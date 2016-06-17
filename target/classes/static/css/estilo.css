@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#header-login,
+#header-texto {
+    display: inline-block;
+}
+
+.login-box {
+    padding-top: 3.5%;
+}
+
+.index-container {
+    margin-top: 0;
+    background-image: url("../images/camp_nou_escura.jpg");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    min-height: 65%;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.texto-registo {
+    padding-top: 10%;
+    margin-bottom: 10%;
+}
+
+.texto-registo h1 {
+    
+    text-align: justify;
+    font-size: 180%;
+    font-weight: bold;
+    color: #FFBF00;
+}
+
+.botoes-index ul li {
+    display: inline-block;
+}
+
+.botoes-index ul li:not(:last-of-type) {
+    margin-right: 10%;
+}
+
+.mobile img {
+    padding-top: 10%;
+    padding-left: 15%;
+}
+@media (min-width: 768px) {
+    .navbar-centered .navbar-nav {
+        float: none;
+        text-align: center;
+        
+    }
+    .navbar-centered .navbar-nav > li {
+        float: none;
+    }
+    .navbar-centered .nav > li {
+        display: inline;
+    }
+    .navbar-centered .nav > li > a {
+        display: inline-block;
+    }
+    
+    .texto-registo {
+        padding-right: 30%;
+        font-size: 1.5em;
+        color: #FFFFFF;
+    }
+}
