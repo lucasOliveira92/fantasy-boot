@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Date;
 import java.util.Set;
 
 @SpringBootApplication
@@ -29,7 +30,7 @@ public class FantasyApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo, GameEventRepository gEventRepo) {
+	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo, GameEventRepository gEventRepo, GameRepository gameRepo) {
 		return (args) -> {
 			// save a couple of Users
 			repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
@@ -57,7 +58,6 @@ public class FantasyApplication {
 
 			System.out.print(p1.getId());
 
-
 			gEventRepo.save(new GameEvent("amarelo",55,1,p1));
 			Set<GameEvent> gameE = gEventRepo.findByPlayer(p1);
 			for(GameEvent g:gameE){
@@ -80,7 +80,13 @@ public class FantasyApplication {
 
 			System.out.println(repository.findByName("Quim").get(0).getTeam().getName());
 
-
+			realRepo.save(new RealTeam("Porto", "a","b",1));
+			RealTeam realt = realRepo.findByName("Porto");
+			gameRepo.save(new Game(new Date(),rtBD2,realt,1));
+			Set<Game> jogos = gameRepo.findByTeam1(realt);
+			for(Game g:jogos){
+				System.out.println(g.getTeam1().getName());
+			}
 
 
 

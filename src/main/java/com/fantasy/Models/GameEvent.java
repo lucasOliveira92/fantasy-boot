@@ -21,7 +21,7 @@ public class GameEvent implements Serializable {
     @Column(name="game_id")
     private long game_id;
 
-    @OneToOne ()
+    @OneToOne
     @JoinColumn(name="player_id")
     private Player player;
 
