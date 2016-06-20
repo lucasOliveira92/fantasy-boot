@@ -30,7 +30,7 @@ public class FantasyApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo, GameEventRepository gEventRepo, GameRepository gameRepo) {
+	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo, GameEventRepository gEventRepo, GameRepository gameRepo, JourneyRepository journeyRepo) {
 		return (args) -> {
 			// save a couple of Users
 			repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
@@ -70,20 +70,24 @@ public class FantasyApplication {
 				System.out.println(allp.getName());
 			}
 
+
+
 			System.out.println(virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
 
 			System.out.println(repository.findByName("Quim").get(0).getTeam().getName());
 
 			realRepo.save(new RealTeam("Porto", "a","b",1));
 			RealTeam realt = realRepo.findByName("Porto");
-			gameRepo.save(new Game(new Date(),rtBD2,realt,1));
+
+			journeyRepo.save(new Journey(new Date(),1,1));
+			Set<Journey> listaJ = journeyRepo.findByNumber(1);
+			for(Journey j : listaJ){
+				System.out.println("Jornada                 "+ j.getNumber());
+				gameRepo.save(new Game(new Date(),rtBD2,realt,j));
+			}
 			Set<Game> jogos = gameRepo.findByTeam1(rtBD2);
 			for(Game g:jogos){
-				System.out.println();
-				System.out.println();
-				System.out.println();
-				System.out.println();
-				System.out.println(g.getTeam1().getName()+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+				System.out.println(g.getTeam1().getName());
 				gEventRepo.save(new GameEvent("amarelo",55,g,p1));
 			}
 

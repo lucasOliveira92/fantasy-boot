@@ -30,19 +30,20 @@ public class Game implements Serializable {
     @JoinColumn(name="team2_ID")
     private RealTeam team2;
 
-    @Column(name="journey_id")
-    private long journey_id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "journey_id")
+    private Journey journey;
 
     @OneToMany(mappedBy="game", fetch = FetchType.EAGER)
     private Set<GameEvent> events;
 
     protected Game(){}
 
-    public Game(Date date, RealTeam team1, RealTeam team2, long journey_id) {
+    public Game(Date date, RealTeam team1, RealTeam team2, Journey journey) {
         this.date = date;
         this.team1 = team1;
         this.team2 = team2;
-        this.journey_id = journey_id;
+        this.journey = journey;
     }
 
     public Date getDate() {
@@ -89,12 +90,12 @@ public class Game implements Serializable {
         return id;
     }
 
-    public long getJourney_id() {
-        return journey_id;
+    public Journey getJourney_id() {
+        return journey;
     }
 
-    public void setJourney_id(long journey_id) {
-        this.journey_id = journey_id;
+    public void setJourney_id(Journey journey) {
+        this.journey = journey;
     }
 
     public Set<GameEvent> getEvents() {
