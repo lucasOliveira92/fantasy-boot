@@ -21,16 +21,23 @@ public class Player implements Serializable {
     @Column(name = "cost", nullable = false)
     private int cost;
 
-    @Column(name="real_team_id")
-    private long realTeam_id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "real_team_id")
+    private RealTeam realTeam;
 
-    protected Player(){};
+    protected Player(){}
 
-    public Player(String name, String position, int cost, long realTeam_id) {
+    public Player(String name, String position, int cost, RealTeam team) {
         this.name = name;
         this.position = position;
         this.cost = cost;
-        this.realTeam_id = realTeam_id;
+        this.realTeam = team;
+    }
+
+    public Player(String name, String position, int cost) {
+        this.name = name;
+        this.position = position;
+        this.cost = cost;
     }
 
     public Long getId() {
@@ -61,11 +68,11 @@ public class Player implements Serializable {
         this.cost = cost;
     }
 
-    public long getRealTeam_id() {
-        return realTeam_id;
+    public RealTeam getRealTeam() {
+        return realTeam;
     }
 
-    public void setRealTeam_id(long realTeam_id) {
-        this.realTeam_id = realTeam_id;
+    public void setRealTeam(RealTeam realTeam) {
+        this.realTeam = realTeam;
     }
 }

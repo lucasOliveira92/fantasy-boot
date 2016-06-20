@@ -1,19 +1,17 @@
 package com.fantasy;
 
-import java.util.Arrays;
-
 import com.fantasy.Models.Player;
+import com.fantasy.Models.RealTeam;
 import com.fantasy.Models.Utilizador;
 import com.fantasy.Models.VirtualTeam;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+
+import java.util.Set;
 
 
 @SpringBootApplication
@@ -35,18 +33,38 @@ public class FantasyApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo) {
+	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo) {
 		return (args) -> {
 			// save a couple of Users
 			repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new Utilizador("Quim","quim@mail.pt","1"));
-			playerRepo.save(new Player("Eder", "AC",90000000, 1));
+
+			RealTeam rt = new RealTeam("Benfica","a","a",1);
+			realRepo.save(rt);
+
+			RealTeam rtBD = realRepo.findByName("Benfica");
+
+			Player p1 = new Player("Eder", "AC",90000000,rtBD);
+			Player p2 = new Player("Ronaldo", "AC",90000000,rtBD);
+
+			playerRepo.save(p1);
+			playerRepo.save(p2);
+
 			virtualRepo.save(new VirtualTeam("Patos FC",repository.findByName("Quim").get(0)));
 
+			RealTeam rtBD2 = realRepo.findByName("Benfica");
+			Set<Player> players = rtBD2.getPlayers();
+			for(Player p: players){
+				System.out.println(p.getName());
+			}
+			System.out.println(p2.getRealTeam().getName());
 
-			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
 
-			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + repository.findByName("Quim").get(0).getTeam().getName());
+			System.out.println(virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
+
+			System.out.println(repository.findByName("Quim").get(0).getTeam().getName());
+
+
 
 
 
