@@ -18,8 +18,9 @@ public class GameEvent implements Serializable {
     @Column(name = "minute", nullable = false)
     private int minute;
 
-    @Column(name="game_id")
-    private long game_id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "game_id")
+    private Game game;
 
     @OneToOne
     @JoinColumn(name="player_id")
@@ -27,10 +28,10 @@ public class GameEvent implements Serializable {
 
     protected GameEvent(){}
 
-    public GameEvent(String type, int minute, long game_id, Player player) {
+    public GameEvent(String type, int minute, Game game, Player player) {
         this.type = type;
         this.minute = minute;
-        this.game_id = game_id;
+        this.game = game;
         this.player = player;
     }
 
@@ -62,11 +63,11 @@ public class GameEvent implements Serializable {
         return id;
     }
 
-    public long getGame_id() {
-        return game_id;
+    public Game getGame() {
+        return game;
     }
 
-    public void setGame_id(long game_id) {
-        this.game_id = game_id;
+    public void setGame(Game game) {
+        this.game = game;
     }
 }

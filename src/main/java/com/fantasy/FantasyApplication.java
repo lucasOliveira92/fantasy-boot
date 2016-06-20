@@ -58,12 +58,6 @@ public class FantasyApplication {
 
 			System.out.print(p1.getId());
 
-			gEventRepo.save(new GameEvent("amarelo",55,1,p1));
-			Set<GameEvent> gameE = gEventRepo.findByPlayer(p1);
-			for(GameEvent g:gameE){
-				System.out.println(g.getType());
-			}
-
 			VirtualTeam vt = new VirtualTeam("Patos FC",repository.findByName("Quim").get(0));
 			virtualRepo.save(vt);
 
@@ -83,9 +77,19 @@ public class FantasyApplication {
 			realRepo.save(new RealTeam("Porto", "a","b",1));
 			RealTeam realt = realRepo.findByName("Porto");
 			gameRepo.save(new Game(new Date(),rtBD2,realt,1));
-			Set<Game> jogos = gameRepo.findByTeam1(realt);
+			Set<Game> jogos = gameRepo.findByTeam1(rtBD2);
 			for(Game g:jogos){
-				System.out.println(g.getTeam1().getName());
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println();
+				System.out.println(g.getTeam1().getName()+"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+				gEventRepo.save(new GameEvent("amarelo",55,g,p1));
+			}
+
+			Set<GameEvent> gameE = gEventRepo.findByPlayer(p1);
+			for(GameEvent g:gameE){
+				System.out.println(g.getType());
 			}
 
 

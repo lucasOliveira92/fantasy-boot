@@ -3,6 +3,7 @@ package com.fantasy.Models;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 //@Table(name = "GAMES")
@@ -31,11 +32,10 @@ public class Game implements Serializable {
 
     @Column(name="journey_id")
     private long journey_id;
-    /*
-        @OneToMany
-        @JoinColumn(name="GAME_ID", referencedColumnName="GAME_ID")
-        private Set<GameEvent> events;
-    */
+
+    @OneToMany(mappedBy="game", fetch = FetchType.EAGER)
+    private Set<GameEvent> events;
+
     protected Game(){}
 
     public Game(Date date, RealTeam team1, RealTeam team2, long journey_id) {
@@ -96,7 +96,7 @@ public class Game implements Serializable {
     public void setJourney_id(long journey_id) {
         this.journey_id = journey_id;
     }
-/*
+
     public Set<GameEvent> getEvents() {
         return events;
     }
@@ -107,5 +107,5 @@ public class Game implements Serializable {
 
     public void addEvent(GameEvent event){
         this.events.add(event);
-    }*/
+    }
 }
