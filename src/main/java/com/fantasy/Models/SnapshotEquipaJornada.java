@@ -33,6 +33,19 @@ public class SnapshotEquipaJornada {
     @Column(name = "pontos_jornada")
     private long pontosJornada;
 
+    @Column (name = "jornada")
+    private long jornada;
+
+
+    public SnapshotEquipaJornada() {
+    }
+
+    public SnapshotEquipaJornada(Set<Player> players, long capitao, long pontosJornada) {
+        this.players = players;
+        this.capitao = capitao;
+        this.pontosJornada = pontosJornada;
+    }
+
     public Long getId() {
         return id;
     }
@@ -52,5 +65,17 @@ public class SnapshotEquipaJornada {
 
     public void setPontosJornada(long pontosJornada) {
         this.pontosJornada = pontosJornada;
+    }
+
+    public long getJornada() {
+        return jornada;
+    }
+
+    public void setJornada(long jornada) {
+        this.jornada = jornada;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
