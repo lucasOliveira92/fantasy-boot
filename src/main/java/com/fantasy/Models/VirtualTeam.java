@@ -35,7 +35,7 @@ public class VirtualTeam implements Serializable {
     private Utilizador utilizador;
 
 
-    @ManyToMany(cascade=CascadeType.ALL)
+    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name="virtuaL_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
     private Set<Player> players;
 

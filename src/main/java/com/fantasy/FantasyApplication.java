@@ -44,7 +44,10 @@ public class FantasyApplication {
 			repository.save(new Utilizador("Quim","quim@mail.pt","1"));
 
 			Player p = new Player("Eder", "AC",90000000, 1);
+			Player p2 = new Player("Ronaldo", "AC",90000000, 1);
 			playerRepo.save(p);
+			playerRepo.save(p2);
+
 
 			VirtualTeam vt = new VirtualTeam("Patos FC",repository.findByName("Quim").get(0));
 			virtualRepo.save(vt);
@@ -53,13 +56,19 @@ public class FantasyApplication {
 			//pset.add(p);
 			//vt.setPlayers(pset);
 			vt.addPlayer(p);
+			vt.addPlayer(p2);
 			virtualRepo.save(vt);
 
+			Set<Player> allVTPlayers = virtualRepo.findByName("Patos FC").get(0).getPlayers();
+			for(Player allp: allVTPlayers){
+				System.out.println(allp.getName());
+			}
 
 
-			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
 
-			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + repository.findByName("Quim").get(0).getTeam().getName());
+			System.out.println(virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
+
+			System.out.println(repository.findByName("Quim").get(0).getTeam().getName());
 
 
 
