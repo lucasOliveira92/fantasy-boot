@@ -1,6 +1,8 @@
 package com.fantasy;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.fantasy.Models.Player;
 import com.fantasy.Models.Utilizador;
@@ -40,13 +42,26 @@ public class FantasyApplication {
 			// save a couple of Users
 			repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new Utilizador("Quim","quim@mail.pt","1"));
-			playerRepo.save(new Player("Eder", "AC",90000000, 1));
-			virtualRepo.save(new VirtualTeam("Patos FC",repository.findByName("Quim").get(0)));
+
+			Player p = new Player("Eder", "AC",90000000, 1);
+			playerRepo.save(p);
+
+			VirtualTeam vt = new VirtualTeam("Patos FC",repository.findByName("Quim").get(0));
+			virtualRepo.save(vt);
+
+			//Set<Player> pset = new HashSet<>();
+			//pset.add(p);
+			//vt.setPlayers(pset);
+			vt.addPlayer(p);
+			virtualRepo.save(vt);
+
 
 
 			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
 
 			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + repository.findByName("Quim").get(0).getTeam().getName());
+
+
 
 
 

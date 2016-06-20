@@ -21,8 +21,8 @@ public class Player implements Serializable {
     @Column(name = "cost", nullable = false)
     private int cost;
 
-    @Column(name="real_team_id")
-    private long realTeam_id;
+    @Column(name="real_team_id", nullable = false)
+    private long realTeamId;
 
     protected Player(){};
 
@@ -30,7 +30,7 @@ public class Player implements Serializable {
         this.name = name;
         this.position = position;
         this.cost = cost;
-        this.realTeam_id = realTeam_id;
+        this.realTeamId = realTeam_id;
     }
 
     public Long getId() {
@@ -62,10 +62,10 @@ public class Player implements Serializable {
     }
 
     public long getRealTeam_id() {
-        return realTeam_id;
+        return realTeamId;
     }
 
     public void setRealTeam_id(long realTeam_id) {
-        this.realTeam_id = realTeam_id;
+        this.realTeamId = realTeam_id;
     }
 }
