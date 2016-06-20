@@ -1,19 +1,14 @@
 package com.fantasy;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-
-import com.fantasy.Models.Player;
-import com.fantasy.Models.RealTeam;
-import com.fantasy.Models.Utilizador;
-import com.fantasy.Models.VirtualTeam;
+import com.fantasy.Models.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+
+import java.util.Set;
 
 @SpringBootApplication
 @EnableAutoConfiguration
@@ -34,7 +29,7 @@ public class FantasyApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo) {
+	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo, GameEventRepository gEventRepo) {
 		return (args) -> {
 			// save a couple of Users
 			repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
@@ -60,10 +55,18 @@ public class FantasyApplication {
 			playerRepo.save(p1);
 			playerRepo.save(p2);
 
+			System.out.print(p1.getId());
+
+
+			gEventRepo.save(new GameEvent("amarelo",55,1,p1));
+			Set<GameEvent> gameE = gEventRepo.findByPlayer(p1);
+			for(GameEvent g:gameE){
+				System.out.println(g.getType());
+			}
 
 			VirtualTeam vt = new VirtualTeam("Patos FC",repository.findByName("Quim").get(0));
 			virtualRepo.save(vt);
-			
+
 			vt.addPlayer(p1);
 			vt.addPlayer(p2);
 			virtualRepo.save(vt);
