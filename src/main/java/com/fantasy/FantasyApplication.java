@@ -1,5 +1,9 @@
 package com.fantasy;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import com.fantasy.Models.Player;
 import com.fantasy.Models.RealTeam;
 import com.fantasy.Models.Utilizador;
@@ -10,9 +14,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-
-import java.util.Set;
-
 
 @SpringBootApplication
 @EnableAutoConfiguration
@@ -50,15 +51,27 @@ public class FantasyApplication {
 			playerRepo.save(p1);
 			playerRepo.save(p2);
 
-			virtualRepo.save(new VirtualTeam("Patos FC",repository.findByName("Quim").get(0)));
-
 			RealTeam rtBD2 = realRepo.findByName("Benfica");
 			Set<Player> players = rtBD2.getPlayers();
 			for(Player p: players){
 				System.out.println(p.getName());
 			}
 			System.out.println(p2.getRealTeam().getName());
+			playerRepo.save(p1);
+			playerRepo.save(p2);
 
+
+			VirtualTeam vt = new VirtualTeam("Patos FC",repository.findByName("Quim").get(0));
+			virtualRepo.save(vt);
+			
+			vt.addPlayer(p1);
+			vt.addPlayer(p2);
+			virtualRepo.save(vt);
+
+			Set<Player> allVTPlayers = virtualRepo.findByName("Patos FC").get(0).getPlayers();
+			for(Player allp: allVTPlayers){
+				System.out.println(allp.getName());
+			}
 
 			System.out.println(virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
 

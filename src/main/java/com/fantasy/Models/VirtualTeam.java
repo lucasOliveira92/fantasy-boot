@@ -2,6 +2,7 @@ package com.fantasy.Models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -32,6 +33,28 @@ public class VirtualTeam implements Serializable {
     @OneToOne
     @JoinColumn (name="utilizador")
     private Utilizador utilizador;
+
+
+    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name="virtuaL_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
+    private Set<Player> players;
+
+    public Set<Player> getPlayers()
+    {
+        return players;
+    }
+    public void setPlayers(Set<Player> players)
+    {
+        this.players = players;
+    }
+
+    public Set<Player> addPlayer(Player p){
+        if(players == null){
+            this.players = new HashSet<>();
+        }
+        this.players.add(p);
+        return players;
+    }
 
 
     public VirtualTeam(){
