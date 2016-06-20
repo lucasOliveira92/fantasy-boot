@@ -3,11 +3,13 @@ package com.fantasy;
 import java.util.Arrays;
 
 import com.fantasy.Models.Player;
-import com.fantasy.Models.User;
+import com.fantasy.Models.Utilizador;
+import com.fantasy.Models.VirtualTeam;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -33,23 +35,31 @@ public class FantasyApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo) {
+	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo) {
 		return (args) -> {
 			// save a couple of Users
-			repository.save(new User("Besuntas","besuntas@mail.pt","1"));
-			repository.save(new User("Quim","quim@mail.pt","1"));
-
+			repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
+			repository.save(new Utilizador("Quim","quim@mail.pt","1"));
 			playerRepo.save(new Player("Eder", "AC",90000000, 1));
+			virtualRepo.save(new VirtualTeam("Patos FC",repository.findByName("Quim").get(0)));
+
+
+			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
+
+			System.out.println("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ   " + repository.findByName("Quim").get(0).getTeam().getName());
+
+
 
 			// fetch all Users
+			/*
 			System.out.println("Users found with findAll():");
 			System.out.println("-------------------------------");
-			for (User User : repository.findAll()) {
+			for (Utilizador User : repository.findAll()) {
 				System.out.println(User.toString());
 
 			}for (Player player : playerRepo.findById(3)) {
 				System.out.println(player.toString());
-			}
+			}*/
 		};
 	}
 

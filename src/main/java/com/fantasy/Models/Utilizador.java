@@ -4,11 +4,12 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Users")
-public class User implements Serializable {
+//@Table(name = "Users")
+public class Utilizador implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "utilizador_id")
     private Long id;
 
     @Column(nullable = false)
@@ -20,13 +21,18 @@ public class User implements Serializable {
     @Column(nullable = false)
     private String password;
 
-    // ... additional members, often include @OneToMany mappings
+    @OneToOne (mappedBy="utilizador")
+    private VirtualTeam virtualTeam;
 
 
-    protected User() {
+    public VirtualTeam getTeam() {
+        return virtualTeam;
     }
 
-    public User(String name, String email, String password) {
+    protected Utilizador() {
+    }
+
+    public Utilizador(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;

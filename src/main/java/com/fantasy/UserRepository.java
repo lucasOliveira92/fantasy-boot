@@ -1,11 +1,11 @@
 package com.fantasy;
 
-import com.fantasy.Models.User;
-import java.util.List;
+import com.fantasy.Models.Utilizador;
+        import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+        import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface UserRepository extends CrudRepository<Utilizador, Long> {
 
-    List<User> findByName(String name);
+    List<Utilizador> findByName(String name);
 }
