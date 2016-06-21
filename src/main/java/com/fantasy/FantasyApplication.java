@@ -40,7 +40,7 @@ public class FantasyApplication {
 	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo, GameEventRepository gEventRepo, GameRepository gameRepo, JourneyRepository journeyRepo) {
 		return (args) -> {
 			// save a couple of Users
-			repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
+			/*repository.save(new Utilizador("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new Utilizador("Quim","quim@mail.pt","1"));
 
 			RealTeam rt = new RealTeam("Benfica","a","a",1);
