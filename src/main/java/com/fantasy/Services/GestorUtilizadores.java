@@ -1,7 +1,7 @@
 package com.fantasy.Services;
 
 import com.fantasy.Models.Utilizador;
-import com.fantasy.UserRepository;
+import com.fantasy.Repositories.UserRepository;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;

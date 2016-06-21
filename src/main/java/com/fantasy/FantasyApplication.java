@@ -1,5 +1,12 @@
 package com.fantasy;
 
+import com.fantasy.Repositories.RealTeamRepository;
+import com.fantasy.Repositories.GameRepository;
+import com.fantasy.Repositories.VirtualTeamRepository;
+import com.fantasy.Repositories.UserRepository;
+import com.fantasy.Repositories.PlayerRepository;
+import com.fantasy.Repositories.GameEventRepository;
+import com.fantasy.Repositories.JourneyRepository;
 import com.fantasy.Models.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

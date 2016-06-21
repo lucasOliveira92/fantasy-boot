@@ -2,7 +2,7 @@ package com.fantasy.Services;
 
 import com.fantasy.Models.Player;
 import com.fantasy.Models.VirtualTeam;
-import com.fantasy.VirtualTeamRepository;
+import com.fantasy.Repositories.VirtualTeamRepository;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

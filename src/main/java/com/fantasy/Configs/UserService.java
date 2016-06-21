@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.fantasy;
+package com.fantasy.Configs;
 
 import com.fantasy.Models.Utilizador;
 import com.fantasy.Services.GestorUtilizadores;

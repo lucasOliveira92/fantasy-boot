@@ -1,4 +1,4 @@
-package com.fantasy;
+package com.fantasy.Repositories;
 
 import com.fantasy.Models.Player;
 import org.springframework.data.repository.CrudRepository;
