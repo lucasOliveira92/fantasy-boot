@@ -19,10 +19,10 @@ public class GestorUtilizadores {
         return users.findAll();
     }
     
-    /*public Utilizador  getUserByEmail(String email){
-        return users.findByEmail(email);
+    public Utilizador  getUserByName(String name){
+        return users.findByName(name);
     }
-    
+    /*
     public Utilizador getUserById(long id){
         return users.findById(id);
     }
