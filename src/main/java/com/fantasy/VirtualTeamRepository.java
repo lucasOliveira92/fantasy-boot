@@ -9,4 +9,8 @@ import org.springframework.data.repository.CrudRepository;
 public interface VirtualTeamRepository extends CrudRepository<VirtualTeam, Long> {
 
     List<VirtualTeam> findByName(String name);
+    
+    VirtualTeam findById(long id);
+    
+    VirtualTeam findByUtilizador (long utilizador);
 }

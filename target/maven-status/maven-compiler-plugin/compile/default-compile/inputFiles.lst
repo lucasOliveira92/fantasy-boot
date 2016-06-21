@@ -1,8 +1,10 @@
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\VirtualTeamRepository.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\PlayerRepository.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Controllers\HelloController.java
+C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Configs\WebSecurityConfig.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\GameEventRepository.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Models\GameEvent.java
+C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Services\GestorEquipaVirtual.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\FantasyApplication.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\UserRepository.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Models\Journey.java
@@ -13,5 +15,7 @@ C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Models\SnapshotEquipaJo
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\JourneyRepository.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Models\Game.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Models\VirtualTeam.java
+C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Configs\MvcConfig.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Models\Utilizador.java
+C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\Services\GestorUtilizadores.java
 C:\Users\Lucas\Desktop\Fantasy\src\main\java\com\fantasy\RealTeamRepository.java

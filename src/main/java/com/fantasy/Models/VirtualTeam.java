@@ -55,6 +55,18 @@ public class VirtualTeam implements Serializable {
         this.players.add(p);
         return players;
     }
+    
+    public Set<Player> removePlayer(Player p){
+        if(players == null){
+            return this.players = new HashSet<>();
+        }
+        for(Player pl: this.players){
+            if(pl.getName() == p.getName()){
+                this.players.remove(pl);
+            }
+        }
+        return this.players;
+    }
 
 
     public VirtualTeam(){
