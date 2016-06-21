@@ -12,13 +12,13 @@ public class Utilizador implements Serializable {
     @Column(name = "utilizador_id")
     private Long id;
 
-    @Column(nullable = false)
-    private String name;
+    @Column(name = "username", nullable = false)
+    private String username;
 
-    @Column(nullable = false)
+    @Column(name = "email", nullable = false)
     private String email;
 
-    @Column(nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
 
     @OneToOne (mappedBy="utilizador")
@@ -33,7 +33,7 @@ public class Utilizador implements Serializable {
     }
 
     public Utilizador(String name, String email, String password) {
-        this.name = name;
+        this.username = name;
         this.email = email;
         this.password = password;
     }
@@ -47,11 +47,11 @@ public class Utilizador implements Serializable {
     }
 
     public String getName() {
-        return name;
+        return username;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.username = name;
     }
 
     public String getEmail() {
@@ -62,11 +62,11 @@ public class Utilizador implements Serializable {
         this.email = email;
     }
 
-    public String getPasswordl() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPasswordl(String passwordl) {
-        this.password = passwordl;
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

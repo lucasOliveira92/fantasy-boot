@@ -65,7 +65,7 @@ public class FantasyApplication {
 
 			System.out.print(p1.getId());
 
-			VirtualTeam vt = new VirtualTeam("Patos FC",repository.findByName("Quim"));
+			VirtualTeam vt = new VirtualTeam("Patos FC",repository.findByUsername("Quim"));
 			virtualRepo.save(vt);
 
 			vt.addPlayer(p1);
@@ -81,7 +81,7 @@ public class FantasyApplication {
 
 			System.out.println(virtualRepo.findByName("Patos FC").get(0).getOwner().getName());
 
-			System.out.println(repository.findByName("Quim").getTeam().getName());
+			System.out.println(repository.findByUsername("Quim").getTeam().getName());
 
 			realRepo.save(new RealTeam("Porto", "a","b",1));
 			RealTeam realt = realRepo.findByName("Porto");

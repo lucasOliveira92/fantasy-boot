@@ -33,7 +33,7 @@ public class UserService implements UserDetailsService {
         Collection<GrantedAuthority> auth = new LinkedList<>();
         auth.add(new SimpleGrantedAuthority("ROLE_USER"));
         
-        return new org.springframework.security.core.userdetails.User(name, u.getPasswordl(), auth);
+        return new org.springframework.security.core.userdetails.User(name, u.getPassword(), auth);
     }
 
 }

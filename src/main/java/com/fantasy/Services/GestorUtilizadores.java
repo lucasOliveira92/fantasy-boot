@@ -19,8 +19,8 @@ public class GestorUtilizadores {
         return users.findAll();
     }
     
-    public Utilizador  getUserByName(String name){
-        return users.findByName(name);
+    public Utilizador  getUserByName(String username){
+        return users.findByUsername(username);
     }
     /*
     public Utilizador getUserById(long id){
