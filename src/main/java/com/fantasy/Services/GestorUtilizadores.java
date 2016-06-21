@@ -2,9 +2,6 @@ package com.fantasy.Services;
 
 import com.fantasy.Models.Utilizador;
 import com.fantasy.Repositories.UserRepository;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,10 +22,9 @@ public class GestorUtilizadores {
     /*
     public Utilizador getUserById(long id){
         return users.findById(id);
-    }
-    
-    public Utilizador create(UserCreateForm form) {
-        Utilizador user = new Utilizador("",form.getEmail(),form.getPassword());
-        return users.save(user);
     }*/
+    
+    public Utilizador create(Utilizador user) {
+        return users.save(user);
+    }
 }

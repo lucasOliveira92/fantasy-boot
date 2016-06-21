@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Registration Success</title>
+</head>
+<body>
+    <div align="center">
+        <table border="0" th:object="${user}">
+            <tr>
+                <td colspan="2" align="center"><h2>Registration Succeeded!</h2></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <h3>Thank you for registering! Here's the review of your details:</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>User Name:</td>
+                <td>th:field="*{name}"</td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td>h:field="*{email}"</td>
+            </tr>
+ 
+        </table>
+    </div>
+</body>
+</html>

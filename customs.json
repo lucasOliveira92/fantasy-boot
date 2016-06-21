@@ -1,0 +1,8 @@
+{
+    "elements": {},
+    "attributes": {
+        "th:object": {
+            "context": "table"
+        }
+    }
+}

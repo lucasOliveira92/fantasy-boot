@@ -29,7 +29,7 @@ public class Utilizador implements Serializable {
         return virtualTeam;
     }
 
-    protected Utilizador() {
+    public Utilizador() {
     }
 
     public Utilizador(String name, String email, String password) {
@@ -62,11 +62,11 @@ public class Utilizador implements Serializable {
         this.email = email;
     }
 
-    public String getPasswordl() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPasswordl(String passwordl) {
+    public void setPassword(String passwordl) {
         this.password = passwordl;
     }
 }
