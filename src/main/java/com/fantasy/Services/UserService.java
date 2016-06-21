@@ -1,12 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.fantasy.Configs;
+package com.fantasy.Services;
 
 import com.fantasy.Models.User;
-import com.fantasy.Services.GestorUtilizadores;
 import java.util.Collection;
 import java.util.LinkedList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,17 +10,18 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import com.fantasy.DAO.UserDAO;
 
 
 @Service
 public class UserService implements UserDetailsService {
 
     @Autowired
-    private GestorUtilizadores userDAO;
+    private UserDAO userDAO;
 
     @Override
     public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-        User u = userDAO.getUserByName(name);
+        User u = userDAO.findByUsername(name);
         if (u == null) {
             throw new UsernameNotFoundException("Username not found: " + name);
         }
@@ -34,6 +29,18 @@ public class UserService implements UserDetailsService {
         auth.add(new SimpleGrantedAuthority("ROLE_USER"));
         
         return new org.springframework.security.core.userdetails.User(name, u.getPassword(), auth);
+    }
+    
+    public User create(User user) throws Exception {
+        return userDAO.save(user);
+    }
+    
+    public User  getUserByName(String username){
+        return userDAO.findByUsername(username);
+    }
+    
+    public Iterable<User> getAllUsers() {
+        return userDAO.findAll();
     }
 
 }

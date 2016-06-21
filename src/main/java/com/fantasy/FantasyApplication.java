@@ -7,12 +7,6 @@ import com.fantasy.Models.Player;
 import com.fantasy.Models.RealTeam;
 import com.fantasy.Models.User;
 import com.fantasy.Models.VirtualTeam;
-import com.fantasy.Repositories.RealTeamRepository;
-import com.fantasy.Repositories.GameRepository;
-import com.fantasy.Repositories.VirtualTeamRepository;
-import com.fantasy.Repositories.UserRepository;
-import com.fantasy.Repositories.PlayerRepository;
-import com.fantasy.Repositories.GameEventRepository;
 import java.util.Date;
 import java.util.Set;
 import org.springframework.boot.CommandLineRunner;
@@ -21,7 +15,13 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import com.fantasy.Repositories.GameWeekRepository;
+import com.fantasy.DAO.GameEventDAO;
+import com.fantasy.DAO.GameDAO;
+import com.fantasy.DAO.GameWeekDAO;
+import com.fantasy.DAO.PlayerDAO;
+import com.fantasy.DAO.RealTeamDAO;
+import com.fantasy.DAO.UserDAO;
+import com.fantasy.DAO.VirtualTeamDAO;
 
 
 @SpringBootApplication
@@ -43,13 +43,13 @@ public class FantasyApplication {
 	}
 
 	@Bean
-	public CommandLineRunner demo(UserRepository repository, PlayerRepository playerRepo, VirtualTeamRepository virtualRepo, RealTeamRepository realRepo, GameEventRepository gEventRepo, GameRepository gameRepo, GameWeekRepository journeyRepo) {
+	public CommandLineRunner demo(UserDAO repository, PlayerDAO playerRepo, VirtualTeamDAO virtualRepo, RealTeamDAO realRepo, GameEventDAO gEventRepo, GameDAO gameRepo, GameWeekDAO journeyRepo) {
 		return (args) -> {
 			// save a couple of Users
 			repository.save(new User("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new User("Quim","quim@mail.pt","1"));
 
-			RealTeam rt = new RealTeam("Benfica","a","a",1);
+			RealTeam rt = new RealTeam("Benfica","a","a");
 			realRepo.save(rt);
 
 			RealTeam rtBD = realRepo.findByName("Benfica");
@@ -89,10 +89,10 @@ public class FantasyApplication {
 
 			System.out.println(repository.findByUsername("Quim").getTeam().getName());
 
-			realRepo.save(new RealTeam("Porto", "a","b",1));
+			realRepo.save(new RealTeam("Porto", "a","b"));
 			RealTeam realt = realRepo.findByName("Porto");
 
-			journeyRepo.save(new GameWeek(new Date(),1,1));
+			journeyRepo.save(new GameWeek(new Date(),1));
 			Set<GameWeek> listaJ = journeyRepo.findByNumber(1);
 			for(GameWeek j : listaJ){
 				System.out.println("GameWeek                "+ j.getNumber());

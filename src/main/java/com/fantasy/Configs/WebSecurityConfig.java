@@ -1,6 +1,7 @@
 package com.fantasy.Configs;
 
 
+import com.fantasy.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

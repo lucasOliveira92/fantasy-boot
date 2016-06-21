@@ -1,4 +1,4 @@
-package com.fantasy.Repositories;
+package com.fantasy.DAO;
 
 import com.fantasy.Models.User;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 import com.fantasy.Models.VirtualTeam;
 import org.springframework.data.repository.CrudRepository;
 
-public interface VirtualTeamRepository extends CrudRepository<VirtualTeam, Long> {
+public interface VirtualTeamDAO extends CrudRepository<VirtualTeam, Long> {
 
     List<VirtualTeam> findByName(String name);
     

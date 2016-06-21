@@ -26,10 +26,6 @@ public class VirtualTeam implements Serializable {
     @Column(name = "captain_id")
     private Long idCaptain;
 
-    @Column(name="season_id", nullable = false)
-    private long season_id;
-
-
     @OneToOne
     @JoinColumn (name="user_id")
     private User user;
@@ -135,12 +131,5 @@ public class VirtualTeam implements Serializable {
     public void setOwner(User owner) {
         this.user = owner;
     }
-
-    public long getSeason_id() {
-        return season_id;
-    }
-
-    public void setSeason_id(long season_id) {
-        this.season_id = season_id;
-    }
+    
 }

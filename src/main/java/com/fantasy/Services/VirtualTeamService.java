@@ -2,32 +2,32 @@ package com.fantasy.Services;
 
 import com.fantasy.Models.Player;
 import com.fantasy.Models.VirtualTeam;
-import com.fantasy.Repositories.VirtualTeamRepository;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.fantasy.DAO.VirtualTeamDAO;
 
 
 @Service
 @Transactional
-public class GestorEquipaVirtual {
+public class VirtualTeamService {
     @Autowired
-    private VirtualTeamRepository virtualTeams;
+    private VirtualTeamDAO virtualTeams;
     
-    public VirtualTeam criarEquipaVirtual(String nome){
+    public VirtualTeam createVirtualTeam(String nome){
         return virtualTeams.save(new VirtualTeam(nome,1000,2));
     }
     
-    public VirtualTeam getEquipaVirtual(long userId){
+    public VirtualTeam getVirtualTeam(long userId){
         return virtualTeams.findByUser(userId);
     }
     
-    public VirtualTeam guardaEquipaVirtual(VirtualTeam vt){
+    public VirtualTeam saveVirtualTeam(VirtualTeam vt){
         return virtualTeams.save(vt);
     }
     
-    public VirtualTeam realizarTransferencia(List<Player> in, List<Player> out, int virtual_team_id) throws Exception{
+    public VirtualTeam doTransfer(List<Player> in, List<Player> out, int virtual_team_id) throws Exception{
         VirtualTeam vt = virtualTeams.findById(virtual_team_id);
         
         int grIN=0,defIN=0,medIN=0,avaIN=0;

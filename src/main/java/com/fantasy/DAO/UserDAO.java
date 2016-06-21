@@ -1,11 +1,11 @@
-package com.fantasy.Repositories;
+package com.fantasy.DAO;
 
 import com.fantasy.Models.User;
         import java.util.List;
 
         import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface UserDAO extends CrudRepository<User, Long> {
 
     User findByUsername(String username);
 }

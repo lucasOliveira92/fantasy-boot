@@ -19,18 +19,14 @@ public class GameWeek implements Serializable {
     @Column(name = "number", nullable = false)
     private int number;
 
-    @Column(name="season_id", nullable = false)
-    private long season_id;
-
     @OneToMany(mappedBy="gameWeek", fetch = FetchType.EAGER)
     private Set<Game> games;
 
     protected GameWeek(){}
 
-    public GameWeek(Date date, int number, long season_id) {
+    public GameWeek(Date date, int number) {
         this.date = date;
         this.number = number;
-        this.season_id = season_id;
     }
 
     public Date getDate() {
@@ -59,13 +55,5 @@ public class GameWeek implements Serializable {
 
     public Long getId() {
         return id;
-    }
-
-    public long getSeason_id() {
-        return season_id;
-    }
-
-    public void setSeason_id(long season_id) {
-        this.season_id = season_id;
     }
 }

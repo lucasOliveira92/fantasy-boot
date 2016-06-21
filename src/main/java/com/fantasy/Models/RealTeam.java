@@ -21,9 +21,6 @@ public class RealTeam implements Serializable {
     @Column(name = "equipment_url", nullable = false)
     private String equipment;
 
-    @Column(name="season_id", nullable = false)
-    private long season_id;
-
     @OneToMany(mappedBy="realTeam", fetch = FetchType.EAGER)
     private Set<Player> players;
 
@@ -33,11 +30,10 @@ public class RealTeam implements Serializable {
 
     protected RealTeam(){}
 
-    public RealTeam(String name, String badge, String equipment, long season_id) {
+    public RealTeam(String name, String badge, String equipment) {
         this.name = name;
         this.badge = badge;
         this.equipment = equipment;
-        this.season_id = season_id;
     }
 
     public String getName() {
@@ -79,14 +75,6 @@ public class RealTeam implements Serializable {
 
     public Long getId() {
         return id;
-    }
-
-    public long getSeason_id() {
-        return season_id;
-    }
-
-    public void setSeason_id(long season_id) {
-        this.season_id = season_id;
     }
 /*
     public List<Game> getGames() {

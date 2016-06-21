@@ -1,4 +1,4 @@
-package com.fantasy.Repositories;
+package com.fantasy.DAO;
 
 
 import com.fantasy.Models.Game;
@@ -7,7 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Set;
 
-public interface GameRepository extends CrudRepository<Game, Long> {
+public interface GameDAO extends CrudRepository<Game, Long> {
 
     Game findById(long game_event_id);
     Set<Game> findByTeam1(RealTeam team1_ID);

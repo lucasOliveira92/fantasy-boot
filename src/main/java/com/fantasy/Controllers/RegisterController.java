@@ -6,7 +6,7 @@
 package com.fantasy.Controllers;
 
 import com.fantasy.Models.User;
-import com.fantasy.Services.GestorUtilizadores;
+import com.fantasy.Services.UserService;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class RegisterController {
     
     @Autowired
-    private GestorUtilizadores users;
+    private UserService users;
     
  
     @RequestMapping(method = RequestMethod.GET)
