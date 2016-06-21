@@ -1,0 +1,17 @@
+com\fantasy\VirtualTeamRepository.class
+com\fantasy\JourneyRepository.class
+com\fantasy\Models\RealTeam.class
+com\fantasy\GameEventRepository.class
+com\fantasy\FantasyApplication.class
+com\fantasy\GameRepository.class
+com\fantasy\UserRepository.class
+com\fantasy\Models\Journey.class
+com\fantasy\Models\Player.class
+com\fantasy\Models\SnapshotEquipaJornada.class
+com\fantasy\Models\Game.class
+com\fantasy\Models\Utilizador.class
+com\fantasy\Controllers\HelloController.class
+com\fantasy\Models\GameEvent.class
+com\fantasy\PlayerRepository.class
+com\fantasy\Models\VirtualTeam.class
+com\fantasy\RealTeamRepository.class
