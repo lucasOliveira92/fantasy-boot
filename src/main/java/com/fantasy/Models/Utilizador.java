@@ -1,7 +1,7 @@
 package com.fantasy.Models;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 //@Table(name = "Users")
@@ -29,7 +29,10 @@ public class Utilizador implements Serializable {
         return virtualTeam;
     }
 
-    protected Utilizador() {
+    public Utilizador() {
+        this.email = "";
+        this.password = "";
+        this.username = "";
     }
 
     public Utilizador(String name, String email, String password) {
