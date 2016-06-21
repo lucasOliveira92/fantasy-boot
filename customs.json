@@ -1,6 +1,9 @@
 {
     "elements": {},
     "attributes": {
+        "th:text": {
+            "context": "td"
+        },
         "th:object": {
             "context": "table"
         }

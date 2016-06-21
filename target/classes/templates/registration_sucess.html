@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Registration Success</title>
 </head>
 <body>
     <div align="center">
-        <table border="0" th:object="${user}">
+        <table border="0">
             <tr>
                 <td colspan="2" align="center"><h2>Registration Succeeded!</h2></td>
             </tr>
@@ -17,13 +16,12 @@
             </tr>
             <tr>
                 <td>User Name:</td>
-                <td>th:field="*{name}"</td>
+                <td th:text="${user.name}">xxx</td>
             </tr>
             <tr>
                 <td>E-mail:</td>
-                <td>h:field="*{email}"</td>
+                <td th:text="${user.email}">xxx</td>
             </tr>
- 
         </table>
     </div>
 </body>

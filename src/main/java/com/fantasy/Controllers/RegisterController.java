@@ -8,6 +8,8 @@ package com.fantasy.Controllers;
 import com.fantasy.Models.Utilizador;
 import com.fantasy.Services.GestorUtilizadores;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,15 +32,20 @@ public class RegisterController {
     }
      
     @RequestMapping(method = RequestMethod.POST)
-    public String processRegistration(Utilizador user) {
+    public String processRegistration(Map<String, Object> model,Utilizador user) {
          System.out.println(user.getName());
          System.out.println(user.getEmail());
          System.out.println(user.getPassword());
          
-        Utilizador create = users.create(user);
-        if(create != null)
-            return "registration_sucess";
-        else
+        Utilizador create;
+        try {
+            create = users.create(user);
+        } catch (Exception ex) {
             return "error";
+        }
+        
+        model.put("user", create); 
+        return "registration_sucess";
+            
     }
 }

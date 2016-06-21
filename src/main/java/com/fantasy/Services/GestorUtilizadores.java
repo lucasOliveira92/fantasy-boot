@@ -24,7 +24,9 @@ public class GestorUtilizadores {
         return users.findById(id);
     }*/
     
-    public Utilizador create(Utilizador user) {
-        return users.save(user);
+    public Utilizador create(Utilizador user) throws Exception {
+        if(users.exists(user.getId()))
+            throw new Exception("User already exists!");
+        else return users.save(user);
     }
 }
