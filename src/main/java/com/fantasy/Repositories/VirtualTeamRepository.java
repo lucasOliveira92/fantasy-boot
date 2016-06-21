@@ -1,6 +1,6 @@
 package com.fantasy.Repositories;
 
-import com.fantasy.Models.Utilizador;
+import com.fantasy.Models.User;
 import java.util.List;
 
 import com.fantasy.Models.VirtualTeam;
@@ -12,5 +12,5 @@ public interface VirtualTeamRepository extends CrudRepository<VirtualTeam, Long>
     
     VirtualTeam findById(long id);
     
-    VirtualTeam findByUtilizador (long utilizador);
+    VirtualTeam findByUser (long userId);
 }

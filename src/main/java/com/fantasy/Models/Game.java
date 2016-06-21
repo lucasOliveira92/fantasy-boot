@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
-//@Table(name = "GAMES")
+@Table(name = "GAMES")
 public class Game implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -31,19 +31,19 @@ public class Game implements Serializable {
     private RealTeam team2;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "journey_id")
-    private Journey journey;
+    @JoinColumn(name = "game_week_id")
+    private GameWeek gameWeek;
 
     @OneToMany(mappedBy="game", fetch = FetchType.EAGER)
     private Set<GameEvent> events;
 
     protected Game(){}
 
-    public Game(Date date, RealTeam team1, RealTeam team2, Journey journey) {
+    public Game(Date date, RealTeam team1, RealTeam team2, GameWeek gameWeek) {
         this.date = date;
         this.team1 = team1;
         this.team2 = team2;
-        this.journey = journey;
+        this.gameWeek = gameWeek;
     }
 
     public Date getDate() {
@@ -90,13 +90,15 @@ public class Game implements Serializable {
         return id;
     }
 
-    public Journey getJourney_id() {
-        return journey;
+    public GameWeek getGameWeek() {
+        return gameWeek;
     }
 
-    public void setJourney_id(Journey journey) {
-        this.journey = journey;
+    public void setGameWeek(GameWeek gameWeek) {
+        this.gameWeek = gameWeek;
     }
+    
+    
 
     public Set<GameEvent> getEvents() {
         return events;

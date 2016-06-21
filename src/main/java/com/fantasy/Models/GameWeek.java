@@ -6,11 +6,11 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
-//@Table(name = "JOURNEY")
-public class Journey implements Serializable {
+@Table(name = "GAME_WEEKS")
+public class GameWeek implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name = "journey_id")
+    @Column(name = "game_week_id")
     private Long id;
 
     @Column(name = "date", nullable = false)
@@ -22,12 +22,12 @@ public class Journey implements Serializable {
     @Column(name="season_id", nullable = false)
     private long season_id;
 
-    @OneToMany(mappedBy="journey", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="gameWeek", fetch = FetchType.EAGER)
     private Set<Game> games;
 
-    protected Journey(){}
+    protected GameWeek(){}
 
-    public Journey(Date date, int number, long season_id) {
+    public GameWeek(Date date, int number, long season_id) {
         this.date = date;
         this.number = number;
         this.season_id = season_id;

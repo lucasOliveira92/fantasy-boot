@@ -5,7 +5,7 @@
  */
 package com.fantasy.Configs;
 
-import com.fantasy.Models.Utilizador;
+import com.fantasy.Models.User;
 import com.fantasy.Services.GestorUtilizadores;
 import java.util.Collection;
 import java.util.LinkedList;
@@ -26,7 +26,7 @@ public class UserService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-        Utilizador u = userDAO.getUserByName(name);
+        User u = userDAO.getUserByName(name);
         if (u == null) {
             throw new UsernameNotFoundException("Username not found: " + name);
         }

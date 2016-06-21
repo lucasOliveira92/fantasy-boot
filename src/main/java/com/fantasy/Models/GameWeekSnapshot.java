@@ -8,7 +8,8 @@ import java.util.Set;
  */
 
 @Entity
-public class SnapshotEquipaJornada {
+@Table(name = "GAME_WEEK_SNAPSHOTS")
+public class GameWeekSnapshot {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Column(name = "snapshot_id")
@@ -30,20 +31,20 @@ public class SnapshotEquipaJornada {
     @Column(name = "captain_id")
     private long capitao;
 
-    @Column(name = "pontos_jornada")
-    private long pontosJornada;
+    @Column(name = "game_week_points")
+    private long gameWeekPoints;
 
-    @Column (name = "jornada")
-    private long jornada;
+    @Column (name = "game_week")
+    private long gameWeek;
 
 
-    public SnapshotEquipaJornada() {
+    public GameWeekSnapshot() {
     }
 
-    public SnapshotEquipaJornada(Set<Player> players, long capitao, long pontosJornada) {
+    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints) {
         this.players = players;
         this.capitao = capitao;
-        this.pontosJornada = pontosJornada;
+        this.gameWeekPoints = gameWeekPoints;
     }
 
     public Long getId() {
@@ -59,21 +60,23 @@ public class SnapshotEquipaJornada {
         this.capitao = capitao;
     }
 
-    public long getPontosJornada() {
-        return pontosJornada;
+    public long getGameWeekPoints() {
+        return gameWeekPoints;
     }
 
-    public void setPontosJornada(long pontosJornada) {
-        this.pontosJornada = pontosJornada;
+    public void setGameWeekPoints(long gameWeekPoints) {
+        this.gameWeekPoints = gameWeekPoints;
     }
 
-    public long getJornada() {
-        return jornada;
+    public long getGameWeek() {
+        return gameWeek;
     }
 
-    public void setJornada(long jornada) {
-        this.jornada = jornada;
+    public void setGameWeek(long gameWeek) {
+        this.gameWeek = gameWeek;
     }
+    
+    
 
     public void setId(Long id) {
         this.id = id;

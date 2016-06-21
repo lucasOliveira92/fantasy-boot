@@ -1,13 +1,13 @@
 package com.fantasy.Repositories;
 
 
-import com.fantasy.Models.Journey;
+import com.fantasy.Models.GameWeek;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Set;
 
-public interface JourneyRepository extends CrudRepository<Journey, Long> {
+public interface GameWeekRepository extends CrudRepository<GameWeek, Long> {
 
-    Journey findById(long journey_id);
-    Set<Journey> findByNumber(int number);
+    GameWeek findById(long game_week_id);
+    Set<GameWeek> findByNumber(int number);
 }

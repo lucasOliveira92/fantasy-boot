@@ -1,6 +1,6 @@
 package com.fantasy.Services;
 
-import com.fantasy.Models.Utilizador;
+import com.fantasy.Models.User;
 import com.fantasy.Repositories.UserRepository;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,19 +12,19 @@ public class GestorUtilizadores {
     @Autowired
     private UserRepository users;
     
-    public Iterable<Utilizador> getAllUsers() {
+    public Iterable<User> getAllUsers() {
         return users.findAll();
     }
     
-    public Utilizador  getUserByName(String username){
+    public User  getUserByName(String username){
         return users.findByUsername(username);
     }
     /*
-    public Utilizador getUserById(long id){
+    public User getUserById(long id){
         return users.findById(id);
     }*/
     
-    public Utilizador create(Utilizador user) throws Exception {
+    public User create(User user) throws Exception {
         return users.save(user);
     }
 }

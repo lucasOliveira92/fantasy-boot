@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Set;
 
 @Entity
-//@Table(name = "REAL_TEAMS")
+@Table(name = "REAL_TEAMS")
 public class RealTeam implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

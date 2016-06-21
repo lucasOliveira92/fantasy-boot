@@ -5,7 +5,7 @@
  */
 package com.fantasy.Controllers;
 
-import com.fantasy.Models.Utilizador;
+import com.fantasy.Models.User;
 import com.fantasy.Services.GestorUtilizadores;
 import java.util.Map;
 import java.util.logging.Level;
@@ -26,18 +26,18 @@ public class RegisterController {
  
     @RequestMapping(method = RequestMethod.GET)
     public String viewRegistration(Map<String, Object> model) {
-        Utilizador user = new Utilizador();    
+        User user = new User();    
         model.put("user", user);         
         return "registration";
     }
      
     @RequestMapping(method = RequestMethod.POST)
-    public String processRegistration(Map<String, Object> model,Utilizador user) {
+    public String processRegistration(Map<String, Object> model,User user) {
          System.out.println(user.getUsername());
          System.out.println(user.getEmail());
          System.out.println(user.getPassword());
          
-        Utilizador create;
+        User create;
         try {
             create = users.create(user);
         } catch (Exception ex) {

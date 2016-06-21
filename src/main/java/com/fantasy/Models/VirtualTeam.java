@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-//@Table(name = "virtual_teams")
+@Table(name = "VIRTUAL_TEAMS")
 public class VirtualTeam implements Serializable {
 
     @Id
@@ -31,12 +31,12 @@ public class VirtualTeam implements Serializable {
 
 
     @OneToOne
-    @JoinColumn (name="utilizador")
-    private Utilizador utilizador;
+    @JoinColumn (name="user_id")
+    private User user;
 
 
     @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name="virtuaL_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
+    @JoinTable(name="virtual_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
     private Set<Player> players;
 
     public Set<Player> getPlayers()
@@ -85,9 +85,9 @@ public class VirtualTeam implements Serializable {
         this.numberTransfers = 0;
     }
 
-    public VirtualTeam(String name, Utilizador owner) {
+    public VirtualTeam(String name, User owner) {
         this.name = name;
-        this.utilizador = owner;
+        this.user = owner;
         this.budget = 1000;
         this.numberTransfers = 0;
     }
@@ -128,12 +128,12 @@ public class VirtualTeam implements Serializable {
         this.idCaptain = idCaptain;
     }
 
-    public Utilizador getOwner() {
-        return utilizador;
+    public User getOwner() {
+        return user;
     }
 
-    public void setOwner(Utilizador owner) {
-        this.utilizador = owner;
+    public void setOwner(User owner) {
+        this.user = owner;
     }
 
     public long getSeason_id() {

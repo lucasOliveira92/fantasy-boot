@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-//@Table(name = "GAME_EVENT")
+@Table(name = "GAME_EVENTS")
 public class GameEvent implements Serializable {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

@@ -19,8 +19,8 @@ public class GestorEquipaVirtual {
         return virtualTeams.save(new VirtualTeam(nome,1000,2));
     }
     
-    public VirtualTeam getEquipaVirtual(int utilizador){
-        return virtualTeams.findByUtilizador(utilizador);
+    public VirtualTeam getEquipaVirtual(long userId){
+        return virtualTeams.findByUser(userId);
     }
     
     public VirtualTeam guardaEquipaVirtual(VirtualTeam vt){

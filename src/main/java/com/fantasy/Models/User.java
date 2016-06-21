@@ -4,12 +4,12 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-//@Table(username = "Users")
-public class Utilizador implements Serializable {
+@Table(name = "USERS")
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name = "utilizador_id")
+    @Column(name = "user_id")
     private Long id;
 
     @Column(nullable = false, unique = true)
@@ -21,7 +21,7 @@ public class Utilizador implements Serializable {
     @Column(nullable = false)
     private String password;
 
-    @OneToOne (mappedBy="utilizador")
+    @OneToOne (mappedBy="user")
     private VirtualTeam virtualTeam;
 
 
@@ -29,10 +29,10 @@ public class Utilizador implements Serializable {
         return virtualTeam;
     }
 
-    public Utilizador() {
+    public User() {
     }
 
-    public Utilizador(String name, String email, String password) {
+    public User(String name, String email, String password) {
         this.username = name;
         this.email = email;
         this.password = password;
