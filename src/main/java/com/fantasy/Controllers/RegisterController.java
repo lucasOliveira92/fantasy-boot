@@ -33,7 +33,7 @@ public class RegisterController {
      
     @RequestMapping(method = RequestMethod.POST)
     public String processRegistration(Map<String, Object> model,Utilizador user) {
-         System.out.println(user.getName());
+         System.out.println(user.getUsername());
          System.out.println(user.getEmail());
          System.out.println(user.getPassword());
          

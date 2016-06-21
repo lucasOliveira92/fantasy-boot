@@ -7,7 +7,6 @@ import com.fantasy.Repositories.UserRepository;
 import com.fantasy.Repositories.PlayerRepository;
 import com.fantasy.Repositories.GameEventRepository;
 import com.fantasy.Repositories.JourneyRepository;
-import com.fantasy.Models.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -15,8 +14,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-import java.util.Date;
-import java.util.Set;
 
 @SpringBootApplication
 @EnableAutoConfiguration

@@ -16,8 +16,8 @@ public class GestorUtilizadores {
         return users.findAll();
     }
     
-    public Utilizador  getUserByName(String name){
-        return users.findByName(name);
+    public Utilizador  getUserByName(String username){
+        return users.findByUsername(username);
     }
     /*
     public Utilizador getUserById(long id){
@@ -25,8 +25,6 @@ public class GestorUtilizadores {
     }*/
     
     public Utilizador create(Utilizador user) throws Exception {
-        if(users.exists(user.getId()))
-            throw new Exception("User already exists!");
-        else return users.save(user);
+        return users.save(user);
     }
 }

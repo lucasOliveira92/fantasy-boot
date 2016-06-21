@@ -7,5 +7,5 @@ import com.fantasy.Models.Utilizador;
 
 public interface UserRepository extends CrudRepository<Utilizador, Long> {
 
-    Utilizador findByName(String name);
+    Utilizador findByUsername(String username);
 }

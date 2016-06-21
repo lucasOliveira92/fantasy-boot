@@ -12,7 +12,7 @@
             You have been logged out.
         </div>
         <form th:action="@{/register}" method="post" th:object="${user}">
-            <div><label> User Name : <input type="text" name="username" th:field="*{name}"/> </label></div>
+            <div><label> User Name : <input type="text" name="username" th:field="*{username}"/> </label></div>
             <div><label> Email : <input type="text" name="email" th:field="*{email}"/> </label></div>
             <div><label> Password: <input type="password" name="password" th:field="*{password}"/> </label></div>
             <div><input type="submit" value="Registar fdp"/></div>
