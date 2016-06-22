@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
 <title>Registration Success</title>
 </head>
@@ -21,6 +21,10 @@
             <tr>
                 <td>E-mail:</td>
                 <td th:text="${user.email}">xxx</td>
+            </tr>
+            <tr>
+                <td>User id:</td>
+                <td th:text="${user.id}">xxx</td>
             </tr>
         </table>
     </div>

@@ -1,8 +1,7 @@
 package com.fantasy.Services;
 
+import com.fantasy.DAO.UserDAO;
 import com.fantasy.Models.User;
-import java.util.Collection;
-import java.util.LinkedList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,7 +9,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.fantasy.DAO.UserDAO;
+
+import java.util.Collection;
+import java.util.LinkedList;
 
 
 @Service
@@ -35,12 +36,20 @@ public class UserService implements UserDetailsService {
         return userDAO.save(user);
     }
     
-    public User  getUserByName(String username){
+    public User  getUserByUsername(String username){
         return userDAO.findByUsername(username);
     }
     
     public Iterable<User> getAllUsers() {
         return userDAO.findAll();
+    }
+
+    public User getUserById(long id){
+        return userDAO.findOne(id);
+    }
+
+    public User saveUser(User ut){
+        return userDAO.save(ut);
     }
 
 }

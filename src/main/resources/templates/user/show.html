@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="row">
+<div class="divs box-body table-responsive">
+    <aside class="col-md-4">
+        <section class="user_info text-center">
+            <div class="pull-left">
+                <td>Username:</td>
+                <td th:text="${user.username}">xxx</td>
+                <td>Email:</td>
+                <td th:text="${user.email}">xxx</td>
+            </div>
+        </section>
+    </aside>
+</div>
+</div>
+</body>
+</html>
