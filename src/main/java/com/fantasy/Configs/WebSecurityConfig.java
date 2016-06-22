@@ -14,7 +14,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true)
+//@EnableGlobalMethodSecurity(securedEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     
     @Autowired
@@ -26,6 +26,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
          //   .authorizeRequests()
           //      .antMatchers("/", "/home","/user/new","/user/**","/greeting").permitAll()
           //      .anyRequest().authenticated()
+
                 .and()
             .formLogin()
                 .loginPage("/login")

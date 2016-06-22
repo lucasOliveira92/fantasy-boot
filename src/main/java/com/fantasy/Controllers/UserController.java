@@ -6,9 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.validation.Valid;
 
 @Controller
 public class UserController {
@@ -44,10 +48,26 @@ public class UserController {
     }
 
     @RequestMapping(value = "user", method = RequestMethod.POST)
-    public String saveUser(User utilizador){
+    public String saveUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model){
 
-        gestor.saveUser(utilizador);
+        if(user.getPassword().compareTo(user.getPasswordCheck()) != 0){
+            bindingResult.reject("password","Passwords não fazem match");
+        }
+        else{
+            User u = gestor.getUserByUserameOrEmail(user.getUsername(),user.getEmail());
+            if( u != null && u.getUsername().compareTo(user.getUsername()) == 0)
+                bindingResult.reject("username","Username já existe");
+            else if(u != null && u.getEmail().compareTo(user.getEmail()) == 0){
+                bindingResult.reject("email","Email já existe");
+            }
+        }
+        if (bindingResult.hasErrors()) {
+            model.addAttribute("user", user);
+            return "user/form";
+        }
 
-        return "redirect:/user/" + utilizador.getId();
+        gestor.saveUser(user);
+
+        return "redirect:/user/" + user.getId();
     }
 }
