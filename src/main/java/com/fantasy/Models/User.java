@@ -21,6 +21,25 @@ public class User implements Serializable {
     @Column(nullable = false)
     private String password;
 
+    @Transient
+    private String passwordCheck;
+
+    public VirtualTeam getVirtualTeam() {
+        return virtualTeam;
+    }
+
+    public void setVirtualTeam(VirtualTeam virtualTeam) {
+        this.virtualTeam = virtualTeam;
+    }
+
+    public String getPasswordCheck() {
+        return passwordCheck;
+    }
+
+    public void setPasswordCheck(String passwordCheck) {
+        this.passwordCheck = passwordCheck;
+    }
+
     @OneToOne (mappedBy="user")
     private VirtualTeam virtualTeam;
 

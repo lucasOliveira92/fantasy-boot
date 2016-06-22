@@ -35,6 +35,10 @@ public class UserService implements UserDetailsService {
     public User create(User user) throws Exception {
         return userDAO.save(user);
     }
+
+    public User getUserByUserameOrEmail(String username, String email){
+        return userDAO.findByUsernameOrEmail(username,email);
+    }
     
     public User  getUserByUsername(String username){
         return userDAO.findByUsername(username);
