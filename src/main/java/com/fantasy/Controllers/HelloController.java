@@ -14,10 +14,10 @@ public class HelloController {
     }
     
     //@Secured("ROLE_USER")
-    @RequestMapping("/greeting")
+    @RequestMapping("/home")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
-        return "greeting";
+        return "home";
     }
 
 }

@@ -1,7 +1,7 @@
 package com.fantasy.Models;
 
-import java.io.Serializable;
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "USERS")
@@ -23,7 +23,6 @@ public class User implements Serializable {
 
     @OneToOne (mappedBy="user")
     private VirtualTeam virtualTeam;
-
 
     public VirtualTeam getTeam() {
         return virtualTeam;
