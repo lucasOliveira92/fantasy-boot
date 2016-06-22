@@ -3,6 +3,7 @@ package com.fantasy.Controllers;
 import com.fantasy.Models.User;
 import com.fantasy.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -33,6 +34,7 @@ public class UserController {
         return "user/show";
     }
 
+    @Secured("ROLSE_USER")
     @RequestMapping("user/edit/{id}")
     public String edit(@PathVariable Integer id, Model model){
         model.addAttribute("user", gestor.getUserById(id));
