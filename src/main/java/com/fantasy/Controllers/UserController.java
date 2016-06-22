@@ -32,13 +32,13 @@ public class UserController {
     @RequestMapping("user/edit/{id}")
     public String edit(@PathVariable Integer id, Model model){
         model.addAttribute("user", gestor.getUserById(id));
-        return "userform";
+        return "user/form";
     }
 
     @RequestMapping("user/new")
     public String newProduct(Model model){
         model.addAttribute("user", new User());
-        return "userform";
+        return "user/form";
     }
 
     @RequestMapping(value = "user", method = RequestMethod.POST)
