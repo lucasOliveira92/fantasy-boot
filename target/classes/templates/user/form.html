@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
+<div class="container-fluid">
+    <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
 <div class="container">
-
     <h2>User Details</h2>
     <div>
         <form class="form-horizontal" th:object="${user}" th:action="@{/user}" method="post">
@@ -51,5 +52,6 @@
         </form>
     </div>
 </div>
+    </div>
 </body>
 </html>
