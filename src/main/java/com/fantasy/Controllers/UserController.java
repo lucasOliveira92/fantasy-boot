@@ -4,6 +4,8 @@ import com.fantasy.Models.User;
 import com.fantasy.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -37,8 +39,16 @@ public class UserController {
     @Secured("ROLE_USER")
     @RequestMapping("user/edit/{id}")
     public String edit(@PathVariable Integer id, Model model){
-        model.addAttribute("user", gestor.getUserById(id));
-        return "user/form";
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestor.getUserById(id);
+
+        if(u.getUsername().compareTo(auth.getName()) == 0) {
+            model.addAttribute("user", u);
+            return "user/form";
+        }
+        else
+            return "redirect:/home";
     }
 
     @RequestMapping("user/new")
