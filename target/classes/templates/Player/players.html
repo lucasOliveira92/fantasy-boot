@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(players)}">
+        <h2>Players List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>playername</th>
+                <th>Email</th>
+                <th>Edit</th>
+            </tr>
+            <tr th:each="player : ${players}">
+                <td><a th:href="${'/player/' + player.id}">Id</a></td>
+                <td th:text="${player.name}">playername</td>
+                <td th:text="${player.position}">email</td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+</body>
+</html>

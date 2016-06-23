@@ -1,6 +1,9 @@
 package com.fantasy.Models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
@@ -12,10 +15,12 @@ public class User implements Serializable {
     @Column(name = "user_id")
     private Long id;
 
+    @NotEmpty
     @Column(nullable = false, unique = true)
     private String username;
 
     @Column(nullable = false, unique = true)
+    @NotEmpty
     private String email;
 
     @Column(nullable = false)
@@ -88,8 +93,9 @@ public class User implements Serializable {
         this.password = passwordl;
     }
 
-    public boolean hasVirtualTeam(){
-        if(virtualTeam==null)
+
+    public boolean hasVirtualTeam() {
+        if (virtualTeam == null)
             return false;
         else
             return true;

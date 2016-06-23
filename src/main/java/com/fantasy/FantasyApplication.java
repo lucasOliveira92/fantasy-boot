@@ -49,7 +49,7 @@ public class FantasyApplication {
 			repository.save(new User("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new User("Quim","quim@mail.pt","1"));
 
-			RealTeam rt = new RealTeam("Benfica","a","a");
+			/*RealTeam rt = new RealTeam("Benfica","a","a");
 			realRepo.save(rt);
 
 			RealTeam rtBD = realRepo.findByName("Benfica");
