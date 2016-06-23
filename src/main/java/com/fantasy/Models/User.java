@@ -87,4 +87,11 @@ public class User implements Serializable {
     public void setPassword(String passwordl) {
         this.password = passwordl;
     }
+
+    public boolean hasVirtualTeam(){
+        if(virtualTeam==null)
+            return false;
+        else
+            return true;
+    }
 }

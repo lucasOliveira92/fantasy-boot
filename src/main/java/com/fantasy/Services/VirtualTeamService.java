@@ -1,12 +1,14 @@
 package com.fantasy.Services;
 
+import com.fantasy.DAO.VirtualTeamDAO;
 import com.fantasy.Models.Player;
+import com.fantasy.Models.User;
 import com.fantasy.Models.VirtualTeam;
-import java.util.List;
-import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.fantasy.DAO.VirtualTeamDAO;
+
+import javax.transaction.Transactional;
+import java.util.List;
 
 
 @Service
@@ -20,12 +22,14 @@ public class VirtualTeamService {
     }
     
     public VirtualTeam getVirtualTeam(long userId){
-        return virtualTeams.findByUser(userId);
+        return virtualTeams.findByUserId(userId);
     }
     
     public VirtualTeam saveVirtualTeam(VirtualTeam vt){
         return virtualTeams.save(vt);
     }
+
+    public User getUserById(long id){ return virtualTeams.findByUserId(id).getOwner(); }
     
     public VirtualTeam doTransfer(List<Player> in, List<Player> out, int virtual_team_id) throws Exception{
         VirtualTeam vt = virtualTeams.findById(virtual_team_id);

@@ -26,18 +26,17 @@ public class UserController {
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public String list(Model model){
         model.addAttribute("users", gestor.getAllUsers());
-        System.out.println("Returning users:");
-        return "user/users";
+        return "users";
     }
 
-    @RequestMapping("user/{id}")
+    @RequestMapping(value ="user/{id}", method = RequestMethod.GET)
     public String showUser(@PathVariable Integer id, Model model){
         model.addAttribute("user",gestor.getUserById(id));
-        return "user/show";
+        return "show";
     }
 
     @Secured("ROLE_USER")
-    @RequestMapping("user/edit/{id}")
+    @RequestMapping(value ="user/edit/{id}", method = RequestMethod.GET)
     public String edit(@PathVariable Integer id, Model model){
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -45,7 +44,7 @@ public class UserController {
 
         if(u.getUsername().compareTo(auth.getName()) == 0) {
             model.addAttribute("user", u);
-            return "user/form";
+            return "form";
         }
         else
             return "redirect:/home";
@@ -54,7 +53,7 @@ public class UserController {
     @RequestMapping("user/new")
     public String newUser(Model model){
         model.addAttribute("user", new User());
-        return "user/form";
+        return "form";
     }
 
     @RequestMapping(value = "user", method = RequestMethod.POST)

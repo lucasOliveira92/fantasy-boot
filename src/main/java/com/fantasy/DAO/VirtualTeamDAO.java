@@ -1,10 +1,9 @@
 package com.fantasy.DAO;
 
-import com.fantasy.Models.User;
-import java.util.List;
-
 import com.fantasy.Models.VirtualTeam;
 import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
 
 public interface VirtualTeamDAO extends CrudRepository<VirtualTeam, Long> {
 
@@ -12,5 +11,5 @@ public interface VirtualTeamDAO extends CrudRepository<VirtualTeam, Long> {
     
     VirtualTeam findById(long id);
     
-    VirtualTeam findByUser (long userId);
+    VirtualTeam findByUserId(long userId);
 }

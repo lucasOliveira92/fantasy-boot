@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container-fluid">
+    <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
+    <div class="row">
+        <div class="box-body table-responsive">
+            <h2>Team Details</h2>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><b>Name: </b></label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${team.name}">Name</p></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><b>Budget: </b></label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${team.budget}">Budget</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label"><b>Number of transfers available: </b></label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${team.numberTransfers}">Transfers</p>
+                    </div>
+                </div>
+
+                <div th:if="${team.getPlayers() != null}" class="form-group">
+                    <h2>Players list</h2>
+                    <table class="table table-striped">
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Cost</th>
+                        </tr>
+                        <tr th:each="player : ${team.getPlayers()}">
+                            <td><a th:href="${'/player/' + player.id}">Id</a></td>
+                            <td th:text="${player.name}">Name</td>
+                            <td th:text="${player.position}">position</td>
+                            <td th:text="${player.cost}">cost</td>
+                        </tr>
+                    </table>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

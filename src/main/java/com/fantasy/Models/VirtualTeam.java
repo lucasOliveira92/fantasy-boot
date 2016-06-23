@@ -35,38 +35,11 @@ public class VirtualTeam implements Serializable {
     @JoinTable(name="virtual_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
     private Set<Player> players;
 
-    public Set<Player> getPlayers()
-    {
-        return players;
-    }
-    public void setPlayers(Set<Player> players)
-    {
-        this.players = players;
-    }
-
-    public Set<Player> addPlayer(Player p){
-        if(players == null){
-            this.players = new HashSet<>();
-        }
-        this.players.add(p);
-        return players;
-    }
-    
-    public Set<Player> removePlayer(Player p){
-        if(players == null){
-            return this.players = new HashSet<>();
-        }
-        for(Player pl: this.players){
-            if(pl.getName() == p.getName()){
-                this.players.remove(pl);
-            }
-        }
-        return this.players;
-    }
-
 
     public VirtualTeam(){
-
+        this.name = "";
+        this.budget = 1000;
+        this.numberTransfers = 2;
     }
 
     public VirtualTeam(String name, int budget, int numberTransfers) {
@@ -131,5 +104,33 @@ public class VirtualTeam implements Serializable {
     public void setOwner(User owner) {
         this.user = owner;
     }
-    
+
+    public Set<Player> getPlayers()
+    {
+        return players;
+    }
+    public void setPlayers(Set<Player> players)
+    {
+        this.players = players;
+    }
+
+    public Set<Player> addPlayer(Player p){
+        if(players == null){
+            this.players = new HashSet<>();
+        }
+        this.players.add(p);
+        return players;
+    }
+
+    public Set<Player> removePlayer(Player p){
+        if(players == null){
+            return this.players = new HashSet<>();
+        }
+        for(Player pl: this.players){
+            if(pl.getName() == p.getName()){
+                this.players.remove(pl);
+            }
+        }
+        return this.players;
+    }
 }
