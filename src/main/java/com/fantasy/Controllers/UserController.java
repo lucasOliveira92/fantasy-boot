@@ -26,13 +26,13 @@ public class UserController {
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public String list(Model model){
         model.addAttribute("users", gestor.getAllUsers());
-        return "users";
+        return "user/users";
     }
 
     @RequestMapping(value ="user/{id}", method = RequestMethod.GET)
     public String showUser(@PathVariable Integer id, Model model){
         model.addAttribute("user",gestor.getUserById(id));
-        return "show";
+        return "user/show";
     }
 
     @Secured("ROLE_USER")
@@ -44,7 +44,7 @@ public class UserController {
 
         if(u.getUsername().compareTo(auth.getName()) == 0) {
             model.addAttribute("user", u);
-            return "form";
+            return "user/form";
         }
         else
             return "redirect:/home";
@@ -53,7 +53,7 @@ public class UserController {
     @RequestMapping("user/new")
     public String newUser(Model model){
         model.addAttribute("user", new User());
-        return "form";
+        return "user/form";
     }
 
     @RequestMapping(value = "user", method = RequestMethod.POST)

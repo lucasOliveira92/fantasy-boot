@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Title</title>
+    <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
+    <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
     <div th:if="${not #lists.isEmpty(players)}">
         <h2>Players List</h2>
         <table class="table table-striped">
