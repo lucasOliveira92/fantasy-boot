@@ -7,5 +7,40 @@
 <div class="container-fluid">
     <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
 </div>
+<div th:if="${players != null}" class="col-md-6">
+    <h2>Players list</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Cost</th>
+        </tr>
+        <tr th:each="player : ${players}">
+            <td><a th:href="${'/player/' + player.id}">Id</a></td>
+            <td th:text="${player.name}">Name</td>
+            <td th:text="${player.position}">position</td>
+            <td th:text="${player.cost}">cost</td>
+        </tr>
+    </table>
+
+</div>
+<aside th:if="${team.getPlayers() != null}" class="form-group">
+    <h2>Players list</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Cost</th>
+        </tr>
+        <tr th:each="playert : ${team.getPlayers()}">
+            <td><a th:href="${'/player/' + playert.id}">Id</a></td>
+            <td th:text="${playert.name}">Name</td>
+            <td th:text="${playert.position}">position</td>
+            <td th:text="${playert.cost}">cost</td>
+        </tr>
+    </table>
+</aside>
 </body>
 </html>

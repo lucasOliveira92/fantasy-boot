@@ -77,6 +77,7 @@ public class UserController {
 
         gestor.saveUser(user);
 
-        return "redirect:/user/" + user.getId();
+       // return "redirect:/user/" + user.getId();
+        return "redirect:/team/new/" + user.getId();
     }
 }

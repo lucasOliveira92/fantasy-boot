@@ -2,6 +2,7 @@ package com.fantasy.Controllers;
 
 import com.fantasy.Models.User;
 import com.fantasy.Models.VirtualTeam;
+import com.fantasy.Services.PlayerService;
 import com.fantasy.Services.UserService;
 import com.fantasy.Services.VirtualTeamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,9 @@ public class VirtualTeamController {
     @Autowired
     private UserService gestorUser;
 
+    @Autowired
+    private PlayerService playerService;
+
     @Secured("ROLE_USER")
     @RequestMapping(value = "team/{id}", method = RequestMethod.GET)
     public String showVirtualTeam(@PathVariable Integer id, Model model) {
@@ -35,21 +39,22 @@ public class VirtualTeamController {
     }
 
     @Secured("ROLE_USER")
-    @RequestMapping(value = "team/new", method = RequestMethod.GET)
-    public String newVirtualTeam(Model model) {
+    @RequestMapping(value = "team/new/{id}", method = RequestMethod.GET)
+    public String newVirtualTeam(@PathVariable Integer id, Model model) {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
 
         if (u != null) {
             if (u.hasVirtualTeam()) {
+                return "redirect:/team/" + u.getId();
+            } else {
+                model.addAttribute("players", playerService.getAllPlayers());
                 model.addAttribute("team", new VirtualTeam());
                 return "virtualTeam/new";
-            } else {
-                return "redirect:/virtualTeam/" + u.getId();
             }
         } else {
-            return "redirect:/home";
+            return "redirect:/login";
         }
 
     }
@@ -64,6 +69,6 @@ public class VirtualTeamController {
 
         gestor.saveVirtualTeam(virtualTeam);
 
-        return "redirect:/virtualTeam/" + virtualTeam.getId();
+        return "redirect:/team/" + virtualTeam.getId();
     }
 }

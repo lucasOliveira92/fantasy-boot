@@ -1,5 +1,7 @@
 package com.fantasy.Models;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -14,6 +16,7 @@ public class VirtualTeam implements Serializable {
     @Column(name = "virtual_team_id")
     private Long id;
 
+    @NotEmpty
     @Column(name = "name", nullable = false)
     private String name;
 

@@ -1,27 +1,16 @@
 package com.fantasy;
 
-import com.fantasy.Models.Game;
-import com.fantasy.Models.GameEvent;
-import com.fantasy.Models.GameWeek;
-import com.fantasy.Models.Player;
-import com.fantasy.Models.RealTeam;
-import com.fantasy.Models.User;
-import com.fantasy.Models.VirtualTeam;
-import java.util.Date;
-import java.util.Set;
+import com.fantasy.DAO.*;
+import com.fantasy.Models.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import com.fantasy.DAO.GameEventDAO;
-import com.fantasy.DAO.GameDAO;
-import com.fantasy.DAO.GameWeekDAO;
-import com.fantasy.DAO.PlayerDAO;
-import com.fantasy.DAO.RealTeamDAO;
-import com.fantasy.DAO.UserDAO;
-import com.fantasy.DAO.VirtualTeamDAO;
+
+import java.util.Date;
+import java.util.Set;
 
 
 @SpringBootApplication
@@ -49,16 +38,22 @@ public class FantasyApplication {
 			repository.save(new User("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new User("Quim","quim@mail.pt","1"));
 
-			/*RealTeam rt = new RealTeam("Benfica","a","a");
+			RealTeam rt = new RealTeam("Benfica","a","a");
 			realRepo.save(rt);
 
 			RealTeam rtBD = realRepo.findByName("Benfica");
 
 			Player p1 = new Player("Eder", "AC",90000000,rtBD);
 			Player p2 = new Player("Ronaldo", "AC",90000000,rtBD);
+			Player p3 = new Player("Andre", "AC",90000000);
+			Player p4 = new Player("Pepão", "DEF",90000000);
+			Player p5 = new Player("Manquinho", "MID",90000000);
 
 			playerRepo.save(p1);
 			playerRepo.save(p2);
+			playerRepo.save(p3);
+			playerRepo.save(p4);
+			playerRepo.save(p5);
 
 			RealTeam rtBD2 = realRepo.findByName("Benfica");
 			Set<Player> players = rtBD2.getPlayers();
