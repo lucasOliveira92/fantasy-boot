@@ -39,8 +39,8 @@ public class VirtualTeamController {
     }
 
     @Secured("ROLE_USER")
-    @RequestMapping(value = "team/new/{id}", method = RequestMethod.GET)
-    public String newVirtualTeam(@PathVariable Integer id, Model model) {
+    @RequestMapping(value = "team/new", method = RequestMethod.GET)
+    public String newVirtualTeam(Model model) {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
@@ -69,6 +69,6 @@ public class VirtualTeamController {
 
         gestor.saveVirtualTeam(virtualTeam);
 
-        return "redirect:/team/" + virtualTeam.getId();
+        return "redirect:/team/new";
     }
 }

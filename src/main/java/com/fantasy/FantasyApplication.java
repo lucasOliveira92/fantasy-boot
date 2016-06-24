@@ -34,8 +34,10 @@ public class FantasyApplication {
 	@Bean
 	public CommandLineRunner demo(UserDAO repository, PlayerDAO playerRepo, VirtualTeamDAO virtualRepo, RealTeamDAO realRepo, GameEventDAO gEventRepo, GameDAO gameRepo, GameWeekDAO journeyRepo) {
 		return (args) -> {
+
+
 			// save a couple of Users
-			repository.save(new User("Besuntas","besuntas@mail.pt","1"));
+			/*repository.save(new User("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new User("Quim","quim@mail.pt","1"));
 
 			RealTeam rt = new RealTeam("Benfica","a","a");
