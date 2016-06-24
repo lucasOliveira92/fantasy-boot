@@ -2,8 +2,10 @@ package com.fantasy.Services;
 
 
 import com.fantasy.DAO.GameWeekDAO;
+import com.fantasy.Models.Game;
 import com.fantasy.Models.GameWeek;
 import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Set;
 
 public class GameWeekService {
     @Autowired
@@ -16,4 +18,8 @@ public class GameWeekService {
     public GameWeek saveGameWeek(GameWeek gameWeek){ return gameWeeks.save(gameWeek); }
 
     public Iterable<GameWeek> getAllGameWeeks(){ return gameWeeks.findAll(); }
+
+    public Set<Game> getGamesByGameWeekId(long id){ return getGameWeekById(id).getGames(); }
+
+    public Set<Game> getGamesByGameWeekNumber(int number){ return getGameWeekByNumber(number).getGames(); }
 }
