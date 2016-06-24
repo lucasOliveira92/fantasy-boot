@@ -3,9 +3,6 @@ package com.fantasy.Models;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Created by Lucas on 20-Jun-16.
- */
 
 @Entity
 @Table(name = "GAME_WEEK_SNAPSHOTS")
@@ -19,32 +16,27 @@ public class GameWeekSnapshot {
     @JoinTable(name="snapshot_players", joinColumns=@JoinColumn(name="snapshot_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
     private Set<Player> players;
 
-    public Set<Player> getPlayers()
-    {
-        return players;
-    }
-    public void setPlayers(Set<Player> players)
-    {
-        this.players = players;
-    }
-
     @Column(name = "captain_id")
     private long capitao;
 
     @Column(name = "game_week_points")
     private long gameWeekPoints;
 
-    @Column (name = "game_week")
-    private long gameWeek;
+    @Column (name = "game_week_id")
+    private long gameWeek_id;
 
+    @Column(name = "virtual_team_id")
+    private long virtual_team_id;
 
     public GameWeekSnapshot() {
     }
 
-    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints) {
+    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints, long gameWeek_id, long virtual_team_id) {
         this.players = players;
         this.capitao = capitao;
         this.gameWeekPoints = gameWeekPoints;
+        this.gameWeek_id = gameWeek_id;
+        this.virtual_team_id = virtual_team_id;
     }
 
     public Long getId() {
@@ -69,16 +61,28 @@ public class GameWeekSnapshot {
     }
 
     public long getGameWeek() {
-        return gameWeek;
+        return gameWeek_id;
     }
 
     public void setGameWeek(long gameWeek) {
-        this.gameWeek = gameWeek;
+        this.gameWeek_id = gameWeek;
     }
-    
-    
 
-    public void setId(Long id) {
-        this.id = id;
+    public Set<Player> getPlayers()
+    {
+        return players;
+    }
+
+    public void setPlayers(Set<Player> players)
+    {
+        this.players = players;
+    }
+
+    public long getVirtual_team_id() {
+        return virtual_team_id;
+    }
+
+    public void setVirtual_team_id(long virtual_team_id) {
+        this.virtual_team_id = virtual_team_id;
     }
 }

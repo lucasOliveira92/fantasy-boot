@@ -16,7 +16,7 @@ public class GameWeek implements Serializable {
     @Column(name = "date", nullable = false)
     private Date date;
 
-    @Column(name = "number", nullable = false)
+    @Column(name = "number", nullable = false, unique = true)
     private int number;
 
     @OneToMany(mappedBy="gameWeek", fetch = FetchType.EAGER)
