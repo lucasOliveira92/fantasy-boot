@@ -105,6 +105,6 @@ public class VirtualTeamController {
 
         gestor.saveVirtualTeam(virtualTeam);
 
-        return "redirect:/team/" + virtualTeam.getId();
+        return "redirect:/team/new";
     }
 }
