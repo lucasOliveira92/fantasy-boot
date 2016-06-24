@@ -8,6 +8,6 @@ import org.springframework.data.repository.CrudRepository;
 public interface GameWeekSnapshotDAO extends CrudRepository<GameWeek, Long> {
 
     GameWeekSnapshot findById(long id);
-    Iterable<GameWeekSnapshot> findByVirtualTeamId(long virtual_team_id);
-    Iterable<GameWeekSnapshot> findByGameWeekId(long game_week_id);
+  //  Iterable<GameWeekSnapshot> findByVirtualTeamId(long virtual_team_id);
+  //  Iterable<GameWeekSnapshot> findByGameWeekId(long game_week_id);
 }

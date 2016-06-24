@@ -21,22 +21,28 @@ public class GameWeekSnapshot {
 
     @Column(name = "game_week_points")
     private long gameWeekPoints;
-
+/*
     @Column (name = "game_week_id")
-    private long gameWeek_id;
-
+    private long game_week_id;
+*/
     @Column(name = "virtual_team_id")
     private long virtual_team_id;
 
     public GameWeekSnapshot() {
     }
-
+/*
     public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints, long gameWeek_id, long virtual_team_id) {
         this.players = players;
         this.capitao = capitao;
         this.gameWeekPoints = gameWeekPoints;
-        this.gameWeek_id = gameWeek_id;
+        this.game_week_id = gameWeek_id;
         this.virtual_team_id = virtual_team_id;
+    }
+*/
+    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints) {
+        this.players = players;
+        this.capitao = capitao;
+        this.gameWeekPoints = gameWeekPoints;
     }
 
     public Long getId() {
@@ -59,15 +65,15 @@ public class GameWeekSnapshot {
     public void setGameWeekPoints(long gameWeekPoints) {
         this.gameWeekPoints = gameWeekPoints;
     }
-
+/*
     public long getGameWeek() {
-        return gameWeek_id;
+        return game_week_id;
     }
 
     public void setGameWeek(long gameWeek) {
-        this.gameWeek_id = gameWeek;
+        this.game_week_id = gameWeek;
     }
-
+*/
     public Set<Player> getPlayers()
     {
         return players;
