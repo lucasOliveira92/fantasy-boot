@@ -50,7 +50,7 @@ public class UserController {
             return "redirect:/home";
     }
 
-    @RequestMapping("user/new")
+    @RequestMapping(value = "user/new", method = RequestMethod.GET)
     public String newUser(Model model){
         model.addAttribute("user", new User());
         return "user/form";
