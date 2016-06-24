@@ -10,7 +10,7 @@ public class HelloController {
 
     @RequestMapping("/")
     public String index() {
-        return "hello";
+        return "home";
     }
     
     //@Secured("ROLE_USER")

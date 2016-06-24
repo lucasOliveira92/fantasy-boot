@@ -56,6 +56,7 @@ public class UserController {
         return "user/form";
     }
 
+    @Secured("ROLE_USER")
     @RequestMapping(value = "user", method = RequestMethod.POST)
     public String saveUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model){
 
@@ -78,6 +79,6 @@ public class UserController {
         gestor.saveUser(user);
 
        // return "redirect:/user/" + user.getId();
-        return "redirect:/team/new/" + user.getId();
+        return "redirect:/team/new";
     }
 }

@@ -7,8 +7,8 @@
 <div class="container-fluid">
     <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
     <div class="row">
-        <div class="box-body table-responsive">
-            <h2>Team Details</h2>
+        <div class="box-body table-responsive col col-md-8 col-md-offset-2">
+            <h2 class="text-center">Team Details</h2>
             <form class="form-horizontal">
                 <div class="form-group">
                     <label class="col-sm-2 control-label"><b>Name: </b></label>
@@ -29,7 +29,7 @@
                 </div>
 
                 <div th:if="${team.getPlayers() != null}" class="form-group">
-                    <h2>Players list</h2>
+                    <h2 class="text-center">Players list</h2>
                     <table class="table table-striped">
                         <tr>
                             <th>Id</th>
