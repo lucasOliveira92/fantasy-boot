@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -33,16 +34,21 @@ public class VirtualTeam implements Serializable {
     @JoinColumn (name="user_id")
     private User user;
 
+    @Column(name = "total_poins", nullable = false)
+    private int totalPoints;
 
     @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name="virtual_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
     private Set<Player> players;
 
+    @OneToMany(mappedBy="virtualTeam")
+    private List<GameWeekSnapshot> gameWeekSnapshots;
 
     public VirtualTeam(){
         this.name = "";
         this.budget = 1000;
         this.numberTransfers = 2;
+        this.totalPoints = 0;
     }
 
     public VirtualTeam(String name, int budget, int numberTransfers) {
@@ -135,5 +141,25 @@ public class VirtualTeam implements Serializable {
             }
         }
         return this.players;
+    }
+
+    public int getTotalpoins() {
+        return totalPoints;
+    }
+
+    public void setTotalpoins(int totalpoins) {
+        this.totalPoints = totalpoins;
+    }
+
+    public void addPoins(int poins) {
+        this.totalPoints += poins;
+    }
+
+    public List<GameWeekSnapshot> getGameWeekSnapshots() {
+        return gameWeekSnapshots;
+    }
+
+    public void setGameWeekSnapshots(List<GameWeekSnapshot> gameWeekSnapshots) {
+        this.gameWeekSnapshots = gameWeekSnapshots;
     }
 }

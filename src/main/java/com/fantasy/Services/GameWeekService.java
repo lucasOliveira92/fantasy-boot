@@ -5,8 +5,11 @@ import com.fantasy.DAO.GameWeekDAO;
 import com.fantasy.Models.Game;
 import com.fantasy.Models.GameWeek;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.Set;
 
+@Service
 public class GameWeekService {
     @Autowired
     private GameWeekDAO gameWeeks;

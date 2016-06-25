@@ -12,4 +12,6 @@ public interface VirtualTeamDAO extends CrudRepository<VirtualTeam, Long> {
     VirtualTeam findById(long id);
     
     VirtualTeam findByUserId(long userId);
+
+    List<VirtualTeam> findAllByOrderByTotalPointsAsc();
 }

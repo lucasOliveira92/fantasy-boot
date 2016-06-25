@@ -21,24 +21,26 @@ public class GameWeekSnapshot {
 
     @Column(name = "game_week_points")
     private long gameWeekPoints;
-/*
-    @Column (name = "game_week_id")
-    private long game_week_id;
-*/
-    @Column(name = "virtual_team_id")
-    private long virtual_team_id;
+
+    @ManyToOne
+    @JoinColumn(name ="game_week_id")
+    private GameWeek gameWeek;
+
+    @ManyToOne
+    @JoinColumn(name ="virtual_team_id")
+    private VirtualTeam virtualTeam;
 
     public GameWeekSnapshot() {
     }
-/*
-    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints, long gameWeek_id, long virtual_team_id) {
+
+    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints, GameWeek gameWeek, VirtualTeam virtualTeam) {
         this.players = players;
         this.capitao = capitao;
         this.gameWeekPoints = gameWeekPoints;
-        this.game_week_id = gameWeek_id;
-        this.virtual_team_id = virtual_team_id;
+        this.gameWeek = gameWeek;
+        this.virtualTeam = virtualTeam;
     }
-*/
+
     public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints) {
         this.players = players;
         this.capitao = capitao;
@@ -84,11 +86,19 @@ public class GameWeekSnapshot {
         this.players = players;
     }
 
-    public long getVirtual_team_id() {
-        return virtual_team_id;
+    public GameWeek getGameWeek() {
+        return gameWeek;
     }
 
-    public void setVirtual_team_id(long virtual_team_id) {
-        this.virtual_team_id = virtual_team_id;
+    public void setGameWeek(GameWeek gameWeek) {
+        this.gameWeek = gameWeek;
+    }
+
+    public VirtualTeam getVirtualTeam() {
+        return virtualTeam;
+    }
+
+    public void setVirtualTeam(VirtualTeam virtualTeam) {
+        this.virtualTeam = virtualTeam;
     }
 }

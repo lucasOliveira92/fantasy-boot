@@ -1,17 +1,12 @@
 package com.fantasy;
 
 import com.fantasy.DAO.*;
-import com.fantasy.Models.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.*;
 
 
 @SpringBootApplication
@@ -36,7 +31,7 @@ public class FantasyApplication {
 	public CommandLineRunner demo(UserDAO repository, PlayerDAO playerRepo, VirtualTeamDAO virtualRepo, RealTeamDAO realTeamDAO, GameEventDAO gEventRepo, GameDAO gameRepo, GameWeekDAO journeyRepo) {
 		return (args) -> {
 
-
+/*
 			RealTeam tondela = new RealTeam ("Tondela","https://upload.wikimedia.org/wikipedia/commons/f/fc/Emblema_CD_Tondela.png","http://imgur.com/ejyF1OG");
 			RealTeam sporting = new RealTeam ("Sporting CP","https://upload.wikimedia.org/wikipedia/en/3/3e/Sporting_Clube_de_Portugal.png","http://imgur.com/HV8arSm");
 			RealTeam belenenses = new RealTeam ("Belenenses","http://upload.wikimedia.org/wikipedia/de/d/db/Belenenses_Lissabon.svg","http://imgur.com/CXwIhAI");
@@ -82,7 +77,7 @@ public class FantasyApplication {
 			HashSet playerList = new HashSet();
 			HashSet playerList = new HashSet();
 			HashSet playerList = new HashSet();*/
-			List<Player> playerList = new ArrayList();
+/*			List<Player> playerList = new ArrayList();
 			List<Player> playerList2 = new ArrayList();
 			List<Player> playerList3 = new ArrayList();
 
@@ -1003,13 +998,13 @@ public class FantasyApplication {
 
 
 			// save a couple of Users
-			/*repository.save(new User("Besuntas","besuntas@mail.pt","1"));
+			repository.save(new User("Besuntas","besuntas@mail.pt","1"));
 			repository.save(new User("Quim","quim@mail.pt","1"));
 
 			RealTeam rt = new RealTeam("Benfica","a","a");
-			realRepo.save(rt);
+			realTeamDAO.save(rt);
 
-			RealTeam rtBD = realRepo.findByName("Benfica");
+			RealTeam rtBD = realTeamDAO.findByName("Benfica");
 
 			Player p1 = new Player("Eder", "AC",90000000,rtBD);
 			Player p2 = new Player("Ronaldo", "AC",90000000,rtBD);
@@ -1023,7 +1018,7 @@ public class FantasyApplication {
 			playerRepo.save(p4);
 			playerRepo.save(p5);
 
-			RealTeam rtBD2 = realRepo.findByName("Benfica");
+			RealTeam rtBD2 = realTeamDAO.findByName("Benfica");
 			Set<Player> players = rtBD2.getPlayers();
 			for(Player p: players){
 				System.out.println(p.getName());
@@ -1047,20 +1042,17 @@ public class FantasyApplication {
 			}
 
 
-
+/*
 			System.out.println(virtualRepo.findByName("Patos FC").get(0).getOwner().getUsername());
 
 			System.out.println(repository.findByUsername("Quim").getTeam().getName());
 
-			realRepo.save(new RealTeam("Porto", "a","b"));
-			RealTeam realt = realRepo.findByName("Porto");
+			realTeamDAO.save(new RealTeam("Porto", "a","b"));
+			RealTeam realt = realTeamDAO.findByName("Porto");
 
 			journeyRepo.save(new GameWeek(new Date(),1));
-			Set<GameWeek> listaJ = journeyRepo.findByNumber(1);
-			for(GameWeek j : listaJ){
-				System.out.println("GameWeek                "+ j.getNumber());
-				gameRepo.save(new Game(new Date(),rtBD2,realt,j));
-			}
+			GameWeek journey = journeyRepo.findByNumber(1);
+			gameRepo.save(new Game(new Date(),rtBD2,realt,journey));
 			Set<Game> jogos = gameRepo.findByTeam1(rtBD2);
 			for(Game g:jogos){
 				System.out.println(g.getTeam1().getName());

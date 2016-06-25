@@ -22,6 +22,9 @@ public class GameWeek implements Serializable {
     @OneToMany(mappedBy="gameWeek", fetch = FetchType.EAGER)
     private Set<Game> games;
 
+    @OneToMany(mappedBy="gameWeek")
+    private Set<GameWeekSnapshot> gameWeekSnapshots;
+
     protected GameWeek(){}
 
     public GameWeek(Date date, int number) {
@@ -55,5 +58,13 @@ public class GameWeek implements Serializable {
 
     public Long getId() {
         return id;
+    }
+
+    public Set<GameWeekSnapshot> getGameWeekSnapshots() {
+        return gameWeekSnapshots;
+    }
+
+    public void setGameWeekSnapshots(Set<GameWeekSnapshot> gameWeekSnapshots) {
+        this.gameWeekSnapshots = gameWeekSnapshots;
     }
 }

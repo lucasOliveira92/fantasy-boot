@@ -4,7 +4,9 @@ package com.fantasy.Services;
 import com.fantasy.DAO.GameWeekSnapshotDAO;
 import com.fantasy.Models.GameWeekSnapshot;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GameWeekSnapshotService {
     @Autowired
     private GameWeekSnapshotDAO gameWeekSnapshots;

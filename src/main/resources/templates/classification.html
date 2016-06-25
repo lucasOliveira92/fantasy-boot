@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container-fluid">
+    <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
+    <div class="box-body table-responsive">
+        <div th:if="${teams != null}" class="col-md-10 col-md-offset-1">
+            <h2 class="text-center">Players list</h2>
+            <table class="table table-striped">
+                <tr>
+                    <th>Position</th>
+                    <th>Name</th>
+                    <th>Points</th>
+                </tr>
+                <tr th:each="team : ${teams}">
+                    <td th:text="${teams.indexOf(team) + 1}">Position</td>
+                    <td th:text="${team.name}">Name</td>
+                    <td th:text="${team.totalpoins}">Points</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
