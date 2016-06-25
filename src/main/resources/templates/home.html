@@ -15,7 +15,7 @@
             <div class="texto-registo">
                 <h1>Forma a tua equipa e compete com milhares de jogadores.</h1>
             </div>
-            <div class="botoes-index">
+            <div th:if="${currentUser == null}" class="botoes-index">
                 <ul>
                     <li>
                         <input type="button" class="btn btn-primary btn-lg" onclick="location.href='/user/new'"

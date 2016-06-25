@@ -143,15 +143,15 @@ public class VirtualTeam implements Serializable {
         return this.players;
     }
 
-    public int getTotalpoins() {
+    public int getTotalPoints() {
         return totalPoints;
     }
 
-    public void setTotalpoins(int totalpoins) {
+    public void setTotalPoints(int totalpoins) {
         this.totalPoints = totalpoins;
     }
 
-    public void addPoins(int poins) {
+    public void addPoints(int poins) {
         this.totalPoints += poins;
     }
 
