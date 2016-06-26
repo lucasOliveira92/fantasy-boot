@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -33,7 +34,7 @@ public class HelloController {
     @RequestMapping("/generate")
     public String generate(){
         GameWeek gw = gameWeekDAO.findByNumber(1);
-        
+
         for (Game g: gw.getGames()){
 
             // -----------------------------  Determinar probabilidade de golo --------------------------------- //
@@ -95,10 +96,7 @@ public class HelloController {
             //Determinar que posição marcou o golo
 
             List<GameEvent> eventosJogo = new ArrayList<>();
-            List<Player> marcadoresTeam1 = new ArrayList<>();
-            List<Player> marcadoresTeam2 = new ArrayList<>();
-            List<Player> amarelos = new ArrayList<>();
-            List<Player> vermelhos = new ArrayList<>();
+            List<Player> amarelados = new ArrayList<>();
             Set<Player> playersTeam1 = team1.getPlayers();
             Set<Player> playersTeam2 = team2.getPlayers();
             List<Player> team1DEF = new ArrayList<>();
@@ -123,24 +121,74 @@ public class HelloController {
                 }
             }
 
+
+            //-------------------------------------------- GERAR VERMELHOS ---------------------------------- //
+            for (int i =0; i < 8; i++){
+                Random r = new SecureRandom();
+                Player expulso;
+                int randomRed = r.nextInt(100) + 1;
+                if(randomRed <= 5){
+                    int randomInt = r.nextInt(100) + 1;
+                    if(randomInt > 40){
+                        int randomPlayerIndex = r.nextInt(team1DEF.size());
+                        expulso = team1DEF.get(randomPlayerIndex);
+                        team1DEF.remove(randomPlayerIndex);
+                    }
+                    else if(randomInt > 10 && randomInt <=40){
+                        int randomPlayerIndex = r.nextInt(team1MID.size());
+                        expulso = team1MID.get(randomPlayerIndex);
+                        team1MID.remove(randomPlayerIndex);
+                    }
+                    else{
+                        int randomPlayerIndex = r.nextInt(team1FOR.size());
+                        expulso = team1FOR.get(randomPlayerIndex);
+                        team1FOR.remove(randomPlayerIndex);
+                    }
+                    GameEvent gameEvent = new GameEvent("RED CARD",r.nextInt(90) + 1,g,expulso);
+                    eventosJogo.add(gameEvent);
+                }
+            }
+            for (int i =0; i < 8; i++){
+                Random r = new SecureRandom();
+                Player expulso;
+                int randomRed = r.nextInt(100) + 1;
+                if(randomRed <= 5){
+                    int randomInt = r.nextInt(100) + 1;
+                    if(randomInt <=10){
+                        int randomPlayerIndex = r.nextInt(team2DEF.size());
+                        expulso = team2DEF.get(randomPlayerIndex);;
+                        team2DEF.remove(randomPlayerIndex);
+                    }
+                    else if(randomInt > 10 && randomInt <=40){
+                        int randomPlayerIndex = r.nextInt(team2MID.size());
+                        expulso = team2MID.get(randomPlayerIndex);
+                        team2MID.remove(randomPlayerIndex);
+                    }
+                    else{
+                        int randomPlayerIndex = r.nextInt(team2FOR.size());
+                        expulso = team2FOR.get(randomPlayerIndex);
+                        team2FOR.remove(randomPlayerIndex);
+                    }
+                    GameEvent gameEvent = new GameEvent("RED CARD",r.nextInt(90) + 1,g,expulso);
+                    eventosJogo.add(gameEvent);
+                }
+            }
+
             //-~------------------------------------------ GERAR GOLOS ---------------------------------- //
             while(golosEquipa1 > 0){
-                Random r = new Random();
+                Random r = new SecureRandom();
                 Player marcador;
                 int randomInt = r.nextInt(100) + 1;
                 if(randomInt <=10){
                     int randomPlayerIndex = r.nextInt(team1DEF.size());
-                    marcadoresTeam1.add(team1DEF.get(randomPlayerIndex));
                     marcador = team1DEF.get(randomPlayerIndex);
                 }
                 else if(randomInt > 10 && randomInt <=40){
                     int randomPlayerIndex = r.nextInt(team1MID.size());
-                    marcadoresTeam1.add(team1MID.get(randomPlayerIndex));
                     marcador = team1MID.get(randomPlayerIndex);
                 }
                 else{
                     int randomPlayerIndex = r.nextInt(team1FOR.size());
-                    marcadoresTeam1.add(team1FOR.get(randomPlayerIndex));
                     marcador = team1FOR.get(randomPlayerIndex);
                 }
                 golosEquipa1--;
@@ -149,73 +197,86 @@ public class HelloController {
             }
 
             while(golosEquipa2 > 0){
-                Random r = new Random();
+                Random r = new SecureRandom();
+                Player marcador;
                 int randomInt = r.nextInt(100) + 1;
                 if(randomInt <=10){
                     int randomPlayerIndex = r.nextInt(team2DEF.size());
-                    marcadoresTeam2.add(team2DEF.get(randomPlayerIndex));
+                    marcador = team2DEF.get(randomPlayerIndex);
                 }
                 else if(randomInt > 10 && randomInt <=40){
                     int randomPlayerIndex = r.nextInt(team2MID.size());
-                    marcadoresTeam2.add(team2MID.get(randomPlayerIndex));
+                    marcador = team2MID.get(randomPlayerIndex);
                 }
                 else{
                     int randomPlayerIndex = r.nextInt(team2FOR.size());
-                    marcadoresTeam2.add(team2FOR.get(randomPlayerIndex));
+                    marcador = team2FOR.get(randomPlayerIndex);
                 }
                 golosEquipa2--;
+                GameEvent gameEvent = new GameEvent("GOAL",r.nextInt(90) + 1,g,marcador);
+                eventosJogo.add(gameEvent);
             }
 
-            for(GameEvent e: eventosJogo){
-                System.out.println(e.getMinute() + " - " + e.getPlayer().getName() + " - " + e.getType());
-            }
-            for(Player p: marcadoresTeam2){
-                System.out.println(p.getName());
-            }
-
-            //-~------------------------------------------ GERAR AMARELOS ---------------------------------- //
-            for (int i =0; i < 10; i++){
-                Random r = new Random();
+            //-------------------------------------------- GERAR AMARELOS ---------------------------------- //
+            for (int i =0; i < 4; i++){
+                Random r = new SecureRandom();
+                Player amarelado;
                 int randomYellow = r.nextInt(100) + 1;
-                if(randomYellow <= 20){
+                if(randomYellow <= 40){
                     int randomInt = r.nextInt(100) + 1;
-                    if(randomInt <=10){
+                    if(randomInt > 40){
                         int randomPlayerIndex = r.nextInt(team1DEF.size());
-                        amarelos.add(team1DEF.get(randomPlayerIndex));
+                        amarelado = team1DEF.get(randomPlayerIndex);
+                        team1DEF.remove(randomPlayerIndex);
                     }
                     else if(randomInt > 10 && randomInt <=40){
                         int randomPlayerIndex = r.nextInt(team1MID.size());
-                        amarelos.add(team1MID.get(randomPlayerIndex));
+                        amarelado = team1MID.get(randomPlayerIndex);
+                        team1MID.remove(randomPlayerIndex);
                     }
                     else{
                         int randomPlayerIndex = r.nextInt(team1FOR.size());
-                        amarelos.add(team1FOR.get(randomPlayerIndex));
+                        amarelado = team1FOR.get(randomPlayerIndex);
+                        team1FOR.remove(randomPlayerIndex);
                     }
+                    GameEvent gameEvent = new GameEvent("YELLOW CARD",r.nextInt(90) + 1,g,amarelado);
+                    eventosJogo.add(gameEvent);
                 }
             }
-            for (int i =0; i < 10; i++){
-                Random r = new Random();
+            for (int i =0; i < 4; i++){
+                Random r = new SecureRandom();
+                Player amarelado;
                 int randomYellow = r.nextInt(100) + 1;
-                if(randomYellow <= 20){
+                if(randomYellow <= 40){
                     int randomInt = r.nextInt(100) + 1;
-                    if(randomInt <=10){
+                    if(randomInt  > 40){
                         int randomPlayerIndex = r.nextInt(team2DEF.size());
-                        amarelos.add(team2DEF.get(randomPlayerIndex));
+                        amarelado = team2DEF.get(randomPlayerIndex);
+                        team2DEF.remove(randomPlayerIndex);
                     }
                     else if(randomInt > 10 && randomInt <=40){
                         int randomPlayerIndex = r.nextInt(team2MID.size());
-                        amarelos.add(team2MID.get(randomPlayerIndex));
+                        amarelado = team2MID.get(randomPlayerIndex);
+                        team2MID.remove(randomPlayerIndex);
                     }
                     else{
                         int randomPlayerIndex = r.nextInt(team2FOR.size());
-                        amarelos.add(team2FOR.get(randomPlayerIndex));
+                        amarelado = team2FOR.get(randomPlayerIndex);
+                        team2FOR.remove(randomPlayerIndex);
                     }
+                    GameEvent gameEvent = new GameEvent("YELLOW CARD",r.nextInt(90) + 1,g,amarelado);
+                    eventosJogo.add(gameEvent);
                 }
             }
 
-            for (Player p: amarelos){
-                System.out.println("AMARELO - " + p.getName());
+
+
+
+            for(GameEvent e: eventosJogo){
+                System.out.println(e.getMinute()+ " - " + e.getType() + " - " + e.getPlayer().getRealTeam().getName() + " - " + e.getPlayer().getName() );
             }
+
+
 
 
             System.out.println("----------------------------------------------------");

@@ -1082,9 +1082,4 @@ public class FantasyApplication {
 		};
 	}
 
-	@Bean
-	public CommandLineRunner demo1(GameDAO gameDAO, GameEventDAO gameEventDAO,GameWeekDAO gameWeekDAO){
-		return (args) -> {
-		};
-	}
 }
