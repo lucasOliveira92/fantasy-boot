@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -25,24 +24,30 @@ public class UserController {
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public String list(Model model){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestor.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
         model.addAttribute("users", gestor.getAllUsers());
         return "user/users";
     }
 
-    @RequestMapping(value ="user/{id}", method = RequestMethod.GET)
-    public String showUser(@PathVariable Integer id, Model model){
-        model.addAttribute("user",gestor.getUserById(id));
+    @RequestMapping(value ="user", method = RequestMethod.GET)
+    public String showUser(Model model){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestor.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
+        model.addAttribute("user",u);
         return "user/show";
     }
 
     @Secured("ROLE_USER")
-    @RequestMapping(value ="user/edit/{id}", method = RequestMethod.GET)
-    public String edit(@PathVariable Integer id, Model model){
+    @RequestMapping(value ="user/edit", method = RequestMethod.GET)
+    public String edit(Model model){
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User u = gestor.getUserById(id);
-
-        if(u.getUsername().compareTo(auth.getName()) == 0) {
+        User u = gestor.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
+        if(u != null) {
             model.addAttribute("user", u);
             return "user/form";
         }
@@ -52,6 +57,9 @@ public class UserController {
 
     @RequestMapping(value = "user/new", method = RequestMethod.GET)
     public String newUser(Model model){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestor.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
         model.addAttribute("user", new User());
         return "user/form";
     }
@@ -59,15 +67,18 @@ public class UserController {
     @Secured("ROLE_USER")
     @RequestMapping(value = "user", method = RequestMethod.POST)
     public String saveUser(@Valid @ModelAttribute("user") User user, BindingResult bindingResult, Model model){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestor.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
 
         if(user.getPassword().compareTo(user.getPasswordCheck()) != 0){
             bindingResult.reject("password","Passwords não fazem match");
         }
         else{
-            User u = gestor.getUserByUserameOrEmail(user.getUsername(),user.getEmail());
-            if( u != null && u.getUsername().compareTo(user.getUsername()) == 0)
+            User u2 = gestor.getUserByUserameOrEmail(user.getUsername(),user.getEmail());
+            if( u2 != null && u.getUsername().compareTo(user.getUsername()) == 0)
                 bindingResult.reject("username","Username já existe");
-            else if(u != null && u.getEmail().compareTo(user.getEmail()) == 0){
+            else if(u2 != null && u2.getEmail().compareTo(user.getEmail()) == 0){
                 bindingResult.reject("email","Email já existe");
             }
         }
@@ -78,7 +89,6 @@ public class UserController {
 
         gestor.saveUser(user);
 
-       // return "redirect:/user/" + user.getId();
         return "redirect:/team/new";
     }
 }

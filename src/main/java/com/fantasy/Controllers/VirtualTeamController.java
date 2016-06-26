@@ -14,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -34,21 +33,21 @@ public class VirtualTeamController {
     private PlayerService playerService;
 
     @Secured("ROLE_USER")
-    @RequestMapping(value = "team/{id}", method = RequestMethod.GET)
-    public String showVirtualTeam(@PathVariable long id, Model model) {
+    @RequestMapping(value = "team", method = RequestMethod.GET)
+    public String showVirtualTeam(Model model) {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
-
-        if(u.getId() == id) {
+        model.addAttribute("currentUser", u);
+        if(u != null) {
             if (u.hasVirtualTeam()) {
-                model.addAttribute("team", gestor.getVirtualTeam(id));
+                model.addAttribute("team", gestor.getVirtualTeam(u.getId()));
                 return "virtualTeam/show";
             }else{
                 return "redirect:/team/new";
             }
         }else{
-            return "redirect:/team/" + u.getId();
+            return "redirect:/";
         }
     }
 
@@ -58,7 +57,7 @@ public class VirtualTeamController {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
-
+        model.addAttribute("currentUser", u);
         if (u != null) {
             if (u.hasVirtualTeam()) {
                 ArrayList<Player> lista = (ArrayList<Player>) playerService.getAllPlayers();
@@ -80,7 +79,7 @@ public class VirtualTeamController {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
-
+        model.addAttribute("currentUser", u);
         if (u != null) {
             if (u.hasVirtualTeam()) {
                 return "redirect:/team/" + u.getId();
@@ -97,14 +96,14 @@ public class VirtualTeamController {
     @Secured("ROLE_USER")
     @RequestMapping(value = "team", method = RequestMethod.POST)
     public String saveVirtualTeam(@Valid @ModelAttribute("team") VirtualTeam virtualTeam, BindingResult bindingResult, Model model) {
-
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
         if (bindingResult.hasErrors()) {
             model.addAttribute("team", virtualTeam);
             return "virtualTeam/new";
         }
-
         gestor.saveVirtualTeam(virtualTeam);
-
         return "redirect:/team/new";
     }
 }
