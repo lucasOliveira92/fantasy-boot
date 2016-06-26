@@ -1,13 +1,16 @@
 package com.fantasy.Controllers;
 
+import com.fantasy.DAO.GameEventDAO;
 import com.fantasy.DAO.GameWeekDAO;
 import com.fantasy.Models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.transaction.Transactional;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +22,8 @@ public class HelloController {
 
     @Autowired
     GameWeekDAO gameWeekDAO;
+    @Autowired
+    GameEventDAO gameEventDAO;
 
     @RequestMapping("/")
     public String index() {
@@ -31,11 +36,14 @@ public class HelloController {
         model.addAttribute("name", name);
         return "home";
     }
-    @RequestMapping("/generate")
-    public String generate(){
-        GameWeek gw = gameWeekDAO.findByNumber(1);
+
+    @RequestMapping("/generate/{gameWeek}")
+    @Transactional
+    public String generate(@PathVariable Integer gameWeek){
+        GameWeek gw = gameWeekDAO.findByNumber(gameWeek);
 
         for (Game g: gw.getGames()){
+            gameEventDAO.deleteByGameId(g.getId());
 
             // -----------------------------  Determinar probabilidade de golo --------------------------------- //
             int chanceTeam1 = 0;
@@ -96,7 +104,6 @@ public class HelloController {
             //Determinar que posição marcou o golo
 
             List<GameEvent> eventosJogo = new ArrayList<>();
-            List<Player> amarelados = new ArrayList<>();
             Set<Player> playersTeam1 = team1.getPlayers();
             Set<Player> playersTeam2 = team2.getPlayers();
             List<Player> team1DEF = new ArrayList<>();
@@ -269,11 +276,44 @@ public class HelloController {
                 }
             }
 
+            //------------------------------------------- GERAR EVENTOS DE RESULTADO ------------------------ //
+
+            for(Player p: playersTeam1){
+                if(golosEquipa1 > golosEquipa2){
+                    GameEvent gameEvent = new GameEvent("WIN",-1,g,p);
+                    eventosJogo.add(gameEvent);
+                }
+                else if(golosEquipa1 < golosEquipa2){
+                    GameEvent gameEvent = new GameEvent("LOSE",-1,g,p);
+                    eventosJogo.add(gameEvent);
+                }
+                else{
+                    GameEvent gameEvent = new GameEvent("DRAW",-1,g,p);
+                    eventosJogo.add(gameEvent);
+                }
+            }
+
+            for(Player p: playersTeam2){
+                if(golosEquipa1 > golosEquipa2){
+                    GameEvent gameEvent = new GameEvent("LOSE",-1,g,p);
+                    eventosJogo.add(gameEvent);
+                }
+                else if(golosEquipa1 < golosEquipa2){
+                    GameEvent gameEvent = new GameEvent("WIN",-1,g,p);
+                    eventosJogo.add(gameEvent);
+                }
+                else{
+                    GameEvent gameEvent = new GameEvent("DRAW",-1,g,p);
+                    eventosJogo.add(gameEvent);
+                }
+            }
+
 
 
 
             for(GameEvent e: eventosJogo){
                 System.out.println(e.getMinute()+ " - " + e.getType() + " - " + e.getPlayer().getRealTeam().getName() + " - " + e.getPlayer().getName() );
+                gameEventDAO.save(e);
             }
 
 
