@@ -86,3 +86,47 @@ body{
     margin-top: 0;
     background-color:  lightgrey;
 }
+
+/* formulario pesquisa classification*/
+.pesquisa {
+    padding-left: 30px;
+    margin: 0;
+    max-width: 300px;
+    padding-bottom: 25px;
+}
+
+.campo-pesquisa{
+    width: 50%;
+    margin-right: 5%;
+    margin-left: auto;
+    display: inline-block;
+}
+
+.botao-pesquisa {
+    width: 40%;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+}
+
+/* formulario pesquisa statistics*/
+.pesquisa-statistic {
+    padding-left: 30px;
+    margin: 0;
+    max-width: 500px;
+    padding-bottom: 25px;
+}
+
+.campo-pesquisa-statistic{
+    width: 23%;
+    margin-right: 3%;
+    margin-left: auto;
+    display: inline-block;
+}
+
+.botao-pesquisa-statistic {
+    width: 15%;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+}

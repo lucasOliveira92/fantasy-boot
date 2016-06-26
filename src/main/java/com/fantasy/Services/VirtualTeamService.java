@@ -29,7 +29,7 @@ public class VirtualTeamService {
         return virtualTeams.save(vt);
     }
 
-    public List<VirtualTeam> getAllTeamsOrderedByPoints(){ return virtualTeams.findAllByOrderByTotalPointsAsc(); }
+    public List<VirtualTeam> getAllTeamsOrderedByPoints(){ return virtualTeams.findAllByOrderByTotalPointsDesc(); }
 
     public User getUserById(long id){ return virtualTeams.findByUserId(id).getOwner(); }
     

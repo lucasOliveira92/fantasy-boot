@@ -75,4 +75,25 @@ public class Player implements Serializable {
     public void setRealTeam(RealTeam realTeam) {
         this.realTeam = realTeam;
     }
+
+    public String getPositionFullName(){
+        String response = "";
+        switch (position){
+            case "GK":
+                response = "Goalkeeper";
+                break;
+            case "DEF":
+                response = "Defender";
+                break;
+            case "MID":
+                response = "Midfielder";
+                break;
+            case "FOR":
+                response = "Forward";
+                break;
+            default:
+                break;
+        }
+        return response;
+    }
 }
