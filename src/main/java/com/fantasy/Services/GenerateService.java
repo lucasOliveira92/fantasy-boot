@@ -28,11 +28,16 @@ public class GenerateService {
     PlayerDAO playerRepo;
     @Autowired
     UserDAO userDAO;
+    @Autowired
+    VirtualTeamDAO virtualTeamDAO;
+    @Autowired
+    GameWeekSnapshotDAO snapDAO;
 
 
     @Transactional
     public void generate(int gameWeek){
         GameWeek gw = gameWeekDAO.findByNumber(gameWeek);
+        HashMap<String,GameWeekSnapshot> snaps = genererateRandomSnapshots(gw);
 
         for (Game g: gw.getGames()){
             gameEventDAO.deleteByGameId(g.getId());
@@ -42,7 +47,7 @@ public class GenerateService {
             int chanceTeam2 = 0;
 
             int golosEquipa1 = 0;
-            int golosEquipa2 = 0; 
+            int golosEquipa2 = 0;
             int golosEquipa1Fixed = 0;
             int golosEquipa2Fixed = 0;
 
@@ -311,11 +316,10 @@ public class GenerateService {
                 System.out.println(e.getMinute()+ " - " + e.getType() + " - " + e.getPlayer().getRealTeam().getName() + " - " + e.getPlayer().getName() );
                 gameEventDAO.save(e);
             }
+
             g.setTeam1_score(golosEquipa1Fixed);
             g.setTeam2_score(golosEquipa2Fixed);
             gameDAO.save(g);
-
-
 
             System.out.println("----------------------------------------------------");
             System.out.println("----------------------------------------------------");
@@ -323,11 +327,10 @@ public class GenerateService {
     }
 
     @Transactional
-    public void populate() throws Exception{
+    public void populateRealTeamsPlayers() throws Exception{
 
 
         RealTeam tondela = new RealTeam ("Tondela","https://upload.wikimedia.org/wikipedia/commons/f/fc/Emblema_CD_Tondela.png","http://imgur.com/ejyF1OG");
-
         RealTeam sporting = new RealTeam ("Sporting CP","https://upload.wikimedia.org/wikipedia/en/3/3e/Sporting_Clube_de_Portugal.png","http://imgur.com/HV8arSm");
         RealTeam belenenses = new RealTeam ("Belenenses","http://upload.wikimedia.org/wikipedia/de/d/db/Belenenses_Lissabon.svg","http://imgur.com/CXwIhAI");
         RealTeam rioAve = new RealTeam ("rioAve","http://upload.wikimedia.org/wikipedia/de/6/63/Rio_Ave_FC.svg","http://imgur.com/cbMEWJy");
@@ -1283,11 +1286,104 @@ public class GenerateService {
         for(Game g: gameList){
             gameDAO.save(g);
         }
-
-
-
-        // save a couple of Users
-        userDAO.save(new User("Besuntas","besuntas@mail.pt","1"));
-        userDAO.save(new User("Quim","quim@mail.pt","1"));
     }
+
+    @Transactional
+    public void populateVirtualTeamsUsers(){
+        List <User> allUsers = new ArrayList<>();
+        List <Player> allGR = playerRepo.findByPosition("GK");
+        List <Player> allDEF = playerRepo.findByPosition("DEF");
+        List <Player> allMID = playerRepo.findByPosition("MID");
+        List <Player> allFOR = playerRepo.findByPosition("FOR");
+
+        allUsers.add(new User("quim","quim@mail.pt","1"));
+        allUsers.add(new User("besuntas","besuntas@mail.pt","1"));
+        allUsers.add(new User("fagundes","fagundes@mail.pt","1"));
+        allUsers.add(new User("badocha","badocha@mail.pt","1"));
+        allUsers.add(new User("pogchamp","pogchamp@mail.pt","1"));
+        allUsers.add(new User("kappa","kappa@mail.pt","1"));
+        allUsers.add(new User("keepo","keepo@mail.pt","1"));
+        allUsers.add(new User("dansgame","dansgame@mail.pt","1"));
+        allUsers.add(new User("wutface","wutface@mail.pt","1"));
+        allUsers.add(new User("opieop","opieop@mail.pt","1"));
+        allUsers.add(new User("brokeback","brokeback@mail.pt","1"));
+        allUsers.add(new User("frankerz","frankerz@mail.pt","1"));
+
+        for (User u: allUsers){
+            VirtualTeam vt = new VirtualTeam(u.getUsername() + " FC",1000,1);
+            Random r = new SecureRandom();
+
+            for(int i = 0; i < 6; i++){
+                if(i < 2)
+                    vt.addPlayer(allGR.remove(r.nextInt(allGR.size())));
+                vt.addPlayer(allDEF.remove(r.nextInt(allDEF.size())));
+                vt.addPlayer(allMID.remove(r.nextInt(allMID.size())));
+                if( i < 4)
+                    vt.addPlayer(allFOR.remove(r.nextInt(allFOR.size())));
+            }
+
+            vt.setOwner(u);
+            u.setVirtualTeam(vt);
+            userDAO.save(u);
+            virtualTeamDAO.save(vt);
+        }
+
+    }
+
+    @Transactional
+    public HashMap<String,GameWeekSnapshot> genererateRandomSnapshots(GameWeek gw){
+        HashMap<String,GameWeekSnapshot> allSnaps = new HashMap<>();
+        List<VirtualTeam> allVTeams = virtualTeamDAO.findAll();
+        List<Player> equipaTitular = new ArrayList<>();
+        int totalGR = 0, totalDEF = 0, totalMID = 0, totalFOR = 0;
+
+        for(VirtualTeam vt: allVTeams){
+            List<Player> players = vt.getPlayers();
+
+            Collections.shuffle(players, new SecureRandom());
+
+            for(Player p: players){
+                if(equipaTitular.size() == 11)
+                    break;
+                else{
+                    switch (p.getPosition()){
+                        case "GR":
+                            if(totalGR == 0){
+                                equipaTitular.add(p);
+                                totalGR++;
+                            }
+                            break;
+                        case "DEF":
+                            if(totalDEF < 4){
+                                equipaTitular.add(p);
+                                totalDEF++;
+                            }
+                            break;
+                        case "MID":
+                            if(totalMID < 4){
+                                equipaTitular.add(p);
+                                totalMID++;
+                            }
+                            break;
+                        case "FOR":
+                            if(totalFOR < 2){
+                                equipaTitular.add(p);
+                                totalFOR++;
+                            }
+                            break;
+                    }
+                }
+            }
+            GameWeekSnapshot snap = new GameWeekSnapshot(equipaTitular,equipaTitular.get(0).getId(),0,gw,vt);
+            allSnaps.put(vt.getName(),snap);
+            snapDAO.save(snap);
+        }
+        return allSnaps;
+    }
+
+    @Transactional
+    public void calculatePointsByWeek(GameWeek gw){
+
+    }
+
 }

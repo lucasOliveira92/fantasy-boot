@@ -10,4 +10,5 @@ public interface PlayerDAO extends CrudRepository<Player, Long> {
     Player findById(long player_id);
     Player findByName(String name);
     List<Player> findAllByOrderByCostDesc();
+    List<Player> findByPosition(String position);
 }
