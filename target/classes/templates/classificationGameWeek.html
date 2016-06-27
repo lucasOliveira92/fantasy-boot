@@ -9,7 +9,8 @@
     <div class="box-body table-responsive">
 
         <div th:if="${teams != null}" class="col-md-10 col-md-offset-1">
-            <h2 class="text-center">Classification</h2>
+            <h2 class="text-center">Classification on Gameweek </h2>
+            <h2 class="text-center" th:text="${number}"></h2>
             <div class="row" style="float: left; position: relative; align-items: baseline;">
                 <div id="playerSearch" class="pesquisa">
                     <div class="campo-pesquisa">
@@ -29,26 +30,24 @@
                 <tr>
                     <th>Position</th>
                     <th>Name</th>
-                    <th>Points</th>
+                    <th>Gameweek Points</th>
+                    <th>Total Points</th>
                 </tr>
                 <tr th:each="team : ${teams}">
                     <td th:text="${teams.indexOf(team) + 1}">Position</td>
                     <td th:text="${team.name}">Name</td>
-                    <td th:text="${team.totalPoints}">Points</td>
+                    <td th:text="${team.getPointsByGameWeek(gameweekID)}">Gameweek points</td>
+                    <td th:text="${team.getComulativePointsByGameWeek(gameweekID)}">Points</td>
                 </tr>
             </table>
             <div th:if="${currentUser != null}">
                 <h2 class="text-center">Your Team</h2>
-                <table class="table table-striped" th:if="${currentUser.hasVirtualTeam()}">
-                    <tr>
-                        <th>Position</th>
-                        <th>Name</th>
-                        <th>Points</th>
-                    </tr>
+                <table class="table table-striped table-bordered" th:if="${currentUser.hasVirtualTeam()}">
                     <tr>
                         <td th:text="${teams.indexOf(currentUser.getVirtualTeam()) + 1}">Position</td>
                         <td th:text="${currentUser.getVirtualTeam().getName()}">Name</td>
-                        <td th:text="${currentUser.getVirtualTeam().getTotalPoints()}">Points</td>
+                        <td th:text="${currentUser.getVirtualTeam().getPointsByGameWeek(gameweekID)}">Gameweek Points</td>
+                        <td th:text="${currentUser.getVirtualTeam().getComulativePointsByGameWeek(gameweekID)}">Points</td>
                     </tr>
                 </table>
             </div>

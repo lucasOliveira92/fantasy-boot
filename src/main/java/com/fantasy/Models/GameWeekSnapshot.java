@@ -20,7 +20,10 @@ public class GameWeekSnapshot {
     private long capitao;
 
     @Column(name = "game_week_points")
-    private long gameWeekPoints;
+    private int gameWeekPoints;
+
+    @Column(name = "game_week_comulative_points")
+    private int gameWeekComulativePoints;
 
     @ManyToOne
     @JoinColumn(name ="game_week_id")
@@ -33,7 +36,7 @@ public class GameWeekSnapshot {
     public GameWeekSnapshot() {
     }
 
-    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints, GameWeek gameWeek, VirtualTeam virtualTeam) {
+    public GameWeekSnapshot(Set<Player> players, long capitao, int gameWeekPoints, GameWeek gameWeek, VirtualTeam virtualTeam) {
         this.players = players;
         this.capitao = capitao;
         this.gameWeekPoints = gameWeekPoints;
@@ -41,7 +44,7 @@ public class GameWeekSnapshot {
         this.virtualTeam = virtualTeam;
     }
 
-    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints) {
+    public GameWeekSnapshot(Set<Player> players, long capitao, int gameWeekPoints) {
         this.players = players;
         this.capitao = capitao;
         this.gameWeekPoints = gameWeekPoints;
@@ -60,22 +63,14 @@ public class GameWeekSnapshot {
         this.capitao = capitao;
     }
 
-    public long getGameWeekPoints() {
+    public int getGameWeekPoints() {
         return gameWeekPoints;
     }
 
-    public void setGameWeekPoints(long gameWeekPoints) {
+    public void setGameWeekPoints(int gameWeekPoints) {
         this.gameWeekPoints = gameWeekPoints;
     }
-/*
-    public long getGameWeek() {
-        return game_week_id;
-    }
 
-    public void setGameWeek(long gameWeek) {
-        this.game_week_id = gameWeek;
-    }
-*/
     public Set<Player> getPlayers()
     {
         return players;
@@ -100,5 +95,13 @@ public class GameWeekSnapshot {
 
     public void setVirtualTeam(VirtualTeam virtualTeam) {
         this.virtualTeam = virtualTeam;
+    }
+
+    public int getGameWeekComulativePoints() {
+        return gameWeekComulativePoints;
+    }
+
+    public void setGameWeekComulativePoints(int gameWeekComulativePoints) {
+        this.gameWeekComulativePoints = gameWeekComulativePoints;
     }
 }

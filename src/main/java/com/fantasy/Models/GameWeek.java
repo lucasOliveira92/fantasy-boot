@@ -3,7 +3,7 @@ package com.fantasy.Models;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
+import java.util.List;
 
 @Entity
 @Table(name = "GAME_WEEKS")
@@ -20,10 +20,10 @@ public class GameWeek implements Serializable {
     private int number;
 
     @OneToMany(mappedBy="gameWeek", fetch = FetchType.EAGER)
-    private Set<Game> games;
+    private List<Game> games;
 
     @OneToMany(mappedBy="gameWeek")
-    private Set<GameWeekSnapshot> gameWeekSnapshots;
+    private List<GameWeekSnapshot> gameWeekSnapshots;
 
     protected GameWeek(){}
 
@@ -48,11 +48,11 @@ public class GameWeek implements Serializable {
         this.number = number;
     }
 
-    public Set<Game> getGames() {
+    public List<Game> getGames() {
         return games;
     }
 
-    public void setGames(Set<Game> games) {
+    public void setGames(List<Game> games) {
         this.games = games;
     }
 
@@ -60,11 +60,11 @@ public class GameWeek implements Serializable {
         return id;
     }
 
-    public Set<GameWeekSnapshot> getGameWeekSnapshots() {
+    public List<GameWeekSnapshot> getGameWeekSnapshots() {
         return gameWeekSnapshots;
     }
 
-    public void setGameWeekSnapshots(Set<GameWeekSnapshot> gameWeekSnapshots) {
+    public void setGameWeekSnapshots(List<GameWeekSnapshot> gameWeekSnapshots) {
         this.gameWeekSnapshots = gameWeekSnapshots;
     }
 }

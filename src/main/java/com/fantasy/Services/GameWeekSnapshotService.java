@@ -6,12 +6,18 @@ import com.fantasy.Models.GameWeekSnapshot;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class GameWeekSnapshotService {
     @Autowired
     private GameWeekSnapshotDAO gameWeekSnapshots;
 
     public GameWeekSnapshot getGameWeekSnapshotById(long id){ return gameWeekSnapshots.findById(id); }
+
+    public List<GameWeekSnapshot> getGameWeekSnapshotsByGameWeekId(long game_week_id){
+        return gameWeekSnapshots.findByGameWeekId(game_week_id);
+    }
 
  /*   public Iterable<GameWeekSnapshot> getAllGameWeekSnapshotsByTeamId(long virtual_team_id){ return gameWeekSnapshots.findByVirtualTeamId(virtual_team_id); }
 

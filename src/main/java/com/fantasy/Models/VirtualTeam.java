@@ -27,9 +27,6 @@ public class VirtualTeam implements Serializable {
     @Column(name = "number_transfers", nullable = false)
     private int numberTransfers;
 
-    @Column(name = "captain_id")
-    private Long idCaptain;
-
     @OneToOne
     @JoinColumn (name="user_id")
     private User user;
@@ -55,6 +52,7 @@ public class VirtualTeam implements Serializable {
         this.name = name;
         this.budget = budget;
         this.numberTransfers = numberTransfers;
+        this.totalPoints = 0;
     }
 
     public VirtualTeam(String name) {
@@ -96,14 +94,6 @@ public class VirtualTeam implements Serializable {
 
     public void setNumberTransfers(int numberTransfers) {
         this.numberTransfers = numberTransfers;
-    }
-
-    public Long getIdCaptain() {
-        return idCaptain;
-    }
-
-    public void setIdCaptain(Long idCaptain) {
-        this.idCaptain = idCaptain;
     }
 
     public User getOwner() {
@@ -161,5 +151,25 @@ public class VirtualTeam implements Serializable {
 
     public void setGameWeekSnapshots(List<GameWeekSnapshot> gameWeekSnapshots) {
         this.gameWeekSnapshots = gameWeekSnapshots;
+    }
+
+    public int getPointsByGameWeek(long game_week_id){
+        int pontos=0;
+        for (GameWeekSnapshot gameweek:this.gameWeekSnapshots) {
+            if(gameweek.getGameWeek().getId()==game_week_id){
+                pontos=gameweek.getGameWeekPoints();
+            }
+        }
+        return pontos;
+    }
+
+    public int getComulativePointsByGameWeek(long game_week_id){
+        int pontos=0;
+        for (GameWeekSnapshot gameweek:this.gameWeekSnapshots) {
+            if(gameweek.getGameWeek().getId()==game_week_id){
+                pontos=gameweek.getGameWeekComulativePoints();
+            }
+        }
+        return pontos;
     }
 }

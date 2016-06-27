@@ -1,6 +1,7 @@
 package com.fantasy.Controllers;
 
 import com.fantasy.Models.User;
+import com.fantasy.Models.VirtualTeam;
 import com.fantasy.Services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -10,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 @Controller
 public class ClassificationController {
@@ -44,9 +47,14 @@ public class ClassificationController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
 
-        model.addAttribute("currentUser", u);
+        List<VirtualTeam> teams = gestorVirtualTeams.getAllTeamsOrderedByPoints();
 
-        return "classification";
+        model.addAttribute("currentUser", u);
+        model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
+        model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
+        model.addAttribute("number", number);
+        model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());
+        return "classificationGameWeek";
     }
 
     @RequestMapping(value = "statistics", method = RequestMethod.GET)

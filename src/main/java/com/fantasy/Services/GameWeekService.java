@@ -7,7 +7,7 @@ import com.fantasy.Models.GameWeek;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
 
 @Service
 public class GameWeekService {
@@ -22,7 +22,7 @@ public class GameWeekService {
 
     public Iterable<GameWeek> getAllGameWeeks(){ return gameWeeks.findAll(); }
 
-    public Set<Game> getGamesByGameWeekId(long id){ return getGameWeekById(id).getGames(); }
+    public List<Game> getGamesByGameWeekId(long id){ return getGameWeekById(id).getGames(); }
 
-    public Set<Game> getGamesByGameWeekNumber(int number){ return getGameWeekByNumber(number).getGames(); }
+    public List<Game> getGamesByGameWeekNumber(int number){ return getGameWeekByNumber(number).getGames(); }
 }
