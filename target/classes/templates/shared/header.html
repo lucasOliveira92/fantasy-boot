@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a onclick="location.href='/'">HOME</a></li>
-                    <li th:if="${currentUser != null}"><a onclick="location.href='/team'">MY TEAM</a></li>
+                    <li th:if="${currentUser != null}"><a onclick="location.href='/team'" style="cursor: pointer;">MY TEAM</a></li>
                     <li th:if="${currentUser != null}"><a onclick="location.href='/team/transfers'">TRANSFERS</a></li>
                     <li><a onclick="location.href='/classification/'">CLASSIFICATION</a></li>
                     <li><a onclick="location.href='/statistics/'">STATISTICS</a></li>

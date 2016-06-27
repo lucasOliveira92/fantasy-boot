@@ -80,6 +80,9 @@ body{
         display: block;
     }
 }
+.navbar li{
+    cursor: pointer;
+}
 
 .dropdown:hover .dropdown-menu {
     display: block;
