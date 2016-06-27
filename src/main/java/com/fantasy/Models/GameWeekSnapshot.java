@@ -37,22 +37,21 @@ public class GameWeekSnapshot {
     public GameWeekSnapshot() {
     }
 
-    public GameWeekSnapshot(List<Player> players, long capitao, long gameWeekPoints, GameWeek gameWeek, VirtualTeam virtualTeam) {
+    public GameWeekSnapshot(List<Player> players, long capitao, GameWeek gameWeek, VirtualTeam virtualTeam) {
         this.players = players;
         this.capitao = capitao;
-        this.gameWeekPoints = gameWeekPoints;
+        this.gameWeekPoints = 0;
+        this.gameWeekCumulativePoints = 0;
         this.gameWeek = gameWeek;
         this.virtualTeam = virtualTeam;
     }
 
-    public GameWeekSnapshot(List<Player> players, long capitao, long gameWeekPoints) {
-        this.players = players;
-        this.capitao = capitao;
-        this.gameWeekPoints = gameWeekPoints;
-    }
-
     public Long getId() {
         return id;
+    }
+
+    public long getGameWeekCumulativePoints() {
+        return gameWeekCumulativePoints;
     }
 
     public void setComulativePOints(long comulativo){
@@ -63,6 +62,8 @@ public class GameWeekSnapshot {
         this.gameWeekPoints+= points;
         this.gameWeekCumulativePoints+=points;
     }
+
+
 
     public long getCapitao() {
         return capitao;

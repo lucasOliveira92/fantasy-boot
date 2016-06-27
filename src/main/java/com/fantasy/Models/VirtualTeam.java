@@ -34,7 +34,7 @@ public class VirtualTeam implements Serializable {
     private User user;
 
     @Column(name = "total_points", nullable = false)
-    private int totalPoints;
+    private long totalPoints;
 
     @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name="virtual_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
@@ -137,15 +137,15 @@ public class VirtualTeam implements Serializable {
         return this.players;
     }
 
-    public int getTotalPoints() {
+    public long getTotalPoints() {
         return totalPoints;
     }
 
-    public void setTotalPoints(int totalpoins) {
+    public void setTotalPoints(long totalpoins) {
         this.totalPoints = totalpoins;
     }
 
-    public void addPoints(int poins) {
+    public void addPoints(long poins) {
         this.totalPoints += poins;
     }
 

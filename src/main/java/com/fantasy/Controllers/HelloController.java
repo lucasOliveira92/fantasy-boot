@@ -39,13 +39,27 @@ public class HelloController {
 
     @RequestMapping("/generate/{gameWeek}")
     public String generate(@PathVariable Integer gameWeek) {
-        if(gameWeek > 0 && gameWeek <= 34)
+        if(gameWeek > 0 && gameWeek <= 34){
+            generateService.genererateRandomSnapshots(gameWeek);
             generateService.generate(gameWeek);
+        }
+
         return "home";
     }
 
     @RequestMapping("/seed")
     public String seed() {
+        try {
+            seed1();
+            seed2();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "home";
+    }
+
+    @RequestMapping("/seed1")
+    public String seed1() {
         try {
             generateService.populateRealTeamsPlayers();
         } catch (Exception e) {
