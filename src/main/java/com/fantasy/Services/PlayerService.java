@@ -20,4 +20,6 @@ public class PlayerService {
     }
 
     public List<Player> getAllPlayersByCost(){ return playerDAO.findAllByOrderByCostDesc();}
+
+    public List<Player> getAllPlayersByPosition(String position){ return playerDAO.findByPosition(position); }
 }

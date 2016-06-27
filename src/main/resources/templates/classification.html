@@ -22,7 +22,7 @@
                         </select>
                     </div>
                     <div class="botao-pesquisa">
-                        <button type="button" class="btn btn-info" onclick = "recarregaAllPlayers()"><span class="glyphicon glyphicon-search"></span> Search</button>
+                        <button type="button" class="btn btn-info" onclick = "recarregaAllTeams()"><span class="glyphicon glyphicon-search"></span> Search</button>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
     </div>
 </div>
 <script>
-    function recarregaAllPlayers(){
+    function recarregaAllTeams(){
 
         var gameweekFilter = $('#gameweekFilter option:selected').text();
         window.open("/classification/"+gameweekFilter,"_self");

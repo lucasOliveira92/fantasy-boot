@@ -4,7 +4,6 @@ import com.fantasy.DAO.*;
 import com.fantasy.Models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
 import java.security.SecureRandom;
@@ -105,8 +104,8 @@ public class GenerateService {
             //Determinar que posição marcou o golo
 
             List<GameEvent> eventosJogo = new ArrayList<>();
-            Set<Player> playersTeam1 = team1.getPlayers();
-            Set<Player> playersTeam2 = team2.getPlayers();
+            List<Player> playersTeam1 = team1.getPlayers();
+            List<Player> playersTeam2 = team2.getPlayers();
             List<Player> team1DEF = new ArrayList<>();
             List<Player> team1MID = new ArrayList<>();
             List<Player> team1FOR = new ArrayList<>();

@@ -1,12 +1,9 @@
 package com.fantasy.Models;
 
 import javax.persistence.*;
-import javax.transaction.Transactional;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "REAL_TEAMS")
@@ -27,11 +24,7 @@ public class RealTeam implements Serializable {
 
     //ATENCAO; ISTO FOI MUDADO DE EAGER PARA LAZY, SE ESTOURAR MUDAR AQUI!
     @OneToMany(mappedBy="realTeam", fetch = FetchType.LAZY)
-    private Set<Player> players;
-
-    // deixar esta anotação apenas se for bidirecional
-    //@OneToMany(mappedBy="RealTeam")
-    //private Set<Game> games;
+    private List<Player> players;
 
     protected RealTeam(){}
 
@@ -65,14 +58,13 @@ public class RealTeam implements Serializable {
         this.equipment = equipment;
     }
 
-    public Set<Player> getPlayers() {
+    public List<Player> getPlayers() {
         return players;
     }
 
-    public void setPlayers(Set<Player> players) {
+    public void setPlayers(List<Player> players) {
         this.players = players;
     }
-
 
     public void removePlayer(Player player){
         this.players.remove(player);
@@ -90,12 +82,4 @@ public class RealTeam implements Serializable {
         }
         return res;
     }
-/*
-    public List<Game> getGames() {
-        return games;
-    }
-
-    public void setGames(List<Game> games) {
-        this.games = games;
-    }*/
 }

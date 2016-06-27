@@ -14,30 +14,23 @@
                 <div id="playerSearch" class="pesquisa-statistic">
                     <div class="campo-pesquisa-statistic">
                         <label>Team:</label>
-                        <select class="btn btn-default" style="width: 100%;">
-                            <option>All</option>
-                            <option th:each="team : ${realTeams}" th:text="${team.name}">name</option>
-                        </select>
-                    </div>
-                    <div class="campo-pesquisa-statistic">
-                        <label>Gameweek:</label>
-                        <select class="btn btn-default" style="width: 100%;">
-                            <option>All</option>
-                            <option th:each="gameWeek : ${gameWeeks}" th:text="${gameWeek.number}">number</option>
+                        <select class="btn btn-default" style="width: 100%;" id="realTeamFilter">
+                            <option id="-1">All</option>
+                            <option th:each="team : ${realTeams}" th:text="${team.name}" th:id="${team.id}">name</option>
                         </select>
                     </div>
                     <div class="campo-pesquisa-statistic">
                         <label>Position:</label>
-                        <select class="btn btn-default" style="width: 100%;">
-                            <option>All</option>
-                            <option>Goalkeeper</option>
-                            <option>Defender</option>
-                            <option>Midfield</option>
-                            <option>Forward</option>
+                        <select class="btn btn-default" style="width: 100%;" id="positionFilter">
+                            <option id="-1">All</option>
+                            <option id="1">Goalkeeper</option>
+                            <option id="2">Defender</option>
+                            <option id="3">Midfield</option>
+                            <option id="4">Forward</option>
                         </select>
                     </div>
                     <div class="botao-pesquisa-statistic">
-                        <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Search</button>
+                        <button type="button" class="btn btn-info" onclick="recarregaAllPlayers()"><span class="glyphicon glyphicon-search"></span> Search</button>
                     </div>
                 </div>
             </div>
@@ -61,5 +54,12 @@
         </div>
     </div>
 </div>
+<script>
+    function recarregaAllPlayers(){
+        var positionFilter = $('#positionFilter option:selected').attr('id');
+        var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
+        window.open("/statistics/"+realTeamFilter+"/"+positionFilter,"_self");
+    };
+</script>
 </body>
 </html>
