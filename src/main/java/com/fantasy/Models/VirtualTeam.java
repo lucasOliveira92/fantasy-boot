@@ -28,7 +28,6 @@ public class VirtualTeam implements Serializable {
     @Column(name = "number_transfers", nullable = false)
     private int numberTransfers;
 
-
     @OneToOne
     @JoinColumn (name="user_id")
     private User user;
@@ -155,5 +154,25 @@ public class VirtualTeam implements Serializable {
 
     public void setGameWeekSnapshots(List<GameWeekSnapshot> gameWeekSnapshots) {
         this.gameWeekSnapshots = gameWeekSnapshots;
+    }
+
+    public int getPointsByGameWeek(long game_week_id){
+        int pontos=0;
+        for (GameWeekSnapshot gameweek:this.gameWeekSnapshots) {
+            if(gameweek.getGameWeek().getId()==game_week_id){
+                pontos=gameweek.getGameWeekPoints();
+            }
+        }
+        return pontos;
+    }
+
+    public int getComulativePointsByGameWeek(long game_week_id){
+        int pontos=0;
+        for (GameWeekSnapshot gameweek:this.gameWeekSnapshots) {
+            if(gameweek.getGameWeek().getId()==game_week_id){
+                pontos=gameweek.getGameWeekComulativePoints();
+            }
+        }
+        return pontos;
     }
 }

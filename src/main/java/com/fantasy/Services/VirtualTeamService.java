@@ -31,6 +31,8 @@ public class VirtualTeamService {
 
     public List<VirtualTeam> getAllTeamsOrderedByPoints(){ return virtualTeams.findAllByOrderByTotalPointsDesc(); }
 
+    public List<VirtualTeam> getAllVirtualTeams(){ return (List<VirtualTeam>) virtualTeams.findAll();}
+
     public User getUserById(long id){ return virtualTeams.findByUserId(id).getOwner(); }
     
     public VirtualTeam doTransfer(List<Player> in, List<Player> out, int virtual_team_id) throws Exception{
