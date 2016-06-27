@@ -1364,12 +1364,12 @@ public class GenerateService {
 
         HashMap<String, GameWeekSnapshot> allSnaps = new HashMap<>();
         List<VirtualTeam> allVTeams = virtualTeamDAO.findAll();
-        List<Player> equipaTitular = new ArrayList<>();
-        int totalGR = 0, totalDEF = 0, totalMID = 0, totalFOR = 0;
+
 
         for (VirtualTeam vt : allVTeams) {
             List<Player> players = vt.getPlayers();
-
+            List<Player> equipaTitular = new ArrayList<>();
+            int totalGR = 0, totalDEF = 0, totalMID = 0, totalFOR = 0;
             Collections.shuffle(players, new SecureRandom());
 
             for (Player p : players) {
@@ -1420,7 +1420,7 @@ public class GenerateService {
 
         for(VirtualTeam vt: allTeams){
             //Fazer set de pontos na jornada anterior
-            GameWeekSnapshot snap = snapDAO.findByGameWeekIdAndVirtualTeamId(gw.getNumber(),vt.getId());
+            GameWeekSnapshot snap = snapDAO.findByGameWeekIdAndVirtualTeamId(gw.getId(),vt.getId());
             snap.setComulativePOints(vt.getTotalPoints());
             HashMap<Player,Integer> pointsByPlayer = new HashMap<>();
             //CONVERTER LISTA PARA HASH
