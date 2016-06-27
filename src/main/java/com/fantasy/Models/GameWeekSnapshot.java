@@ -1,6 +1,7 @@
 package com.fantasy.Models;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 
@@ -14,13 +15,16 @@ public class GameWeekSnapshot {
 
     @ManyToMany(cascade=CascadeType.ALL)
     @JoinTable(name="snapshot_players", joinColumns=@JoinColumn(name="snapshot_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
-    private Set<Player> players;
+    private List<Player> players;
 
     @Column(name = "captain_id")
     private long capitao;
 
     @Column(name = "game_week_points")
     private long gameWeekPoints;
+
+    @Column(name = "game_week_cumulative_points")
+    private long gameWeekCumulativePoints;
 
     @ManyToOne
     @JoinColumn(name ="game_week_id")
@@ -33,7 +37,7 @@ public class GameWeekSnapshot {
     public GameWeekSnapshot() {
     }
 
-    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints, GameWeek gameWeek, VirtualTeam virtualTeam) {
+    public GameWeekSnapshot(List<Player> players, long capitao, long gameWeekPoints, GameWeek gameWeek, VirtualTeam virtualTeam) {
         this.players = players;
         this.capitao = capitao;
         this.gameWeekPoints = gameWeekPoints;
@@ -41,7 +45,7 @@ public class GameWeekSnapshot {
         this.virtualTeam = virtualTeam;
     }
 
-    public GameWeekSnapshot(Set<Player> players, long capitao, long gameWeekPoints) {
+    public GameWeekSnapshot(List<Player> players, long capitao, long gameWeekPoints) {
         this.players = players;
         this.capitao = capitao;
         this.gameWeekPoints = gameWeekPoints;
@@ -51,6 +55,14 @@ public class GameWeekSnapshot {
         return id;
     }
 
+    public void setComulativePOints(long comulativo){
+        this.gameWeekCumulativePoints = comulativo;
+    }
+
+    public void addPointsFromEvent(long points){
+        this.gameWeekPoints+= points;
+        this.gameWeekCumulativePoints+=points;
+    }
 
     public long getCapitao() {
         return capitao;
@@ -67,21 +79,14 @@ public class GameWeekSnapshot {
     public void setGameWeekPoints(long gameWeekPoints) {
         this.gameWeekPoints = gameWeekPoints;
     }
-/*
-    public long getGameWeek() {
-        return game_week_id;
-    }
 
-    public void setGameWeek(long gameWeek) {
-        this.game_week_id = gameWeek;
-    }
-*/
-    public Set<Player> getPlayers()
+
+    public List<Player> getPlayers()
     {
         return players;
     }
 
-    public void setPlayers(Set<Player> players)
+    public void setPlayers(List<Player> players)
     {
         this.players = players;
     }

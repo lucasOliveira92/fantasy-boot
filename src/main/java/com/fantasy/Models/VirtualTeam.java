@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -27,8 +28,6 @@ public class VirtualTeam implements Serializable {
     @Column(name = "number_transfers", nullable = false)
     private int numberTransfers;
 
-    @Column(name = "captain_id")
-    private Long idCaptain;
 
     @OneToOne
     @JoinColumn (name="user_id")
@@ -39,7 +38,7 @@ public class VirtualTeam implements Serializable {
 
     @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name="virtual_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
-    private Set<Player> players;
+    private List<Player> players;
 
     @OneToMany(mappedBy="virtualTeam")
     private List<GameWeekSnapshot> gameWeekSnapshots;
@@ -101,14 +100,6 @@ public class VirtualTeam implements Serializable {
         this.numberTransfers = numberTransfers;
     }
 
-    public Long getIdCaptain() {
-        return idCaptain;
-    }
-
-    public void setIdCaptain(Long idCaptain) {
-        this.idCaptain = idCaptain;
-    }
-
     public User getOwner() {
         return user;
     }
@@ -117,26 +108,26 @@ public class VirtualTeam implements Serializable {
         this.user = owner;
     }
 
-    public Set<Player> getPlayers()
+    public List<Player> getPlayers()
     {
         return players;
     }
-    public void setPlayers(Set<Player> players)
+    public void setPlayers(List<Player> players)
     {
         this.players = players;
     }
 
-    public Set<Player> addPlayer(Player p){
+    public List<Player> addPlayer(Player p){
         if(players == null){
-            this.players = new HashSet<>();
+            this.players = new ArrayList<>();
         }
         this.players.add(p);
         return players;
     }
 
-    public Set<Player> removePlayer(Player p){
+    public List<Player> removePlayer(Player p){
         if(players == null){
-            return this.players = new HashSet<>();
+            return this.players = new ArrayList<>();
         }
         for(Player pl: this.players){
             if(pl.getName() == p.getName()){
