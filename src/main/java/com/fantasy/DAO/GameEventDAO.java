@@ -11,4 +11,5 @@ public interface GameEventDAO extends CrudRepository<GameEvent, Long> {
 
     GameEvent findById(long game_event_id);
     Set<GameEvent> findByPlayer(Player player);
+    void deleteByGameId(long id);
 }

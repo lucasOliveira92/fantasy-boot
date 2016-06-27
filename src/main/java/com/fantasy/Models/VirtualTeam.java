@@ -34,7 +34,7 @@ public class VirtualTeam implements Serializable {
     @JoinColumn (name="user_id")
     private User user;
 
-    @Column(name = "total_poins", nullable = false)
+    @Column(name = "total_points", nullable = false)
     private int totalPoints;
 
     @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
@@ -55,12 +55,14 @@ public class VirtualTeam implements Serializable {
         this.name = name;
         this.budget = budget;
         this.numberTransfers = numberTransfers;
+        this.totalPoints = 0;
     }
 
     public VirtualTeam(String name) {
         this.name = name;
         this.budget = 1000;
         this.numberTransfers = 0;
+        this.totalPoints = 0;
     }
 
     public VirtualTeam(String name, User owner) {
@@ -68,6 +70,7 @@ public class VirtualTeam implements Serializable {
         this.user = owner;
         this.budget = 1000;
         this.numberTransfers = 0;
+        this.totalPoints = 0;
     }
 
     public Long getId() {
