@@ -47,7 +47,16 @@ public class HelloController {
     @RequestMapping("/seed")
     public String seed() {
         try {
-            generateService.populate();
+            generateService.populateRealTeamsPlayers();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return "home";
+    }
+    @RequestMapping("/seed2")
+    public String seed2() {
+        try {
+            generateService.populateVirtualTeamsUsers();
         } catch (Exception e) {
             e.printStackTrace();
         }
