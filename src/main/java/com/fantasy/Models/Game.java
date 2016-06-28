@@ -30,13 +30,13 @@ public class Game implements Serializable {
     @JoinColumn(name="team2_ID")
     private RealTeam team2;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "game_week_id")
     private GameWeek gameWeek;
 
 
     //ATENCAO; ISTO FOI MUDADO DE EAGER PARA LAZY, SE ESTOURAR MUDAR AQUI!
-    @OneToMany(mappedBy="game", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy="game", fetch = FetchType.LAZY)
     private Set<GameEvent> events;
 
     protected Game(){}

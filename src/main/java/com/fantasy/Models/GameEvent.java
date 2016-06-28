@@ -18,7 +18,7 @@ public class GameEvent implements Serializable {
     @Column(name = "minute", nullable = false)
     private int minute;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "game_id")
     private Game game;
 

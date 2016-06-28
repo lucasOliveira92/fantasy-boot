@@ -21,7 +21,7 @@ public class Player implements Serializable {
     @Column(name = "cost", nullable = false)
     private int cost;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "real_team_id")
     private RealTeam realTeam;
 

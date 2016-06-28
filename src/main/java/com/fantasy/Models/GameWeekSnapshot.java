@@ -29,11 +29,11 @@ public class GameWeekSnapshot {
     @Column(name = "game_week_cumulative_points")
     private long gameWeekCumulativePoints;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name ="game_week_id")
     private GameWeek gameWeek;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name ="virtual_team_id")
     private VirtualTeam virtualTeam;
 
