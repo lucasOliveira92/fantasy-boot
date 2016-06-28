@@ -29,6 +29,16 @@
                             <option id="4">Forward</option>
                         </select>
                     </div>
+                    <div class="campo-pesquisa-statistic">
+                        <label>Order by:</label>
+                        <select class="btn btn-default" style="width: 100%;" id="orderFilter">
+                            <option id="-1">Cost</option>
+                            <option id="1">Points</option>
+                            <option id="2">Goals Scored</option>
+                            <option id="3">Yellow Cards</option>
+                            <option id="4">Red Cards</option>
+                        </select>
+                    </div>
                     <div class="botao-pesquisa-statistic">
                         <button type="button" class="btn btn-info" onclick="recarregaAllPlayers()"><span class="glyphicon glyphicon-search"></span> Search</button>
                     </div>
@@ -41,14 +51,20 @@
                     <th>Name</th>
                     <th>Team</th>
                     <th>Cost</th>
-                    <th>Points</th>
+                    <th th:if="${(order==-1) || (order==1)}">Points</th>
+                    <th th:if="${order==2}">Goals Scored</th>
+                    <th th:if="${order==3}">Yellow Cards</th>
+                    <th th:if="${order==4}">Red Cards</th>
                 </tr>
                 <tr th:each="player : ${players}">
                     <td th:text="${player.getPositionFullName()}">Position</td>
                     <td th:text="${player.name}">Name</td>
                     <td th:if="${player.getRealTeam() != null}" th:text="${player.getRealTeam().getName()}">Team</td>
-                    <td th:text="${player.cost}">Name</td>
-                    <td>0</td>
+                    <td th:text="${player.cost}">Cost</td>
+                    <td th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">Points</td>
+                    <td th:if="${order==2}" th:text="${player.totalPoints}">Goals</td>
+                    <td th:if="${order==3}" th:text="${player.totalPoints}">Yellow</td>
+                    <td th:if="${order==4}" th:text="${player.totalPoints}">Red</td>
                 </tr>
             </table>
         </div>
@@ -58,7 +74,8 @@
     function recarregaAllPlayers(){
         var positionFilter = $('#positionFilter option:selected').attr('id');
         var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
-        window.open("/statistics/"+realTeamFilter+"/"+positionFilter,"_self");
+        var orderFilter = $('#orderFilter option:selected').attr('id');
+        window.open("/statistics/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
     };
 </script>
 </body>

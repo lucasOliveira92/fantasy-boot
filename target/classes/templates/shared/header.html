@@ -31,12 +31,12 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a onclick="location.href='/'">HOME</a></li>
-                    <li th:if="${currentUser != null}"><a onclick="location.href='/team'" style="cursor: pointer;">MY TEAM</a></li>
+                    <li th:if="${currentUser != null}"><a onclick="location.href='/team'">MY TEAM</a></li>
                     <li th:if="${currentUser != null}"><a onclick="location.href='/team/transfers'">TRANSFERS</a></li>
                     <li><a onclick="location.href='/classification/'">CLASSIFICATION</a></li>
                     <li><a onclick="location.href='/statistics/'">STATISTICS</a></li>
-                    <li><a href="#">WINNERS</a></li>
-                    <li><a href="#">RULES</a></li>
+                    <li><a onclick="location.href='/winners/'">WINNERS</a></li>
+                    <li><a onclick="location.href='/rules/'">RULES</a></li>
                     <li th:if="${currentUser != null}" class="dropdown" style="float: right;">
                         <a class="dropdown-toggle" data-toggle="dropdown">Welcome
                             <span th:text="${currentUser.getUsername()}"></span>
