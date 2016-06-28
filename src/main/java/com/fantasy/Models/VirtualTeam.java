@@ -5,9 +5,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "VIRTUAL_TEAMS")
@@ -174,5 +172,13 @@ public class VirtualTeam implements Serializable {
             }
         }
         return pontos;
+    }
+
+    public List<Player> getLastTeamFormation(){
+        List<Player> formationList = new ArrayList<>();
+        if (gameWeekSnapshots != null && !gameWeekSnapshots.isEmpty()) {
+            formationList = gameWeekSnapshots.get(gameWeekSnapshots.size()-1).getPlayers();
+        }
+        return formationList;
     }
 }

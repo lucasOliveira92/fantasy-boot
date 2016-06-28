@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
+import java.util.*;
 
 @Controller
 public class VirtualTeamController {
@@ -41,7 +41,60 @@ public class VirtualTeamController {
         model.addAttribute("currentUser", u);
         if(u != null) {
             if (u.hasVirtualTeam()) {
-                model.addAttribute("team", gestor.getVirtualTeam(u.getId()));
+                VirtualTeam team = gestor.getVirtualTeam(u.getId());
+                List<Player> formation = team.getLastTeamFormation();
+                List<Player> substitutes = team.getPlayers();
+                substitutes.removeAll(formation);
+                Player gk=null;
+                ArrayList<Player> defs = new ArrayList<>();
+                ArrayList<Player> mids = new ArrayList<>();
+                ArrayList<Player> fors = new ArrayList<>();
+                Player gksub=null;
+                ArrayList<Player> defsub = new ArrayList<>();
+                ArrayList<Player> midsub = new ArrayList<>();
+                ArrayList<Player> forsub = new ArrayList<>();
+                for (Player p : formation) {
+                    switch (p.getPosition()){
+                        case "GK":
+                            gk = p;
+                            break;
+                        case "DEF":
+                            defs.add(p);
+                            break;
+                        case "MID":
+                            mids.add(p);
+                            break;
+                        case "FOR":
+                            fors.add(p);
+                            break;
+                    }
+                }
+                for (Player p : substitutes) {
+                    switch (p.getPosition()){
+                        case "GK":
+                            gksub = p;
+                            break;
+                        case "DEF":
+                            defsub.add(p);
+                            break;
+                        case "MID":
+                            midsub.add(p);
+                            break;
+                        case "FOR":
+                            forsub.add(p);
+                            break;
+                    }
+                }
+                model.addAttribute("GK",gk);
+                model.addAttribute("DEFs",defs);
+                model.addAttribute("MIDs",mids);
+                model.addAttribute("FORs",fors);
+                model.addAttribute("GKsub",gksub);
+                model.addAttribute("DEFsub",defsub);
+                model.addAttribute("MIDsub",midsub);
+                model.addAttribute("FORsub",forsub);
+                model.addAttribute("formation",team.getLastTeamFormation());
+                model.addAttribute("team", team);
                 return "virtualTeam/show";
             }else{
                 return "redirect:/team/new";
