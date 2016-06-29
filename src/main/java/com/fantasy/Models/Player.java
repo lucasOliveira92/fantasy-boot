@@ -21,6 +21,22 @@ public class Player implements Serializable {
     @Column(name = "cost", nullable = false)
     private int cost;
 
+
+    @Column(name = "yellow_total", nullable = false)
+    private int yellowTotal;
+
+    @Column(name = "red_total", nullable = false)
+    private int redTotal;
+
+    @Column(name = "goal_total", nullable = false)
+    private int goalTotal;
+
+    @Column(name = "total_times_bought", nullable = false)
+    private int totalTimesBought;
+
+    @Column(name = "total_points", nullable = false)
+    private int totalPoints;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "real_team_id")
     private RealTeam realTeam;
@@ -32,12 +48,22 @@ public class Player implements Serializable {
         this.position = position;
         this.cost = cost;
         this.realTeam = team;
+        this.totalTimesBought=0;
+        this.yellowTotal=0;
+        this.redTotal=0;
+        this.goalTotal=0;
+        this.totalPoints=0;
     }
 
     public Player(String name, String position, int cost) {
         this.name = name;
         this.position = position;
         this.cost = cost;
+        this.totalTimesBought=0;
+        this.yellowTotal=0;
+        this.redTotal=0;
+        this.goalTotal=0;
+        this.totalPoints=0;
     }
 
     public Long getId() {
@@ -95,5 +121,45 @@ public class Player implements Serializable {
                 break;
         }
         return response;
+    }
+
+    public int getYellowTotal() {
+        return yellowTotal;
+    }
+
+    public void setYellowTotal(int yellowTotal) {
+        this.yellowTotal = yellowTotal;
+    }
+
+    public int getRedTotal() {
+        return redTotal;
+    }
+
+    public void setRedTotal(int redTotal) {
+        this.redTotal = redTotal;
+    }
+
+    public int getGoalTotal() {
+        return goalTotal;
+    }
+
+    public void setGoalTotal(int goalTotal) {
+        this.goalTotal = goalTotal;
+    }
+
+    public int getTotalTimesBought() {
+        return totalTimesBought;
+    }
+
+    public void setTotalTimesBought(int totalTimesBought) {
+        this.totalTimesBought = totalTimesBought;
+    }
+
+    public int getTotalPoints() {
+        return totalPoints;
+    }
+
+    public void setTotalPoints(int totalPoints) {
+        this.totalPoints = totalPoints;
     }
 }

@@ -21,5 +21,15 @@ public class PlayerService {
 
     public List<Player> getAllPlayersByCost(){ return playerDAO.findAllByOrderByCostDesc();}
 
+    public List<Player> getAllPlayersByYellow(){ return playerDAO.findAllByOrderByYellowTotalDesc();}
+
+    public List<Player> getAllPlayersByRed(){ return playerDAO.findAllByOrderByRedTotalDesc();}
+
+    public List<Player> getAllPlayersByGoalScored(){ return playerDAO.findAllByOrderByGoalTotalDesc();}
+
+    public List<Player> getAllPlayersByTimesBought(){ return playerDAO.findAllByOrderByTotalTimesBoughtDesc();}
+
+    public List<Player> getAllPlayersByTotalPoints(){ return playerDAO.findAllByOrderByTotalPointsDesc();}
+
     public List<Player> getAllPlayersByPosition(String position){ return playerDAO.findByPosition(position); }
 }

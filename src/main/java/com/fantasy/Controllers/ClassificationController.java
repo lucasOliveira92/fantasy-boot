@@ -67,15 +67,37 @@ public class ClassificationController {
         model.addAttribute("players", gestorPlayers.getAllPlayersByCost());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
+        model.addAttribute("order",-1);
         return "statistics";
     }
 
-    @RequestMapping(value = "statistics/{teamId}/{positionId}", method = RequestMethod.GET)
-    public String showStatistics(Model model, @PathVariable Integer teamId, @PathVariable Integer positionId) {
+    @RequestMapping(value = "statistics/{teamId}/{positionId}/{orderId}", method = RequestMethod.GET)
+    public String showStatisticsBySearch(Model model, @PathVariable Integer teamId, @PathVariable Integer positionId, @PathVariable Integer orderId) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
-        List<Player> lista;
+        List<Player> lista = null;
         List<Player> lista2;
+        List<Player> listafinal;
+        switch (orderId){
+            case -1:
+                listafinal = gestorPlayers.getAllPlayersByCost();
+                break;
+            case 1:
+                listafinal = gestorPlayers.getAllPlayersByTotalPoints();
+                break;
+            case 2:
+                listafinal = gestorPlayers.getAllPlayersByGoalScored();
+                break;
+            case 3:
+                listafinal = gestorPlayers.getAllPlayersByYellow();
+                break;
+            case 4:
+                listafinal = gestorPlayers.getAllPlayersByRed();
+                break;
+            default:
+                listafinal = gestorPlayers.getAllPlayersByCost();
+                break;
+        }
         if(teamId!=-1) {
             switch (positionId) {
                 case -1:
@@ -94,39 +116,58 @@ public class ClassificationController {
                     lista = gestorRealTeams.getById(teamId).getPlayerByPosition("FOR");
                     break;
                 default:
-                    lista = gestorPlayers.getAllPlayersByCost();
                     break;
             }
+            if (lista!=null)listafinal.retainAll(lista);
         }else{
-            lista = gestorPlayers.getAllPlayersByCost();
             switch (positionId) {
                 case -1:
                     break;
                 case 1:
                     lista2 = gestorPlayers.getAllPlayersByPosition("GK");
-                    lista.retainAll(lista2);
+                    listafinal.retainAll(lista2);
                     break;
                 case 2:
                     lista2 = gestorPlayers.getAllPlayersByPosition("DEF");
-                    lista.retainAll(lista2);
+                    listafinal.retainAll(lista2);
                     break;
                 case 3:
                     lista2 = gestorPlayers.getAllPlayersByPosition("MID");
-                    lista.retainAll(lista2);
+                    listafinal.retainAll(lista2);
                     break;
                 case 4:
                     lista2 = gestorPlayers.getAllPlayersByPosition("FOR");
-                    lista.retainAll(lista2);
+                    listafinal.retainAll(lista2);
                     break;
                 default:
-                    lista = gestorPlayers.getAllPlayersByCost();
                     break;
             }
         }
         model.addAttribute("currentUser", u);
-        model.addAttribute("players", lista);
+        model.addAttribute("players", listafinal);
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
+        model.addAttribute("order",orderId);
         return "statistics";
+    }
+
+    @RequestMapping(value = "winners", method = RequestMethod.GET)
+    public String showWinners(Model model) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+
+        model.addAttribute("currentUser", u);
+        return "winners";
+    }
+
+    @RequestMapping(value = "rules", method = RequestMethod.GET)
+    public String showRules(Model model) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+
+        model.addAttribute("currentUser", u);
+        return "rules";
     }
 }
