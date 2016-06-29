@@ -33,7 +33,7 @@ public class VirtualTeam implements Serializable {
     @Column(name = "total_points", nullable = false)
     private long totalPoints;
 
-    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany(cascade=CascadeType.ALL, fetch = FetchType.LAZY)
     @JoinTable(name="virtual_team_players", joinColumns=@JoinColumn(name="virtual_team_id"), inverseJoinColumns=@JoinColumn(name="player_id"))
     private List<Player> players;
 

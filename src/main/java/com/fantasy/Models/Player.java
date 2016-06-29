@@ -21,6 +21,7 @@ public class Player implements Serializable {
     @Column(name = "cost", nullable = false)
     private int cost;
 
+
     @Column(name = "yellow_total", nullable = false)
     private int yellowTotal;
 
@@ -36,7 +37,7 @@ public class Player implements Serializable {
     @Column(name = "total_points", nullable = false)
     private int totalPoints;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "real_team_id")
     private RealTeam realTeam;
 
@@ -63,6 +64,24 @@ public class Player implements Serializable {
         this.redTotal=0;
         this.goalTotal=0;
         this.totalPoints=0;
+    }
+
+    public void addPontos(int pontos){
+        this.totalPoints+= pontos;
+    }
+    public void addYellow(){
+        this.yellowTotal++;
+    }
+    public void addRed(){
+        this.redTotal++;
+    }
+
+    public void wasBought(){
+        this.totalTimesBought++;
+    }
+
+    public void scoredGoal(){
+        this.goalTotal++;
     }
 
     public Long getId() {

@@ -16,7 +16,6 @@ public class FantasyApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(FantasyApplication.class, args);
-
 	}
 
 }
