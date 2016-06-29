@@ -88,11 +88,13 @@ function makeCaptain(id){
     var cost = player.find('h2').text();
     var img = player.find('img').clone().attr("height", "50%").prop('outerHTML');
 
-
-
-    player.fadeOut(0,function(){
-        this.remove();
+    $('button.captain').each(function() {
+        if($(this).attr('id') == id)
+            $(this).addClass('cpt-selected')
+        else
+            $(this).removeClass('cpt-selected')
     });
+<<<<<<< HEAD
 /*
     var y = $(".captain")[0];
     $(".captain")[0].attr("class","btn btn-xs btn-default");
@@ -109,18 +111,35 @@ function makeCaptain(id){
 </button>\
 </div>\
 ").appendTo("#" + pos);
+=======
 
-
+    searchText();
 }
-/*
-function atualizaDiv(id,pos){
-    $.map($("#field #"+position).children(), function(n, i) {
-            return n.id;
-        });
+>>>>>>> dc18ed01f60901258fb779f8819af08929ee9e80
 
-    $.map($("#field #FOR").children(), function(n, i) {
-        for (var i = 0; i < n.length; ++i) {
-            if(n.attr('id')!=id){}
-                }
+function searchText() {
+
+    $(function () {
+        var token = $("input[name='_csrf']").val();
+        var header = "X-CSRF-TOKEN";
+        $(document).ajaxSend(function(e, xhr, options) {
+            xhr.setRequestHeader(header, token);
+        });
     });
-}*/
+    
+
+    var search = {
+        "name": "TAUUU",
+        "id" : 1
+    }
+    $.ajax({
+        type: "POST",
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        url: "/api/games",
+        data: JSON.stringify(search), // Note it is important
+        success: function (result) {
+            console.log("WTF");
+        }
+    });
+}
