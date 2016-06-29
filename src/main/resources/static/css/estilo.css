@@ -9,6 +9,10 @@ body{
     padding-bottom: 1%;
 }
 
+.cpt-selected{
+    background-color: #2b669a;
+}
+
 #header-login,
 #header-texto {
     display: inline-block;
