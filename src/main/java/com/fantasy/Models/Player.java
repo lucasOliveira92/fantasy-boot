@@ -66,6 +66,24 @@ public class Player implements Serializable {
         this.totalPoints=0;
     }
 
+    public void addPontos(int pontos){
+        this.totalPoints+= pontos;
+    }
+    public void addYellow(){
+        this.yellowTotal++;
+    }
+    public void addRed(){
+        this.redTotal++;
+    }
+
+    public void wasBought(){
+        this.totalTimesBought++;
+    }
+
+    public void scoredGoal(){
+        this.goalTotal++;
+    }
+
     public Long getId() {
         return id;
     }

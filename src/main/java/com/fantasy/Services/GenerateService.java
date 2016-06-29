@@ -320,9 +320,26 @@ public class GenerateService {
                 }
             }
 
+            Iterable<EventPoints> pointList = eventPointsDAO.findAll();
+            HashMap<String, Integer> pointMap = new HashMap<>();
+            for(EventPoints e: pointList){
+                pointMap.put(e.getEventType(),e.getPoints());
+            }
 
             for (GameEvent e : eventosJogo) {
                 System.out.println(e.getMinute() + " - " + e.getType() + " - " + e.getPlayer().getRealTeam().getName() + " - " + e.getPlayer().getName());
+                Player p = e.getPlayer();
+                p.addPontos(pointMap.get(e.getType()));
+                switch (e.getType()){
+                    case "GOAL GK": p.scoredGoal(); break;
+                    case "GOAL DEF": p.scoredGoal(); break;
+                    case "GOAL MID": p.scoredGoal(); break;
+                    case "GOAL FOR": p.scoredGoal(); break;
+                    case "YELLOW CARD": p.addYellow(); break;
+                    case "RED CARD": p.addRed(); break;
+
+                }
+                playerRepo.save(p);
                 gameEventDAO.save(e);
             }
 
@@ -330,7 +347,7 @@ public class GenerateService {
             g.setTeam2_score(golosEquipa2Fixed);
             gameDAO.save(g);
 
-            calculatePointsForSnapshots(gw,eventosJogo);
+            calculatePointsForSnapshots(gw,eventosJogo,pointMap);
 
             System.out.println("----------------------------------------------------");
             System.out.println("----------------------------------------------------");
@@ -350,6 +367,10 @@ public class GenerateService {
         events.add(new EventPoints("WIN",2));
         events.add(new EventPoints("DRAW",0));
         events.add(new EventPoints("LOSE",-2));
+        events.add(new EventPoints("NO GOALS GK",4));
+        events.add(new EventPoints("NO GOALS DEF",3));
+        events.add(new EventPoints("NO GOALS MID",2));
+        events.add(new EventPoints("NO GOALS FOR",1));
 
         for(EventPoints e: events){
             eventPointsDAO.save(e);
@@ -359,7 +380,7 @@ public class GenerateService {
         RealTeam tondela = new RealTeam("Tondela", "https://upload.wikimedia.org/wikipedia/commons/f/fc/Emblema_CD_Tondela.png", "http://imgur.com/ejyF1OG");
         RealTeam sporting = new RealTeam("Sporting CP", "https://upload.wikimedia.org/wikipedia/en/3/3e/Sporting_Clube_de_Portugal.png", "http://imgur.com/HV8arSm");
         RealTeam belenenses = new RealTeam("Belenenses", "http://upload.wikimedia.org/wikipedia/de/d/db/Belenenses_Lissabon.svg", "http://imgur.com/CXwIhAI");
-        RealTeam rioAve = new RealTeam("rioAve", "http://upload.wikimedia.org/wikipedia/de/6/63/Rio_Ave_FC.svg", "http://imgur.com/cbMEWJy");
+        RealTeam rioAve = new RealTeam("Rio Ave", "http://upload.wikimedia.org/wikipedia/de/6/63/Rio_Ave_FC.svg", "http://imgur.com/cbMEWJy");
         RealTeam porto = new RealTeam("FC Porto", "http://upload.wikimedia.org/wikipedia/de/e/ed/FC_Porto_1922-2005.svg", "http://imgur.com/165VABr");
         RealTeam guimaraes = new RealTeam("Vitoria Guimarães", "http://upload.wikimedia.org/wikipedia/de/8/81/Vitoria_Guimaraes.svg", "http://imgur.com/VTgrrlz");
         RealTeam setubal = new RealTeam("Vitoria Setúbal", "http://upload.wikimedia.org/wikipedia/de/b/bd/Vit%C3%B3ria_Set%C3%BAbal.svg", "http://imgur.com/m7ZcOFv");
@@ -1339,15 +1360,19 @@ public class GenerateService {
             VirtualTeam vt = new VirtualTeam(u.getUsername() + " FC", 1000, 1);
             Random r = new SecureRandom();
 
-            for (int i = 0; i < 6; i++) {
+            for (int i = 0; i < 5; i++) {
                 if (i < 2)
                     vt.addPlayer(allGR.remove(r.nextInt(allGR.size())));
                 vt.addPlayer(allDEF.remove(r.nextInt(allDEF.size())));
                 vt.addPlayer(allMID.remove(r.nextInt(allMID.size())));
-                if (i < 4)
+                if (i < 3)
                     vt.addPlayer(allFOR.remove(r.nextInt(allFOR.size())));
             }
 
+            for(Player p: vt.getPlayers()){
+                p.wasBought();
+                playerRepo.save(p);
+            }
             vt.setOwner(u);
             u.setVirtualTeam(vt);
             userDAO.save(u);
@@ -1409,13 +1434,27 @@ public class GenerateService {
     }
 
     @Transactional
-    public void calculatePointsForSnapshots(GameWeek gw, List<GameEvent> gameEvents) {
-        Iterable<EventPoints> pointList = eventPointsDAO.findAll();
+    public void calculatePointsForSnapshots(GameWeek gw, List<GameEvent> gameEvents,HashMap<String,Integer> pointMap) {
+        /*Iterable<EventPoints> pointList = eventPointsDAO.findAll();
         HashMap<String, Integer> pointMap = new HashMap<>();
         for(EventPoints e: pointList){
             pointMap.put(e.getEventType(),e.getPoints());
-        }
+        }*/
         List<VirtualTeam> allTeams = virtualTeamDAO.findAll();
+        List<Game> games = gameDAO.findByGameWeekId(gw.getId());
+        HashMap<String, Integer> golosSofridos = new HashMap();
+        HashMap<Long,Game> gamesByPlayer = new HashMap();
+
+        for(Game g: games){
+            List<Player> players = g.getTeam1().getPlayers();
+            players.addAll(g.getTeam2().getPlayers());
+            for(Player p: players){
+                gamesByPlayer.put(p.getId(),g);
+            }
+
+            golosSofridos.put(g.getTeam1().getName(),g.getTeam2_score());
+            golosSofridos.put(g.getTeam2().getName(),g.getTeam1_score());
+        }
 
         for(VirtualTeam vt: allTeams){
             //Fazer set de pontos na jornada anterior
@@ -1425,10 +1464,17 @@ public class GenerateService {
             //CONVERTER LISTA PARA HASH
             HashMap<String, Player> playerHash = new HashMap<>();
 
-            List<Player> players = vt.getPlayers();
+            List<Player> players = snap.getPlayers();
 
             for(Player p: players){
                 playerHash.put(p.getName(),p);
+                if(golosSofridos.get(p.getRealTeam().getName()) == 0 ){
+                    p.addPontos(pointMap.get("NO GOALS " + p.getPosition()));
+                    GameEvent gameEvent = new GameEvent("NO GOALS " + p.getPosition(), -1, gamesByPlayer.get(p.getId()), p);
+                    gameEvents.add(gameEvent);
+                    gameEventDAO.save(gameEvent);
+                }
+                playerRepo.save(p);
             }
 
             for(GameEvent e: gameEvents){
@@ -1446,8 +1492,6 @@ public class GenerateService {
             virtualTeamDAO.save(vt);
             snapDAO.save(snap);
         }
-
-
     }
 
 }
