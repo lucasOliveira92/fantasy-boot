@@ -133,3 +133,11 @@ body{
     margin-left: auto;
     display: inline-block;
 }
+
+.highlighted {
+    background-color: #CCCC33;
+}
+
+.tr{
+    vertical-align: center;
+}
