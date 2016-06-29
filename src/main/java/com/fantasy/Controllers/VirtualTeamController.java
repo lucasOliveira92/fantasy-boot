@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -115,6 +116,76 @@ public class VirtualTeamController {
             if (u.hasVirtualTeam()) {
                 ArrayList<Player> lista = (ArrayList<Player>) playerService.getAllPlayers();
                 lista.removeAll(u.getTeam().getPlayers());
+                ArrayList<Player> gks = new ArrayList<>();
+                ArrayList<Player> defs = new ArrayList<>();
+                ArrayList<Player> mids = new ArrayList<>();
+                ArrayList<Player> fors = new ArrayList<>();
+                for (Player p : u.getTeam().getPlayers()) {
+                    switch (p.getPosition()){
+                        case "GK":
+                            gks.add(p);
+                            break;
+                        case "DEF":
+                            defs.add(p);
+                            break;
+                        case "MID":
+                            mids.add(p);
+                            break;
+                        case "FOR":
+                            fors.add(p);
+                            break;
+                    }
+                }
+                model.addAttribute("gks", gks);
+                model.addAttribute("defs", defs);
+                model.addAttribute("mids", mids);
+                model.addAttribute("fors", fors);
+                model.addAttribute("players", lista);
+                model.addAttribute("team", u.getTeam());
+                return "virtualTeam/transfers";
+            } else {
+                return "redirect:/team/new";
+            }
+        } else {
+            return "redirect:/login";
+        }
+    }
+
+    @Secured("ROLE_USER")
+    @RequestMapping(value = "team/transfers/{newId}/{oldId}", method = RequestMethod.GET)
+    public String makeTransfersVirtualTeam(Model model, @PathVariable Integer newId, @PathVariable Integer oldId) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
+        if (u != null) {
+            if (u.hasVirtualTeam()) {
+                VirtualTeam team = gestor.doTransfer(playerService.getPlayerById(newId),playerService.getPlayerById(oldId),u.getTeam().getId());
+                ArrayList<Player> lista = (ArrayList<Player>) playerService.getAllPlayers();
+                lista.removeAll(team.getPlayers());
+                ArrayList<Player> gks = new ArrayList<>();
+                ArrayList<Player> defs = new ArrayList<>();
+                ArrayList<Player> mids = new ArrayList<>();
+                ArrayList<Player> fors = new ArrayList<>();
+                for (Player p : team.getPlayers()) {
+                    switch (p.getPosition()){
+                        case "GK":
+                            gks.add(p);
+                            break;
+                        case "DEF":
+                            defs.add(p);
+                            break;
+                        case "MID":
+                            mids.add(p);
+                            break;
+                        case "FOR":
+                            fors.add(p);
+                            break;
+                    }
+                }
+                model.addAttribute("gks", gks);
+                model.addAttribute("defs", defs);
+                model.addAttribute("mids", mids);
+                model.addAttribute("fors", fors);
                 model.addAttribute("players", lista);
                 model.addAttribute("team", u.getTeam());
                 return "virtualTeam/transfers";

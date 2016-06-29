@@ -134,6 +134,14 @@ public class VirtualTeam implements Serializable {
         return this.players;
     }
 
+    public boolean removePlayerB(Player p){
+        return players.remove(p);
+    }
+
+    public boolean addPlayerB(Player p){
+        return players.add(p);
+    }
+
     public long getTotalPoints() {
         return totalPoints;
     }

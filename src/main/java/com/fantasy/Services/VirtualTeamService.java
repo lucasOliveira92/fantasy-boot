@@ -71,5 +71,18 @@ public class VirtualTeamService {
         
         return virtualTeams.save(vt);
     }
-    
+
+    public VirtualTeam doTransfer(Player in, Player out, long virtual_team_id){
+        VirtualTeam vt = virtualTeams.findById(virtual_team_id);
+
+
+        vt.removePlayerB(out);
+        vt.addPlayerB(in);
+
+
+        virtualTeams.save(vt);
+        return virtualTeams.findById(virtual_team_id);
+    }
+
+
 }
