@@ -13,4 +13,5 @@ public interface GameDAO extends CrudRepository<Game, Long> {
     Game findById(long game_event_id);
     Set<Game> findByTeam1(RealTeam team1_ID);
     List<Game> findByGameWeekId(long game_week_id);
+    List<Game> findAll();
 }
