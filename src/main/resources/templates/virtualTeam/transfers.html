@@ -56,7 +56,7 @@
                         <th class="text-center">Team</th>
                         <th class="text-center">Position</th>
                         <th class="text-center">Cost</th>
-                        <th class="text-center" th:if="${(order==-1) || (order==1)}">Points</th>
+                        <th class="text-center" th:if="${(order==1)}">Points</th>
                         <th class="text-center" th:if="${order==2}">Goals Scored</th>
                         <th class="text-center" th:if="${order==3}">Yellow Cards</th>
                         <th class="text-center" th:if="${order==4}">Red Cards</th>
@@ -70,7 +70,7 @@
                         <td class="text-center" th:text="${player.getRealTeam().getName()}">Team</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
-                        <td class="text-center" th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">
+                        <td class="text-center" th:if="${(order==1)}" th:text="${player.totalPoints}">
                             Points
                         </td>
                         <td class="text-center" th:if="${order==2}" th:text="${player.goalTotal}">Goals</td>
@@ -103,6 +103,7 @@
                         <th>Name</th>
                         <th class="text-center">Position</th>
                         <th class="text-center">Cost</th>
+                        <th class="text-center">Points</th>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${gks}">
@@ -111,6 +112,7 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
+                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${defs}">
@@ -119,6 +121,7 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
+                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${mids}">
@@ -127,6 +130,7 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
+                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${fors}">
@@ -135,6 +139,7 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
+                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                 </table>
             </div>

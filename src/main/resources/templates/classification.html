@@ -27,13 +27,13 @@
                     </div>
                 </div>
 
-                <table class="table table-striped table-bordered">
+                <table id="listOwnPlayers" class="table table-striped table-bordered">
                     <tr>
                         <th>Position</th>
                         <th>Name</th>
                         <th>Points</th>
                     </tr>
-                    <tr th:each="team : ${teams}">
+                    <tr th:id="${team.getOwner().getId()}" th:each="team : ${teams}">
                         <td th:text="${teams.indexOf(team) + 1}">Position</td>
                         <td th:text="${team.name}">Name</td>
                         <td th:text="${team.totalPoints}">Points</td>
@@ -63,8 +63,8 @@
 
         var gameweekFilter = $('#gameweekFilter option:selected').text();
         window.open("/classification/" + gameweekFilter, "_self");
-    }
-    ;
+    };
+
 </script>
 </body>
 </html>

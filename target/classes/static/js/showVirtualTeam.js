@@ -1,30 +1,36 @@
-
 var currentCaptain = -1;
 var user;
 var titulares = [];
 
-$(document).on('click', '.clickable-row', function() {
-    $('.clickable-row').removeClass('highlighted');
-    $(this).addClass('highlighted');
+$(document).on('click', '.clickable-row', function () {
 
-    if($('.clickable-row.highlighted').length > 0){
-        $('button.trade').fadeIn("500");
-    }
-    else {
+    if ($(this).hasClass("highlighted")) {
+        $(this).removeClass('highlighted');
         $('button.trade').fadeOut("500");
     }
+    else {
+        $(this).addClass('highlighted').siblings().removeClass('highlighted');
+        $('button.trade').fadeIn("500");
+    }
 });
+
+if ($('tr.highlighted').length < 0) {
+    $('button.trade').fadeIn("500");
+}
+else {
+    $('button.trade').hide();
+};
 
 
 function switchPlayers(id) {
     var p1 = $(".highlighted").find('td').eq(2).text();
-    var p2 = $("#field #"+id).find('p').attr('id');
+    var p2 = $("#field #" + id).find('p').attr('id');
 
     if (!$(".highlighted").length) {
         alert("Select a player from the table first!");
         return;
     }
-    if(($(".highlighted").find('td').eq(2).text() == 'GK') && (p1 != p2)){
+    if (($(".highlighted").find('td').eq(2).text() == 'GK') && (p1 != p2)) {
         alert("You can only trade GKs with GKs!");
         return;
     }
@@ -43,36 +49,34 @@ function addToField() {
     var cost = data.eq(3).text();
     var img = data.eq(0).find("img").clone().attr("height", "50%").prop('outerHTML');
 
-    //titulares.push(id);
 
     row.attr("class", "");
     row.attr("style", "background-color: #666666");
 
-    row.fadeOut(300,function() {
+    row.fadeOut(300, function () {
         $(this).remove();
     });
 
-    $("<div class='titular' id="+id+" style='overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block'>\
-"+img+"\
-<p style='line-height: 100%; font-weight: bold; font-size: 100%' id="+ pos +">" + name + "</p>\
-<h2 style='visibility: hidden;'>"+ cost +"</h2>\
-<button type='button' class='btn btn-xs captain' onclick='makeCaptain(this.id)' style='position: absolute; font-weight: bold; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden' id="+id+">C</button>\
-<button type='button' class='btn btn-xs btn-default trade' id="+id+" onclick='switchPlayers(this.id)' style='position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden'>\
+    $("<div class='titular' id=" + id + " style='overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block'>\
+" + img + "\
+<p style='line-height: 100%; font-weight: bold; font-size: 70%' id=" + pos + ">" + name + "</p>\
+<h2 style='visibility: hidden;'>" + cost + "</h2>\
+<button type='button' class='btn btn-xs captain' onclick='makeCaptain(this.id)' style='position: absolute; font-weight: bold; left: 0; margin-left: 10%; bottom: 0;  width: 40%; overflow: hidden' id=" + id + ">C</button>\
+<button type='button' class='btn btn-xs btn-default trade' id=" + id + " onclick='switchPlayers(this.id)' style='position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden'>\
 <span class='glyphicon glyphicon-retweet'></span>\
 </button>\
 </div>\
 ").appendTo("#" + pos);
 
 
-
 }
 
-function removeFromField(id){
+function removeFromField(id) {
 
-    if(currentCaptain == id)
+    if (currentCaptain == id)
         currentCaptain = -1;
-    var player = $("#field #"+id);
-    var tablePlayer = $("#listPlayers #"+id);
+    var player = $("#field #" + id);
+    var tablePlayer = $("#listPlayers #" + id);
     var id2 = player.attr('id');
     var name = player.find('p').text();
     var pos = player.find('p').attr('id');
@@ -86,33 +90,33 @@ function removeFromField(id){
     }
 
     $("<tr class='clickable-row' style='cursor:pointer;' id='id2'>\
-    <td class='col-md-1 text-center'>"+img+"</td>\
-        <td>"+ name +"</td>\
-    <td>"+ pos +"</td>\
-    <td>"+ cost +"</td>\
+    <td class='col-md-1 text-center'>" + img + "</td>\
+        <td>" + name + "</td>\
+    <td>" + pos + "</td>\
+    <td>" + cost + "</td>\
     </tr>\
         ").appendTo("#listPlayers");
 
-    tablePlayer.attr("class","clickable-row");
-    tablePlayer.attr("style","");
+    tablePlayer.attr("class", "clickable-row");
+    tablePlayer.attr("style", "");
 
 
-    player.fadeOut(300,function() {
+    player.fadeOut(300, function () {
         $(this).remove();
     });
 
 }
-function makeCaptain(id){
+function makeCaptain(id) {
     currentCaptain = id;
-    var player =$("#field #"+id);
+    var player = $("#field #" + id);
     var name = player.find('p').text();
     var pos = player.find('p').attr('id');
     var cost = player.find('h2').text();
     var img = player.find('img').clone().attr("height", "50%").prop('outerHTML');
 
 
-    $('button.captain').each(function() {
-        if($(this).attr('id') == id)
+    $('button.captain').each(function () {
+        if ($(this).attr('id') == id)
             $(this).addClass('cpt-selected')
         else
             $(this).removeClass('cpt-selected')
@@ -124,15 +128,15 @@ function updateStrategy() {
     titulares = [];
 
 
-    $('button.cpt-selected').each(function() {
-        if($(this).attr('id') == id){
+    $('button.cpt-selected').each(function () {
+        if ($(this).attr('id') == id) {
             currentCaptain = id;
         }
 
     });
 
     user = $('.current-user-id').text();
-    if(currentCaptain == -1){
+    if (currentCaptain == -1) {
         alert("You must pick a captain for your team");
         return;
     }
@@ -141,13 +145,13 @@ function updateStrategy() {
     $(function () {
         var token = $("input[name='_csrf']").val();
         var header = "X-CSRF-TOKEN";
-        $(document).ajaxSend(function(e, xhr, options) {
+        $(document).ajaxSend(function (e, xhr, options) {
             xhr.setRequestHeader(header, token);
         });
     });
 
 
-    $('.titular').each(function() {
+    $('.titular').each(function () {
         titulares.push(($(this).attr('id')));
     });
 
