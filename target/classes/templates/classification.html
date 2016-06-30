@@ -9,16 +9,14 @@
     <div class="box-body table-responsive">
 
         <div th:if="${teams != null}" class="col-md-10 col-md-offset-1">
-            <div style="text-align: center; padding-top: 20px;" >
-                <span style="font-size: 200%;"><b>Classification</b></span>
-            </div>
+            <h2 class="text-center">Classification</h2>
             <div class="row" style="float: left; position: relative; align-items: baseline;">
                 <div capitao="playerSearch" class="pesquisa">
                     <div class="campo-pesquisa">
                         <label>Gameweek:</label>
                         <select class="btn btn-default" style="width: 100%;"  capitao="gameweekFilter">
                             <option>All</option>
-                            <option th:each="gameWeek : ${gameWeeks}" th:text="${gameWeek.number}">number</option>
+                            <option th:each="gameWeek : ${gameWeekNumber}" th:text="${gameWeek}">number</option>
                         </select>
                     </div>
                     <div class="botao-pesquisa">

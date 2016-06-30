@@ -1344,7 +1344,7 @@ public class GenerateService {
         List<Player> allMID = playerRepo.findByPosition("MID");
         List<Player> allFOR = playerRepo.findByPosition("FOR");
 
-        allUsers.add(new User("quim", "quim@mail.pt", "1"));
+        allUsers.add(new User("Quim", "quim@mail.pt", "1"));
         allUsers.add(new User("besuntas", "besuntas@mail.pt", "1"));
         allUsers.add(new User("fagundes", "fagundes@mail.pt", "1"));
         allUsers.add(new User("badocha", "badocha@mail.pt", "1"));

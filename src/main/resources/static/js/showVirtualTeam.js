@@ -103,6 +103,7 @@ function makeCaptain(id){
     var cost = player.find('h2').text();
     var img = player.find('img').clone().attr("height", "50%").prop('outerHTML');
 
+
     $('button.captain').each(function() {
         if($(this).attr('id') == id)
             $(this).addClass('cpt-selected')

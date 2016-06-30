@@ -2,7 +2,6 @@ package com.fantasy.Models;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 
 @Entity
@@ -22,9 +21,6 @@ public class GameWeekSnapshot {
 
     @Column(name = "game_week_points")
     private int gameWeekPoints;
-
-    @Column(name = "game_week_comulative_points")
-    private int gameWeekComulativePoints;
 
     @Column(name = "game_week_cumulative_points")
     private long gameWeekCumulativePoints;
@@ -111,11 +107,7 @@ public class GameWeekSnapshot {
         this.virtualTeam = virtualTeam;
     }
 
-    public int getGameWeekComulativePoints() {
-        return gameWeekComulativePoints;
-    }
-
-    public void setGameWeekComulativePoints(int gameWeekComulativePoints) {
-        this.gameWeekComulativePoints = gameWeekComulativePoints;
+    public void setGameWeekCumulativePoints(long gameWeekCumulativePoints) {
+        this.gameWeekCumulativePoints = gameWeekCumulativePoints;
     }
 }

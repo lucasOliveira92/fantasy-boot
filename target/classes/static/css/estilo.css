@@ -142,6 +142,10 @@ body{
     background-color: #CCCC33;
 }
 
-.tr{
+.table tr{
     vertical-align: center;
+}
+
+.table th{
+    background-color:lightgrey;
 }
