@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-var pickPlayer=0;
-=======
+
 var currentCaptain = -1;
 var user;
 var titulares = [];
->>>>>>> a1d1b5081ec85cf48fce890f9a9fafd98a829745
 
 $(document).on('click', '.clickable-row', function() {
     $('.clickable-row').removeClass('highlighted');

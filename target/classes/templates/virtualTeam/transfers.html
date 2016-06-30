@@ -5,121 +5,141 @@
     <script src="/js/transferVirtualTeam.js" type="text/javascript"></script>
 </head>
 <body>
-<div class="container-fluid">
-    <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
-
-    <div class="box-body table-responsive">
-        <h2 class="text-center">Transfers</h2>
-        <div th:if="${players != null}" class="col-md-5 transfer">
-            <div class="row" style="float: left; position: relative; align-items: baseline;">
-                <div id="playerSearch" class="pesquisa-statistic" style="max-width: 100%;">
-                    <div class="campo-pesquisa-statistic">
-                        <label>Team:</label>
-                        <select class="btn btn-default" style="width: 100%;" id="realTeamFilter">
-                            <option id="-1">All</option>
-                            <option th:each="team : ${realTeams}" th:text="${team.name}" th:id="${team.id}">name</option>
-                        </select>
-                    </div>
-                    <div class="campo-pesquisa-statistic">
-                        <label>Position:</label>
-                        <select class="btn btn-default" style="width: 100%;" id="positionFilter">
-                            <option id="-1">All</option>
-                            <option id="1">Goalkeeper</option>
-                            <option id="2">Defender</option>
-                            <option id="3">Midfield</option>
-                            <option id="4">Forward</option>
-                        </select>
-                    </div>
-                    <div class="campo-pesquisa-statistic">
-                        <label>Order by:</label>
-                        <select class="btn btn-default" style="width: 100%;" id="orderFilter">
-                            <option id="-1">Cost</option>
-                            <option id="1">Points</option>
-                            <option id="2">Goals Scored</option>
-                            <option id="3">Yellow Cards</option>
-                            <option id="4">Red Cards</option>
-                            <option id="5">Times Bought</option>
-                        </select>
-                    </div>
-                    <div class="botao-pesquisa-statistic">
-                        <button type="button" class="btn btn-info" onclick="recarregaAllPlayers()"><span class="glyphicon glyphicon-search"></span> Search</button>
+<!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
+<section id="main-content">
+    <div class="wrap-container">
+        <div class="box-body table-responsive">
+            <h2 class="text-center">Transfers</h2>
+            <div th:if="${players != null}" class="col-md-5 transfer">
+                <div class="row" style="float: left; position: relative; align-items: baseline;">
+                    <div id="playerSearch" class="pesquisa-statistic" style="max-width: 100%;">
+                        <div class="campo-pesquisa-statistic">
+                            <label>Team:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="realTeamFilter">
+                                <option id="-1">All</option>
+                                <option th:each="team : ${realTeams}" th:text="${team.name}" th:id="${team.id}">name
+                                </option>
+                            </select>
+                        </div>
+                        <div class="campo-pesquisa-statistic">
+                            <label>Position:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="positionFilter">
+                                <option id="-1">All</option>
+                                <option id="1">Goalkeeper</option>
+                                <option id="2">Defender</option>
+                                <option id="3">Midfield</option>
+                                <option id="4">Forward</option>
+                            </select>
+                        </div>
+                        <div class="campo-pesquisa-statistic">
+                            <label>Order by:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="orderFilter">
+                                <option id="-1">Cost</option>
+                                <option id="1">Points</option>
+                                <option id="2">Goals Scored</option>
+                                <option id="3">Yellow Cards</option>
+                                <option id="4">Red Cards</option>
+                                <option id="5">Times Bought</option>
+                            </select>
+                        </div>
+                        <div class="botao-pesquisa-statistic">
+                            <button type="button" class="btn btn-info" onclick="recarregaAllPlayers()"><span
+                                    class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <table id="listAllPlayers" class="table table-bordered table-condensed">
-                <tr>
-                    <th class="col-md-1"></th>
-                    <th>Name</th>
-                    <th class="text-center">Team</th>
-                    <th class="text-center">Position</th>
-                    <th class="text-center">Cost</th>
-                    <th class="text-center" th:if="${(order==-1) || (order==1)}">Points</th>
-                    <th class="text-center" th:if="${order==2}">Goals Scored</th>
-                    <th class="text-center" th:if="${order==3}">Yellow Cards</th>
-                    <th class="text-center" th:if="${order==4}">Red Cards</th>
-                    <th class="text-center" th:if="${order==5}">Times Bought</th>
-                </tr>
-                <tr th:each="player : ${players}" th:id="${player.id}" class="clickable-row allPlayers" style="cursor:pointer;">
-                    <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}" height="20%"/></td>
-                    <td th:text="${player.name}">Name</td>
-                    <td class="text-center" th:text="${player.getRealTeam().getName()}">Team</td>
-                    <td class="text-center" th:text="${player.position}">position</td>
-                    <td class="text-center" th:text="${player.cost}">cost</td>
-                    <td class="text-center"  th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">Points</td>
-                    <td class="text-center"  th:if="${order==2}" th:text="${player.goalTotal}">Goals</td>
-                    <td class="text-center"  th:if="${order==3}" th:text="${player.yellowTotal}">Yellow</td>
-                    <td class="text-center"  th:if="${order==4}" th:text="${player.redTotal}">Red</td>
-                    <td class="text-center" th:if="${order==5}" th:text="${player.totalTimesBought}">cost</td>
-                </tr>
-            </table>
+                <table id="listAllPlayers" class="table table-bordered table-condensed">
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th>Name</th>
+                        <th class="text-center">Team</th>
+                        <th class="text-center">Position</th>
+                        <th class="text-center">Cost</th>
+                        <th class="text-center" th:if="${(order==-1) || (order==1)}">Points</th>
+                        <th class="text-center" th:if="${order==2}">Goals Scored</th>
+                        <th class="text-center" th:if="${order==3}">Yellow Cards</th>
+                        <th class="text-center" th:if="${order==4}">Red Cards</th>
+                        <th class="text-center" th:if="${order==5}">Times Bought</th>
+                    </tr>
+                    <tr th:each="player : ${players}" th:id="${player.id}" class="clickable-row allPlayers"
+                        style="cursor:pointer;">
+                        <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                              height="20%"/></td>
+                        <td th:text="${player.name}">Name</td>
+                        <td class="text-center" th:text="${player.getRealTeam().getName()}">Team</td>
+                        <td class="text-center" th:text="${player.position}">position</td>
+                        <td class="text-center" th:text="${player.cost}">cost</td>
+                        <td class="text-center" th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">
+                            Points
+                        </td>
+                        <td class="text-center" th:if="${order==2}" th:text="${player.goalTotal}">Goals</td>
+                        <td class="text-center" th:if="${order==3}" th:text="${player.yellowTotal}">Yellow</td>
+                        <td class="text-center" th:if="${order==4}" th:text="${player.redTotal}">Red</td>
+                        <td class="text-center" th:if="${order==5}" th:text="${player.totalTimesBought}">cost</td>
+                    </tr>
+                </table>
 
-        </div>
-        <div class="col-md-2" style="padding-top: 5%">
-            <div class="col-md-12">
-                <p class="text-center" style="font-weight: bold; font-size: 150%;" th:text="${'Budget: '+team.getBudget()}"></p>
-                <p class="text-center" style="font-weight: bold; font-size: 150%;" th:text="${'Avaliable transfers: '+team.getNumberTransfers()}"></p>
-                <button type="button" class="btn btn-lg btn-success" th:id="${team.getBudget()}" onclick="switchPlayers(this.id)">
-                    <span class="glyphicon glyphicon-retweet"></span> Make Transfer
-                </button>
             </div>
+            <div class="col-md-2" style="padding-top: 5%">
+                <div class="col-md-12">
+                    <p class="text-center" style="font-weight: bold; font-size: 150%;"
+                       th:text="${'Budget: '+team.getBudget()}"></p>
+                    <p class="text-center" style="font-weight: bold; font-size: 150%;"
+                       th:text="${'Avaliable transfers: '+team.getNumberTransfers()}"></p>
+                    <button type="button" class="btn btn-lg btn-success" th:id="${team.getBudget()}"
+                            onclick="switchPlayers(this.id)">
+                        <span class="glyphicon glyphicon-retweet"></span> Make Transfer
+                    </button>
+                </div>
 
-        </div>
-        <div th:if="${team.getPlayers() != null}" class="col-md-5 transfer">
-            <h2  class="text-center" th:text="${team.name}">Nome</h2>
-            <table th:if="${team.getPlayers() != null}" id="listPlayers" class="table table-bordered table-condensed">
-                <tr>
-                    <th class="col-md-1"></th>
-                    <th>Name</th>
-                    <th class="text-center">Position</th>
-                    <th class="text-center">Cost</th>
-                </tr>
-                <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${gks}">
-                    <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}" height="20%"/></td>
-                    <td th:text="${player.name}">Name</td>
-                    <td class="text-center" th:text="${player.position}">position</td>
-                    <td class="text-center" th:text="${player.cost}">cost</td>
-                </tr>
-                <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${defs}">
-                    <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
-                    <td th:text="${player.name}">Name</td>
-                    <td class="text-center" th:text="${player.position}">position</td>
-                    <td class="text-center" th:text="${player.cost}">cost</td>
-                </tr>
-                <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${mids}">
-                    <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
-                    <td th:text="${player.name}">Name</td>
-                    <td class="text-center" th:text="${player.position}">position</td>
-                    <td class="text-center" th:text="${player.cost}">cost</td>
-                </tr>
-                <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${fors}">
-                    <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
-                    <td th:text="${player.name}">Name</td>
-                    <td class="text-center" th:text="${player.position}">position</td>
-                    <td class="text-center" th:text="${player.cost}">cost</td>
-                </tr>
-            </table>
+            </div>
+            <div th:if="${team.getPlayers() != null}" class="col-md-5 transfer">
+                <h2 class="text-center" th:text="${team.name}">Nome</h2>
+                <table th:if="${team.getPlayers() != null}" id="listPlayers"
+                       class="table table-bordered table-condensed">
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th>Name</th>
+                        <th class="text-center">Position</th>
+                        <th class="text-center">Cost</th>
+                    </tr>
+                    <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
+                        th:each="player : ${gks}">
+                        <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                              height="20%"/></td>
+                        <td th:text="${player.name}">Name</td>
+                        <td class="text-center" th:text="${player.position}">position</td>
+                        <td class="text-center" th:text="${player.cost}">cost</td>
+                    </tr>
+                    <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
+                        th:each="player : ${defs}">
+                        <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                              height="20%"/></td>
+                        <td th:text="${player.name}">Name</td>
+                        <td class="text-center" th:text="${player.position}">position</td>
+                        <td class="text-center" th:text="${player.cost}">cost</td>
+                    </tr>
+                    <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
+                        th:each="player : ${mids}">
+                        <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                              height="20%"/></td>
+                        <td th:text="${player.name}">Name</td>
+                        <td class="text-center" th:text="${player.position}">position</td>
+                        <td class="text-center" th:text="${player.cost}">cost</td>
+                    </tr>
+                    <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
+                        th:each="player : ${fors}">
+                        <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                              height="20%"/></td>
+                        <td th:text="${player.name}">Name</td>
+                        <td class="text-center" th:text="${player.position}">position</td>
+                        <td class="text-center" th:text="${player.cost}">cost</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+</section>
 </body>
 </html>
