@@ -18,7 +18,7 @@
                     <th>Cost</th>
                 </tr>
                 <tr th:each="player : ${players}">
-                    <td><a th:href="${'/player/' + player.id}">Id</a></td>
+                    <td><a th:href="${'/player/' + player.capitao}">Id</a></td>
                     <td th:text="${player.name}">Name</td>
                     <td th:text="${player.position}">position</td>
                     <td th:text="${player.cost}">cost</td>
@@ -36,7 +36,7 @@
                     <th>Cost</th>
                 </tr>
                 <tr th:each="playert : ${team.getPlayers()}">
-                    <td><a th:href="${'/player/' + playert.id}">Id</a></td>
+                    <td><a th:href="${'/player/' + playert.capitao}">Id</a></td>
                     <td th:text="${playert.name}">Name</td>
                     <td th:text="${playert.position}">position</td>
                     <td th:text="${playert.cost}">cost</td>

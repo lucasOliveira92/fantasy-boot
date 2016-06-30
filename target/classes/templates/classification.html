@@ -13,10 +13,10 @@
                 <span style="font-size: 200%;"><b>Classification</b></span>
             </div>
             <div class="row" style="float: left; position: relative; align-items: baseline;">
-                <div id="playerSearch" class="pesquisa">
+                <div capitao="playerSearch" class="pesquisa">
                     <div class="campo-pesquisa">
                         <label>Gameweek:</label>
-                        <select class="btn btn-default" style="width: 100%;"  id="gameweekFilter">
+                        <select class="btn btn-default" style="width: 100%;"  capitao="gameweekFilter">
                             <option>All</option>
                             <option th:each="gameWeek : ${gameWeeks}" th:text="${gameWeek.number}">number</option>
                         </select>

@@ -1,4 +1,7 @@
-var pickPlayer=0;
+var currentCaptain;
+var user;
+var titulares = [];
+
 $(document).on('click', '.clickable-row', function() {
     if($(this).hasClass("highlighted"))
         $(this).removeClass('highlighted');
@@ -33,6 +36,8 @@ function addToField() {
     var cost = data.eq(3).text();
     var img = data.eq(0).find("img").clone().attr("height", "50%").prop('outerHTML');
 
+    //titulares.push(id);
+
     row.attr("class", "");
     row.attr("style", "background-color: #666666");
 
@@ -40,12 +45,12 @@ function addToField() {
         $(this).remove();
     });
 
-    $("<div id="+id+" style='overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block'>\
+    $("<div class='titular' id="+id+" style='overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block'>\
 "+img+"\
 <p style='line-height: 100%; font-weight: bold; font-size: 100%' id="+ pos +">" + name + "</p>\
 <h2 style='visibility: hidden;'>"+ cost +"</h2>\
-<button type='button' class='btn btn-xs btn-default ' onclick='makeCaptain(this.id)' style='position: absolute; font-weight: bold;  background-color: darkgray; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden' id="+id+">C</button>\
-<button type='button' class='btn btn-xs btn-default' id="+id+" onclick='switchPlayers(this.id)' style='position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden'>\
+<button type='button' class='btn btn-xs captain' onclick='makeCaptain(this.id)' style='position: absolute; font-weight: bold; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden' id="+id+">C</button>\
+<button type='button' class='btn btn-xs btn-default trade' id="+id+" onclick='switchPlayers(this.id)' style='position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden'>\
 <span class='glyphicon glyphicon-retweet'></span>\
 </button>\
 </div>\
@@ -63,6 +68,12 @@ function removeFromField(id){
     var pos = player.find('p').attr('id');
     var cost = player.find('h2').text();
     var img = player.find('img').clone().attr("height", "20%").prop('outerHTML');
+
+    //REMOVER DA LISTA DE TITULARES
+    var index = titulares.indexOf(id);
+    if (index > -1) {
+        titulares.splice(index, 1);
+    }
 
     $("<tr class='clickable-row' style='cursor:pointer;' id='id2'>\
     <td class='col-md-1 text-center'>"+img+"</td>\
@@ -82,6 +93,7 @@ function removeFromField(id){
 
 }
 function makeCaptain(id){
+    currentCaptain = id;
     var player =$("#field #"+id);
     var name = player.find('p').text();
     var pos = player.find('p').attr('id');
@@ -94,11 +106,14 @@ function makeCaptain(id){
         else
             $(this).removeClass('cpt-selected')
     });
-
-    searchText();
 }
 
-function searchText() {
+//NAO ESQUECER DOS HEADERS (TEM NO VIRTUAL_TEAM_SHOW)
+function updateStrategy() {
+    titulares = [];
+
+    user = $('.current-user-id').text();
+    //console.log(user);
 
     $(function () {
         var token = $("input[name='_csrf']").val();
@@ -107,11 +122,16 @@ function searchText() {
             xhr.setRequestHeader(header, token);
         });
     });
-    
+
+
+    $('.titular').each(function() {
+        titulares.push(($(this).attr('id')));
+    });
 
     var search = {
-        "name": "TAUUU",
-        "id" : 1
+        "user": user,
+        "capitao": currentCaptain,
+        "titulares": titulares
     }
     $.ajax({
         type: "POST",
@@ -120,7 +140,6 @@ function searchText() {
         url: "/api/games",
         data: JSON.stringify(search), // Note it is important
         success: function (result) {
-            console.log("WTF");
         }
     });
 }

@@ -16,7 +16,7 @@
                 <th>Edit</th>
             </tr>
             <tr th:each="player : ${players}">
-                <td><a th:href="${'/player/' + player.id}">Id</a></td>
+                <td><a th:href="${'/player/' + player.capitao}">Id</a></td>
                 <td th:text="${player.name}">playername</td>
                 <td th:text="${player.position}">email</td>
             </tr>
