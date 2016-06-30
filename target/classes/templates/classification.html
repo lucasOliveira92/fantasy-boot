@@ -16,7 +16,7 @@
                         <label>Gameweek:</label>
                         <select class="btn btn-default" style="width: 100%;"  id="gameweekFilter">
                             <option>All</option>
-                            <option th:each="gameWeek : ${gameWeeks}" th:text="${gameWeek.number}">number</option>
+                            <option th:each="gameWeek : ${gameWeekNumber}" th:text="${gameWeek}">number</option>
                         </select>
                     </div>
                     <div class="botao-pesquisa">

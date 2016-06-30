@@ -43,58 +43,16 @@ public class VirtualTeamController {
         if(u != null) {
             if (u.hasVirtualTeam()) {
                 VirtualTeam team = gestor.getVirtualTeam(u.getId());
-                List<Player> formation = team.getLastTeamFormation();
-                List<Player> substitutes = team.getPlayers();
-                substitutes.removeAll(formation);
-                Player gk=null;
-                ArrayList<Player> defs = new ArrayList<>();
-                ArrayList<Player> mids = new ArrayList<>();
-                ArrayList<Player> fors = new ArrayList<>();
-                Player gksub=null;
-                ArrayList<Player> defsub = new ArrayList<>();
-                ArrayList<Player> midsub = new ArrayList<>();
-                ArrayList<Player> forsub = new ArrayList<>();
-                for (Player p : formation) {
-                    switch (p.getPosition()){
-                        case "GK":
-                            gk = p;
-                            break;
-                        case "DEF":
-                            defs.add(p);
-                            break;
-                        case "MID":
-                            mids.add(p);
-                            break;
-                        case "FOR":
-                            fors.add(p);
-                            break;
-                    }
-                }
-                for (Player p : substitutes) {
-                    switch (p.getPosition()){
-                        case "GK":
-                            gksub = p;
-                            break;
-                        case "DEF":
-                            defsub.add(p);
-                            break;
-                        case "MID":
-                            midsub.add(p);
-                            break;
-                        case "FOR":
-                            forsub.add(p);
-                            break;
-                    }
-                }
-                model.addAttribute("GK",gk);
-                model.addAttribute("DEFs",defs);
-                model.addAttribute("MIDs",mids);
-                model.addAttribute("FORs",fors);
-                model.addAttribute("GKsub",gksub);
-                model.addAttribute("DEFsub",defsub);
-                model.addAttribute("MIDsub",midsub);
-                model.addAttribute("FORsub",forsub);
-                model.addAttribute("formation",team.getLastTeamFormation());
+                List<List<Player>> listFormation = gestor.getListsPlayersByPositionByFormation(u.getVirtualTeam().getId());
+                List<List<Player>> listSubstitutes = gestor.getListsPlayersByPositionBySubstitutes(u.getVirtualTeam().getId());
+                model.addAttribute("GK",listFormation.get(0));
+                model.addAttribute("DEFs",listFormation.get(1));
+                model.addAttribute("MIDs",listFormation.get(2));
+                model.addAttribute("FORs",listFormation.get(3));
+                model.addAttribute("GKsub",listSubstitutes.get(0));
+                model.addAttribute("DEFsub",listSubstitutes.get(1));
+                model.addAttribute("MIDsub",listSubstitutes.get(2));
+                model.addAttribute("FORsub",listSubstitutes.get(3));
                 model.addAttribute("team", team);
                 return "virtualTeam/show";
             }else{
@@ -114,32 +72,14 @@ public class VirtualTeamController {
         model.addAttribute("currentUser", u);
         if (u != null) {
             if (u.hasVirtualTeam()) {
-                ArrayList<Player> lista = (ArrayList<Player>) playerService.getAllPlayers();
+                ArrayList<Player> lista = new ArrayList<>(playerService.getAllPlayers());
                 lista.removeAll(u.getTeam().getPlayers());
-                ArrayList<Player> gks = new ArrayList<>();
-                ArrayList<Player> defs = new ArrayList<>();
-                ArrayList<Player> mids = new ArrayList<>();
-                ArrayList<Player> fors = new ArrayList<>();
-                for (Player p : u.getTeam().getPlayers()) {
-                    switch (p.getPosition()){
-                        case "GK":
-                            gks.add(p);
-                            break;
-                        case "DEF":
-                            defs.add(p);
-                            break;
-                        case "MID":
-                            mids.add(p);
-                            break;
-                        case "FOR":
-                            fors.add(p);
-                            break;
-                    }
-                }
-                model.addAttribute("gks", gks);
-                model.addAttribute("defs", defs);
-                model.addAttribute("mids", mids);
-                model.addAttribute("fors", fors);
+
+                List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(u.getVirtualTeam().getId());
+                model.addAttribute("gks", listFormation.get(0));
+                model.addAttribute("defs", listFormation.get(1));
+                model.addAttribute("mids", listFormation.get(2));
+                model.addAttribute("fors", listFormation.get(3));
                 model.addAttribute("players", lista);
                 model.addAttribute("team", u.getTeam());
                 return "virtualTeam/transfers";
@@ -160,32 +100,14 @@ public class VirtualTeamController {
         if (u != null) {
             if (u.hasVirtualTeam()) {
                 VirtualTeam team = gestor.doTransfer(playerService.getPlayerById(newId),playerService.getPlayerById(oldId),u.getTeam().getId());
-                ArrayList<Player> lista = (ArrayList<Player>) playerService.getAllPlayers();
-                lista.removeAll(team.getPlayers());
-                ArrayList<Player> gks = new ArrayList<>();
-                ArrayList<Player> defs = new ArrayList<>();
-                ArrayList<Player> mids = new ArrayList<>();
-                ArrayList<Player> fors = new ArrayList<>();
-                for (Player p : team.getPlayers()) {
-                    switch (p.getPosition()){
-                        case "GK":
-                            gks.add(p);
-                            break;
-                        case "DEF":
-                            defs.add(p);
-                            break;
-                        case "MID":
-                            mids.add(p);
-                            break;
-                        case "FOR":
-                            fors.add(p);
-                            break;
-                    }
-                }
-                model.addAttribute("gks", gks);
-                model.addAttribute("defs", defs);
-                model.addAttribute("mids", mids);
-                model.addAttribute("fors", fors);
+                ArrayList<Player> lista = new ArrayList<>(playerService.getAllPlayers());
+                lista.removeAll(u.getTeam().getPlayers());
+
+                List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(team.getId());
+                model.addAttribute("gks", listFormation.get(0));
+                model.addAttribute("defs", listFormation.get(1));
+                model.addAttribute("mids", listFormation.get(2));
+                model.addAttribute("fors", listFormation.get(3));
                 model.addAttribute("players", lista);
                 model.addAttribute("team", u.getTeam());
                 return "virtualTeam/transfers";

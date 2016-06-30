@@ -49,14 +49,16 @@
                 <tr>
                     <th class="col-md-1"></th>
                     <th>Name</th>
-                    <th>Position</th>
-                    <th>Cost</th>
+                    <th class="text-center">Position</th>
+                    <th class="text-center">Cost</th>
+                    <th class="text-center">Times Bought</th>
                 </tr>
                 <tr th:each="player : ${players}" th:id="${player.id}" class="clickable-row allPlayers" style="cursor:pointer;">
                     <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}" height="20%"/></td>
                     <td th:text="${player.name}">Name</td>
-                    <td th:text="${player.position}">position</td>
-                    <td th:text="${player.cost}">cost</td>
+                    <td class="text-center" th:text="${player.position}">position</td>
+                    <td class="text-center" th:text="${player.cost}">cost</td>
+                    <td class="text-center" th:text="${player.totalTimesBought}">cost</td>
                 </tr>
             </table>
 
@@ -72,32 +74,32 @@
                 <tr>
                     <th class="col-md-1"></th>
                     <th>Name</th>
-                    <th>Position</th>
-                    <th>Cost</th>
+                    <th class="text-center">Position</th>
+                    <th class="text-center">Cost</th>
                 </tr>
                 <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${gks}">
                     <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}" height="20%"/></td>
                     <td th:text="${player.name}">Name</td>
-                    <td th:text="${player.position}">position</td>
-                    <td th:text="${player.cost}">cost</td>
+                    <td class="text-center" th:text="${player.position}">position</td>
+                    <td class="text-center" th:text="${player.cost}">cost</td>
                 </tr>
                 <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${defs}">
                     <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
                     <td th:text="${player.name}">Name</td>
-                    <td th:text="${player.position}">position</td>
-                    <td th:text="${player.cost}">cost</td>
+                    <td class="text-center" th:text="${player.position}">position</td>
+                    <td class="text-center" th:text="${player.cost}">cost</td>
                 </tr>
                 <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${mids}">
                     <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
                     <td th:text="${player.name}">Name</td>
-                    <td th:text="${player.position}">position</td>
-                    <td th:text="${player.cost}">cost</td>
+                    <td class="text-center" th:text="${player.position}">position</td>
+                    <td class="text-center" th:text="${player.cost}">cost</td>
                 </tr>
                 <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;" th:each="player : ${fors}">
                     <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
                     <td th:text="${player.name}">Name</td>
-                    <td th:text="${player.position}">position</td>
-                    <td th:text="${player.cost}">cost</td>
+                    <td class="text-center" th:text="${player.position}">position</td>
+                    <td class="text-center" th:text="${player.cost}">cost</td>
                 </tr>
             </table>
         </div>

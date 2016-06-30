@@ -1,10 +1,4 @@
 
-var sell = [];
-var buy = [];
-
-var allPlayers = $("#listAllPlayers");
-var myPlayers = $("#listPlayers");
-
 $(document).on('click', '.clickable-row', function() {
     if($(this).hasClass("highlighted"))
         $(this).removeClass('highlighted');

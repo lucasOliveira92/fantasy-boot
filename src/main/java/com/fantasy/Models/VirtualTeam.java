@@ -172,11 +172,11 @@ public class VirtualTeam implements Serializable {
         return pontos;
     }
 
-    public int getComulativePointsByGameWeek(long game_week_id){
-        int pontos=0;
+    public long getComulativePointsByGameWeek(long game_week_id){
+        long pontos=0;
         for (GameWeekSnapshot gameweek:this.gameWeekSnapshots) {
             if(gameweek.getGameWeek().getId()==game_week_id){
-                pontos=gameweek.getGameWeekComulativePoints();
+                pontos=gameweek.getGameWeekCumulativePoints();
             }
         }
         return pontos;

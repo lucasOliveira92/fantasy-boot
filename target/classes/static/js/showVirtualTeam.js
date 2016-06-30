@@ -88,36 +88,19 @@ function makeCaptain(id){
     var cost = player.find('h2').text();
     var img = player.find('img').clone().attr("height", "50%").prop('outerHTML');
 
+
     $('button.captain').each(function() {
         if($(this).attr('id') == id)
             $(this).addClass('cpt-selected')
         else
             $(this).removeClass('cpt-selected')
     });
-<<<<<<< HEAD
-/*
-    var y = $(".captain")[0];
-    $(".captain")[0].attr("class","btn btn-xs btn-default");
-    $(".captain")[0].attr("style","position: absolute; font-weight: bold; color: white; background-color: darkgray; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden");
-    console.log(y);
-*/
-    $("<div id="+id+" style='overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block'>\
-"+img+"\
-<p style='line-height: 100%; font-weight: bold; font-size: 100%' id="+ pos +">" + name + "</p>\
-<h2 style='visibility: hidden;'>"+ cost +"</h2>\
-<button type='button' class='btn btn-xs btn-default captain' onclick='makeCaptain(this.id)' style='position: absolute; font-weight: bold; color: white; background-color: darkblue; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden' id="+id+">C</button>\
-<button type='button' class='btn btn-xs btn-default' id="+id+" onclick='switchPlayers(this.id)' style='position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden'>\
-<span class='glyphicon glyphicon-retweet'></span>\
-</button>\
-</div>\
-").appendTo("#" + pos);
-=======
 
-    searchText();
+    postJSONInfo();
 }
->>>>>>> dc18ed01f60901258fb779f8819af08929ee9e80
 
-function searchText() {
+//NAO ESQUECER DOS HEADERS (TEM NO VIRTUAL_TEAM_SHOW)
+function postJSONInfo() {
 
     $(function () {
         var token = $("input[name='_csrf']").val();

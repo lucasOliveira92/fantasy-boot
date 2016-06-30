@@ -2,7 +2,6 @@ package com.fantasy.Controllers;
 
 import com.fantasy.Models.Player;
 import com.fantasy.Models.User;
-import com.fantasy.Models.VirtualTeam;
 import com.fantasy.Services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -37,6 +36,7 @@ public class ClassificationController {
         User u = gestorUser.getUserByUsername(auth.getName());
 
         model.addAttribute("currentUser", u);
+        model.addAttribute("gameWeekNumber",gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1);
         model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         return "classification";
@@ -48,13 +48,17 @@ public class ClassificationController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
 
-        List<VirtualTeam> teams = gestorVirtualTeams.getAllTeamsOrderedByPoints();
 
         model.addAttribute("currentUser", u);
+        model.addAttribute("gameWeekNumber",gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1);
         model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         model.addAttribute("number", number);
-        model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());
+        if(number != -1) {
+            model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());
+        }else{
+            model.addAttribute("gameweekID",gestorGameWeek.getGameWeekByNumber(u.getVirtualTeam().getGameWeekSnapshots().size()-1).getId());
+        }
         return "classificationGameWeek";
     }
 
