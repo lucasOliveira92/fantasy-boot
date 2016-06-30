@@ -1,35 +1,47 @@
 package com.fantasy.Models;
 
+import java.util.List;
+
 /**
  * Created by Lucas on 29-Jun-16.
  */
 public class TeamManagementResponse {
 
-    private String name;
 
-    private int id;
+    private long capitao;
 
-    public TeamManagementResponse(String name) {
-        this.name = name;
-    }
+    private long user;
+
+    private List titulares;
+
 
     public TeamManagementResponse() {
     }
 
 
-    public String getName() {
-        return name;
+    public long getUser() {
+        return user;
     }
 
-    public int getId() {
-        return id;
+    public void setUser(long user) {
+        this.user = user;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public List getTitulares() {
+        return titulares;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitulares(List titulares) {
+        this.titulares = titulares;
     }
+
+
+    public long getCapitao() {
+        return capitao;
+    }
+
+    public void setCapitao(long capitao) {
+        this.capitao = capitao;
+    }
+
 }

@@ -1,6 +1,7 @@
 package com.fantasy.Services;
 
 import com.fantasy.DAO.VirtualTeamDAO;
+import com.fantasy.Models.GameWeekSnapshot;
 import com.fantasy.Models.Player;
 import com.fantasy.Models.User;
 import com.fantasy.Models.VirtualTeam;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -17,6 +19,8 @@ import java.util.List;
 public class VirtualTeamService {
     @Autowired
     private VirtualTeamDAO virtualTeams;
+    @Autowired
+    private SnapshotService snapshotService;
     
     public VirtualTeam createVirtualTeam(String nome){
         return virtualTeams.save(new VirtualTeam(nome,1000,2));
@@ -35,43 +39,6 @@ public class VirtualTeamService {
     public List<VirtualTeam> getAllVirtualTeams(){ return (List<VirtualTeam>) virtualTeams.findAll();}
 
     public User getUserById(long id){ return virtualTeams.findByUserId(id).getOwner(); }
-    
-    public VirtualTeam doTransfer(List<Player> in, List<Player> out, int virtual_team_id) throws Exception{
-        VirtualTeam vt = virtualTeams.findById(virtual_team_id);
-        
-        int grIN=0,defIN=0,medIN=0,avaIN=0;
-        int grOUT=0,defOUT=0,medOUT=0,avaOUT=0;
-        if(in.size() != out.size())
-            throw new Exception("Número de jogadores é diferente");
-        for(Player p: in){
-            switch(p.getPosition()){
-                case "GR": grIN++;break;
-                case "DEF": defIN++;break;
-                case "MED": medIN++;break;
-                case "AVA": avaIN++;break;
-            }
-        }
-        for(Player p: out){
-            switch(p.getPosition()){
-                case "GR": grOUT++;break;
-                case "DEF": defOUT++;break;
-                case "MED": medOUT++;break;
-                case "AVA": avaOUT++;break;
-            }
-        }
-        if(!(grOUT == grIN && defIN == defOUT && medIN == medOUT && avaIN == avaOUT)){
-            throw new Exception("Posições erradas");
-        }
-        
-        for(Player p: in){
-            vt.addPlayer(p);
-        }
-        for(Player p: out){
-            vt.removePlayer(p);
-        }
-        
-        return virtualTeams.save(vt);
-    }
 
     public VirtualTeam doTransfer(Player in, Player out, long virtual_team_id){
         VirtualTeam vt = virtualTeams.findById(virtual_team_id);
@@ -79,7 +46,24 @@ public class VirtualTeamService {
         if((in.getPosition().equals(out.getPosition()) && (vt.getBudget()>(out.getCost()-in.getCost())))){
             vt.removePlayerB(out);
             vt.addPlayerB(in);
+            GameWeekSnapshot snap = vt.getLastSnapshot();
+            List<Player> players = snap.getPlayers();
+            List<Player> newPlayers = new ArrayList<>();
 
+            for (Player p: players) {
+                if(p.getId() == out.getId()){
+                    if(p.getId() == snap.getCapitao()){
+                        snap.setCapitao(in.getId());
+
+                    }
+                    newPlayers.add(in);
+                }
+                else{
+                    newPlayers.add(p);
+                }
+            }
+            snap.setPlayers(newPlayers);
+            snapshotService.saveSnap(snap);
         }
 
         virtualTeams.save(vt);

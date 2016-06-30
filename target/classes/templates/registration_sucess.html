@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<title>Registration Success</title>
+</head>
+<body>
+    <div align="center">
+        <table border="0">
+            <tr>
+                <td colspan="2" align="center"><h2>Registration Succeeded!</h2></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <h3>Thank you for registering! Here's the review of your details:</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>User Name:</td>
+                <td th:text="${user.username}">xxx</td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td th:text="${user.email}">xxx</td>
+            </tr>
+            <tr>
+                <td>User capitao:</td>
+                <td th:text="${user.capitao}">xxx</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

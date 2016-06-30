@@ -40,3 +40,10 @@ function switchPlayers(budget) {
                 alert("Transfer is OK!");
                 window.open("/team/transfers/"+idAll+"/"+idMy,"_self");}}}
 };
+
+function recarregaAllPlayers(){
+    var positionFilter = $('#positionFilter option:selected').attr('id');
+    var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
+    var orderFilter = $('#orderFilter option:selected').attr('id');
+    window.open("/team/transfers/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
+};

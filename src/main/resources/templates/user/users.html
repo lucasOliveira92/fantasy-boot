@@ -17,10 +17,10 @@
                 <th>Edit</th>
             </tr>
             <tr th:each="user : ${users}">
-                <td><a th:href="${'/user/' + user.id}">Id</a></td>
+                <td><a th:href="${'/user/' + user.capitao}">Id</a></td>
                 <td th:text="${user.username}">Username</td>
                 <td th:text="${user.email}">email</td>
-                <td><a th:href="${'/user/edit/' + user.id}">Edit</a></td>
+                <td><a th:href="${'/user/edit/' + user.capitao}">Edit</a></td>
             </tr>
         </table>
 
