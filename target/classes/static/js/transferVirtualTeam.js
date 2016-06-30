@@ -13,13 +13,14 @@ function switchPlayers(budget) {
     var posMy=null;
     var costAll=null;
     var costMy=null;
+    var totalTransfers=null;
 
 
     $('tr.highlighted').each(function(){
         if($(this).hasClass('allPlayers')) {
             idAll = $(this).attr('id');
-            posAll = $(this).find('td').eq(2).text();
-            costAll = $(this).find('td').eq(3).text();
+            posAll = $(this).find('td').eq(3).text();
+            costAll = $(this).find('td').eq(4).text();
         }
         if($(this).hasClass('myTeam')) {
             idMy = $(this).attr('id');
@@ -27,18 +28,32 @@ function switchPlayers(budget) {
             costMy = $(this).find('td').eq(3).text();
         }
     });
+    
+    $('p.total-transfers').each(function(){
+        totalTransfers = $(this).attr('id');
+    });
 
     if (idAll == null || idMy == null) {
         alert("Select a player from both tables first!");
     }else{
-        if(posAll!=posMy){
+        if(posAll != posMy){
+            console.log(posAll);
+            console.log(posMy);
             alert("Positions doesn't match! Please select players from the same positions");
         }else{
             if(budget < (costMy-costAll)){
             alert("Your budget isn't enough! Select other players");
         }else{
-                alert("Transfer is OK!");
-                window.open("/team/transfers/"+idAll+"/"+idMy,"_self");}}}
+                if(totalTransfers > 0){
+                    alert("Transfer is OK!");
+                    window.open("/team/transfers/"+idAll+"/"+idMy,"_self");
+                }else{
+                    alert("You don't have enough transfers!");
+                }
+
+            }
+        }
+    }
 };
 
 function recarregaAllPlayers(){

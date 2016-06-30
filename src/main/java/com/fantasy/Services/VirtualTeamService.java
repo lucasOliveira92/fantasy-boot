@@ -46,6 +46,8 @@ public class VirtualTeamService {
         if((in.getPosition().equals(out.getPosition()) && (vt.getBudget()>(out.getCost()-in.getCost())))){
             vt.removePlayerB(out);
             vt.addPlayerB(in);
+            vt.setNumberTransfers(vt.getNumberTransfers() -1);
+            vt.setBudget(vt.getBudget() - (out.getCost()-in.getCost()));
             GameWeekSnapshot snap = vt.getLastSnapshot();
             List<Player> players = snap.getPlayers();
             List<Player> newPlayers = new ArrayList<>();
