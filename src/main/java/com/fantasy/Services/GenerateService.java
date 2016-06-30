@@ -1395,39 +1395,50 @@ public class GenerateService {
             List<Player> players = vt.getPlayers();
             List<Player> equipaTitular = new ArrayList<>();
             int totalGR = 0, totalDEF = 0, totalMID = 0, totalFOR = 0;
-            Collections.shuffle(players, new SecureRandom());
+            long capitao = 0;
+            List<Player> lastSnapshot = new ArrayList<Player>(vt.getLastTeamFormation());
+            if(lastSnapshot.isEmpty()){ //SE NAO TEM LAST SNAPSHOT
 
-            for (Player p : players) {
-                if (equipaTitular.size() < 11) {
-                    switch (p.getPosition()) {
-                        case "GK":
-                            if (totalGR == 0) {
-                                equipaTitular.add(p);
-                                totalGR++;
-                            }
-                            break;
-                        case "DEF":
-                            if (totalDEF < 4) {
-                                equipaTitular.add(p);
-                                totalDEF++;
-                            }
-                            break;
-                        case "MID":
-                            if (totalMID < 4) {
-                                equipaTitular.add(p);
-                                totalMID++;
-                            }
-                            break;
-                        case "FOR":
-                            if (totalFOR < 2) {
-                                equipaTitular.add(p);
-                                totalFOR++;
-                            }
-                            break;
+                Collections.shuffle(players, new SecureRandom());
+                for (Player p : players) {
+                    if (equipaTitular.size() < 11) {
+                        switch (p.getPosition()) {
+                            case "GK":
+                                if (totalGR == 0) {
+                                    equipaTitular.add(p);
+                                    totalGR++;
+                                }
+                                break;
+                            case "DEF":
+                                if (totalDEF < 4) {
+                                    equipaTitular.add(p);
+                                    totalDEF++;
+                                }
+                                break;
+                            case "MID":
+                                if (totalMID < 4) {
+                                    equipaTitular.add(p);
+                                    totalMID++;
+                                }
+                                break;
+                            case "FOR":
+                                if (totalFOR < 2) {
+                                    equipaTitular.add(p);
+                                    totalFOR++;
+                                }
+                                break;
+                        }
                     }
                 }
+
+                capitao = equipaTitular.get(0).getId();
             }
-            GameWeekSnapshot snap = new GameWeekSnapshot(equipaTitular, equipaTitular.get(0).getId(), gw, vt);
+            else{ //SE JA TEM LAST SNAPSHOT
+                equipaTitular = lastSnapshot;
+                capitao = vt.getLastCaptain();
+            }
+
+            GameWeekSnapshot snap = new GameWeekSnapshot(equipaTitular,capitao , gw, vt);
             allSnaps.put(vt.getName(), snap);
             snapDAO.save(snap);
         }

@@ -1,4 +1,4 @@
-var currentCaptain;
+var currentCaptain = -1;
 var user;
 var titulares = [];
 
@@ -61,6 +61,9 @@ function addToField() {
 }
 
 function removeFromField(id){
+
+    if(currentCaptain == id)
+        currentCaptain = -1;
     var player = $("#field #"+id);
     var tablePlayer = $("#listPlayers #"+id);
     var id2 = player.attr('id');
@@ -113,6 +116,10 @@ function updateStrategy() {
     titulares = [];
 
     user = $('.current-user-id').text();
+    if(currentCaptain == -1){
+        alert("You must pick a captain for your team");
+        return;
+    }
     //console.log(user);
 
     $(function () {
@@ -137,7 +144,7 @@ function updateStrategy() {
         type: "POST",
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
-        url: "/api/games",
+        url: "/save/team",
         data: JSON.stringify(search), // Note it is important
         success: function (result) {
         }

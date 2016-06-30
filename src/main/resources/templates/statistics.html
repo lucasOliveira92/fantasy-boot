@@ -11,32 +11,32 @@
         <div th:if="${players != null}" class="col-md-10 col-md-offset-1">
             <h2 class="text-center">Statistics</h2>
             <div class="row" style="float: left; position: relative; align-items: baseline;">
-                <div capitao="playerSearch" class="pesquisa-statistic">
+                <div id="playerSearch" class="pesquisa-statistic">
                     <div class="campo-pesquisa-statistic">
                         <label>Team:</label>
-                        <select class="btn btn-default" style="width: 100%;" capitao="realTeamFilter">
-                            <option capitao="-1">All</option>
-                            <option th:each="team : ${realTeams}" th:text="${team.name}" th:capitao="${team.capitao}">name</option>
+                        <select class="btn btn-default" style="width: 100%;" id="realTeamFilter">
+                            <option id="-1">All</option>
+                            <option th:each="team : ${realTeams}" th:text="${team.name}" th:id="${team.id}">name</option>
                         </select>
                     </div>
                     <div class="campo-pesquisa-statistic">
                         <label>Position:</label>
-                        <select class="btn btn-default" style="width: 100%;" capitao="positionFilter">
-                            <option capitao="-1">All</option>
-                            <option capitao="1">Goalkeeper</option>
-                            <option capitao="2">Defender</option>
-                            <option capitao="3">Midfield</option>
-                            <option capitao="4">Forward</option>
+                        <select class="btn btn-default" style="width: 100%;" id="positionFilter">
+                            <option id="-1">All</option>
+                            <option id="1">Goalkeeper</option>
+                            <option id="2">Defender</option>
+                            <option id="3">Midfield</option>
+                            <option id="4">Forward</option>
                         </select>
                     </div>
                     <div class="campo-pesquisa-statistic">
                         <label>Order by:</label>
-                        <select class="btn btn-default" style="width: 100%;" capitao="orderFilter">
-                            <option capitao="-1">Cost</option>
-                            <option capitao="1">Points</option>
-                            <option capitao="2">Goals Scored</option>
-                            <option capitao="3">Yellow Cards</option>
-                            <option capitao="4">Red Cards</option>
+                        <select class="btn btn-default" style="width: 100%;" id="orderFilter">
+                            <option id="-1">Cost</option>
+                            <option id="1">Points</option>
+                            <option id="2">Goals Scored</option>
+                            <option id="3">Yellow Cards</option>
+                            <option id="4">Red Cards</option>
                         </select>
                     </div>
                     <div class="botao-pesquisa-statistic">
@@ -72,9 +72,9 @@
 </div>
 <script>
     function recarregaAllPlayers(){
-        var positionFilter = $('#positionFilter option:selected').attr('capitao');
-        var realTeamFilter = $('#realTeamFilter option:selected').attr('capitao');
-        var orderFilter = $('#orderFilter option:selected').attr('capitao');
+        var positionFilter = $('#positionFilter option:selected').attr('id');
+        var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
+        var orderFilter = $('#orderFilter option:selected').attr('id');
         window.open("/statistics/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
     };
 </script>

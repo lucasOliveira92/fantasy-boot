@@ -181,4 +181,14 @@ public class VirtualTeam implements Serializable {
         }
         return formationList;
     }
+    public long getLastCaptain(){
+        if (gameWeekSnapshots != null && !gameWeekSnapshots.isEmpty()) {
+            return gameWeekSnapshots.get(gameWeekSnapshots.size()-1).getCapitao();
+        }
+        return -1;
+    }
+
+    public GameWeekSnapshot getLastSnapshot(){
+        return gameWeekSnapshots.get(gameWeekSnapshots.size()-1);
+    }
 }

@@ -8,9 +8,9 @@ import java.util.List;
 public class TeamManagementResponse {
 
 
-    private int capitao;
+    private long capitao;
 
-    private int user;
+    private long user;
 
     private List titulares;
 
@@ -19,11 +19,11 @@ public class TeamManagementResponse {
     }
 
 
-    public int getUser() {
+    public long getUser() {
         return user;
     }
 
-    public void setUser(int user) {
+    public void setUser(long user) {
         this.user = user;
     }
 
@@ -36,11 +36,11 @@ public class TeamManagementResponse {
     }
 
 
-    public int getCapitao() {
+    public long getCapitao() {
         return capitao;
     }
 
-    public void setCapitao(int capitao) {
+    public void setCapitao(long capitao) {
         this.capitao = capitao;
     }
 

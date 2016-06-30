@@ -40,8 +40,9 @@ public class HelloController {
     @RequestMapping("/generate/{gameWeek}")
     public String generate(@PathVariable Integer gameWeek) {
         if(gameWeek > 0 && gameWeek <= 34){
-            generateService.genererateRandomSnapshots(gameWeek);
             generateService.generate(gameWeek);
+            if(gameWeek < 34)
+                generateService.genererateRandomSnapshots(gameWeek + 1 );
         }
 
         return "home";
@@ -52,13 +53,13 @@ public class HelloController {
         try {
             seed1();
             seed2();
+            generateService.genererateRandomSnapshots(1);
         } catch (Exception e) {
             e.printStackTrace();
         }
         return "home";
     }
 
-    @RequestMapping("/seed1")
     public String seed1() {
         try {
             generateService.populateRealTeamsPlayers();
@@ -67,7 +68,8 @@ public class HelloController {
         }
         return "home";
     }
-    @RequestMapping("/seed2")
+
+
     public String seed2() {
         try {
             generateService.populateVirtualTeamsUsers();

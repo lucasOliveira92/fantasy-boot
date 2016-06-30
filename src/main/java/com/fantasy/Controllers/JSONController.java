@@ -21,20 +21,4 @@ public class JSONController {
     public String serveAPI() {
         return restService.serveREST();
     }
-
-    @CrossOrigin
-    @RequestMapping(value = "/api/games", method = RequestMethod.POST)
-    public @ResponseBody  String  getSearchUserProfiles(@RequestBody TeamManagementResponse rs, HttpServletRequest request) {
-        System.out.println("User");
-        System.out.println(rs.getUser());
-        System.out.println("Capitao");
-        System.out.println(rs.getCapitao());
-        List lista = rs.getTitulares();
-        System.out.println("Players");
-        for(Object o: lista){
-            System.out.println(o);
-        }
-
-        return "OK";
-    }
 }

@@ -27,7 +27,10 @@
                             <img th:src="${player.getRealTeam().getEquipment()}"  height="50%"/>
                             <p style="line-height: 100%; font-weight: bold; font-size: 100%;" id="FOR" th:text="${player.name}"></p>
                             <h2 style="visibility: hidden;" th:text="${player.cost}"></h2>
-                            <button type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                            <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                                <b>C</b>
+                            </button>
+                            <button th:if="${idCapitao == player.id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
                                 <b>C</b>
                             </button>
                             <button type="button" class="btn btn-xs btn-default" th:id="${player.id}" onclick="switchPlayers(this.id)" style="position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden">
@@ -40,7 +43,10 @@
                             <img th:src="${player.getRealTeam().getEquipment()}"  height="50%"/>
                             <p style="line-height: 100%; font-weight: bold; font-size: 100%" id="MID" th:text="${player.name}"></p>
                             <h2 style="visibility: hidden;" th:text="${player.cost}"></h2>
-                            <button type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute;border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                            <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                                <b>C</b>
+                            </button>
+                            <button th:if="${idCapitao == player.id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
                                 <b>C</b>
                             </button>
                             <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}" onclick="switchPlayers(this.id)" style="position: absolute;  border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden">
@@ -53,7 +59,10 @@
                             <img th:src="${player.getRealTeam().getEquipment()}"  height="50%"/>
                             <p style="line-height: 100%; font-weight: bold; font-size: 100%" id="DEF" th:text="${player.name}"></p>
                             <h2 style="visibility: hidden;" th:text="${player.cost}"></h2>
-                            <button type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                            <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                                <b>C</b>
+                            </button>
+                            <button th:if="${idCapitao == player.id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
                                 <b>C</b>
                             </button>
                             <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}" onclick="switchPlayers(this.id)" style="position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden">
@@ -66,7 +75,10 @@
                             <img th:src="${GK.getRealTeam().getEquipment()}"  height="50%"/>
                             <p style="line-height: 100%; font-weight: bold; font-size: 100%" id="GK" th:text="${GK.name}"></p>
                             <h2 style="visibility: hidden;" th:text="${GK.cost}"></h2>
-                            <button type="button" class="btn btn-xs captain" th:id="${GK.id}" onclick="makeCaptain(this.id)" style="position: absolute;border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                            <button th:if="${idCapitao != GK.id}" type="button" class="btn btn-xs captain" th:id="${GK.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                                <b>C</b>
+                            </button>
+                            <button th:if="${idCapitao == GK.id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${GK.id}" onclick="makeCaptain(this.id)" style="position: absolute; border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
                                 <b>C</b>
                             </button>
                             <button type="button" class="btn btn-xs btn-default trade" th:id="${GK.id}" onclick="switchPlayers(this.id)" style="position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden">

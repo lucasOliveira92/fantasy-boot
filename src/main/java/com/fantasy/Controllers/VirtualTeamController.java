@@ -1,9 +1,8 @@
 package com.fantasy.Controllers;
 
-import com.fantasy.Models.Player;
-import com.fantasy.Models.User;
-import com.fantasy.Models.VirtualTeam;
+import com.fantasy.Models.*;
 import com.fantasy.Services.PlayerService;
+import com.fantasy.Services.SnapshotService;
 import com.fantasy.Services.UserService;
 import com.fantasy.Services.VirtualTeamService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +12,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.*;
 
@@ -31,6 +29,10 @@ public class VirtualTeamController {
 
     @Autowired
     private PlayerService playerService;
+
+    @Autowired
+    private SnapshotService snapshotService;
+
 
     @Secured("ROLE_USER")
     @RequestMapping(value = "team", method = RequestMethod.GET)
@@ -93,6 +95,7 @@ public class VirtualTeamController {
                 model.addAttribute("DEFsub",defsub);
                 model.addAttribute("MIDsub",midsub);
                 model.addAttribute("FORsub",forsub);
+                model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
                 model.addAttribute("formation",team.getLastTeamFormation());
                 model.addAttribute("team", team);
                 return "virtualTeam/show";
@@ -158,5 +161,31 @@ public class VirtualTeamController {
         }
         gestor.saveVirtualTeam(virtualTeam);
         return "redirect:/team/new";
+    }
+
+    @CrossOrigin
+    @RequestMapping(value = "/save/team", method = RequestMethod.POST)
+    public @ResponseBody
+    String  getSearchUserProfiles(@RequestBody TeamManagementResponse rs, HttpServletRequest request) {
+        System.out.println("User");
+        System.out.println(rs.getUser());
+        System.out.println("Capitao");
+        System.out.println(rs.getCapitao());
+
+        List lista = rs.getTitulares();
+        List<Player> idPlayers = new ArrayList<>();
+        System.out.println("Players");
+        for(Object o: lista){
+            idPlayers.add(playerService.getPlayerById(Long.parseLong(o.toString())));
+        }
+
+        GameWeekSnapshot snap = snapshotService.getLastSnapshotByUser(rs.getUser());
+        if(snap != null){
+            snap.setCapitao(rs.getCapitao());
+            snap.setPlayers(idPlayers);
+            snapshotService.saveSnap(snap);
+        }
+
+        return "OK";
     }
 }
