@@ -79,6 +79,7 @@ public class VirtualTeamService {
         if((in.getPosition().equals(out.getPosition()) && (vt.getBudget()>(out.getCost()-in.getCost())))){
             vt.removePlayerB(out);
             vt.addPlayerB(in);
+
         }
 
         virtualTeams.save(vt);

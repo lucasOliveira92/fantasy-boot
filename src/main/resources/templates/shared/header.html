@@ -4,60 +4,48 @@
 </head>
 <body>
 <div th:fragment="header">
-    <div class="container-fluid header ">
-
-        <div class="row logo">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4"><img src="/images/logo.png" height="20%"/></div>
-            <div th:if="${currentUser == null}" class="col-lg-4 login-box">
-                <button type="button" class="btn btn-default" onclick="location.href='/login'"><span
-                        class="glyphicon glyphicon-user"></span> Login
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <nav class="navbar navbar-default navbar-centered">
-        <div class="container-fluid centrado">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <header>
+        <div class="wrap-container">
+            <div id="logo"><img onclick="location.href='/'" src="/images/logo.png" alt="homepage" title="Home Page"/></div>
+            <nav id="menu" class="navbar">
                 <ul class="nav navbar-nav">
-                    <li><a onclick="location.href='/'">HOME</a></li>
-                    <li th:if="${currentUser != null}"><a onclick="location.href='/team'">MY TEAM</a></li>
-                    <li th:if="${currentUser != null}"><a onclick="location.href='/team/transfers'">TRANSFERS</a></li>
-                    <li><a onclick="location.href='/classification/'">CLASSIFICATION</a></li>
-                    <li><a onclick="location.href='/statistics/'">STATISTICS</a></li>
-                    <li><a onclick="location.href='/winners/'">WINNERS</a></li>
-                    <li><a onclick="location.href='/rules/'">RULES</a></li>
-                    <li th:if="${currentUser != null}" class="dropdown" style="float: right;">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Welcome
-                            <span th:text="${currentUser.getUsername()}"></span>
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu" >
-                            <li th:if="${currentUser.hasVirtualTeam()}" class="text-center"><span style="font-weight: bold;"
-                                      th:text="${currentUser.getVirtualTeam().getName()}">:</span>
-                                <span style="font-weight: bold;">:</span>
-                                <span style="font-weight: bold;" th:text="${currentUser.getVirtualTeam().getTotalPoints()}"> </span>
-                                <span> Pts.</span>
-                            </li>
-                            <li class="text-center"> <input type="button" class="btn btn-sm btn-info" onclick="location.href='/user/edit'" value="Edit Account"/></li>
-                            <li class="text-center"><form th:action="@{/logout}" method="post">
-                                    <input type="submit" class="btn btn-sm btn-danger" value="Sign Out"/>
-                                </form></li>
-                        </ul>
+                    <li th:if="${currentUser != null}" onclick="location.href='/team'">MY TEAM</li>
+                    <li th:if="${currentUser != null}" onclick="location.href='/team/transfers'">TRANSFERS</li>
+                    <li onclick="location.href='/classification/'">CLASSIFICATION</li>
+                    <li onclick="location.href='/statistics/'">STATISTICS</li>
+                    <li onclick="location.href='/winners/'">WINNERS</li>
+                    <li onclick="location.href='/rules/'">RULES</li>
+                    <li th:if="${currentUser != null}" class="dropdown">
+
                     </li>
                 </ul>
+            </nav>
+            <div id="user_in">
+                <button th:if="${currentUser == null}" type="button" class="btn btn-default" onclick="location.href='/login'"><span
+                        class="glyphicon glyphicon-user"></span> Login
+                </button>
+                <div id="user-header-toggle" th:if="${currentUser != null}">
+                    <button type="button">
+                        <span th:text="${'Welcome ' + currentUser.getUsername()}"></span>
+                        <span class="caret"></span>
+                    </button>
+                    <ul>
+                        <li th:if="${currentUser.hasVirtualTeam()}" class="text-center"><span style="font-weight: bold;"
+                                                                                              th:text="${currentUser.getVirtualTeam().getName()}">:</span>
+                            <span style="font-weight: bold;">:</span>
+                            <span style="font-weight: bold;" th:text="${currentUser.getVirtualTeam().getTotalPoints()}"> </span>
+                            <span> Pts.</span>
+                        </li>
+                        <li class="text-center"> <input type="button" class="btn btn-sm btn-info" onclick="location.href='/user/edit'" value="Edit Account"/></li>
+                        <li class="text-center"><form th:action="@{/logout}" method="post">
+                            <input type="submit" class="btn btn-sm btn-danger" value="Sign Out"/>
+                        </form></li>
+                    </ul>
+                </div>
+
             </div>
         </div>
-    </nav>
+    </header>
 </div>
 </body>
 </html>
