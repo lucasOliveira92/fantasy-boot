@@ -116,6 +116,14 @@ function makeCaptain(id){
 function updateStrategy() {
     titulares = [];
 
+
+    $('button.cpt-selected').each(function() {
+        if($(this).attr('id') == id){
+            currentCaptain = id;
+        }
+
+    });
+
     user = $('.current-user-id').text();
     if(currentCaptain == -1){
         alert("You must pick a captain for your team");
