@@ -138,9 +138,7 @@ body{
     display: inline-block;
 }
 
-.highlighted {
-    background-color: #CCCC33;
-}
+
 
 .table tr{
     vertical-align: middle;
@@ -150,6 +148,9 @@ body{
     background-color: #ecf0f1;
 }
 
+.table tr.highlighted {
+    background-color: #CCCC33;
+}
 
 .table th{
     background-color:lightgrey;

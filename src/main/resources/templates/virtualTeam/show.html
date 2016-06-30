@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
-    <script src="/js/showVirtualTeam.js" type="text/javascript"></script>
+
     <meta name="_csrf" content="${_csrf.token}"/>
     <!-- default header name is X-CSRF-TOKEN -->
     <meta name="_csrf_header" content="${_csrf.headerName}"/>
@@ -65,10 +65,10 @@
                                         <img th:src="${GK.get(0).getRealTeam().getEquipment()}"  height="50%"/>
                                         <p style="line-height: 100%; font-weight: bold; font-size: 100%" id="GK" th:text="${GK.get(0).name}"></p>
                                         <h2 style="visibility: hidden;" th:text="${GK.get(0).cost}"></h2>
-                                        <button type="button" class="btn btn-xs captain" th:id="${GK.get(0).id}" onclick="makeCaptain(this.id)" style="position: absolute;border: 2px solid #000000; left: 0; bottom: 0;  width: 30%; overflow: hidden">
+                                        <button type="button" class="btn btn-xs captain" th:id="${GK.get(0).id}" onclick="makeCaptain(this.id)" style="position: absolute; left: 0; bottom: 0;  width: 40%; overflow: hidden">
                                             <b>C</b>
                                         </button>
-                                        <button type="button" class="btn btn-xs btn-default" th:id="${GK.get(0).id}" onclick="switchPlayers(this.id)" style="position: absolute; border: 2px solid #000000; right: 0; bottom: 0;  width: 70%; overflow: hidden">
+                                        <button type="button" class="btn btn-xs btn-default" th:id="${GK.get(0).id}" onclick="switchPlayers(this.id)" style="position: absolute; right: 0; bottom: 0;  width: 40%; overflow: hidden">
                                             <span class="glyphicon glyphicon-retweet"></span>
                                         </button>
                                     </div>
@@ -140,5 +140,7 @@
             </div>
         </div>
     </section>
+    <script src="/js/showVirtualTeam.js" type="text/javascript"></script>
+
 </body>
 </html>

@@ -1,10 +1,17 @@
 var pickPlayer=0;
+
 $(document).on('click', '.clickable-row', function() {
-    if($(this).hasClass("highlighted"))
-        $(this).removeClass('highlighted');
-    else
-        $(this).addClass('highlighted').siblings().removeClass('highlighted');
+    $('.clickable-row').removeClass('highlighted');
+    $(this).addClass('highlighted');
+
+    if($('.clickable-row.highlighted').length > 0){
+        $('button.trade').fadeIn("500");
+    }
+    else {
+        $('button.trade').fadeOut("500");
+    }
 });
+
 
 function switchPlayers(id) {
     var p1 = $(".highlighted").find('td').eq(2).text();
