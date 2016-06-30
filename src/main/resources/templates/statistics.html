@@ -62,9 +62,9 @@
                     <td th:if="${player.getRealTeam() != null}" th:text="${player.getRealTeam().getName()}">Team</td>
                     <td th:text="${player.cost}">Cost</td>
                     <td th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">Points</td>
-                    <td th:if="${order==2}" th:text="${player.totalPoints}">Goals</td>
-                    <td th:if="${order==3}" th:text="${player.totalPoints}">Yellow</td>
-                    <td th:if="${order==4}" th:text="${player.totalPoints}">Red</td>
+                    <td th:if="${order==2}" th:text="${player.goalTotal}">Goals</td>
+                    <td th:if="${order==3}" th:text="${player.yellowTotal}">Yellow</td>
+                    <td th:if="${order==4}" th:text="${player.redTotal}">Red</td>
                 </tr>
             </table>
         </div>

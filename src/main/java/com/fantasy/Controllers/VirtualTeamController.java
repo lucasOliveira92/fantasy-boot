@@ -1,10 +1,7 @@
 package com.fantasy.Controllers;
 
 import com.fantasy.Models.*;
-import com.fantasy.Services.PlayerService;
-import com.fantasy.Services.SnapshotService;
-import com.fantasy.Services.UserService;
-import com.fantasy.Services.VirtualTeamService;
+import com.fantasy.Services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.Authentication;
@@ -37,6 +34,9 @@ public class VirtualTeamController {
 
     @Autowired
     private SnapshotService snapshotService;
+
+    @Autowired
+    private RealTeamService gestorRealTeams;
 
 
     @Secured("ROLE_USER")
@@ -87,6 +87,7 @@ public class VirtualTeamController {
                 model.addAttribute("defs", listFormation.get(1));
                 model.addAttribute("mids", listFormation.get(2));
                 model.addAttribute("fors", listFormation.get(3));
+                model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
                 model.addAttribute("players", lista);
                 model.addAttribute("team", u.getTeam());
                 return "virtualTeam/transfers";
@@ -115,6 +116,7 @@ public class VirtualTeamController {
                 model.addAttribute("defs", listFormation.get(1));
                 model.addAttribute("mids", listFormation.get(2));
                 model.addAttribute("fors", listFormation.get(3));
+                model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
                 model.addAttribute("players", lista);
                 model.addAttribute("team", u.getTeam());
                 return "virtualTeam/transfers";
@@ -124,6 +126,94 @@ public class VirtualTeamController {
         } else {
             return "redirect:/login";
         }
+    }
+
+    @RequestMapping(value = "team/transfers/{teamId}/{positionId}/{orderId}", method = RequestMethod.GET)
+    public String searchMakeTransfersVirtualTeam(Model model, @PathVariable Integer teamId, @PathVariable Integer positionId, @PathVariable Integer orderId) {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+        List<Player> lista = null;
+        List<Player> lista2;
+        List<Player> listafinal;
+        switch (orderId){
+            case -1:
+                listafinal = playerService.getAllPlayersByCost();
+                break;
+            case 1:
+                listafinal = playerService.getAllPlayersByTotalPoints();
+                break;
+            case 2:
+                listafinal = playerService.getAllPlayersByGoalScored();
+                break;
+            case 3:
+                listafinal = playerService.getAllPlayersByYellow();
+                break;
+            case 4:
+                listafinal = playerService.getAllPlayersByRed();
+                break;
+            case 5:
+                listafinal = playerService.getAllPlayersByTimesBought();
+                break;
+            default:
+                listafinal = playerService.getAllPlayersByCost();
+                break;
+        }
+        if(teamId!=-1) {
+            switch (positionId) {
+                case -1:
+                    lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
+                    break;
+                case 1:
+                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("GK");
+                    break;
+                case 2:
+                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("DEF");
+                    break;
+                case 3:
+                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("MID");
+                    break;
+                case 4:
+                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("FOR");
+                    break;
+                default:
+                    break;
+            }
+            if (lista!=null)listafinal.retainAll(lista);
+        }else{
+            switch (positionId) {
+                case -1:
+                    break;
+                case 1:
+                    lista2 = playerService.getAllPlayersByPosition("GK");
+                    listafinal.retainAll(lista2);
+                    break;
+                case 2:
+                    lista2 = playerService.getAllPlayersByPosition("DEF");
+                    listafinal.retainAll(lista2);
+                    break;
+                case 3:
+                    lista2 = playerService.getAllPlayersByPosition("MID");
+                    listafinal.retainAll(lista2);
+                    break;
+                case 4:
+                    lista2 = playerService.getAllPlayersByPosition("FOR");
+                    listafinal.retainAll(lista2);
+                    break;
+                default:
+                    break;
+            }
+        }
+        List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(u.getVirtualTeam().getId());
+        model.addAttribute("currentUser", u);
+        model.addAttribute("players", listafinal);
+        model.addAttribute("gks", listFormation.get(0));
+        model.addAttribute("defs", listFormation.get(1));
+        model.addAttribute("mids", listFormation.get(2));
+        model.addAttribute("fors", listFormation.get(3));
+        model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
+        model.addAttribute("team", u.getTeam());
+        model.addAttribute("order",orderId);
+        return "virtualTeam/transfers";
     }
 
     @Secured("ROLE_USER")
