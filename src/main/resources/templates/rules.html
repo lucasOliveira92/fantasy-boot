@@ -7,20 +7,94 @@
 <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
 <section id="main-content">
     <div class="wrap-container">
-        <div class="box-body table-responsive">
-            <div class="col col-md-8 col-md-offset-2">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
                 <h2 class="text-center">Rules</h2>
+                <div class="row composition-space">
+                    <p class="intro-composition">To create your squad, you have to choose 15 players:</p>
+                    <p class="item-composition">2 Goalkeepers</p>
+                    <p class="item-composition">5 Defenders</p>
+                    <p class="item-composition">5 Midfielders</p>
+                    <p class="item-composition">3 Strikers</p>
+                </div>
+                <hr/>
+                <div class="row item-rules">
+                    <p class="title-rules">Scoring</p>
+                    <p>Based on their performance, players will be allocated a point score after each game.</p>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Points</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Goal scored by a goalkeeper</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Goal scored by a defender</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Goal scored by a midfielder</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Goal scored by a forward</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Yellow Card</td>
+                            <td>-1</td>
+                        </tr>
+                        <tr>
+                            <td>Red Card</td>
+                            <td>-3</td>
+                        </tr>
+                        <tr>
+                            <td>Clean Sheet - goalkeeper</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Clean Sheet - defender</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Clean Sheet - midfielder</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Clean Sheet - forward</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Victory</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Draw</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Lost</td>
+                            <td>5</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <hr/>
+                <div class="row item-rules">
+                    <p class="title-rules">Budget</p>
+                    <p>You also need manage to manage your budget:</p>
+                    <p class="item-composition">your initial squad value must not exceed 100m</p>
+                </div>
+                <hr/>
+                <div class="row item-rules">
+                    <p class="title-rules">Transfers</p>
 
-                Squad Composition
-                <ul>
-                    <li>Each squad must have exacly 15 players</li>
-                    <ul>
-                        <li>2 Goalkeepers</li>
-                        <li>5 Defenders</li>
-                        <li>5 Midfielders</li>
-                        <li>3 Strikers</li>
-                    </ul>
-                </ul>
+                </div>
             </div>
         </div>
     </div>
