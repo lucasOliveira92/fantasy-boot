@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -21,9 +20,29 @@ public class VirtualTeamService {
     private VirtualTeamDAO virtualTeams;
     @Autowired
     private SnapshotService snapshotService;
-    
-    public VirtualTeam createVirtualTeam(String nome){
-        return virtualTeams.save(new VirtualTeam(nome,1000,2));
+    @Autowired
+    private PlayerService playerService;
+    @Autowired
+    private UserService gestorUser;
+    @Autowired
+    private GenerateService gestorGenerate;
+
+    @Transactional
+    public VirtualTeam createVirtualTeam(String nome, List<Long> playerIds, long user){
+        User owner = gestorUser.getUserById(user);
+        VirtualTeam vt = new VirtualTeam(nome,1000,1);
+        vt.setOwner(owner);
+        List<Player> players = new ArrayList<>();
+        for(long l: playerIds){
+            players.add(playerService.getPlayerById(l));
+        }
+        vt.setPlayers(players);
+        virtualTeams.save(vt);
+        User u = gestorUser.getUserByUsername("Quim");
+        int gameWeekNumber = u.getVirtualTeam().getGameWeekSnapshots().size();
+
+        gestorGenerate.genererateRandomSnapshotsForPlayer(gameWeekNumber,owner.getId());
+        return vt;
     }
     
     public VirtualTeam getVirtualTeam(long userId){
