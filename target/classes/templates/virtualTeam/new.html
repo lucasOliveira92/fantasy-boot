@@ -13,38 +13,109 @@
             </div>
             <div th:if="${players != null}" class="col-md-5">
                 <h2 class="text-center">Players list</h2>
-                <table class="table table-striped">
+                <table id="listAllPlayers" class="table table-bordered table-condensed">
                     <tr>
-                        <th>Id</th>
+                        <th class="col-md-1"></th>
                         <th>Name</th>
                         <th>Position</th>
                         <th>Cost</th>
+                        <th>Points</th>
                     </tr>
                     <tr th:each="player : ${players}">
-                        <td><a th:href="${'/player/' + player.id}">Id</a></td>
+                        <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}" height="20%"/></td>
                         <td th:text="${player.name}">Name</td>
                         <td th:text="${player.position}">position</td>
                         <td th:text="${player.cost}">cost</td>
+                        <td th:text="${player.totalPoints}">cost</td>
                     </tr>
                 </table>
             </div>
             <div class="col-md-2" style="padding-top: 5%">
-                <input type="button" class="btn btn-success btn-lg" value="Pick Player"/>
+                <p class="text-center" style="font-weight: bold; font-size: 150%;"
+                   th:text="${'Budget: '+team.getBudget()}"></p>
+                <button type="button" class="btn btn-success btn-lg" onclick="pickPlayer()" style="margin-top: 15%"><span
+                        class="glyphicon glyphicon-plus-sign"></span> Pick Player
+                </button>
+                <button type="button" class="btn btn-lg btn-success" th:id="${team.getBudget()}"
+                        onclick="submitTeam(this.id)" style="margin-top: 50px">
+                    <span class="glyphicon glyphicon-floppy-saved"></span> Submit Team
+                </button>
             </div>
             <div class="col-md-5">
-                <h2 class="text-center">Your Team</h2>
-                <table th:if="${team.getPlayers() != null}" class="table table-striped">
+                <h2 class="text-center">Squad</h2>
+                <table class="table table-bordered table-condensed">
+                    <tr class="gks">
+                        <th>Goalkeepers</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr class="defs">
+                        <th>Defenders</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr class="mids">
+                        <th>Midfielders</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr class="fors">
+                        <th>Forwards</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </table>
+                <table th:if="${team.getPlayers() != null}" class="table table-bordered table-condensed">
                     <tr>
                         <th>Id</th>
                         <th>Name</th>
                         <th>Position</th>
                         <th>Cost</th>
+                        <th>Points</th>
                     </tr>
                     <tr th:each="playert : ${team.getPlayers()}">
                         <td><a th:href="${'/player/' + playert.id}">Id</a></td>
                         <td th:text="${playert.name}">Name</td>
                         <td th:text="${playert.position}">position</td>
                         <td th:text="${playert.cost}">cost</td>
+                        <td th:text="${playert.totalPoints}">cost</td>
                     </tr>
                 </table>
             </div>
