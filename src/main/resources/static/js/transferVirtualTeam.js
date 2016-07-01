@@ -46,9 +46,18 @@ function switchPlayers(budget) {
                 $('.p-alerta').text("Your budget isn't enough! Select other players");
                 $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
             }else{
-                $('.p-alerta').text("Transfer is OK!");
-                $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
-                window.open("/team/transfers/"+idAll+"/"+idMy,"_self");}}
+                if(totalTransfers > 0){
+                    $('.p-alerta').text("Transfer is OK!");
+                    $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
+                    window.open("/team/transfers/"+idAll+"/"+idMy,"_self");
+                }
+                else{
+                    $('.p-alerta').text("You don't have enough transfers!");
+                    $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
+                }
+            }
+        }
+
     }
 };
 
