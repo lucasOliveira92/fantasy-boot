@@ -4,79 +4,86 @@
     <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-<div class="container-fluid">
-    <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
-    <div class="box-body table-responsive">
+<!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
+<section id="main-content">
+    <div class="wrap-container">
+        <div class="box-body table-responsive">
 
-        <div th:if="${players != null}" class="col-md-10 col-md-offset-1">
-            <h2 class="text-center">Statistics</h2>
-            <div class="row" style="float: left; position: relative; align-items: baseline;">
-                <div id="playerSearch" class="pesquisa-statistic">
-                    <div class="campo-pesquisa-statistic">
-                        <label>Team:</label>
-                        <select class="btn btn-default" style="width: 100%;" id="realTeamFilter">
-                            <option id="-1">All</option>
-                            <option th:each="team : ${realTeams}" th:text="${team.name}" th:id="${team.id}">name</option>
-                        </select>
-                    </div>
-                    <div class="campo-pesquisa-statistic">
-                        <label>Position:</label>
-                        <select class="btn btn-default" style="width: 100%;" id="positionFilter">
-                            <option id="-1">All</option>
-                            <option id="1">Goalkeeper</option>
-                            <option id="2">Defender</option>
-                            <option id="3">Midfield</option>
-                            <option id="4">Forward</option>
-                        </select>
-                    </div>
-                    <div class="campo-pesquisa-statistic">
-                        <label>Order by:</label>
-                        <select class="btn btn-default" style="width: 100%;" id="orderFilter">
-                            <option id="-1">Cost</option>
-                            <option id="1">Points</option>
-                            <option id="2">Goals Scored</option>
-                            <option id="3">Yellow Cards</option>
-                            <option id="4">Red Cards</option>
-                        </select>
-                    </div>
-                    <div class="botao-pesquisa-statistic">
-                        <button type="button" class="btn btn-info" onclick="recarregaAllPlayers()"><span class="glyphicon glyphicon-search"></span> Search</button>
+            <div th:if="${players != null}" class="col-md-10 col-md-offset-1">
+                <h2 class="text-center">Statistics</h2>
+                <div class="row" style="float: left; position: relative; align-items: baseline;">
+                    <div id="playerSearch" class="pesquisa-statistic">
+                        <div class="campo-pesquisa-statistic">
+                            <label>Team:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="realTeamFilter">
+                                <option id="-1">All</option>
+                                <option th:each="team : ${realTeams}" th:text="${team.name}" th:id="${team.id}">name
+                                </option>
+                            </select>
+                        </div>
+                        <div class="campo-pesquisa-statistic">
+                            <label>Position:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="positionFilter">
+                                <option id="-1">All</option>
+                                <option id="1">Goalkeeper</option>
+                                <option id="2">Defender</option>
+                                <option id="3">Midfield</option>
+                                <option id="4">Forward</option>
+                            </select>
+                        </div>
+                        <div class="campo-pesquisa-statistic">
+                            <label>Order by:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="orderFilter">
+                                <option id="-1">Cost</option>
+                                <option id="1">Points</option>
+                                <option id="2">Goals Scored</option>
+                                <option id="3">Yellow Cards</option>
+                                <option id="4">Red Cards</option>
+                            </select>
+                        </div>
+                        <div class="botao-pesquisa-statistic">
+                            <button type="button" class="btn btn-info" onclick="recarregaAllPlayers()"><span
+                                    class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <table class="table table-striped table-bordered">
-                <tr>
-                    <th>Position</th>
-                    <th>Name</th>
-                    <th>Team</th>
-                    <th>Cost</th>
-                    <th th:if="${(order==-1) || (order==1)}">Points</th>
-                    <th th:if="${order==2}">Goals Scored</th>
-                    <th th:if="${order==3}">Yellow Cards</th>
-                    <th th:if="${order==4}">Red Cards</th>
-                </tr>
-                <tr th:each="player : ${players}">
-                    <td th:text="${player.getPositionFullName()}">Position</td>
-                    <td th:text="${player.name}">Name</td>
-                    <td th:if="${player.getRealTeam() != null}" th:text="${player.getRealTeam().getName()}">Team</td>
-                    <td th:text="${player.cost}">Cost</td>
-                    <td th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">Points</td>
-                    <td th:if="${order==2}" th:text="${player.goalTotal}">Goals</td>
-                    <td th:if="${order==3}" th:text="${player.yellowTotal}">Yellow</td>
-                    <td th:if="${order==4}" th:text="${player.redTotal}">Red</td>
-                </tr>
-            </table>
+                <table class="table table-striped table-bordered">
+                    <tr>
+                        <th>Position</th>
+                        <th>Name</th>
+                        <th>Team</th>
+                        <th>Cost</th>
+                        <th th:if="${(order==-1) || (order==1)}">Points</th>
+                        <th th:if="${order==2}">Goals Scored</th>
+                        <th th:if="${order==3}">Yellow Cards</th>
+                        <th th:if="${order==4}">Red Cards</th>
+                    </tr>
+                    <tr th:each="player : ${players}">
+                        <td th:text="${player.getPositionFullName()}">Position</td>
+                        <td th:text="${player.name}">Name</td>
+                        <td th:if="${player.getRealTeam() != null}" th:text="${player.getRealTeam().getName()}">Team
+                        </td>
+                        <td th:text="${player.cost}">Cost</td>
+                        <td th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">Points</td>
+                        <td th:if="${order==2}" th:text="${player.goalTotal}">Goals</td>
+                        <td th:if="${order==3}" th:text="${player.yellowTotal}">Yellow</td>
+                        <td th:if="${order==4}" th:text="${player.redTotal}">Red</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+</section>
 <script>
-    function recarregaAllPlayers(){
+    function recarregaAllPlayers() {
         var positionFilter = $('#positionFilter option:selected').attr('id');
         var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
         var orderFilter = $('#orderFilter option:selected').attr('id');
-        window.open("/statistics/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
-    };
+        window.open("/statistics/" + realTeamFilter + "/" + positionFilter + "/" + orderFilter, "_self");
+    }
+    ;
 </script>
 </body>
 </html>

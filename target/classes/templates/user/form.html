@@ -4,6 +4,7 @@
     <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
+<<<<<<< HEAD
 <div class="container-fluid">
     <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
     <div class="container">
@@ -52,5 +53,59 @@
         </div>
     </div>
 </div>
+=======
+<!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
+<section id="main-content">
+    <div class="wrap-container">
+        <div class="container">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-center">User Details</h2>
+                <div>
+                    <form class="form-horizontal" th:object="${user}" th:action="@{/user}" method="post">
+
+                        <p th:if="${#fields.hasErrors('global')}" th:errors="*{global}">Incorrect date</p>
+
+                        <!--<ul>
+                            <li th:each="e : ${#fields.detailedErrors()}" th:class="${e.global}? globalerr : fielderr">
+                                <span th:text="${e.global}? '*' : ${e.fieldName}">The field name</span> |
+                                <span th:text="${e.message}">The error message</span>
+                            </li>
+                        </ul>-->
+
+                        <input type="hidden" th:field="*{id}"/>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Username:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" th:field="*{username}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" th:field="*{email}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" th:field="*{password}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Confirm Password:</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" th:field="*{passwordCheck}"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="btn btn-default pull-right" style="margin-right: 3%;">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+>>>>>>> 8ed4004a4c9c45c31c9d89a026344373b10a7bc6
 </body>
 </html>
