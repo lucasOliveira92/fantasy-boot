@@ -16,26 +16,65 @@ function pickPlayer(budget) {
     var posMy=null;
     var costMy=null;
 
+    var escolhidos = [];
+
 
     $('tr.highlighted').each(function(){
-        if($(this).hasClass('listAllPlayers')) {
-            idAll = $(this).attr('id');
-            posAll = $(this).find('td').eq(2).text();
-            costAll = $(this).find('td').eq(3).text();
-        }
+        var esc = {
+            id: $(this).attr('id'),
+            pos: $(this).find('td').eq(2).text(),
+            cost: $(this).find('td').eq(3).text()
+        };
+        escolhidos.push(esc)
     });
 
-    if (idAll == null || idMy == null) {
-        alert("Select a player from both tables first!");
-    }else{
-        if(posAll!=posMy){
-            alert("Positions doesn't match! Please select players from the same positions");
-        }else{
-            if(budget < (costMy-costAll)){
-                alert("Your budget isn't enough! Select other players");
-            }else{
-                alert("Transfer is OK!");
-                window.open("/team/transfers/"+idAll+"/"+idMy,"_self");}}}
+    var ids = []
+    var custoTotal = 0;
+    var avans = 0;
+    var defs = 0;
+    var meds = 0;
+    var gks = 0;
+
+    for(var i=0; i<escolhidos.length; i++){
+        var e = escolhidos[i];
+        if(e.pos === "GK"){
+            gks++;
+        }
+        else if(e.pos === "DEF"){
+            defs++;
+        }
+        else if(e.pos === "MID"){
+            meds++;
+        }
+        else if(e.pos === "FOR"){
+            avans++;
+        }
+        custoTotal += e.cost;
+        ids.push(e.id)
+    }
+
+    //caso positivo
+    if(custoTotal <= budget && gks <= 2 && defs <= 5 && meds <=5 && avans <= 3){
+        console.log("trankz");
+    }
+    else {
+        var aviso = "";
+        if(custoTotal > budget){
+            aviso += "Not enough money. The current team costs "+custoTotal+" coins and you only have "+budget+" to spend.\n";
+        }
+        if(gks > 2){
+            aviso += "Too many goal keepers. You picked "+gks+", only 2 allowed.\n";
+        }
+        if(defs > 5){
+            aviso += "Too many defenders. You picked "+defs+", only 5 allowed.\n";
+        }
+        if(meds > 5){
+            aviso += "Too many midfielders. You picked "+meds+", only 5 allowed.\n";
+        }
+        if(avans > 3){
+            aviso += "Too many forwarders. You picked "+avans+", only 3 allowed.\n";
+        }
+    }
 
     var table = $("#myTeam");
 };

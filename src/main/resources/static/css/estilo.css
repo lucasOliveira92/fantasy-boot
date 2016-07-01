@@ -40,7 +40,7 @@ body{
 }
 
 .texto-registo h1 {
-    
+
     text-align: justify;
     font-size: 180%;
     font-weight: bold;
@@ -63,7 +63,7 @@ body{
     .navbar-centered .navbar-nav {
         float: none;
         text-align: center;
-        
+
     }
     .navbar-centered .navbar-nav > li {
         float: none;
@@ -74,7 +74,7 @@ body{
     .navbar-centered .nav > li > a {
         display: inline-block;
     }
-    
+
     .texto-registo {
         padding-right: 30%;
         font-size: 1.5em;
@@ -84,6 +84,10 @@ body{
         display: block;
     }
 }
+
+
+
+
 .navbar li{
     cursor: pointer;
 }
@@ -198,7 +202,7 @@ header > .wrap-container > div#user_in {
     vertical-align: middle;
     text-align: center;
 }
-
+header > .wrap-container > nav#menu
 header > .wrap-container > div#logo,
 header > .wrap-container > div#user_in {
     width:20%;
@@ -210,7 +214,7 @@ header > .wrap-container > div#logo > img {
     cursor: pointer;
 }
 
-header > .wrap-container > nav#menu {
+{
     width:60%;
     text-align: center;
     height:100%;
@@ -296,4 +300,52 @@ section#main-content > .wrap-container {
 
 #listPlayers {
     width:95%;
+}
+
+.error-login {
+    color: red;
+}
+
+.composition-space {
+    margin-top: 8%;
+
+}
+
+.intro-composition {
+    font-weight: bold;
+}
+
+.item-composition {
+    padding-left: 5%;
+}
+
+.item-rules {
+    margin-top: 3%;
+}
+
+.title-rules {
+    font-weight: bold;
+}
+
+@media (max-width: 1400px) {
+    header > .wrap-container > nav#menu {
+        width:70%;
+        text-align: center;
+        height:100%;
+    }
+}
+
+.alerta {
+    position: absolute;
+    margin-top: 5%;
+    background-color: red;
+    border-radius: 5px;
+    left: 40%;
+    z-index: 1200;
+}
+
+.p-alerta {
+    padding: 8%;
+    color: #ffffff;
+    font-weight: bold;
 }
