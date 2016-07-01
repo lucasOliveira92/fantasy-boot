@@ -4,63 +4,67 @@
     <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
 </head>
 <body>
-<div class="container-fluid">
-    <!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
-    <div class="box-body table-responsive">
-
-        <div th:if="${teams != null}" class="col-md-10 col-md-offset-1">
-            <h2 class="text-center">Classification</h2>
-            <div class="row" style="float: left; position: relative; align-items: baseline;">
-                <div capitao="playerSearch" class="pesquisa">
-                    <div class="campo-pesquisa">
-                        <label>Gameweek:</label>
-                        <select class="btn btn-default" style="width: 100%;"  capitao="gameweekFilter">
-                            <option>All</option>
-                            <option th:each="gameWeek : ${gameWeekNumber}" th:text="${gameWeek}">number</option>
-                        </select>
-                    </div>
-                    <div class="botao-pesquisa">
-                        <button type="button" class="btn btn-info" onclick = "recarregaAllTeams()"><span class="glyphicon glyphicon-search"></span> Search</button>
+<!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
+<section id="main-content">
+    <div class="wrap-container">
+        <div class="box-body table-responsive ">
+            <div th:if="${teams != null}" class="col-md-10 col-md-offset-1">
+                <h2 class="text-center">Classification</h2>
+                <div class="row" style="float: left; position: relative; align-items: baseline;">
+                    <div id="playerSearch" class="pesquisa">
+                        <div class="campo-pesquisa">
+                            <label>Gameweek:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="gameweekFilter">
+                                <option>All</option>
+                                <option th:each="gameWeek : ${gameWeekNumber}" th:text="${gameWeek}">number</option>
+                            </select>
+                        </div>
+                        <div class="botao-pesquisa">
+                            <button type="button" class="btn btn-info" onclick="recarregaAllTeams()"><span
+                                    class="glyphicon glyphicon-search"></span> Search
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <table class="table table-striped table-bordered">
-                <tr>
-                    <th>Position</th>
-                    <th>Name</th>
-                    <th>Points</th>
-                </tr>
-                <tr th:each="team : ${teams}">
-                    <td th:text="${teams.indexOf(team) + 1}">Position</td>
-                    <td th:text="${team.name}">Name</td>
-                    <td th:text="${team.totalPoints}">Points</td>
-                </tr>
-            </table>
-            <div th:if="${currentUser != null}">
-                <h2 class="text-center">Your Team</h2>
-                <table class="table table-striped" th:if="${currentUser.hasVirtualTeam()}">
+                <table id="listOwnPlayers" class="table table-striped table-bordered">
                     <tr>
                         <th>Position</th>
                         <th>Name</th>
                         <th>Points</th>
                     </tr>
-                    <tr>
-                        <td th:text="${teams.indexOf(currentUser.getVirtualTeam()) + 1}">Position</td>
-                        <td th:text="${currentUser.getVirtualTeam().getName()}">Name</td>
-                        <td th:text="${currentUser.getVirtualTeam().getTotalPoints()}">Points</td>
+                    <tr th:id="${team.getOwner().getId()}" th:each="team : ${teams}">
+                        <td th:text="${teams.indexOf(team) + 1}">Position</td>
+                        <td th:text="${team.name}">Name</td>
+                        <td th:text="${team.totalPoints}">Points</td>
                     </tr>
                 </table>
+                <div th:if="${currentUser != null}">
+                    <h2 class="text-center">Your Team</h2>
+                    <table class="table table-striped" th:if="${currentUser.hasVirtualTeam()}">
+                        <tr>
+                            <th>Position</th>
+                            <th>Name</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td th:text="${teams.indexOf(currentUser.getVirtualTeam()) + 1}">Position</td>
+                            <td th:text="${currentUser.getVirtualTeam().getName()}">Name</td>
+                            <td th:text="${currentUser.getVirtualTeam().getTotalPoints()}">Points</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 <script>
-    function recarregaAllTeams(){
+    function recarregaAllTeams() {
 
         var gameweekFilter = $('#gameweekFilter option:selected').text();
-        window.open("/classification/"+gameweekFilter,"_self");
+        window.open("/classification/" + gameweekFilter, "_self");
     };
+
 </script>
 </body>
 </html>
