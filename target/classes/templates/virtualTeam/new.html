@@ -21,19 +21,19 @@
                         <th>Cost</th>
                         <th>Points</th>
                     </tr>
-                    <tr th:each="player : ${players}">
+                    <tr th:each="player : ${players}" th:id="${player.id}" class="clickable-row" style="cursor:pointer;">
                         <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}" height="20%"/></td>
                         <td th:text="${player.name}">Name</td>
                         <td th:text="${player.position}">position</td>
                         <td th:text="${player.cost}">cost</td>
-                        <td th:text="${player.totalPoints}">cost</td>
+                        <td th:text="${player.totalPoints}">points</td>
                     </tr>
                 </table>
             </div>
             <div class="col-md-2" style="padding-top: 5%">
                 <p class="text-center" style="font-weight: bold; font-size: 150%;"
                    th:text="${'Budget: '+team.getBudget()}"></p>
-                <button type="button" class="btn btn-success btn-lg" onclick="pickPlayer()" style="margin-top: 15%"><span
+                <button type="button" class="btn btn-success btn-lg" th:id="${team.getBudget()}" onclick="pickPlayer(this.id)" style="margin-top: 15%"><span
                         class="glyphicon glyphicon-plus-sign"></span> Pick Player
                 </button>
                 <button type="button" class="btn btn-lg btn-success" th:id="${team.getBudget()}"
@@ -43,84 +43,69 @@
             </div>
             <div class="col-md-5">
                 <h2 class="text-center">Squad</h2>
-                <table class="table table-bordered table-condensed">
+                <table class="table table-bordered table-condensed myTeam">
                     <tr class="gks">
-                        <th>Goalkeepers</th>
+                        <th>Goalkeepers: 0 of 2</th>
                     </tr>
-                    <tr>
+                    <tr id="gk1">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="gk2">
                         <td></td>
                     </tr>
                     <tr class="defs">
-                        <th>Defenders</th>
+                        <th>Defenders: 0 of 5</th>
                     </tr>
-                    <tr>
+                    <tr id="def1">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="def2">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="def3">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="def4">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="def5">
                         <td></td>
                     </tr>
                     <tr class="mids">
-                        <th>Midfielders</th>
+                        <th>Midfielders: 0 of 5</th>
                     </tr>
-                    <tr>
+                    <tr id="mid1">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="mid2">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="mid3">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="mid4">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="mid5">
                         <td></td>
                     </tr>
                     <tr class="fors">
-                        <th>Forwards</th>
+                        <th>Forwards: 0 of 3</th>
                     </tr>
-                    <tr>
+                    <tr id="for1">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="for2">
                         <td></td>
                     </tr>
-                    <tr>
+                    <tr id="for3">
                         <td></td>
-                    </tr>
-                </table>
-                <table th:if="${team.getPlayers() != null}" class="table table-bordered table-condensed">
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Cost</th>
-                        <th>Points</th>
-                    </tr>
-                    <tr th:each="playert : ${team.getPlayers()}">
-                        <td><a th:href="${'/player/' + playert.id}">Id</a></td>
-                        <td th:text="${playert.name}">Name</td>
-                        <td th:text="${playert.position}">position</td>
-                        <td th:text="${playert.cost}">cost</td>
-                        <td th:text="${playert.totalPoints}">cost</td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
 </section>
+<script src="/js/newVirtualTeam.js" type="text/javascript"></script>
 </body>
 </html>
