@@ -31,6 +31,7 @@ function switchPlayers(budget) {
     
     $('p.total-transfers').each(function(){
         totalTransfers = $(this).attr('id');
+        console
     });
 
     if (idAll == null || idMy == null) {
