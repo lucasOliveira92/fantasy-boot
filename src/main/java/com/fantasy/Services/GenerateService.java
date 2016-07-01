@@ -349,8 +349,14 @@ public class GenerateService {
 
             calculatePointsForSnapshots(gw,eventosJogo,pointMap);
 
+
             System.out.println("----------------------------------------------------");
             System.out.println("----------------------------------------------------");
+        }
+        List<VirtualTeam> all = virtualTeamDAO.findAll();
+        for(VirtualTeam vt: all){
+            vt.setNumberTransfers(vt.getNumberTransfers() +1);
+            virtualTeamDAO.save(vt);
         }
     }
 
@@ -1356,6 +1362,7 @@ public class GenerateService {
         allUsers.add(new User("opieop", "opieop@mail.pt", "1"));
         allUsers.add(new User("brokeback", "brokeback@mail.pt", "1"));
         allUsers.add(new User("frankerz", "frankerz@mail.pt", "1"));
+        //allUsers.add(new User("admin", "admin@mail.pt", "1"));
 
         for (User u : allUsers) {
             VirtualTeam vt = new VirtualTeam(u.getUsername() + " FC", 1000, 1);

@@ -127,11 +127,10 @@ function makeCaptain(id) {
 function updateStrategy() {
     titulares = [];
 
+    
+    $('button.cpt-selected').each(function() {
+        currentCaptain = $(this).attr('id');
 
-    $('button.cpt-selected').each(function () {
-        if ($(this).attr('id') == id) {
-            currentCaptain = id;
-        }
 
     });
 

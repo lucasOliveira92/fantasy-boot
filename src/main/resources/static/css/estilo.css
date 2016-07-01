@@ -309,3 +309,30 @@ section#main-content > .wrap-container {
     vertical-align: middle;
     padding: 5px 10px;
 }
+
+@media (max-width: 1366px) {
+    header > .wrap-container > nav#menu {
+        width:70%;
+        text-align: center;
+        height:100%;
+    }
+}
+
+.alerta {
+    position: absolute;
+    margin-top: 5%;
+    background-color: red;
+    border-radius: 5px;
+    left: 40%;
+    z-index: 1200;
+}
+
+.p-alerta {
+    padding: 8%;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.team-p {
+    padding-top: 6%;
+}

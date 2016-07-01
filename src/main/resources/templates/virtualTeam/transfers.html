@@ -56,7 +56,7 @@
                         <th class="text-center">Team</th>
                         <th class="text-center">Position</th>
                         <th class="text-center">Cost</th>
-                        <th class="text-center" th:if="${(order==1)}">Points</th>
+                        <th class="text-center" th:if="${(order==-1) || (order==1)}">Points</th>
                         <th class="text-center" th:if="${order==2}">Goals Scored</th>
                         <th class="text-center" th:if="${order==3}">Yellow Cards</th>
                         <th class="text-center" th:if="${order==4}">Red Cards</th>
@@ -70,7 +70,7 @@
                         <td class="text-center" th:text="${player.getRealTeam().getName()}">Team</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
-                        <td class="text-center" th:if="${(order==1)}" th:text="${player.totalPoints}">
+                        <td class="text-center" th:if="${(order==-1) || (order==1)}" th:text="${player.totalPoints}">
                             Points
                         </td>
                         <td class="text-center" th:if="${order==2}" th:text="${player.goalTotal}">Goals</td>
@@ -81,11 +81,15 @@
                 </table>
 
             </div>
+            <div class="alerta col-md-3">
+                <p class="p-alerta">teste</p>
+            </div>
             <div class="col-md-2" style="padding-top: 5%">
                 <div class="col-md-12">
                     <p class="text-center" style="font-weight: bold; font-size: 150%;"
                        th:text="${'Budget: '+team.getBudget()}"></p>
-                    <p class="text-center" style="font-weight: bold; font-size: 150%;"
+                    <p class="text-center total-transfers" th:id="${team.getNumberTransfers()}"
+                       style="font-weight: bold; font-size: 150%;"
                        th:text="${'Avaliable transfers: '+team.getNumberTransfers()}"></p>
                     <button type="button" class="btn btn-lg btn-success" th:id="${team.getBudget()}"
                             onclick="switchPlayers(this.id)">
@@ -103,7 +107,6 @@
                         <th>Name</th>
                         <th class="text-center">Position</th>
                         <th class="text-center">Cost</th>
-                        <th class="text-center">Points</th>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${gks}">
@@ -112,7 +115,6 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
-                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${defs}">
@@ -121,7 +123,6 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
-                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${mids}">
@@ -130,7 +131,6 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
-                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                     <tr th:id="${player.id}" class="clickable-row myTeam" style="cursor:pointer;"
                         th:each="player : ${fors}">
@@ -139,7 +139,6 @@
                         <td th:text="${player.name}">Name</td>
                         <td class="text-center" th:text="${player.position}">position</td>
                         <td class="text-center" th:text="${player.cost}">cost</td>
-                        <td class="text-center" th:text="${player.totalPoints}">cost</td>
                     </tr>
                 </table>
             </div>
