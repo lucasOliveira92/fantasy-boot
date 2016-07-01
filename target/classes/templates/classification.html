@@ -69,10 +69,8 @@
     ;
 
     user = $('.current-user-id').text();
-    alert(user);
 
     $('#listOwnPlayers').find('tr').each(function () {
-        console.log(this);
         if ($(this).attr('id') == user)
             $(this).addClass('highlighted');
     });

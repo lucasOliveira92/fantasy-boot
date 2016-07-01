@@ -64,7 +64,8 @@ public class VirtualTeamController {
                 model.addAttribute("DEFsub",listSubstitutes.get(1));
                 model.addAttribute("MIDsub",listSubstitutes.get(2));
                 model.addAttribute("FORsub",listSubstitutes.get(3));
-                model.addAttribute("gameWeek",gestorGameWeeks.getGamesByGameWeekNumber(tot));
+                model.addAttribute("games",gestorGameWeeks.getGamesByGameWeekNumber(tot));
+                model.addAttribute("gameWeekNumber", tot);
                 model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
                 model.addAttribute("team", team);
                 return "virtualTeam/show";

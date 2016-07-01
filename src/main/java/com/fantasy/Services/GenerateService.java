@@ -392,11 +392,11 @@ public class GenerateService {
         RealTeam setubal = new RealTeam("Vitoria Setúbal", "http://upload.wikimedia.org/wikipedia/de/b/bd/Vit%C3%B3ria_Set%C3%BAbal.svg", "http://i.imgur.com/m7ZcOFv.png");
         RealTeam boavista = new RealTeam("Boavista", "http://upload.wikimedia.org/wikipedia/en/4/40/Boavista_F.C._logo.svg", "http://i.imgur.com/fRaXlEu.png");
         RealTeam uniaoMadeira = new RealTeam("União da Madeira", "https://upload.wikimedia.org/wikipedia/en/0/0f/UMadeira.png", "http://i.imgur.com/jcmfTYS.png");
-        RealTeam maritimo = new RealTeam("Marítimo", "http://upload.wikimedia.org/wikipedia/de/3/3b/Mar%C3%ADtimo_nacionalMadeira.svg", "http://i.imgur.com/lKqbclk.png");
+        RealTeam maritimo = new RealTeam("Marítimo", "https://upload.wikimedia.org/wikipedia/pt/a/a2/Logo_CS_Maritimo.png", "http://i.imgur.com/lKqbclk.png");
         RealTeam moreirense = new RealTeam("Moreirense", "https://upload.wikimedia.org/wikipedia/pt/8/8c/Logo_Moreirense.svg", "http://i.imgur.com/WnmXD0z.png");
         RealTeam arouca = new RealTeam("Arouca", "http://upload.wikimedia.org/wikipedia/de/b/b4/FC_Arouca.png", "http://i.imgur.com/CXwIhAI.png");
         RealTeam braga = new RealTeam("SC Braga", "http://upload.wikimedia.org/wikipedia/de/f/f3/Sporting_Clube_de_Braga.svg", "http://i.imgur.com/QEKPmkl.png");
-        RealTeam nacionalMadeira = new RealTeam("Nacional da Madeira", "http://upload.wikimedia.org/wikipedia/de/e/ee/Nacional_nacionalMadeira.svg", "http://i.imgur.com/GyYni2b.png");
+        RealTeam nacionalMadeira = new RealTeam("Nacional da Madeira", "http://www.zerozero.pt/img/logos/equipas/27_imgbank.png", "http://i.imgur.com/GyYni2b.png");
         RealTeam benfica = new RealTeam("SL Benfica", "http://upload.wikimedia.org/wikipedia/de/8/89/Logo_Benfica_Lissabon.svg", "http://i.imgur.com/KMclTFb.png");
         RealTeam estoril = new RealTeam("Estoril", "http://upload.wikimedia.org/wikipedia/de/1/14/GD_Estoril_Praia.svg", "http://i.imgur.com/ZpAOyVq.png");
         RealTeam pacos = new RealTeam("Paços de Ferreira", "http://upload.wikimedia.org/wikipedia/de/f/f2/FC_Pacos_de_Ferreira.svg", "http://i.imgur.com/j7ehS55.png");

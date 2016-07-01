@@ -37,6 +37,8 @@ function switchPlayers(id) {
 
     removeFromField(id);
     addToField();
+
+    $('button.trade').hide();
 };
 
 
@@ -47,6 +49,7 @@ function addToField() {
     var name = data.eq(1).text();
     var pos = data.eq(2).text();
     var cost = data.eq(3).text();
+    var points = data.eq(4).text();
     var img = data.eq(0).find("img").clone().attr("height", "50%").prop('outerHTML');
 
 
@@ -61,6 +64,7 @@ function addToField() {
 " + img + "\
 <p style='line-height: 100%; font-weight: bold; font-size: 70%' id=" + pos + ">" + name + "</p>\
 <h2 style='visibility: hidden;'>" + cost + "</h2>\
+<h3 style='visibility: hidden;'>" + points + "</h3>\
 <button type='button' class='btn btn-xs captain' onclick='makeCaptain(this.id)' style='position: absolute; font-weight: bold; left: 0; margin-left: 10%; bottom: 0;  width: 40%; overflow: hidden' id=" + id + ">C</button>\
 <button type='button' class='btn btn-xs btn-default trade' id=" + id + " onclick='switchPlayers(this.id)' style='position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden'>\
 <span class='glyphicon glyphicon-retweet'></span>\
@@ -81,6 +85,7 @@ function removeFromField(id) {
     var name = player.find('p').text();
     var pos = player.find('p').attr('id');
     var cost = player.find('h2').text();
+    var points = player.find('h3').text();
     var img = player.find('img').clone().attr("height", "20%").prop('outerHTML');
 
     //REMOVER DA LISTA DE TITULARES
@@ -94,6 +99,7 @@ function removeFromField(id) {
         <td>" + name + "</td>\
     <td>" + pos + "</td>\
     <td>" + cost + "</td>\
+    <td>" + points + "</td>\
     </tr>\
         ").appendTo("#listPlayers");
 
