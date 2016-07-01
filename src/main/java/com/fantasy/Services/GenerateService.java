@@ -1514,23 +1514,19 @@ public class GenerateService {
     }
 
     @Transactional
-    public HashMap<String, GameWeekSnapshot> genererateRandomSnapshotsForPlayer(int gameWeek, long user) {
+    public void genererateRandomSnapshotsForPlayer(int gameWeek, long user) {
 
         GameWeek gw = gameWeekDAO.findByNumber(gameWeek);
 
-        HashMap<String, GameWeekSnapshot> allSnaps = new HashMap<>();
-        List<VirtualTeam> allVTeams = new ArrayList<>();
-        allVTeams.add(virtualTeamDAO.findByUserId(user));
+        VirtualTeam vt = virtualTeamDAO.findByUserId(user);
 
 
-        for (VirtualTeam vt : allVTeams) {
             List<Player> players = vt.getPlayers();
             List<Player> equipaTitular = new ArrayList<>();
             int totalGR = 0, totalDEF = 0, totalMID = 0, totalFOR = 0;
             long capitao = 0;
-            List<Player> lastSnapshot = new ArrayList<Player>(vt.getLastTeamFormation());
+            List<Player> lastSnapshot = new ArrayList<>(vt.getLastTeamFormation());
             if(lastSnapshot.isEmpty()){ //SE NAO TEM LAST SNAPSHOT
-
                 Collections.shuffle(players, new SecureRandom());
                 for (Player p : players) {
                     if (equipaTitular.size() < 11) {
@@ -1571,10 +1567,8 @@ public class GenerateService {
             }
 
             GameWeekSnapshot snap = new GameWeekSnapshot(equipaTitular,capitao , gw, vt);
-            allSnaps.put(vt.getName(), snap);
             snapDAO.save(snap);
-        }
-        return allSnaps;
+        
     }
 
 }
