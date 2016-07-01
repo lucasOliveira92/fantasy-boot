@@ -118,9 +118,7 @@ function updateStrategy() {
 
 
     $('button.cpt-selected').each(function() {
-        if($(this).attr('id') == id){
-            currentCaptain = id;
-        }
+        currentCaptain = $(this).attr('id');
 
     });
 
