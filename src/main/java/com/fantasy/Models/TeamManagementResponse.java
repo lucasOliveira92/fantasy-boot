@@ -2,9 +2,7 @@ package com.fantasy.Models;
 
 import java.util.List;
 
-/**
- * Created by Lucas on 29-Jun-16.
- */
+
 public class TeamManagementResponse {
 
 

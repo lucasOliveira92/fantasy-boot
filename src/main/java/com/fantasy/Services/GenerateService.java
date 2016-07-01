@@ -1513,4 +1513,68 @@ public class GenerateService {
         }
     }
 
+    @Transactional
+    public HashMap<String, GameWeekSnapshot> genererateRandomSnapshotsForPlayer(int gameWeek, long user) {
+
+        GameWeek gw = gameWeekDAO.findByNumber(gameWeek);
+
+        HashMap<String, GameWeekSnapshot> allSnaps = new HashMap<>();
+        List<VirtualTeam> allVTeams = new ArrayList<>();
+        allVTeams.add(virtualTeamDAO.findByUserId(user));
+
+
+        for (VirtualTeam vt : allVTeams) {
+            List<Player> players = vt.getPlayers();
+            List<Player> equipaTitular = new ArrayList<>();
+            int totalGR = 0, totalDEF = 0, totalMID = 0, totalFOR = 0;
+            long capitao = 0;
+            List<Player> lastSnapshot = new ArrayList<Player>(vt.getLastTeamFormation());
+            if(lastSnapshot.isEmpty()){ //SE NAO TEM LAST SNAPSHOT
+
+                Collections.shuffle(players, new SecureRandom());
+                for (Player p : players) {
+                    if (equipaTitular.size() < 11) {
+                        switch (p.getPosition()) {
+                            case "GK":
+                                if (totalGR == 0) {
+                                    equipaTitular.add(p);
+                                    totalGR++;
+                                }
+                                break;
+                            case "DEF":
+                                if (totalDEF < 4) {
+                                    equipaTitular.add(p);
+                                    totalDEF++;
+                                }
+                                break;
+                            case "MID":
+                                if (totalMID < 4) {
+                                    equipaTitular.add(p);
+                                    totalMID++;
+                                }
+                                break;
+                            case "FOR":
+                                if (totalFOR < 2) {
+                                    equipaTitular.add(p);
+                                    totalFOR++;
+                                }
+                                break;
+                        }
+                    }
+                }
+
+                capitao = equipaTitular.get(0).getId();
+            }
+            else{ //SE JA TEM LAST SNAPSHOT
+                equipaTitular = lastSnapshot;
+                capitao = vt.getLastCaptain();
+            }
+
+            GameWeekSnapshot snap = new GameWeekSnapshot(equipaTitular,capitao , gw, vt);
+            allSnaps.put(vt.getName(), snap);
+            snapDAO.save(snap);
+        }
+        return allSnaps;
+    }
+
 }

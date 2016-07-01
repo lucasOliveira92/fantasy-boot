@@ -39,6 +39,7 @@ public class VirtualTeamController {
     private RealTeamService gestorRealTeams;
 
 
+
     @Secured("ROLE_USER")
     @RequestMapping(value = "team", method = RequestMethod.GET)
     public String showVirtualTeam(Model model) {
@@ -227,7 +228,7 @@ public class VirtualTeamController {
             if (u.hasVirtualTeam()) {
                 return "redirect:/team/" + u.getId();
             } else {
-                model.addAttribute("players", playerService.getAllPlayers());
+                model.addAttribute("players", playerService.getAllPlayersByCost());
                 model.addAttribute("team", new VirtualTeam());
                 return "virtualTeam/new";
             }
@@ -251,13 +252,10 @@ public class VirtualTeamController {
     }
 
     @CrossOrigin
+    @Secured("ROLE_USER")
     @RequestMapping(value = "/save/team", method = RequestMethod.POST)
     public @ResponseBody
     String  getSearchUserProfiles(@RequestBody TeamManagementResponse rs, HttpServletRequest request) {
-        System.out.println("User");
-        System.out.println(rs.getUser());
-        System.out.println("Capitao");
-        System.out.println(rs.getCapitao());
 
         List lista = rs.getTitulares();
         List<Player> idPlayers = new ArrayList<>();
@@ -273,6 +271,38 @@ public class VirtualTeamController {
             snapshotService.saveSnap(snap);
         }
 
+        return "OK";
+    }
+
+    @CrossOrigin
+    @Secured("ROLE_USER")
+    @RequestMapping(value = "/save/new/team", method = RequestMethod.POST)
+    public @ResponseBody
+    String  newVirtualTeam(@RequestBody NewTeamResponse rs, HttpServletRequest request) {
+        System.out.println("User");
+        System.out.println(rs.getUser());
+        System.out.println("Team");
+        System.out.println(rs.getTeamName());
+
+        List lista = rs.getEquipa();
+        List<Long> idPlayers = new ArrayList<>();
+        System.out.println("Players");
+        for(Object o: lista){
+            idPlayers.add((Long.parseLong(o.toString())));
+            System.out.println(o.toString());
+        }
+
+        gestor.createVirtualTeam(rs.getTeamName(),idPlayers,rs.getUser());
+
+
+        /*
+        GameWeekSnapshot snap = snapshotService.getLastSnapshotByUser(rs.getUser());
+        if(snap != null){
+            snap.setCapitao(rs.getCapitao());
+            snap.setPlayers(idPlayers);
+            snapshotService.saveSnap(snap);
+        }
+*/
         return "OK";
     }
 }
