@@ -297,3 +297,15 @@ section#main-content > .wrap-container {
 #listPlayers {
     width:95%;
 }
+
+#toggle-buttons {
+    display:table;
+    table-layout: fixed;
+    width:100%;
+}
+
+#toggle-buttons button {
+    display:table-cell;
+    vertical-align: middle;
+    padding: 5px 10px;
+}

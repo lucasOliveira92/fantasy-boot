@@ -13,6 +13,13 @@
             </div>
             <div th:if="${players != null}" class="col-md-5">
                 <h2 class="text-center">Players list</h2>
+                <div id="toggle-buttons">
+                    <button id="toggle_all" class="btn btn-default">All</button>
+                    <button id="toggle_gk" class="btn btn-default">Goalkeepers</button>
+                    <button id="toggle_def" class="btn btn-default">Defenders</button>
+                    <button id="toggle_mid" class="btn btn-default">Midfielders</button>
+                    <button id="toggle_for" class="btn btn-default">Forwarders</button>
+                </div>
                 <table id="listAllPlayers" class="table table-bordered table-condensed">
                     <tr>
                         <th class="col-md-1"></th>
@@ -33,6 +40,7 @@
             <div class="col-md-2" style="padding-top: 5%">
                 <p class="text-center" style="font-weight: bold; font-size: 150%;"
                    th:text="${'Budget: '+team.getBudget()}"></p>
+                <p id="current_cost"  style="font-weight: bold; font-size: 130%;">Current Cost: <span>0</span></p>
                 <button type="button" class="btn btn-success btn-lg" th:id="${team.getBudget()}" onclick="pickPlayer(this.id)" style="margin-top: 15%"><span
                         class="glyphicon glyphicon-plus-sign"></span> Pick Player
                 </button>
@@ -41,65 +49,46 @@
                     <span class="glyphicon glyphicon-floppy-saved"></span> Submit Team
                 </button>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-5" id="current_squad">
                 <h2 class="text-center">Squad</h2>
-                <table class="table table-bordered table-condensed myTeam">
-                    <tr class="gks">
-                        <th>Goalkeepers: 0 of 2</th>
+                <p class="seccao gk">Goalkeepers: <span>0</span> in 2</p>
+                <table id="listGK" class="table table-bordered table-condensed">
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Cost</th>
+                        <th>Points</th>
                     </tr>
-                    <tr id="gk1">
-                        <td></td>
+                </table>
+                <p class="seccao def">Defenders: <span>0</span> in 5</p>
+                <table id="listDEF" class="table table-bordered table-condensed">
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Cost</th>
+                        <th>Points</th>
                     </tr>
-                    <tr id="gk2">
-                        <td></td>
+                </table>
+                <p class="seccao mid">Midfielders: <span>0</span> in 5</p>
+                <table id="listMID" class="table table-bordered table-condensed">
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Cost</th>
+                        <th>Points</th>
                     </tr>
-                    <tr class="defs">
-                        <th>Defenders: 0 of 5</th>
-                    </tr>
-                    <tr id="def1">
-                        <td></td>
-                    </tr>
-                    <tr id="def2">
-                        <td></td>
-                    </tr>
-                    <tr id="def3">
-                        <td></td>
-                    </tr>
-                    <tr id="def4">
-                        <td></td>
-                    </tr>
-                    <tr id="def5">
-                        <td></td>
-                    </tr>
-                    <tr class="mids">
-                        <th>Midfielders: 0 of 5</th>
-                    </tr>
-                    <tr id="mid1">
-                        <td></td>
-                    </tr>
-                    <tr id="mid2">
-                        <td></td>
-                    </tr>
-                    <tr id="mid3">
-                        <td></td>
-                    </tr>
-                    <tr id="mid4">
-                        <td></td>
-                    </tr>
-                    <tr id="mid5">
-                        <td></td>
-                    </tr>
-                    <tr class="fors">
-                        <th>Forwards: 0 of 3</th>
-                    </tr>
-                    <tr id="for1">
-                        <td></td>
-                    </tr>
-                    <tr id="for2">
-                        <td></td>
-                    </tr>
-                    <tr id="for3">
-                        <td></td>
+                </table>
+                <p class="seccao for">Forwarders: <span>0</span> in 3</p>
+                <table id="listFOR" class="table table-bordered table-condensed">
+                    <tr>
+                        <th class="col-md-1"></th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Cost</th>
+                        <th>Points</th>
                     </tr>
                 </table>
             </div>
