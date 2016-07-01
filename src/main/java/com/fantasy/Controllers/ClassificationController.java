@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -34,9 +35,14 @@ public class ClassificationController {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
+        List<Integer> lista = new ArrayList<>();
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        for(int i=1; i<=tot; i++)
+            lista.add(i);
 
         model.addAttribute("currentUser", u);
-        model.addAttribute("gameWeekNumber",gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1);
+
+        model.addAttribute("gameWeekNumber",lista);
         model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         return "classification";
@@ -48,9 +54,13 @@ public class ClassificationController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
 
+        List<Integer> lista = new ArrayList<>();
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        for(int i=1; i<=tot; i++)
+            lista.add(i);
 
         model.addAttribute("currentUser", u);
-        model.addAttribute("gameWeekNumber",gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1);
+        model.addAttribute("gameWeekNumber",lista);
         model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         model.addAttribute("number", number);

@@ -25,22 +25,21 @@
                         class="glyphicon glyphicon-user"></span> Login
                 </button>
                 <div id="user-header-toggle" th:if="${currentUser != null}">
-                    <button type="button">
-                        <span th:text="${'Welcome ' + currentUser.getUsername()}"></span>
-                        <span class="caret"></span>
-                    </button>
-                    <ul>
-                        <li th:if="${currentUser.hasVirtualTeam()}" class="text-center"><span style="font-weight: bold;"
+
+
+                        <p th:if="${currentUser.hasVirtualTeam()}" class="text-center team-p"><span style="font-weight: bold;"
                                                                                               th:text="${currentUser.getVirtualTeam().getName()}">:</span>
                             <span style="font-weight: bold;">:</span>
                             <span style="font-weight: bold;" th:text="${currentUser.getVirtualTeam().getTotalPoints()}"> </span>
                             <span> Pts.</span>
-                        </li>
-                        <li class="text-center"> <input type="button" class="btn btn-sm btn-info" onclick="location.href='/user/edit'" value="Edit Account"/></li>
-                        <li class="text-center"><form th:action="@{/logout}" method="post">
-                            <input type="submit" class="btn btn-sm btn-danger" value="Sign Out"/>
-                        </form></li>
-                    </ul>
+                        </p>
+                        <form th:action="@{/logout}" method="post" id="myForm">
+                        <p class="text-center">
+                            <a href="/user/edit">Edit Account</a><br/>
+                            <a href="#" onclick="document.getElementById('myForm').submit();">Sign Out</a>
+                        </p>
+                        </form>
+
                 </div>
             </div>
         </div>

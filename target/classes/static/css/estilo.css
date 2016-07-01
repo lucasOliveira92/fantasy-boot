@@ -332,3 +332,7 @@ section#main-content > .wrap-container {
     color: #ffffff;
     font-weight: bold;
 }
+
+.team-p {
+    padding-top: 6%;
+}
