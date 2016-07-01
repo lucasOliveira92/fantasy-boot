@@ -70,7 +70,7 @@ public class VirtualTeamController {
         }
     }
 
-    @Secured("ROLE_USER")
+    //@Secured("ROLE_USER")
     @RequestMapping(value = "team/transfers", method = RequestMethod.GET)
     public String transfersVirtualTeam(Model model) {
 
