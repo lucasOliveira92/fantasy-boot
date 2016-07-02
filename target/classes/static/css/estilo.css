@@ -142,6 +142,7 @@ body{
 
 .table tr{
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .table tr:not(:first-of-type) {
@@ -335,4 +336,60 @@ section#main-content > .wrap-container {
 
 .team-p {
     padding-top: 6%;
+}
+.container-home {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 5%;
+}
+
+.home-left {
+    padding-top: 10%;
+    padding-left: 5%;
+    background-image: url('../images/home-left.jpg');
+    background-size: 100%;
+    min-height: 350px;
+}
+
+.p-home {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding-top: 55%;
+}
+
+.centrada {
+    float: none;
+    padding-left: 35%;
+    padding-top: 13%;
+}
+
+.home-right {
+    padding-top: 10%;
+    padding-left: 5%;
+    background-image: url('../images/home-right.jpg');
+    background-size: 100%;
+    min-height: 350px;
+}
+.home-left-col {
+    margin-left: 4%;
+}
+
+.listAllPlayers tr {
+    cursor: pointer;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: transparent; !important;
+}
+
+.highlighted:hover {
+    background-color: red;
+}
+
+.table tr.highlighted:hover {
+    background-color: #CCCC33;
+}
+
+.table-dir {
+    margin-top: 7%;
 }

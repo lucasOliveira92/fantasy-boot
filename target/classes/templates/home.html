@@ -8,17 +8,37 @@
 <section id="main-content">
     <div class="wrap-container">
         <div th:if="${currentUser == null}" class="botoes-index">
-            <ul>
-                <li>
-                    <input type="button" class="btn btn-primary btn-lg" onclick="location.href='/user/new'"
-                           value="Register"/>
-                </li>
-
-                <li>
-                    <input type="button" class="btn btn-primary btn-lg" onclick="location.href='/login'"
-                           value="Login"/>
-                </li>
-            </ul>
+            <div class="row container-home">
+                <div class="col-sm-5 home-left-col">
+                    <div class="row home-left">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <p class="p-home">Test your knowledge about football</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-11 centrada">
+                                <input type="button" class="btn btn-primary btn-lg" onclick="location.href='/user/new'" value="Register"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5">
+                    <div class="row home-right">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <p class="p-home">Compete with other players. Login and enjoy. </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-11 centrada">
+                                <input type="button" class="btn btn-primary btn-lg" onclick="location.href='/login'" value="Login"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
