@@ -38,6 +38,9 @@ public class VirtualTeamController {
     @Autowired
     private RealTeamService gestorRealTeams;
 
+    @Autowired
+    private GameWeekService gestorGameWeeks;
+
 
 
     @Secured("ROLE_USER")
@@ -47,6 +50,7 @@ public class VirtualTeamController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
         model.addAttribute("currentUser", u);
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
         if(u != null) {
             if (u.hasVirtualTeam()) {
                 VirtualTeam team = gestor.getVirtualTeam(u.getId());
@@ -60,6 +64,8 @@ public class VirtualTeamController {
                 model.addAttribute("DEFsub",listSubstitutes.get(1));
                 model.addAttribute("MIDsub",listSubstitutes.get(2));
                 model.addAttribute("FORsub",listSubstitutes.get(3));
+                model.addAttribute("games",gestorGameWeeks.getGamesByGameWeekNumber(tot));
+                model.addAttribute("gameWeekNumber", tot);
                 model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
                 model.addAttribute("team", team);
                 return "virtualTeam/show";
@@ -294,15 +300,6 @@ public class VirtualTeamController {
 
         gestor.createVirtualTeam(rs.getTeamName(),idPlayers,rs.getUser());
 
-
-        /*
-        GameWeekSnapshot snap = snapshotService.getLastSnapshotByUser(rs.getUser());
-        if(snap != null){
-            snap.setCapitao(rs.getCapitao());
-            snap.setPlayers(idPlayers);
-            snapshotService.saveSnap(snap);
-        }
-*/
-        return "OK";
+        return "redirect:/team";
     }
 }
