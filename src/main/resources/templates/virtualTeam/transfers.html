@@ -30,6 +30,16 @@
                             </select>
                         </div>
                         <div class="campo-pesquisa-statistic">
+                            <label>Position:</label>
+                            <select class="btn btn-default" style="width: 100%;" id="positionFilter">
+                                <option id="-1">All</option>
+                                <option id="1">Goalkeeper</option>
+                                <option id="2">Defender</option>
+                                <option id="3">Midfield</option>
+                                <option id="4">Forward</option>
+                            </select>
+                        </div>
+                        <div class="campo-pesquisa-statistic">
                             <label>Order by:</label>
                             <select class="btn btn-default" style="width: 100%;" id="orderFilter">
                                 <option id="-1">Cost</option>
@@ -46,13 +56,6 @@
                             </button>
                         </div>
                     </div>
-                </div>
-                <div id="toggle-buttons">
-                    <button id="toggle_all" class="btn btn-default">All</button>
-                    <button id="toggle_gk" class="btn btn-default">Goalkeepers</button>
-                    <button id="toggle_def" class="btn btn-default">Defenders</button>
-                    <button id="toggle_mid" class="btn btn-default">Midfielders</button>
-                    <button id="toggle_for" class="btn btn-default">Forwarders</button>
                 </div>
                 <table id="listAllPlayers" class="table table-bordered table-condensed" data-url='x' data-toggle="table"  data-search="true" data-pagination="true">
                     <thead>
