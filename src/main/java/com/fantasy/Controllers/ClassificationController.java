@@ -67,7 +67,7 @@ public class ClassificationController {
         if(number != -1) {
             model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());
         }else{
-            model.addAttribute("gameweekID",gestorGameWeek.getGameWeekByNumber(u.getVirtualTeam().getGameWeekSnapshots().size()-1).getId());
+            model.addAttribute("gameweekID",gestorGameWeek.getGameWeekByNumber(tot).getId());
         }
         return "classificationGameWeek";
     }
