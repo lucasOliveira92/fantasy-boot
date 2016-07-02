@@ -37,6 +37,9 @@ public class HelloController {
     @Autowired
     SnapshotService snapService;
 
+    @Autowired
+    GameWeekService gameWeekService;
+
     @RequestMapping("/")
     public String index(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -102,6 +105,8 @@ public class HelloController {
 
     @RequestMapping("/generate/{gameWeek}")
     public String generate(@PathVariable Integer gameWeek) {
+        if(gameWeekService.getTotalGeneratedWeeks() >= gameWeek)
+            return "home";
         if(gameWeek > 0 && gameWeek <= 34){
             generateService.generate(gameWeek);
             if(gameWeek < 34)

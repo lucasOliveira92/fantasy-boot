@@ -1392,6 +1392,20 @@ public class GenerateService {
     @Transactional
     public HashMap<String, GameWeekSnapshot> genererateRandomSnapshots(int gameWeek) {
 
+        HashSet<String> nomesBOTS = new HashSet();
+        nomesBOTS.add("Quim");
+        nomesBOTS.add("besuntas");
+        nomesBOTS.add("fagundes");
+        nomesBOTS.add("badocha");
+        nomesBOTS.add("pogchamp");
+        nomesBOTS.add("kappa");
+        nomesBOTS.add("keepo");
+        nomesBOTS.add("dansgame");
+        nomesBOTS.add("wutface");
+        nomesBOTS.add("opieop");
+        nomesBOTS.add("brokeback");
+        nomesBOTS.add("frankerz");
+
         GameWeek gw = gameWeekDAO.findByNumber(gameWeek);
 
         HashMap<String, GameWeekSnapshot> allSnaps = new HashMap<>();
@@ -1399,6 +1413,11 @@ public class GenerateService {
 
 
         for (VirtualTeam vt : allVTeams) {
+            System.out.println((vt.getOwner().getUsername()));
+            if(!nomesBOTS.contains(vt.getOwner().getUsername())){
+                continue;
+            }
+
             List<Player> players = vt.getPlayers();
             List<Player> equipaTitular = new ArrayList<>();
             int totalGR = 0, totalDEF = 0, totalMID = 0, totalFOR = 0;
@@ -1568,7 +1587,7 @@ public class GenerateService {
 
             GameWeekSnapshot snap = new GameWeekSnapshot(equipaTitular,capitao , gw, vt);
             snapDAO.save(snap);
-        
+
     }
 
 }

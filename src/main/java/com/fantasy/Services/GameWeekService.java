@@ -2,6 +2,7 @@ package com.fantasy.Services;
 
 
 import com.fantasy.DAO.GameWeekDAO;
+import com.fantasy.DAO.UserDAO;
 import com.fantasy.Models.Game;
 import com.fantasy.Models.GameWeek;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,8 @@ import java.util.List;
 public class GameWeekService {
     @Autowired
     private GameWeekDAO gameWeeks;
+    @Autowired
+    private UserDAO userDAO;
 
     public GameWeek getGameWeekById(long id){ return gameWeeks.findById(id); }
 
@@ -25,4 +28,8 @@ public class GameWeekService {
     public List<Game> getGamesByGameWeekId(long id){ return getGameWeekById(id).getGames(); }
 
     public List<Game> getGamesByGameWeekNumber(int number){ return getGameWeekByNumber(number).getGames(); }
+
+    public int getTotalGeneratedWeeks(){
+        return userDAO.findByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+    }
 }
