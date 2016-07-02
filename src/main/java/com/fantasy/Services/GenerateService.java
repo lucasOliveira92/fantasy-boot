@@ -1350,18 +1350,18 @@ public class GenerateService {
         List<Player> allMID = playerRepo.findByPosition("MID");
         List<Player> allFOR = playerRepo.findByPosition("FOR");
 
-        allUsers.add(new User("Quim", "quim@mail.pt", "1"));
-        allUsers.add(new User("besuntas", "besuntas@mail.pt", "1"));
-        allUsers.add(new User("fagundes", "fagundes@mail.pt", "1"));
-        allUsers.add(new User("badocha", "badocha@mail.pt", "1"));
-        allUsers.add(new User("pogchamp", "pogchamp@mail.pt", "1"));
-        allUsers.add(new User("kappa", "kappa@mail.pt", "1"));
-        allUsers.add(new User("keepo", "keepo@mail.pt", "1"));
-        allUsers.add(new User("dansgame", "dansgame@mail.pt", "1"));
-        allUsers.add(new User("wutface", "wutface@mail.pt", "1"));
-        allUsers.add(new User("opieop", "opieop@mail.pt", "1"));
-        allUsers.add(new User("brokeback", "brokeback@mail.pt", "1"));
-        allUsers.add(new User("frankerz", "frankerz@mail.pt", "1"));
+        allUsers.add(new User("Quim", "quim@mail.pt", "123123"));
+        allUsers.add(new User("besuntas", "besuntas@mail.pt", "123123"));
+        allUsers.add(new User("fagundes", "fagundes@mail.pt", "123123"));
+        allUsers.add(new User("badocha", "badocha@mail.pt", "123123"));
+        allUsers.add(new User("pogchamp", "pogchamp@mail.pt", "123123"));
+        allUsers.add(new User("kappa", "kappa@mail.pt", "123123"));
+        allUsers.add(new User("keepo", "keepo@mail.pt", "123123"));
+        allUsers.add(new User("dansgame", "dansgame@mail.pt", "12323"));
+        allUsers.add(new User("wutface", "wutface@mail.pt", "123123"));
+        allUsers.add(new User("opieop", "opieop@mail.pt", "123123"));
+        allUsers.add(new User("brokeback", "brokeback@mail.pt", "123123"));
+        allUsers.add(new User("frankerz", "frankerz@mail.pt", "123123"));
         //allUsers.add(new User("admin", "admin@mail.pt", "1"));
 
         for (User u : allUsers) {

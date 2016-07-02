@@ -30,12 +30,10 @@ public class User implements Serializable {
 
     @NotEmpty
     @NotNull
-    @Size(min = 6, max = 15)
+    @Size(min = 5, max = 15)
     @Column(nullable = false)
     private String password;
 
-    @NotNull
-    @Size(min = 6, max = 15)
     @Transient
     private String passwordCheck;
 
