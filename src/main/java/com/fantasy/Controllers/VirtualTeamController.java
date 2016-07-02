@@ -184,6 +184,7 @@ public class VirtualTeamController {
                     lista = gestorRealTeams.getById(teamId).getPlayerByPosition("FOR");
                     break;
                 default:
+                    lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
                     break;
             }
             if (lista!=null)listafinal.retainAll(lista);
@@ -208,6 +209,8 @@ public class VirtualTeamController {
                     listafinal.retainAll(lista2);
                     break;
                 default:
+                    lista2 = playerService.getAllPlayersByPosition("GK");
+                    listafinal.retainAll(lista2);
                     break;
             }
         }

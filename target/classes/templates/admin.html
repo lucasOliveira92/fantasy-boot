@@ -14,9 +14,9 @@
                     <p style="font-weight: bold; font-size: 140%;" class="text-center">Old Gameweek</p>
                     <table id="gameweek" class="table table-striped table-bordered" style="vertical-align: middle">
                         <tr class="text-center" style="background-color: #2ecc71">
-                            <th colspan="3" class="text-center" style="font-size: 150%;background-color: #1abc9c; font-weight: bold;">
+                            <th colspan="4" class="text-center" style="font-size: 150%;background-color: #1abc9c; font-weight: bold;">
                                 Gameweek: <span th:text="${oldgameweekNumber}"></span></th>
-                            <th colspan="4" class="text-center" style="font-size: 150%;background-color: #1abc9c; font-weight: bold;">  <span th:text="${oldgameweek.prettyPrintDate()}"></span></th>
+                            <th colspan="3" class="text-center" style="font-size: 150%;background-color: #1abc9c; font-weight: bold;">  <span th:text="${oldgameweek.prettyPrintDate()}"></span></th>
                         </tr>
                         <tr th:each="game : ${oldgameweek.getGames()}">
                             <td class="text-right" style="font-weight: bold;" th:text="${game.getTeam1().getName()}"></td>

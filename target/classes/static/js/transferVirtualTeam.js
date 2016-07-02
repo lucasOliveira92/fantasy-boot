@@ -61,12 +61,53 @@ function switchPlayers(budget) {
 };
 
 function recarregaAllPlayers(){
-    var positionFilter = $('#positionFilter option:selected').attr('id');
     var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
     var orderFilter = $('#orderFilter option:selected').attr('id');
-    window.open("/team/transfers/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
+    window.open("/team/transfers/"+realTeamFilter+"/-1/"+orderFilter,"_self");
 };
 
 $(document).ready(function() {
     $('.alerta').hide();
+});
+
+$('#toggle-buttons button').click(function(){
+    var id = $(this).attr('id');
+    alert(id);
+    var tabela = $('table#listAllPlayers');
+    tabela.find('tr').show();
+    switch(id){
+        case "toggle_all":
+
+            break;
+        case "toggle_gk":
+            tabela.find('tr').not(':first').each(function(){
+                if($(this).find('td').eq(3).text() != "GK") {
+                    $(this).hide();
+                }
+            });
+            break;
+        case "toggle_def":
+            tabela.find('tr').not(':first').each(function(){
+                if($(this).find('td').eq(3).text() != "DEF") {
+                    $(this).hide();
+                }
+            });
+            break;
+        case "toggle_mid":
+            tabela.find('tr').not(':first').each(function(){
+                if($(this).find('td').eq(3).text() != "MID") {
+                    $(this).hide();
+                }
+            });
+            break;
+        case "toggle_for":
+            tabela.find('tr').not(':first').each(function(){
+                if($(this).find('td').eq(3).text() != "FOR") {
+                    $(this).hide();
+                }
+            });
+            break;
+        default:
+            console.log("deu porcaria");
+    }
 });
