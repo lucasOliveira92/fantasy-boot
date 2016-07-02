@@ -321,11 +321,15 @@ section#main-content > .wrap-container {
 
 .alerta {
     position: absolute;
-    margin-top: 5%;
+    display:none;
     background-color: red;
     border-radius: 5px;
-    left: 40%;
     z-index: 1200;
+    width: 20%;
+    top: 50%;
+    left: 43%;
+    margin-top: -50px;
+    margin-left: -50px;
 }
 
 .p-alerta {

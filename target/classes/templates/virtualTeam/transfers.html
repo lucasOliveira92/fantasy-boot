@@ -13,6 +13,7 @@
 <section id="main-content">
     <div class="wrap-container">
         <div class="box-body table-responsive">
+
             <h2 class="text-center">Transfers</h2>
             <div th:if="${players != null}" class="col-md-5 transfer">
                 <div class="row" style="float: left; position: relative; align-items: baseline;">
@@ -53,6 +54,7 @@
                         </div>
                     </div>
                 </div>
+
                 <table id="listAllPlayers" class="table table-bordered table-condensed" data-url='x' data-toggle="table"  data-search="true" data-pagination="true">
                     <thead>
                         <tr>
@@ -85,11 +87,8 @@
                         <td class="text-center" th:if="${order==5}" th:text="${player.totalTimesBought}">cost</td>
                     </tr>
                 </table>
+            </div>
 
-            </div>
-            <div class="alerta col-md-3">
-                <p class="p-alerta">teste</p>
-            </div>
             <div class="col-md-2" style="padding-top: 5%">
                 <div class="col-md-12">
                     <p class="text-center" style="font-weight: bold; font-size: 150%;"
@@ -151,5 +150,9 @@
         </div>
     </div>
 </section>
+<div class="alerta col-md-3">
+    <p class="p-alerta"></p>
+</div>
 </body>
+
 </html>

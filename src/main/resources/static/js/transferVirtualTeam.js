@@ -31,27 +31,33 @@ function switchPlayers(budget) {
     
     $('p.total-transfers').each(function(){
         totalTransfers = $(this).attr('id');
-        console
     });
 
     if (idAll == null || idMy == null) {
+        $(".alerta").css("background-color", "red");
         $('.p-alerta').text("Select a player from both tables first!");
         $('.alerta').fadeIn(1000).delay(4000).fadeOut('slow');
     }else{
         if(posAll!=posMy){
+            $(".alerta").css("background-color", "red");
             $('.p-alerta').text("Please select players from the same positions");
             $('.alerta').fadeIn(1000).delay(4000).fadeOut('slow');
         }else{
             if(budget < (costMy-costAll)){
+                $(".alerta").css("background-color", "red");
                 $('.p-alerta').text("Your budget isn't enough! Select other players");
                 $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
             }else{
                 if(totalTransfers > 0){
+                    $(".alerta").css("background-color", "green");
                     $('.p-alerta').text("Transfer is OK!");
                     $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
-                    window.open("/team/transfers/"+idAll+"/"+idMy,"_self");
+                    setTimeout(function(){
+                        window.open("/team/transfers/"+idAll+"/"+idMy,"_self");
+                    }, 2500);
                 }
                 else{
+                    $(".alerta").css("background-color", "red");
                     $('.p-alerta').text("You don't have enough transfers!");
                     $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
                 }
