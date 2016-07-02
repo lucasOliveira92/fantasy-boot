@@ -131,18 +131,19 @@ function makeCaptain(id) {
 
 //NAO ESQUECER DOS HEADERS (TEM NO VIRTUAL_TEAM_SHOW)
 function updateStrategy() {
+    console.log("entrei no botao");
     titulares = [];
 
-    
+
     $('button.cpt-selected').each(function() {
         currentCaptain = $(this).attr('id');
-
-
     });
 
     user = $('.current-user-id').text();
     if (currentCaptain == -1) {
-        alert("You must pick a captain for your team");
+        $(".alerta").css("background-color", "red");
+        $('.p-alerta').text("You must pick a captain for your team");
+        $('.alerta').fadeIn(1000).delay(4000).fadeOut('slow');
         return;
     }
     //console.log(user);
@@ -165,13 +166,21 @@ function updateStrategy() {
         "capitao": currentCaptain,
         "titulares": titulares
     }
+    console.log("antes do ajax");
     $.ajax({
         type: "POST",
         contentType: 'application/json; charset=utf-8',
         dataType: 'json',
         url: "/save/team",
-        data: JSON.stringify(search), // Note it is important
+        data: JSON.stringify(search),
         success: function (result) {
+            console.log("cenas");
+            $(".alerta").css("background-color", "green");
+            $('.p-alerta').text("Updated successfully");
+            $('.alerta').fadeIn(1000).delay(4000).fadeOut('slow');
         }
     });
+    $(".alerta").css("background-color", "green");
+    $('.p-alerta').text("updated successfully");
+    $('.alerta').fadeIn(1000).delay(4000).fadeOut('slow');
 }
