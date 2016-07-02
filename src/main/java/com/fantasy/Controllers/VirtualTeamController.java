@@ -50,7 +50,7 @@ public class VirtualTeamController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
         model.addAttribute("currentUser", u);
-        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size();
         if(u != null) {
             if (u.hasVirtualTeam()) {
                 VirtualTeam team = gestor.getVirtualTeam(u.getId());
