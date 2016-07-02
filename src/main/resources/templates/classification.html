@@ -64,16 +64,23 @@
     function recarregaAllTeams() {
 
         var gameweekFilter = $('#gameweekFilter option:selected').text();
+        if(gameweekFilter =="All"){ gameweekFilter=-1;}
         window.open("/classification/" + gameweekFilter, "_self");
     }
     ;
-
-    user = $('.current-user-id').text();
+    var listaEquipas = [];
+    var user = $('.current-user-id').text();
 
     $('#listOwnPlayers').find('tr').each(function () {
-        if ($(this).attr('id') == user)
-            $(this).addClass('highlighted');
+        if ($(this).attr('id') == user){
+            $(this).addClass('highlighted');}
     });
+    $('#listOwnPlayers').find('tr').not(':first').each(function(){
+        listaEquipas.push(this);
+        console.log(this);
+    });
+
+
 </script>
 </body>
 
