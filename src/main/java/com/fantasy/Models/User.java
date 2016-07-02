@@ -1,8 +1,11 @@
 package com.fantasy.Models;
 
+import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
@@ -15,17 +18,24 @@ public class User implements Serializable {
     private Long id;
 
     @NotEmpty
+    @NotNull
     @Column(nullable = false, unique = true)
     private String username;
 
     @NotEmpty
+    @Email
+    @NotNull
     @Column(nullable = false, unique = true)
     private String email;
 
     @NotEmpty
+    @NotNull
+    @Size(min = 6, max = 15)
     @Column(nullable = false)
     private String password;
 
+    @NotNull
+    @Size(min = 6, max = 15)
     @Transient
     private String passwordCheck;
 
