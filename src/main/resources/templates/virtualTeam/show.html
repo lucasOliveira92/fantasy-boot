@@ -17,70 +17,112 @@
                     <section class="user_info">
                         <h2 class="text-center">Formation</h2>
                     </section>
-                    <div id="field" style="position: relative; width: 70%; height: 100%; margin:0 auto;" class="text-center">
+                    <div id="field" style="position: relative; width: 70%; height: 100%; margin:0 auto;"
+                         class="text-center">
                         <img src="/images/field.png" alt="" height="70%" width="80%"/>
 
                         <div style="width: 100%; height: 100%; position: absolute; top: 0; text-align: center">
                             <div id="FOR" style="width: 100%; height: 15%; margin-top: 10%; position: relative">
-                                <div th:each="player : ${FORs}" th:id="${player.id}" class="titular" style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
-                                    <img th:src="${player.getRealTeam().getEquipment()}"  height="50%"/>
-                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%;" id="FOR" th:text="${player.name}"></p>
+                                <div th:each="player : ${FORs}" th:id="${player.id}" class="titular"
+                                     style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                    <img th:src="${player.getRealTeam().getEquipment()}" height="50%"/>
+                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%;" id="FOR"
+                                       th:text="${player.name}"></p>
                                     <h2 style="visibility: hidden;" th:text="${player.cost}"></h2>
-                                    <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <h3 style="visibility: hidden;" th:text="${player.totalPoints}"></h3>
+                                    <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain"
+                                            th:id="${player.id}" onclick="makeCaptain(this.id)"
+                                            style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button th:if="${idCapitao == player.id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <button th:if="${idCapitao == player.id}" type="button"
+                                            class="btn btn-xs captain cpt-selected" th:id="${player.id}"
+                                            onclick="makeCaptain(this.id)"
+                                            style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}" onclick="switchPlayers(this.id)" style="position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
+                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}"
+                                            onclick="switchPlayers(this.id)"
+                                            style="position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
                                         <span class="glyphicon glyphicon-retweet"></span>
                                     </button>
                                 </div>
                             </div>
                             <div id="MID" style="width: 100%; height: 15%; margin-top: 15%; position: relative">
-                                <div th:each="player : ${MIDs}" th:id="${player.id}" class="titular" style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
-                                    <img th:src="${player.getRealTeam().getEquipment()}"  height="50%"/>
-                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="MID" th:text="${player.name}"></p>
+                                <div th:each="player : ${MIDs}" th:id="${player.id}" class="titular"
+                                     style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                    <img th:src="${player.getRealTeam().getEquipment()}" height="50%"/>
+                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="MID"
+                                       th:text="${player.name}"></p>
                                     <h2 style="visibility: hidden;" th:text="${player.cost}"></h2>
-                                    <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <h3 style="visibility: hidden;" th:text="${player.totalPoints}"></h3>
+                                    <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain"
+                                            th:id="${player.id}" onclick="makeCaptain(this.id)"
+                                            style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button th:if="${idCapitao == player.id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <button th:if="${idCapitao == player.id}" type="button"
+                                            class="btn btn-xs captain cpt-selected" th:id="${player.id}"
+                                            onclick="makeCaptain(this.id)"
+                                            style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}" onclick="switchPlayers(this.id)" style="position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
+                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}"
+                                            onclick="switchPlayers(this.id)"
+                                            style="position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
                                         <span class="glyphicon glyphicon-retweet"></span>
                                     </button>
                                 </div>
                             </div>
                             <div id="DEF" style="width: 100%; height: 15%; margin-top: 15%; position: relative">
-                                <div th:each="player : ${DEFs}" th:id="${player.id}" class="titular" style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
-                                    <img th:src="${player.getRealTeam().getEquipment()}"  height="50%"/>
-                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="DEF" th:text="${player.name}"></p>
+                                <div th:each="player : ${DEFs}" th:id="${player.id}" class="titular"
+                                     style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                    <img th:src="${player.getRealTeam().getEquipment()}" height="50%"/>
+                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="DEF"
+                                       th:text="${player.name}"></p>
                                     <h2 style="visibility: hidden;" th:text="${player.cost}"></h2>
-                                    <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <h3 style="visibility: hidden;" th:text="${player.totalPoints}"></h3>
+                                    <button th:if="${idCapitao != player.id}" type="button" class="btn btn-xs captain"
+                                            th:id="${player.id}" onclick="makeCaptain(this.id)"
+                                            style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button th:if="${idCapitao == player.id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${player.id}" onclick="makeCaptain(this.id)" style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <button th:if="${idCapitao == player.id}" type="button"
+                                            class="btn btn-xs captain cpt-selected" th:id="${player.id}"
+                                            onclick="makeCaptain(this.id)"
+                                            style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}" onclick="switchPlayers(this.id)" style="position: absolute;right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
+                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${player.id}"
+                                            onclick="switchPlayers(this.id)"
+                                            style="position: absolute;right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
                                         <span class="glyphicon glyphicon-retweet"></span>
                                     </button>
                                 </div>
                             </div>
                             <div id="GK" style="width: 100%; height: 15%; margin-top: 5%; position: relative">
-                                <div th:id="${GK.get(0).id}" class="titular" style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
-                                    <img th:src="${GK.get(0).getRealTeam().getEquipment()}"  height="50%"/>
-                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="GK" th:text="${GK.get(0).name}"></p>
+                                <div th:id="${GK.get(0).id}" class="titular"
+                                     style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                    <img th:src="${GK.get(0).getRealTeam().getEquipment()}" height="50%"/>
+                                    <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="GK"
+                                       th:text="${GK.get(0).name}"></p>
                                     <h2 style="visibility: hidden;" th:text="${GK.get(0).cost}"></h2>
-                                    <button th:if="${idCapitao != GK.get(0).id}" type="button" class="btn btn-xs captain" th:id="${GK.get(0).id}" onclick="makeCaptain(this.id)" style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <h3 style="visibility: hidden;" th:text="${GK.get(0).totalPoints}"></h3>
+                                    <button th:if="${idCapitao != GK.get(0).id}" type="button"
+                                            class="btn btn-xs captain" th:id="${GK.get(0).id}"
+                                            onclick="makeCaptain(this.id)"
+                                            style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button th:if="${idCapitao == GK.get(0).id}" type="button" class="btn btn-xs captain cpt-selected" th:id="${GK.get(0).id}" onclick="makeCaptain(this.id)" style="position: absolute; left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <button th:if="${idCapitao == GK.get(0).id}" type="button"
+                                            class="btn btn-xs captain cpt-selected" th:id="${GK.get(0).id}"
+                                            onclick="makeCaptain(this.id)"
+                                            style="position: absolute; left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
                                         <b>C</b>
                                     </button>
-                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${GK.get(0).id}" onclick="switchPlayers(this.id)" style="position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
+                                    <button type="button" class="btn btn-xs btn-default trade" th:id="${GK.get(0).id}"
+                                            onclick="switchPlayers(this.id)"
+                                            style="position: absolute; right: 0; margin-right: 10%; bottom: 0;  width: 40%; overflow: hidden">
                                         <span class="glyphicon glyphicon-retweet"></span>
                                     </button>
                                 </div>
@@ -90,48 +132,78 @@
                     </div>
 
                 </div>
-                <div th:if="${team.getPlayers() != null}" class="col-md-5">
-                    <h2 class="text-center">Substitutes</h2>
-                    <table id="listPlayers" class="table table-bordered">
-                        <tr>
-                            <th class="col-md-1"></th>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Value</th>
-                            <th>Points</th>
-                        </tr>
-                        <tr th:id="${GKsub.get(0).id}" class="clickable-row" style="cursor:pointer;">
-                            <td class="col-md-1 text-center"><img th:src="${GKsub.get(0).getRealTeam().getEquipment()}" height="20%"/></td>
-                            <td th:text="${GKsub.get(0).name}">Name</td>
-                            <td th:text="${GKsub.get(0).position}">position</td>
-                            <td th:text="${GKsub.get(0).cost}">cost</td>
-                            <td th:text="${GKsub.get(0).totalPoints}">cost</td>
-                        </tr>
-                        <tr th:id="${player.id}" class="clickable-row" style="cursor:pointer;" th:each="player : ${DEFsub}">
-                            <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
-                            <td th:text="${player.name}">Name</td>
-                            <td th:text="${player.position}">position</td>
-                            <td th:text="${player.cost}">cost</td>
-                            <td th:text="${player.totalPoints}">cost</td>
-                        </tr>
-                        <tr th:id="${player.id}" class="clickable-row" style="cursor:pointer;" th:each="player : ${MIDsub}">
-                            <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
-                            <td th:text="${player.name}">Name</td>
-                            <td th:text="${player.position}">position</td>
-                            <td th:text="${player.cost}">cost</td>
-                            <td th:text="${player.totalPoints}">cost</td>
-                        </tr>
-                        <tr th:id="${player.id}" class="clickable-row" style="cursor:pointer;" th:each="player : ${FORsub}">
-                            <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"  height="20%"/></td>
-                            <td th:text="${player.name}">Name</td>
-                            <td th:text="${player.position}">position</td>
-                            <td th:text="${player.cost}">cost</td>
-                            <td th:text="${player.totalPoints}">cost</td>
-                        </tr>
-                    </table>
-                    <button type="button" class="btn btn-success pull-right btn-lg" style="margin-right:5%;bottom: 20px; right: 20px" onclick="updateStrategy()">Update Strategy</button>
+                <div th:if="${team.getPlayers() != null}" class="col-md-6">
+                    <div class="col-md-10 col-md-offset-1">
+                        <h2 class="text-center">Substitutes</h2>
+                        <table id="listPlayers" class="table table-bordered">
+                            <tr>
+                                <th class="col-md-1"></th>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Value</th>
+                                <th>Points</th>
+                            </tr>
+                            <tr th:id="${GKsub.get(0).id}" class="clickable-row" style="cursor:pointer;">
+                                <td class="col-md-1 text-center"><img
+                                        th:src="${GKsub.get(0).getRealTeam().getEquipment()}"
+                                        height="20%"/></td>
+                                <td th:text="${GKsub.get(0).name}">Name</td>
+                                <td th:text="${GKsub.get(0).position}">position</td>
+                                <td th:text="${GKsub.get(0).cost}">cost</td>
+                                <td th:text="${GKsub.get(0).totalPoints}">cost</td>
+                            </tr>
+                            <tr th:id="${player.id}" class="clickable-row" style="cursor:pointer;"
+                                th:each="player : ${DEFsub}">
+                                <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                                      height="20%"/></td>
+                                <td th:text="${player.name}">Name</td>
+                                <td th:text="${player.position}">position</td>
+                                <td th:text="${player.cost}">cost</td>
+                                <td th:text="${player.totalPoints}">cost</td>
+                            </tr>
+                            <tr th:id="${player.id}" class="clickable-row" style="cursor:pointer;"
+                                th:each="player : ${MIDsub}">
+                                <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                                      height="20%"/></td>
+                                <td th:text="${player.name}">Name</td>
+                                <td th:text="${player.position}">position</td>
+                                <td th:text="${player.cost}">cost</td>
+                                <td th:text="${player.totalPoints}">cost</td>
+                            </tr>
+                            <tr th:id="${player.id}" class="clickable-row" style="cursor:pointer;"
+                                th:each="player : ${FORsub}">
+                                <td class="col-md-1 text-center"><img th:src="${player.getRealTeam().getEquipment()}"
+                                                                      height="20%"/></td>
+                                <td th:text="${player.name}">Name</td>
+                                <td th:text="${player.position}">position</td>
+                                <td th:text="${player.cost}">cost</td>
+                                <td th:text="${player.totalPoints}">cost</td>
+                            </tr>
+                        </table>
+                        <button type="button" class="btn btn-success pull-right btn-lg"
+                                style="margin-right:5%;bottom: 20px;margin-bottom: 10%; right: 20px"
+                                onclick="updateStrategy()">Update Strategy
+                        </button>
+                    </div>
+                    <div style="margin-right: 5%">
+                        <table id="gameweek" class="table table-striped table-bordered" style="vertical-align: middle">
+                            <tr class="text-center" style="background-color: #2ecc71">
+                                <th colspan="6" class="text-center" style="font-size: 150%;background-color: #1abc9c; font-weight: bold;">
+                                    Gameweek: <span th:text="${gameWeekNumber}"></span></th>
+                            </tr>
+                            <tr th:each="game : ${games}">
+                                <td th:text="${game.prettyPrintDate()}"></td>
+                                <td class="text-right" style="font-weight: bold;" th:text="${game.getTeam1().getName()}"></td>
+                                <td class="text-center"><img th:src="${game.getTeam1().getBadge()}"
+                                                             height="20px"/></td>
+                                <td>Vs</td>
+                                <td class="text-center"><img th:src="${game.getTeam2().getBadge()}"
+                                         height="20px"/></td>
+                                <td style="font-weight: bold;" th:text="${game.getTeam2().getName()}"></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-                <div class="col-md-1"></div>
                 <div class="divs box-body table-responsive" th:if="${team.getOwner() != currentUser}">
                     <div class="col-md-offset-2 col-md-8">
                         <div th:if="${team.getPlayers() != null}" class="form-group">
@@ -144,7 +216,7 @@
                                     <th>Cost</th>
                                 </tr>
                                 <tr th:each="player : ${team.getPlayers()}">
-                                    <td class="col-md-1"><img src="http://i.imgur.com/m7ZcOFv.png"  height="15%"/></td>
+                                    <td class="col-md-1"><img src="http://i.imgur.com/m7ZcOFv.png" height="15%"/></td>
                                     <td th:text="${player.name}">Name</td>
                                     <td th:text="${player.position}">position</td>
                                     <td th:text="${player.cost}">cost</td>
@@ -162,6 +234,6 @@
 
 </body>
 <div id="divHidden" style="display: none;">
-    <p  th:text="${currentUser.id}" class="current-user-id"></p>
+    <p th:text="${currentUser.id}" class="current-user-id"></p>
 </div>
 </html>

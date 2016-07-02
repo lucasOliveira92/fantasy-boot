@@ -2,6 +2,7 @@ package com.fantasy.Models;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Set;
 
@@ -99,8 +100,6 @@ public class Game implements Serializable {
     public void setGameWeek(GameWeek gameWeek) {
         this.gameWeek = gameWeek;
     }
-    
-    
 
     public Set<GameEvent> getEvents() {
         return events;
@@ -112,5 +111,10 @@ public class Game implements Serializable {
 
     public void addEvent(GameEvent event){
         this.events.add(event);
+    }
+
+    public String prettyPrintDate(){
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+        return format.format(date);
     }
 }

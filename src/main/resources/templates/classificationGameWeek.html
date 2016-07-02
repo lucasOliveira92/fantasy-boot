@@ -62,6 +62,9 @@
             </div>
         </div>
     </div>
+    <div id="divHidden" style="display: none;">
+        <p th:if="${currentUser != null}" th:text="${currentUser.id}" class="current-user-id"></p>
+    </div>
 </section>
 <script>
     function recarregaAllPlayers() {
@@ -70,6 +73,18 @@
         window.open("/classification/" + gameweekFilter, "_self");
     }
     ;
+
+    var listaEquipas = [];
+    var user = $('.current-user-id').text();
+
+    $('#listOwnPlayers').find('tr').each(function () {
+        if ($(this).attr('id') == user){
+            $(this).addClass('highlighted');}
+    });
+    $('#listOwnPlayers').find('tr').not(':first').each(function(){
+        listaEquipas.push(this);
+        console.log(this);
+    });
 </script>
 </body>
 </html>
