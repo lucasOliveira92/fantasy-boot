@@ -79,6 +79,41 @@ public class VirtualTeamController {
     }
 
     @Secured("ROLE_USER")
+    @RequestMapping(value = "team/historic", method = RequestMethod.GET)
+    public String historicVirtualTeam(Model model) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        if(u != null) {
+            if (u.hasVirtualTeam()) {
+                VirtualTeam team = gestor.getVirtualTeam(u.getId());
+                List<List<Player>> listFormation = gestor.getListsPlayersByPositionByFormation(u.getVirtualTeam().getId());
+                List<List<Player>> listSubstitutes = gestor.getListsPlayersByPositionBySubstitutes(u.getVirtualTeam().getId());
+                model.addAttribute("GK",listFormation.get(0));
+                model.addAttribute("DEFs",listFormation.get(1));
+                model.addAttribute("MIDs",listFormation.get(2));
+                model.addAttribute("FORs",listFormation.get(3));
+                model.addAttribute("GKsub",listSubstitutes.get(0));
+                model.addAttribute("DEFsub",listSubstitutes.get(1));
+                model.addAttribute("MIDsub",listSubstitutes.get(2));
+                model.addAttribute("FORsub",listSubstitutes.get(3));
+                model.addAttribute("games",gestorGameWeeks.getGamesByGameWeekNumber(tot));
+                model.addAttribute("gameWeekNumber", tot);
+                model.addAttribute("gameWeekDate", gestorGameWeeks.getGameWeekByNumber(tot).prettyPrintDate());
+                model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
+                model.addAttribute("team", team);
+                return "virtualTeam/historic";
+            }else{
+                return "redirect:/team/new";
+            }
+        }else{
+            return "redirect:/";
+        }
+    }
+
+    @Secured("ROLE_USER")
     @RequestMapping(value = "team/transfers", method = RequestMethod.GET)
     public String transfersVirtualTeam(Model model) {
 

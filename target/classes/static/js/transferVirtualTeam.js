@@ -1,56 +1,90 @@
-
-$(document).on('click', '.clickable-row', function() {
-    if($(this).hasClass("highlighted"))
+$(document).on('click', '.clickable-row', function () {
+    if ($(this).hasClass("highlighted"))
         $(this).removeClass('highlighted');
     else
         $(this).addClass('highlighted').siblings().removeClass('highlighted');
 });
 
+var tabelaAllPlayers = $('table#listAllPlayers');
+var tabelaMyTeam = $('table#listPlayers');
+tabelaAllPlayers.find('tr').show();
+
+var listaMyplayers = [];
+var listaMyplayersIds = [];
+
+tabelaMyTeam.find('tr').not(':first').each(function () {
+    listaMyplayersIds.push($(this).attr('id'));
+});
+
+
+tabelaAllPlayers.find('tr').not(':first').each(function(){
+    for(var i= 0;i<listaMyplayersIds.length;i++){
+        var y = listaMyplayersIds[i];
+        var x = $(this).attr('id');
+        if(x === y){
+            console.log('ppppppppppppppppppppppppoooooooooooooooooooooooooooooooooooo crl');
+            console.log(x);
+            console.log(y);
+            console.log('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz');
+        }
+        else{
+            console.log(x);
+            console.log(y);
+        }
+        /*if(x == listaMyplayersIds[i]){
+            console.log(x);
+            $(this).hide();
+        }*/
+    }
+});
+
+
+
 function switchPlayers(budget) {
-    var idAll=null;
-    var posAll=null;
-    var idMy=null;
-    var posMy=null;
-    var costAll=null;
-    var costMy=null;
-    var totalTransfers=null;
+    var idAll = null;
+    var posAll = null;
+    var idMy = null;
+    var posMy = null;
+    var costAll = null;
+    var costMy = null;
+    var totalTransfers = null;
 
 
-    $('tr.highlighted').each(function(){
-        if($(this).hasClass('allPlayers')) {
+    $('tr.highlighted').each(function () {
+        if ($(this).hasClass('allPlayers')) {
             idAll = $(this).attr('id');
             posAll = $(this).find('td').eq(3).text();
             costAll = $(this).find('td').eq(4).text();
         }
-        if($(this).hasClass('myTeam')) {
+        if ($(this).hasClass('myTeam')) {
             idMy = $(this).attr('id');
             posMy = $(this).find('td').eq(2).text();
             costMy = $(this).find('td').eq(3).text();
         }
     });
-    
-    $('p.total-transfers').each(function(){
+
+    $('p.total-transfers').each(function () {
         totalTransfers = $(this).attr('id');
     });
 
     if (idAll == null || idMy == null) {
         $('.p-alerta').text("Select a player from both tables first!");
         $('.alerta').fadeIn(1000).delay(4000).fadeOut('slow');
-    }else{
-        if(posAll!=posMy){
+    } else {
+        if (posAll != posMy) {
             $('.p-alerta').text("Please select players from the same positions");
             $('.alerta').fadeIn(1000).delay(4000).fadeOut('slow');
-        }else{
-            if(budget < (costMy-costAll)){
+        } else {
+            if (budget < (costMy - costAll)) {
                 $('.p-alerta').text("Your budget isn't enough! Select other players");
                 $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
-            }else{
-                if(totalTransfers > 0){
+            } else {
+                if (totalTransfers > 0) {
                     $('.p-alerta').text("Transfer is OK!");
                     $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
-                    window.open("/team/transfers/"+idAll+"/"+idMy,"_self");
+                    window.open("/team/transfers/" + idAll + "/" + idMy, "_self");
                 }
-                else{
+                else {
                     $('.p-alerta').text("You don't have enough transfers!");
                     $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
                 }
@@ -60,49 +94,48 @@ function switchPlayers(budget) {
     }
 };
 
-function recarregaAllPlayers(){
+function recarregaAllPlayers() {
     var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
     var orderFilter = $('#orderFilter option:selected').attr('id');
-    window.open("/team/transfers/"+realTeamFilter+"/-1/"+orderFilter,"_self");
+    window.open("/team/transfers/" + realTeamFilter + "/-1/" + orderFilter, "_self");
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
     $('.alerta').hide();
 });
 
-$('#toggle-buttons button').click(function(){
+$('#toggle-buttons button').click(function () {
     var id = $(this).attr('id');
-    alert(id);
     var tabela = $('table#listAllPlayers');
     tabela.find('tr').show();
-    switch(id){
+    switch (id) {
         case "toggle_all":
 
             break;
         case "toggle_gk":
-            tabela.find('tr').not(':first').each(function(){
-                if($(this).find('td').eq(3).text() != "GK") {
+            tabela.find('tr').not(':first').each(function () {
+                if ($(this).find('td').eq(3).text() != "GK") {
                     $(this).hide();
                 }
             });
             break;
         case "toggle_def":
-            tabela.find('tr').not(':first').each(function(){
-                if($(this).find('td').eq(3).text() != "DEF") {
+            tabela.find('tr').not(':first').each(function () {
+                if ($(this).find('td').eq(3).text() != "DEF") {
                     $(this).hide();
                 }
             });
             break;
         case "toggle_mid":
-            tabela.find('tr').not(':first').each(function(){
-                if($(this).find('td').eq(3).text() != "MID") {
+            tabela.find('tr').not(':first').each(function () {
+                if ($(this).find('td').eq(3).text() != "MID") {
                     $(this).hide();
                 }
             });
             break;
         case "toggle_for":
-            tabela.find('tr').not(':first').each(function(){
-                if($(this).find('td').eq(3).text() != "FOR") {
+            tabela.find('tr').not(':first').each(function () {
+                if ($(this).find('td').eq(3).text() != "FOR") {
                     $(this).hide();
                 }
             });
