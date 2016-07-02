@@ -19,6 +19,11 @@ public class GameWeekSnapshotService {
         return gameWeekSnapshots.findByGameWeekId(game_week_id);
     }
 
+    public List<GameWeekSnapshot> getGameWeekSnapshotsOrderedCumulative(long game_week_id){
+        List<GameWeekSnapshot> gameWekk = gameWeekSnapshots.findByGameWeekId(game_week_id);
+        return null;
+    }
+
  /*   public Iterable<GameWeekSnapshot> getAllGameWeekSnapshotsByTeamId(long virtual_team_id){ return gameWeekSnapshots.findByVirtualTeamId(virtual_team_id); }
 
     public Iterable<GameWeekSnapshot> getAllGameWeekSnapshotsByGameWeekId(long game_week_id){ return gameWeekSnapshots.findByGameWeekId(game_week_id); }

@@ -63,11 +63,12 @@ public class ClassificationController {
         model.addAttribute("gameWeekNumber",lista);
         model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
-        model.addAttribute("number", number);
         if(number != -1) {
             model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());
+            model.addAttribute("number", number);
         }else{
             model.addAttribute("gameweekID",gestorGameWeek.getGameWeekByNumber(tot).getId());
+            model.addAttribute("number", tot);
         }
         return "classificationGameWeek";
     }

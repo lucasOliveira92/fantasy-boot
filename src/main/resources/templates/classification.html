@@ -65,6 +65,7 @@
     function recarregaAllTeams() {
 
         var gameweekFilter = $('#gameweekFilter option:selected').text();
+        if(gameweekFilter == "All"){gameweekFilter = -1};
         window.open("/classification/" + gameweekFilter, "_self");
     }
     ;

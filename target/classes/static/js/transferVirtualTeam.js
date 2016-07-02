@@ -47,6 +47,7 @@ function switchPlayers(budget) {
                 $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
             }else{
                 if(totalTransfers > 0){
+                    totalTransfers-=1;
                     $('.p-alerta').text("Transfer is OK!");
                     $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
                     window.open("/team/transfers/"+idAll+"/"+idMy,"_self");
