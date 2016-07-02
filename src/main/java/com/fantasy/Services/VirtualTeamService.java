@@ -54,7 +54,13 @@ public class VirtualTeamService {
     }
 
     public List<VirtualTeam> getAllTeamsOrderedByPoints(){ return virtualTeams.findAllByOrderByTotalPointsDesc(); }
+/*
+    public List<VirtualTeam> getAllTeamsOrderedByPointsByGameWeekNumber(long number){
+        List<VirtualTeam> listaInicial = new ArrayList<>(virtualTeams.findAll());
+        List<VirtualTeam> listaFinal = new ArrayList<>();
 
+        return virtualTeams.findAllByOrderByTotalPointsDesc(); }
+*/
     public List<VirtualTeam> getAllVirtualTeams(){ return (List<VirtualTeam>) virtualTeams.findAll();}
 
     public User getUserById(long id){ return virtualTeams.findByUserId(id).getOwner(); }
