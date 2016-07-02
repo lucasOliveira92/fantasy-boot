@@ -66,6 +66,7 @@ public class VirtualTeamController {
                 model.addAttribute("FORsub",listSubstitutes.get(3));
                 model.addAttribute("games",gestorGameWeeks.getGamesByGameWeekNumber(tot));
                 model.addAttribute("gameWeekNumber", tot);
+                model.addAttribute("gameWeekDate", gestorGameWeeks.getGameWeekByNumber(tot).prettyPrintDate());
                 model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
                 model.addAttribute("team", team);
                 return "virtualTeam/show";
@@ -277,7 +278,7 @@ public class VirtualTeamController {
             snapshotService.saveSnap(snap);
         }
 
-        return "OK";
+        return "redirect:/team";
     }
 
     @CrossOrigin
