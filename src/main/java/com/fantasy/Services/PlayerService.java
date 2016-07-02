@@ -5,7 +5,9 @@ import com.fantasy.Models.Player;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PlayerService {
@@ -32,4 +34,9 @@ public class PlayerService {
     public List<Player> getAllPlayersByTotalPoints(){ return playerDAO.findAllByOrderByTotalPointsDesc();}
 
     public List<Player> getAllPlayersByPosition(String position){ return playerDAO.findByPosition(position); }
+
+    public Set<Player> getAllPlayersSet(){
+        return (HashSet<Player>) playerDAO.findAll();
+
+    }
 }

@@ -54,6 +54,18 @@ public class VirtualTeamService {
     }
 
     public List<VirtualTeam> getAllTeamsOrderedByPoints(){ return virtualTeams.findAllByOrderByTotalPointsDesc(); }
+
+    /*public List<Player> getAllPlayersExceptTeam(long id){
+        ArrayList<Player> playerSet = new ArrayList<>(playerService.getAllPlayers());
+        List<Player> allPlayersFromTeam = gestorUser.getUserById(id).getTeam().getPlayers();
+
+        for(Player p: allPlayersFromTeam){
+            for(Player pl: playerSet){
+                if(pl.getName().equals(p.getName()))
+
+            }
+        }
+    }*/
 /*
     public List<VirtualTeam> getAllTeamsOrderedByPointsByGameWeekNumber(long number){
         List<VirtualTeam> listaInicial = new ArrayList<>(virtualTeams.findAll());

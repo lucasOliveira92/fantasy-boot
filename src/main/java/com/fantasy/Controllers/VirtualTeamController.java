@@ -87,7 +87,6 @@ public class VirtualTeamController {
         if (u != null) {
             if (u.hasVirtualTeam()) {
                 ArrayList<Player> lista = new ArrayList<>(playerService.getAllPlayers());
-                lista.removeAll(u.getTeam().getPlayers());
 
                 List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(u.getVirtualTeam().getId());
                 model.addAttribute("gks", listFormation.get(0));
@@ -107,7 +106,7 @@ public class VirtualTeamController {
     }
 
     @Secured("ROLE_USER")
-    @RequestMapping(value = "team/transfers/{newId}/{oldId}", method = RequestMethod.GET)
+    @RequestMapping(value = "team/transfers/{newId}/{oldId}", method = RequestMethod.POST)
     public String makeTransfersVirtualTeam(Model model, @PathVariable Integer newId, @PathVariable Integer oldId) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());

@@ -385,7 +385,7 @@ public class GenerateService {
 
         RealTeam tondela = new RealTeam("Tondela", "https://upload.wikimedia.org/wikipedia/commons/f/fc/Emblema_CD_Tondela.png", "http://i.imgur.com/ejyF1OG.png");
         RealTeam sporting = new RealTeam("Sporting CP", "https://upload.wikimedia.org/wikipedia/en/3/3e/Sporting_Clube_de_Portugal.png", "http://i.imgur.com/HV8arSm.png");
-        RealTeam belenenses = new RealTeam("Belenenses", "http://upload.wikimedia.org/wikipedia/de/d/db/Belenenses_Lissabon.svg", "http://i.imgur.com/CXwIhAI.png");
+        RealTeam belenenses = new RealTeam("Belenenses", "http://upload.wikimedia.org/wikipedia/de/d/db/Belenenses_Lissabon.svg", "http://i.imgur.com/Yo7b6ky.png");
         RealTeam rioAve = new RealTeam("Rio Ave", "http://upload.wikimedia.org/wikipedia/de/6/63/Rio_Ave_FC.svg", "http://i.imgur.com/cbMEWJy.png");
         RealTeam porto = new RealTeam("FC Porto", "http://upload.wikimedia.org/wikipedia/de/e/ed/FC_Porto_1922-2005.svg", "http://i.imgur.com/165VABr.png");
         RealTeam guimaraes = new RealTeam("Vitoria Guimarães", "http://upload.wikimedia.org/wikipedia/de/8/81/Vitoria_Guimaraes.svg", "http://i.imgur.com/VTgrrlz.png");

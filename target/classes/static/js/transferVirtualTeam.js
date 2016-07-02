@@ -47,10 +47,36 @@ function switchPlayers(budget) {
                 $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
             }else{
                 if(totalTransfers > 0){
-                    totalTransfers-=1;
                     $('.p-alerta').text("Transfer is OK!");
                     $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
-                    window.open("/team/transfers/"+idAll+"/"+idMy,"_self");
+
+                    $(function () {
+                        var token = $("input[name='_csrf']").val();
+                        var header = "X-CSRF-TOKEN";
+                        $(document).ajaxSend(function (e, xhr, options) {
+                            xhr.setRequestHeader(header, token);
+                        });
+                    });
+
+                    var search = {
+                        "newId": idAll,
+                        "cldId": idMy
+                    }
+                    $.ajax({
+                        type: "POST",
+                        contentType: 'application/json; charset=utf-8',
+                        dataType: 'json',
+                        url: "/team/transfers/"+idAll+"/"+idMy,
+                        data: JSON.stringify(search), // Note it is important
+                        success: function (result) {
+                        }
+                    });
+
+                    setTimeout(function(){
+                        location.reload(true);
+                    }, 2000);
+
+
                 }
                 else{
                     $('.p-alerta').text("You don't have enough transfers!");
