@@ -70,11 +70,20 @@
     }
     ;
 
+        if(gameweekFilter =="All"){ gameweekFilter=-1;}
+        window.open("/classification/" + gameweekFilter, "_self");
+    }
+    ;
+    var listaEquipas = [];
     var user = $('.current-user-id').text();
 
     $('#listOwnPlayers').find('tr').each(function () {
         if ($(this).attr('id') == user){
             $(this).addClass('highlighted');}
+    });
+    $('#listOwnPlayers').find('tr').not(':first').each(function(){
+        listaEquipas.push(this);
+        console.log(this);
     });
 
 </script>
