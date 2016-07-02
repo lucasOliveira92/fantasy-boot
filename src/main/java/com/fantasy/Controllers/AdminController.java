@@ -10,7 +10,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -44,15 +43,16 @@ public class AdminController {
         List<Integer> lista = new ArrayList<>();
         int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
 
-        generateService.generate(tot+1);
         model.addAttribute("currentUser", u);
         model.addAttribute("nextgameweek",gameWeekService.getGameWeekByNumber(tot+1));
         model.addAttribute("oldgameweek",gameWeekService.getGameWeekByNumber(tot));
         model.addAttribute("games",gameWeekService.getGamesByGameWeekNumber(tot+1));
+        model.addAttribute("oldgameweekNumber", tot);
+        model.addAttribute("nextgameweekNumber", tot+1);
         return "admin";
     }
-    @RequestMapping(value = "admin/generate/{gameWeek}")
-    public String generate(Model model,@PathVariable Integer gameWeek) {
+    @RequestMapping(value = "admin/generate")
+    public String generate(Model model) {
 
         /*Iterable<GameWeek> allGameWeeks = gameWeekService.getAllGameWeeks();
         Iterator<GameWeek> it = allGameWeeks.iterator();
@@ -62,24 +62,28 @@ public class AdminController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
         List<Integer> lista = new ArrayList<>();
-        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size();
 
-        generateService.generate(tot+1);
+        if(gameWeekService.getTotalGeneratedWeeks() >= tot)
+            return "home";
+        if(tot > 0 && tot <= 34){
+            generateService.generate(tot);
+            if(tot < 34)
+                generateService.genererateRandomSnapshots(tot + 1 );
+        }
         model.addAttribute("currentUser", u);
         model.addAttribute("nextgameweek",gameWeekService.getGameWeekByNumber(tot+1));
         model.addAttribute("oldgameweek",gameWeekService.getGameWeekByNumber(tot));
         model.addAttribute("games",gameWeekService.getGamesByGameWeekNumber(tot+1));
+        model.addAttribute("oldgameweekNumber", tot);
+        model.addAttribute("nextgameweekNumber", tot+1);
        /* if(gameWeek > 0 && gameWeek <= 34){
             generateService.generate(gameWeek);
             if(gameWeek < 34)
                 generateService.genererateRandomSnapshots(gameWeek + 1 );
         }
 */
-        System.out.println(gameWeek);
-        System.out.println(gameWeek);
-        System.out.println(gameWeek);
-        System.out.println(gameWeek);
-        System.out.println(gameWeek);
+
         return "admin";
     }
 }

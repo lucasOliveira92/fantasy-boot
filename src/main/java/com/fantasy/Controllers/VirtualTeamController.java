@@ -66,6 +66,7 @@ public class VirtualTeamController {
                 model.addAttribute("FORsub",listSubstitutes.get(3));
                 model.addAttribute("games",gestorGameWeeks.getGamesByGameWeekNumber(tot));
                 model.addAttribute("gameWeekNumber", tot);
+                model.addAttribute("gameWeekDate", gestorGameWeeks.getGameWeekByNumber(tot).prettyPrintDate());
                 model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
                 model.addAttribute("team", team);
                 return "virtualTeam/show";
@@ -87,6 +88,7 @@ public class VirtualTeamController {
         if (u != null) {
             if (u.hasVirtualTeam()) {
                 ArrayList<Player> lista = new ArrayList<>(playerService.getAllPlayers());
+
 
                 List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(u.getVirtualTeam().getId());
                 model.addAttribute("gks", listFormation.get(0));
@@ -182,6 +184,7 @@ public class VirtualTeamController {
                     lista = gestorRealTeams.getById(teamId).getPlayerByPosition("FOR");
                     break;
                 default:
+                    lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
                     break;
             }
             if (lista!=null)listafinal.retainAll(lista);
@@ -206,6 +209,8 @@ public class VirtualTeamController {
                     listafinal.retainAll(lista2);
                     break;
                 default:
+                    lista2 = playerService.getAllPlayersByPosition("GK");
+                    listafinal.retainAll(lista2);
                     break;
             }
         }
@@ -276,7 +281,7 @@ public class VirtualTeamController {
             snapshotService.saveSnap(snap);
         }
 
-        return "OK";
+        return "redirect:/team";
     }
 
     @CrossOrigin

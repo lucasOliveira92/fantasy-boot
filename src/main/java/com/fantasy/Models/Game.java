@@ -114,7 +114,7 @@ public class Game implements Serializable {
     }
 
     public String prettyPrintDate(){
-        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
         return format.format(date);
     }
 }
