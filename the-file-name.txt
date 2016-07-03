@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *********************** Checkpoint 3 - Players Team 1 - 26
 *********************** Checkpoint 3 - Players Team 2 - 33
 $$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 126
@@ -1738,3 +1739,1730 @@ $$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 227
 %%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
 %%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
 ######################## Académica  VS Marítimo     Briguel   Marítimo ------------ LOSE
+=======
+*********************** Checkpoint 3 - Players Team 1 - 27
+*********************** Checkpoint 3 - Players Team 2 - 28
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 127
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 228
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     William Carvalho   Sporting CP ------------ GOAL MID
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     André Carrillo   Sporting CP ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Nélson Monte   Rio Ave ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Roderick Miranda   Rio Ave ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Tarantini   Rio Ave ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Islam Slimani   Sporting CP ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Pedrinho   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Hélder Postiga   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Aníbal   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Yazalde   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Carlos Alves   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Lionn   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Alhassan Wakaso   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Tarantini   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Renan Bressan   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Kuca   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Kayembe   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Héldon   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Edimar   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Cássio   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Nélson Monte   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     André Vilas Boas   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Ukra   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Guedes   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Marcelo   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Rui Vieira   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Filip Krovinovic   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     João Novais   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Zé Paulo   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Pedro Paulo   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Ronan   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Roderick Miranda   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Pedro Moreira   Rio Ave ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Naldo   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Bruno Paulista   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Gelson Martins   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Teófilo Gutiérrez   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Bruno César   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Hernán Barcos   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Rúben Semedo   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     João Pereira   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Ezequiel Schelotto   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Matheus Pereira   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Paulo Oliveira   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Tobias Figueiredo   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     André Martins   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Carlos Mané   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Islam Slimani   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Ewerton   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Marvin Zeegelaar   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Bryan Ruíz   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Rui Patrício   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     André Carrillo   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Azbe Jug   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Alberto Aquilani   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     William Carvalho   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Adrien Silva   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Jefferson   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Ricardo Esgaio   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     João Mário   Sporting CP ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Rio Ave  VS Sporting CP     Sebastián Coates   Sporting CP ------------ WIN
+*********************** Checkpoint 3 - Players Team 1 - 31
+*********************** Checkpoint 3 - Players Team 2 - 26
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 131
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 226
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Piojo   Tondela ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Pedrão   Vitoria Guimarães ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bruno Gaspar   Vitoria Guimarães ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bruno Nascimento   Tondela ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Markus Berger   Tondela ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     João Pedro   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Henrique   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Otávio   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Oriol Rosell   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Licá   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Douglas Jesus   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Josué Sá   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     João Afonso   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Moreno   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Breno   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bruno Gaspar   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Cafú   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bouba   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bruno Alves   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Paolo Hurtado   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Tozé   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Pedrão   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Luís Rocha   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Dalbert   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Falaye Sacko   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Xande Silva   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Francis   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Assis   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Pedro Correia   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Ricardo Valente   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     João Vigário   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     João Teixeira   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Miguel Silva   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Thibang Phete   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Santiago Montoya   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Victor Andrade   Vitoria Guimarães ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Lucas Souza   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Kaká   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Eñaut Zubikarai   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Oto'o   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Tikito   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Luis Tinoco   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Miguel Batista   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Pica   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Nuno Santos   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Jhon Murillo   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Romário Baldé   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Piojo   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Nathan Júnior   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Érick Moreno   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Dolly Menga   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bruno Nascimento   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     João Jaquité   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Cláudio Ramos   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Hélder Tavares   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Karl   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bilal Sebaihi   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Wanderson Lima   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Markus Berger   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Wagner   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Luís Alberto   Tondela ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 131
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Vitoria Guimarães  VS Tondela     Bruno Monteiro   Tondela ------------ WIN
+*********************** Checkpoint 3 - Players Team 1 - 35
+*********************** Checkpoint 3 - Players Team 2 - 26
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 135
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 226
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Luisinho   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Mika   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Mamadou Ba   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Anderson Correia   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Reuben Gabriel   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Idris Mandiang   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Tengarrinha   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Anderson Carvalho   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Zé Manuel   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Michael Uchebo   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Philipe Sampaio   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Nuno Henrique   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Tiago Mesquita   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Ancelmo Júnior   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Fábio Lopes   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     André Bukia   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Uche Nwofor   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Ian Pereira   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Mario Martínez   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Rúben Ribeiro   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Renato Santos   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Afonso   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Miguel Pereira   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Yoro Ly   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Ibrahima   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Cristian Cangá   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Douglas Abner   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Imanol Iriberri   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Emmanuel Hackman   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Carlos Santos   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Aymen Tahar   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Paulo Vinícius   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Fábio Ervões   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Samu   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Gideão   Boavista ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Pelé   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Rafael Defendi   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Hélder Lopes   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Manuel José   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Bruno Moreira   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Christian   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Fábio Martins   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Marco Baixinho   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     João Góis   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Bruno Santos   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Ricardo   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Fábio Cardoso   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Paraiba   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Miguel Vieira   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Rodrigo Antônio   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Roniel   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Barnes Osei   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Mário Felgueiras   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Marco   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Paulo Henrique   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Diogo Jota   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Minhoca   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Ponck   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Romeu Rocha   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Cícero   Paços de Ferreira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 135
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Boavista  VS Paços de Ferreira     Andrezinho   Paços de Ferreira ------------ DRAW
+*********************** Checkpoint 3 - Players Team 1 - 27
+*********************** Checkpoint 3 - Players Team 2 - 30
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 127
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 230
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Edgar Costa   Marítimo ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Meyong   Vitoria Setúbal ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Diney Borges   Marítimo ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Briguel   Marítimo ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     João Diogo   Marítimo ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Pana   Marítimo ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Nuno Pinto   Vitoria Setúbal ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     André Claro   Vitoria Setúbal ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Tiago Valente   Vitoria Setúbal ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Frederico Venâncio   Vitoria Setúbal ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Gevorg Ghazaryan   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Babá   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Alex Soares   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     António Xavier   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Dyego Sousa   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Ulysse Diallo   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Tiago Rodrigues   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Alireza Haghighi   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Wellington   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Dirceu   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Barata   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Pana   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Lynneeker   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Damien Plessis   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Gevaro Nepomuceno   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Donald Djousse   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Romain Salin   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Fransérgio   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Edgar Costa   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Deyvison   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Patrick   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     João Diogo   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Briguel   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Fernando Ferreira   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Diney Borges   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Rúben   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Éber Bessa   Marítimo ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Ricardo Nunes   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Diego   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Lukas Raeder   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Frederico Venâncio   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Miguel Lourenco   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Tiago Terroso   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Dani   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Paulo Tavares   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Nuno Pinto   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Toni Gorupec   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Hamdou Mohamed Elnouni   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Cristian Tissone   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Alexandre Cardoso   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Costinha   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Salim Cissé   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     André Claro   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Vasco Costa   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Arnold   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Maciej Makuszewski   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Meyong   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Mohcine Hassan   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Miguel Lázaro   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     André Horta   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Tiago Valente   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     William Alves   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Cléber   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Mohamed El Gadi   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Fábio Pacheco   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Ruca   Vitoria Setúbal ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 127
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Marítimo  VS Vitoria Setúbal     Abdulaziz Al-Mansour   Vitoria Setúbal ------------ DRAW
+*********************** Checkpoint 3 - Players Team 1 - 33
+*********************** Checkpoint 3 - Players Team 2 - 28
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 133
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 228
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     André Marques A. Marques   Moreirense ------------ GOAL DEF
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Miguel Fidalgo   União da Madeira ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Emmanuel Boateng   Moreirense ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Miguel Cardoso   União da Madeira ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Genséric Kusunga   União da Madeira ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Rafael Martins   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Marcelo Oliveira M. Oliveira   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Danielson Danielson   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     André Marques A. Marques   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Coronas Coronas   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Caleb Gomina C. Gomina   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Ença Fati E. Fati   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Emmanuel Boateng   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Iuri Medeiros   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     André Micael André Micael   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Evaldo Evaldo   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Rafa Sousa Rafa Sousa   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Alan Schons A. Schons   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Vítor Gomes V. Gomes   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Rafa Rafa   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Rafael Martins Rafael Martins   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Emmanuel Boateng E. Boateng   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Ramón Cardozo R. Cardozo   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Ricardo Almeida R. Almeida   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Ença Fati   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Igor Stefanovic I. Stefanovic   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Victor Braga Victor Braga   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Filipe Gonçalves F. Gonçalves   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Ernest Ernest   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Iuri Medeiros I. Medeiros   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Nilson Nilson   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Fábio Espinho Fábio Espinho   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Vítor Gomes   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     João Sousa João Sousa   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     João Palhinha J. Palhinha   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Pierre Sagna P. Sagna   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Nildo Petrolina Nildo Petrolina   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Patrick Andrade Patrick Andrade   Moreirense ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     André Moreira   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Rafael Alves   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Diego Galo   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Tiago Ferreira   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Edson Almeida   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Paulo Monteiro   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Joãozinho   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Nilson   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Carlos Manuel   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Wanderson Miranda   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Rúben Andrade   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Gian Martins   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Danilo Dias   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Élio Martins   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Kisley   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Amilton   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Miguel Fidalgo   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Rúben Lima   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Miguel Cardoso   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Toni Silva   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Ricardo Campos   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     William Soares   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Abdullahi Shehu   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Jhonder Cádiz   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Edder Farías   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Genséric Kusunga   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Marco Túlio   União da Madeira ------------ DRAW
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 133
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 228
+######################## Moreirense  VS União da Madeira     Breitner   União da Madeira ------------ DRAW
+*********************** Checkpoint 3 - Players Team 1 - 28
+*********************** Checkpoint 3 - Players Team 2 - 25
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 128
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 225
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Adilson Goiano   Arouca ------------ RED CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Nuno Valente   Arouca ------------ GOAL MID
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Nuno Valente   Arouca ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Bruno Martins Indi   FC Porto ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Gegé   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Mateus   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Ivo Rodrigues   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Igor Rocha   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Pintassilgo   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Artur   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     José Manuel Velázquez   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Idrissa Coulibaly   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Lucas Lima   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Maurides   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Emiliano Albín   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Rodney Wallace   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Walter González   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Alex   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Zequinha   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Rui Sacramento   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Hugo Basto   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Nelsinho   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Nuno Coelho   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Rafael Bracalli   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Adilson Goiano   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Nuno Valente   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Jubal   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Jaílson Araújo   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Roberto   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Tomás Dabó   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Hugo Monteiro   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     David Simão   Arouca ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Maicon   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Silvestre Varela   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     José Ángel   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Rúben Neves   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Yacine Brahimi   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Kelvin   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Vincent Aboubakar   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     José Sá   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Moussa Marega   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     André André   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Sérgio Oliveira   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Hyun-Jun Suk   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Helton   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Bruno Martins Indi   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Jesús Corona   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Maxi Pereira   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Héctor Herrera   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Evandro   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     André Silva   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Danilo Pereira   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Walter   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Miguel Layún   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Iván Marcano   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Iker Casillas   FC Porto ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 128
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 225
+######################## Arouca  VS FC Porto     Alberto Bueno   FC Porto ------------ LOSE
+*********************** Checkpoint 3 - Players Team 1 - 29
+*********************** Checkpoint 3 - Players Team 2 - 30
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 129
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 230
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Hicham Belkaroui   Nacional da Madeira ------------ RED CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     William Gustavo   Académica ------------ RED CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rodrigo Pinho   Nacional da Madeira ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Mauro Cerqueira   Nacional da Madeira ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Tripy Makonda   Académica ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     João Real   Académica ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Paulinho   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Gottardi   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rui Silva   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Kevin Sousa   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Miguel Rodrigues   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Zainadine Júnior   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Nuno Campos   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Ali Ghazal   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Boubacar Fofana   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Tiquinho Soares   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Willyan   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Salvador Agra   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Joan Román   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Mauro Cerqueira   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Jota   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Nenê Bonilha   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Gustavo   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rui Correia   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Luís Aurélio   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Filipe Ferreira   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Ricardo Gomes   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rodrigo Pinho   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Washington Santana   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Hicham Belkaroui   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Danísio Barbosa   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Witi   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Alan Henrique   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Nuno Sequeira   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     João Aurélio   Nacional da Madeira ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Artur Taborda   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Lee   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Iago Santos   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     João Real   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Richard Ofori   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Nuno Piloto   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Ivanildo   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Marinho   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Nii Plange   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Inters Gui   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rabiola   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Emídio Rafael   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     João Gomes   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Leandro Silva   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Selim Bouadla   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rafael Lopes   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Gonçalo Paciência   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Ki   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Christopher Oualembo   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rui Pedro   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Tripy Makonda   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Pedro Nuno   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Ricardo Nascimento   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Rafa Soares   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Aderlan   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Fernando Alexandre   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Hugo Seco   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     William Gustavo   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Nwankwo Obiora   Académica ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 129
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 230
+######################## Nacional da Madeira  VS Académica     Pedro Trigueira   Académica ------------ LOSE
+*********************** Checkpoint 3 - Players Team 1 - 26
+*********************** Checkpoint 3 - Players Team 2 - 27
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 126
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 227
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Luisão   SL Benfica ------------ GOAL DEF
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Ljubomir Fejsa   SL Benfica ------------ GOAL MID
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Eliseu   SL Benfica ------------ GOAL DEF
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Miguel Rosa   Belenenses ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Rafael Amorim   Belenenses ------------ GOAL DEF
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Ljubomir Fejsa   SL Benfica ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Fábio Nunes   Belenenses ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Tiago Silva   Belenenses ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Konstantinos Mitroglou   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Lisandro López   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Luisão   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Eliseu   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Andreas Samaris   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Ljubomir Fejsa   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Pizzi   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Jonas   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Talisca   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Raúl Jiménez   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Raphael Guzzo   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Victor Lindelöf   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Nélson Semedo   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Mehdi Carcela-González   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Gonçalo Guedes   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Renato Sanches   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Ederson   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Paulo Lopes   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Sílvio   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Jardel   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Nico Gaitán   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Luka Jovic   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Júlio César   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Toto Salvio   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Álex Grimaldo   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     André Almeida   SL Benfica ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Matt Jones   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Hugo Ventura   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Palmeira   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Carlos Martins   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Tiago Silva   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Tiago Caeiro   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Marko Bakic   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Ricardo Ribeiro   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Gonçalo Brandão   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Gonçalo Silva   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Tonel   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Rafael Floro   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     João Amorim   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Ricardo Dias   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Betinho   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Fábio Sturgeon   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Lucas Pugh   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Juanto Ortuño   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Abel Aguilar   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     André Sousa   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Tiago Almeida   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Fábio Nunes   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Filipe Mendes   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Rafael Amorim   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Miguel Rosa   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     André Geraldes   Belenenses ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 126
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 227
+######################## SL Benfica  VS Belenenses     Rúben Pinto   Belenenses ------------ LOSE
+*********************** Checkpoint 3 - Players Team 1 - 30
+*********************** Checkpoint 3 - Players Team 2 - 26
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 130
+$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 226
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Yohan Tavares   Estoril ------------ RED CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Tijane   Estoril ------------ GOAL FOR
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Oumar Diakhite   Estoril ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Lucas Farias   Estoril ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Matheuzinho   Estoril ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Djavan   SC Braga ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Ricardo    SC Braga ------------ YELLOW CARD
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Georgemy   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Pawel Kieszek   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Tijane   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Léo Bonatini   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Oumar Diakhite   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Diogo Baltazar   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Gladestony   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Leandro Chaparro   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Dieguinho   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Pedro Botelho   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Michael   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Felipe Augusto   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Rúben Dionísio   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Yohan Tavares   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Babanco   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Ânderson Luís   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Anderson Esiti   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Frédéric Mendy   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Lucas Farias   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Marion   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Diego Carlos   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Luiz Phellype   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Afonso Taira   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Bruno Miguel   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Diogo Amado   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Dankler   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Mattheus   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Matheuzinho   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Mano   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Gerso   Estoril ------------ WIN
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Filipe Augusto   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Arghus   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Ricardo    SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Ahmed Hassan   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Matheus   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Willy Boly   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Marcelo Goiano   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Luíz Carlos   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Pedro Santos   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Rafa Silva   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Rui Fonte   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Alef   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     William Pottker   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Wilson Eduardo   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Crislan   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Marafona   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Stian Ringstad   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Aarón Ñíguez   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     André Pinto   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Nikola Stojiljkovic   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Alan   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Josué   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Djavan   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Mauro   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Nikola Vukcevic   SC Braga ------------ LOSE
+%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 130
+%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 226
+######################## Estoril  VS SC Braga     Baiano   SC Braga ------------ LOSE
+>>>>>>> c872a0c993dc46cda3fe1ae40509fba51075b6af

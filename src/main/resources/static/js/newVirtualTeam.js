@@ -371,7 +371,7 @@ function submitTeam() {
         success: function (result) {
         }
     });
-
+    
     $(".alerta").css("background-color", "green");
     $('.p-alerta').text("Team created sucessfully!");
     $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
@@ -381,3 +381,4 @@ function submitTeam() {
     }, 500);
 
 }
+

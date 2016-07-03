@@ -81,7 +81,7 @@
                     </select>
                     <button type="button" class="btn btn-info btn-lg"
                             style="margin-left:5%;bottom: 20px;margin-top: 10%; right: 20px;background-color: #2980b9"
-                            onclick="updateHistoric()">Update Strategy
+                            onclick="updateHistoric()">Show Data
                     </button>
                 </div>
             </div>
@@ -92,6 +92,10 @@
                         <th colspan="4" class="text-center" style=" font-weight: bold;">
                             Gameweek: <span th:text="${gameWeekNumber}"></span></th>
                         <th colspan="3" class="text-center" style=" font-weight: bold;">  <span th:text="${gameWeekDate}"></span></th>
+                    </tr>
+                    <tr class="text-center" style="background-color: #2ecc71">
+                        <th colspan="7" class="text-center" style=" font-weight: bold;">
+                            Points Earned by Event</th>
                     </tr>
                     <tr >
                         <th class="text-center">Name</th>
