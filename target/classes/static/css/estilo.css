@@ -196,7 +196,7 @@ header {
     display: block;
 }
 
-header > .wrap-container {
+header > .navbar > .wrap-container {
     width:85%;
     margin:0 auto;
     display: table;
@@ -204,39 +204,40 @@ header > .wrap-container {
     height:100px;
 }
 
-header > .wrap-container > div#logo,
-header > .wrap-container > nav#menu,
-header > .wrap-container > div#user_in {
+header > .navbar > .wrap-container > div#logo,
+header > .navbar >  nav#menu,
+header > .navbar > .container > div#user_in {
     display:table-cell;
     vertical-align: middle;
-    text-align: center;
+    text-align: right;
 }
 
-header > .wrap-container > div#logo,
-header > .wrap-container > div#user_in {
+header > .navbar > .wrap-container > div#logo,
+header > .navbar > .container > div#user_in {
     width:20%;
 }
 
-header > .wrap-container > div#logo > img {
-    height:70%;
+header > .navbar > .wrap-container > div#logo > img {
+    height:90px;
     padding:2% 0;
     cursor: pointer;
 }
 
-header > .wrap-container > nav#menu {
-    width:60%;
-    text-align: center;
+
+header > .navbar > .wrap-container > nav#menu {
+    width:100%;
+    text-align: right;
     height:100%;
 }
 
-header > .wrap-container > nav#menu > ul {
+header > .navbar > .wrap-container > nav#menu > .navbar-collapse > ul {
     display:table;
     table-layout: fixed;
     text-align: center;
     height:100%;
 }
 
-header > .wrap-container > nav#menu > ul > li {
+header > .navbar > .wrap-container > nav#menu > .navbar-collapse > ul > li {
     display:table-cell;
     vertical-align: middle;
     background-color: transparent;
@@ -247,7 +248,7 @@ header > .wrap-container > nav#menu > ul > li {
     font-family:'Montserrat', sans-serif;
 }
 
-header > .wrap-container > nav#menu > ul > li:hover {
+header > .navbar > .wrap-container > nav#menu > .navbar-collapse > ul > li:hover {
     background-color: #1abc9c;
     color: #ecf0f1;
     text-transform:uppercase;
@@ -255,24 +256,24 @@ header > .wrap-container > nav#menu > ul > li:hover {
 }
 
 
-header > .wrap-container > div#user_in > #user-header-toggle {
+header > .navbar > .wrap-container > div#user_in > #user-header-toggle {
     position:relative;
-    text-align: right;
+    text-align: center;
     width:100%;
 }
 
-header > .wrap-container > div#user_in > #user-header-toggle button{
+header > .navbar > .wrap-container > div#user_in > #user-header-toggle button{
     cursor: pointer;
     padding:5px 10px;
     border:none;
     border-radius:4px;
     background-color:rgba(52, 152, 219,1.0);
 }
-header > .wrap-container > div#user_in > #user-header-toggle button span {
+header > .navbar > .wrap-container > div#user_in > #user-header-toggle button span {
     color: #ecf0f1;
 }
 
-header > .wrap-container > div#user_in > #user-header-toggle > ul {
+header > .navbar > .wrap-container > div#user_in > #user-header-toggle > .navbar-collapse > ul {
     list-style: none;
     display:none;
     position:absolute;
@@ -282,13 +283,13 @@ header > .wrap-container > div#user_in > #user-header-toggle > ul {
     background-color: #333;
 }
 
-header > .wrap-container > div#user_in > #user-header-toggle > ul > li:first-of-type span {
+header > .navbar > .wrap-container > div#user_in > #user-header-toggle > .navbar-collapse > ul > li:first-of-type span {
     color: #ecf0f1;
 }
 
-header > .wrap-container > div#user_in > #user-header-toggle > ul.open {
+header > .navbar > .wrap-container > div#user_in > #user-header-toggle > .navbar-collapse > ul.open {
     display:block;
-    z-index:1100;
+    z-index:99999;
 }
 
 section#main-content {
@@ -323,11 +324,41 @@ section#main-content > .wrap-container {
     padding: 5px 10px;
 }
 
-@media (max-width: 1366px) {
-    header > .wrap-container > nav#menu {
-        width:70%;
-        text-align: center;
+@media (max-width: 768px) {
+    #logo {
+        max-width: 80%;
+        display: inline;
+    }
+    header > .navbar > .wrap-container > div#logo,
+    header > .navbar > .container > div#user_in {
+        width:80px;
+    }
+
+    header > .navbar > .wrap-container > div#logo > img {
+        height:80px;
+        padding:2% 0;
+        cursor: pointer;
+    }
+
+    header > .navbar > .wrap-container > nav#menu > .navbar-collapse > ul > li {
+        display:block;
+        vertical-align: middle;
+        background-color: transparent;
         height:100%;
+        cursor:pointer;
+        padding:0 15px;
+        line-height:30px;
+        font-family:'Montserrat', sans-serif;
+    }
+    header > .navbar > .wrap-container {
+        height: 120px;
+    }
+
+    section#main-content {
+        padding-top: 170px;
+    }
+    .text-center {
+        text-align: center;
     }
 }
 
@@ -351,7 +382,7 @@ section#main-content > .wrap-container {
 }
 
 .team-p {
-    padding-top: 6%;
+    padding-top: 1%;
 }
 .container-home {
     padding-left: 5%;
@@ -408,4 +439,8 @@ section#main-content > .wrap-container {
 
 .table-dir {
     margin-top: 4.5%;
+}
+
+.navbar-inverse {
+    background-color: rgba(236, 240, 241, 0.9);;
 }
