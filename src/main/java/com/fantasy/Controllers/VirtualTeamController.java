@@ -37,7 +37,7 @@ public class VirtualTeamController {
     private GameWeekService gestorGameWeeks;
 
 
-    @Secured("ROLE_USER")
+    //@Secured("ROLE_USER")
     @RequestMapping(value = "team", method = RequestMethod.GET)
     public String showVirtualTeam(Model model) {
 
@@ -72,7 +72,7 @@ public class VirtualTeamController {
         }
     }
 
-    @Secured("ROLE_USER")
+    //@Secured("ROLE_USER")
     @RequestMapping(value = "team/historic", method = RequestMethod.GET)
     public String historicVirtualTeam(Model model) {
 
