@@ -62,7 +62,7 @@ public class ClassificationController {
         List<GameWeekSnapshot> gameWeekSnapshotsByGameWeekId = gestorGameWeekSnapshot.getGameWeekSnapshotsOrderedCumulative(gw.getId());
         List<VirtualTeam> orderedTeams = new ArrayList<>();
         for(GameWeekSnapshot gws: gameWeekSnapshotsByGameWeekId){
-            System.out.println(gws.getVirtualTeam().getName() + " "+ gws.getGameWeekCumulativePoints());
+            //System.out.println(gws.getVirtualTeam().getName() + " "+ gws.getGameWeekCumulativePoints());
             orderedTeams.add(gws.getVirtualTeam());
         }
 

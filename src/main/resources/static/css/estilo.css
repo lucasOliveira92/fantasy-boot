@@ -125,14 +125,14 @@ body{
 }
 
 .campo-pesquisa-statistic{
-    width: 23%;
+    width: 35%;
     margin-right: 3%;
     margin-left: auto;
     display: inline-block;
 }
 
 .botao-pesquisa-statistic {
-    width: 15%;
+    width: 20%;
     margin-right: auto;
     margin-left: auto;
     display: inline-block;

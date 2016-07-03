@@ -35,6 +35,9 @@ public class PlayerService {
 
     public List<Player> getAllPlayersByPosition(String position){ return playerDAO.findByPosition(position); }
 
+
+    public List<Player> getAllPlayersExceptFromTeam(long virtual_team_id){ return playerDAO.findAllPlayersExceptFromTeam(virtual_team_id); }
+
     public Set<Player> getAllPlayersSet(){
         return (HashSet<Player>) playerDAO.findAll();
 

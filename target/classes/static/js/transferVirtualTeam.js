@@ -97,7 +97,7 @@ function switchPlayers(budget) {
 function recarregaAllPlayers(){
     var positionFilter = $('#positionFilter option:selected').attr('id');
     var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
-    var orderFilter = $('#orderFilter option:selected').attr('id');
+    var orderFilter = -1;
     window.open("/team/transfers/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
 };
 

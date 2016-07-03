@@ -87,7 +87,7 @@ public class VirtualTeamController {
         model.addAttribute("currentUser", u);
         if (u != null) {
             if (u.hasVirtualTeam()) {
-                ArrayList<Player> lista = new ArrayList<>(playerService.getAllPlayers());
+                List<Player> lista = playerService.getAllPlayersExceptFromTeam(u.getVirtualTeam().getId());
 
 
                 List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(u.getVirtualTeam().getId());
@@ -116,7 +116,7 @@ public class VirtualTeamController {
         if (u != null) {
             if (u.hasVirtualTeam()) {
                 VirtualTeam team = gestor.doTransfer(playerService.getPlayerById(newId),playerService.getPlayerById(oldId),u.getTeam().getId());
-                ArrayList<Player> lista = new ArrayList<>(playerService.getAllPlayers());
+                List<Player> lista = playerService.getAllPlayersExceptFromTeam(u.getVirtualTeam().getId());
                 lista.removeAll(u.getTeam().getPlayers());
 
                 List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(team.getId());
@@ -142,8 +142,9 @@ public class VirtualTeamController {
         User u = gestorUser.getUserByUsername(auth.getName());
         List<Player> lista = null;
         List<Player> lista2;
-        List<Player> listafinal;
-        switch (orderId){
+        //List<Player> listafinal;
+        List<Player> listafinal = playerService.getAllPlayersExceptFromTeam(u.getVirtualTeam().getId());
+        /*switch (orderId){
             case -1:
                 listafinal = playerService.getAllPlayersByCost();
                 break;
@@ -165,7 +166,7 @@ public class VirtualTeamController {
             default:
                 listafinal = playerService.getAllPlayersByCost();
                 break;
-        }
+        }*/
         if(teamId!=-1) {
             switch (positionId) {
                 case -1:

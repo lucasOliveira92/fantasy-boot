@@ -1,5 +1,6 @@
 package com.fantasy.Controllers;
 
+import com.fantasy.DAO.PlayerDAO;
 import com.fantasy.Models.*;
 import com.fantasy.Services.*;
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx;
@@ -39,6 +40,9 @@ public class HelloController {
 
     @Autowired
     GameWeekService gameWeekService;
+
+    @Autowired
+    PlayerDAO playerDAO;
 
     @RequestMapping("/")
     public String index(Model model) {
