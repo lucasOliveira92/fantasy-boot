@@ -247,7 +247,7 @@ header > .wrap-container > nav#menu > ul > li {
 }
 
 header > .wrap-container > nav#menu > ul > li:hover {
-    background-color: #3498db;
+    background-color: #1abc9c;
     color: #ecf0f1;
     text-transform:uppercase;
 

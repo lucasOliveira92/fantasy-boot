@@ -148,7 +148,7 @@ public class PlayerService {
                         }
                         break;
                 }
-                System.out.println("zzzzzzzzzz   "+id+"  aaaaaa  "+position+"  hjhjhjh   "+gE.getType());
+               // System.out.println("zzzzzzzzzz   "+id+"  aaaaaa  "+position+"  hjhjhjh   "+gE.getType());
             }
             totalPoints = yellow + red + cleanSheet + teamResult + goalScored;
             List<Integer> listaEventsPlayer = new ArrayList<>();
