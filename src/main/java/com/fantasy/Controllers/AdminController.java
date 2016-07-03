@@ -54,11 +54,6 @@ public class AdminController {
     @RequestMapping(value = "admin/generate")
     public String generate(Model model) {
 
-        /*Iterable<GameWeek> allGameWeeks = gameWeekService.getAllGameWeeks();
-        Iterator<GameWeek> it = allGameWeeks.iterator();
-        while(it.hasNext()){
-            GameWeek gw = it.next();
-        }*/
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
         List<Integer> lista = new ArrayList<>();
@@ -77,13 +72,6 @@ public class AdminController {
         model.addAttribute("games",gameWeekService.getGamesByGameWeekNumber(tot+1));
         model.addAttribute("oldgameweekNumber", tot);
         model.addAttribute("nextgameweekNumber", tot+1);
-       /* if(gameWeek > 0 && gameWeek <= 34){
-            generateService.generate(gameWeek);
-            if(gameWeek < 34)
-                generateService.genererateRandomSnapshots(gameWeek + 1 );
-        }
-*/
-
         return "admin";
     }
 }

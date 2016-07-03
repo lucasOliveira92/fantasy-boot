@@ -138,6 +138,13 @@ body{
     display: inline-block;
 }
 
+.campo-pesquisa-historic{
+    width: 100%;
+    margin-top: 30%;
+    margin-left: auto;
+    display: inline-block;
+}
+
 
 
 .table tr{
@@ -159,7 +166,7 @@ body{
 }
 
 .table th{
-    background-color:lightgrey;
+    background-color: #1abc9c;
 }
 
 /* CENAS FEITAS PELO VASCO */
@@ -241,7 +248,7 @@ header > .wrap-container > nav#menu > ul > li {
 }
 
 header > .wrap-container > nav#menu > ul > li:hover {
-    background-color: #3498db;
+    background-color: #1abc9c;
     color: #ecf0f1;
     text-transform:uppercase;
 

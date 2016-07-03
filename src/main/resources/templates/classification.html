@@ -30,27 +30,23 @@
 
                 <table id="listOwnPlayers" class="table table-bordered">
                     <tr>
-                        <th>Position</th>
-                        <th>Name</th>
-                        <th>Points</th>
+                        <th class="col-md-3">Position</th>
+                        <th class="col-md-6">Name</th>
+                        <th class="col-md-3">Points</th>
                     </tr>
                     <tr th:id="${team.getOwner().getId()}" th:each="team : ${teams}">
-                        <td th:text="${teams.indexOf(team) + 1}">Position</td>
-                        <td th:text="${team.name}">Name</td>
-                        <td th:text="${team.totalPoints}">Points</td>
+                        <td class="col-md-3" th:text="${teams.indexOf(team) + 1}">Position</td>
+                        <td class="col-md-6" th:text="${team.name}">Name</td>
+                        <td class="col-md-3" th:text="${team.totalPoints}">Points</td>
                     </tr>
                 </table>
-                <div th:if="${currentUser != null}">
-                    <table class="table table-bordered" th:if="${currentUser.hasVirtualTeam()}">
+                <div th:if="${currentUser != null and (teams.indexOf(currentUser.getVirtualTeam()) + 1)>15}">
+                    <table id="ownPlayer" class="table table-bordered" th:if="${currentUser.hasVirtualTeam()}">
                         <tr>
-                            <th>Position</th>
-                            <th>Name</th>
-                            <th>Points</th>
-                        </tr>
-                        <tr>
-                            <td th:text="${teams.indexOf(currentUser.getVirtualTeam()) + 1}">Position</td>
-                            <td th:text="${currentUser.getVirtualTeam().getName()}">Name</td>
-                            <td th:text="${currentUser.getVirtualTeam().getTotalPoints()}">Points</td>
+                            <td class="col-md-3" th:text="${teams.indexOf(currentUser.getVirtualTeam()) + 1}">Position
+                            </td>
+                            <td class="col-md-6" th:text="${currentUser.getVirtualTeam().getName()}">Name</td>
+                            <td class="col-md-3" th:text="${currentUser.getVirtualTeam().getTotalPoints()}">Points</td>
                         </tr>
                     </table>
                 </div>
@@ -65,20 +61,24 @@
     function recarregaAllTeams() {
 
         var gameweekFilter = $('#gameweekFilter option:selected').text();
-        if(gameweekFilter == "All"){gameweekFilter = -1};
+        if (gameweekFilter == "All") {
+            gameweekFilter = -1
+        }
+        ;
         window.open("/classification/" + gameweekFilter, "_self");
-    };
+    }
+    ;
 
-    var listaEquipas = [];
     var user = $('.current-user-id').text();
 
     $('#listOwnPlayers').find('tr').each(function () {
-        if ($(this).attr('id') == user){
-            $(this).addClass('highlighted');}
+        if ($(this).attr('id') == user) {
+            $(this).addClass('highlighted');
+        }
     });
-    $('#listOwnPlayers').find('tr').not(':first').each(function(){
-        listaEquipas.push(this);
-        console.log(this);
+
+    $('#ownPlayer').find('tr').each(function () {
+        $(this).addClass('highlighted');
     });
 
 </script>

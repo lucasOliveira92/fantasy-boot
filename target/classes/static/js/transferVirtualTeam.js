@@ -1,35 +1,69 @@
-
-$(document).on('click', '.clickable-row', function() {
-    if($(this).hasClass("highlighted"))
+$(document).on('click', '.clickable-row', function () {
+    if ($(this).hasClass("highlighted"))
         $(this).removeClass('highlighted');
     else
         $(this).addClass('highlighted').siblings().removeClass('highlighted');
 });
 
+var tabelaAllPlayers = $('table#listAllPlayers');
+var tabelaMyTeam = $('table#listPlayers');
+tabelaAllPlayers.find('tr').show();
+
+var listaMyplayers = [];
+var listaMyplayersIds = [];
+
+tabelaMyTeam.find('tr').not(':first').each(function () {
+    listaMyplayersIds.push($(this).attr('id'));
+});
+
+
+tabelaAllPlayers.find('tr').not(':first').each(function(){
+    for(var i= 0;i<listaMyplayersIds.length;i++){
+        var y = listaMyplayersIds[i];
+        var x = $(this).attr('id');
+        if(x === y){
+            console.log('ppppppppppppppppppppppppoooooooooooooooooooooooooooooooooooo crl');
+            console.log(x);
+            console.log(y);
+            console.log('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz');
+        }
+        else{
+            console.log(x);
+            console.log(y);
+        }
+        /*if(x == listaMyplayersIds[i]){
+            console.log(x);
+            $(this).hide();
+        }*/
+    }
+});
+
+
+
 function switchPlayers(budget) {
-    var idAll=null;
-    var posAll=null;
-    var idMy=null;
-    var posMy=null;
-    var costAll=null;
-    var costMy=null;
-    var totalTransfers=null;
+    var idAll = null;
+    var posAll = null;
+    var idMy = null;
+    var posMy = null;
+    var costAll = null;
+    var costMy = null;
+    var totalTransfers = null;
 
 
-    $('tr.highlighted').each(function(){
-        if($(this).hasClass('allPlayers')) {
+    $('tr.highlighted').each(function () {
+        if ($(this).hasClass('allPlayers')) {
             idAll = $(this).attr('id');
             posAll = $(this).find('td').eq(3).text();
             costAll = $(this).find('td').eq(4).text();
         }
-        if($(this).hasClass('myTeam')) {
+        if ($(this).hasClass('myTeam')) {
             idMy = $(this).attr('id');
             posMy = $(this).find('td').eq(2).text();
             costMy = $(this).find('td').eq(3).text();
         }
     });
-    
-    $('p.total-transfers').each(function(){
+
+    $('p.total-transfers').each(function () {
         totalTransfers = $(this).attr('id');
     });
 
@@ -105,4 +139,3 @@ function recarregaAllPlayers(){
 $(document).ready(function() {
     $('.alerta').hide();
 });
-
