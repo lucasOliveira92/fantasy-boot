@@ -331,11 +331,11 @@ section#main-content > .wrap-container {
     }
     header > .navbar > .wrap-container > div#logo,
     header > .navbar > .container > div#user_in {
-        width:80px;
+        width:90px;
     }
 
     header > .navbar > .wrap-container > div#logo > img {
-        height:80px;
+        height:90px;
         padding:2% 0;
         cursor: pointer;
     }
@@ -346,7 +346,7 @@ section#main-content > .wrap-container {
         background-color: transparent;
         height:100%;
         cursor:pointer;
-        padding:0 15px;
+        padding:0 15px 0 70px;
         line-height:30px;
         font-family:'Montserrat', sans-serif;
     }
