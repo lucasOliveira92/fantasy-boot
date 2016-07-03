@@ -37,11 +37,11 @@
                         <th>Gameweek Points</th>
                         <th>Total Points</th>
                     </tr>
-                    <tr th:id="${team.getOwner().getId()}" th:each="team : ${teams}">
-                        <td th:text="${teams.indexOf(team) + 1}">Position</td>
-                        <td th:text="${team.name}">Name</td>
-                        <td th:text="${team.getPointsByGameWeek(gameweekID)}">Gameweek points</td>
-                        <td th:text="${team.getComulativePointsByGameWeek(gameweekID)}">Points</td>
+                    <tr th:id="${snap.getVirtualTeam().getOwner().getId()}" th:each="snap : ${snapshots}">
+                        <td th:text="${snapshots.indexOf(snap) + 1}">Position</td>
+                        <td th:text="${snap.getVirtualTeam().getName()}">Name</td>
+                        <td th:text="${snap.getGameWeekPoints()}">Gameweek points</td>
+                        <td th:text="${snap.getGameWeekCumulativePoints()}">Points</td>
                     </tr>
                 </table>
                 <div th:if="${currentUser != null}">
@@ -84,8 +84,8 @@
     });
     $('#listOwnPlayers').find('tr').not(':first').each(function(){
         listaEquipas.push(this);
-        console.log(this);
     });
+        console.log(this);
 </script>
 </body>
 </html>

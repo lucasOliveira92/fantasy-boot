@@ -58,7 +58,7 @@ public class ClassificationController {
         for(int i=1; i<=tot; i++)
             lista.add(i);
 
-        GameWeek gw = gestorGameWeek.getGameWeekByNumber(tot);
+        GameWeek gw = gestorGameWeek.getGameWeekByNumber(number);
         List<GameWeekSnapshot> gameWeekSnapshotsByGameWeekId = gestorGameWeekSnapshot.getGameWeekSnapshotsOrderedCumulative(gw.getId());
         List<VirtualTeam> orderedTeams = new ArrayList<>();
         for(GameWeekSnapshot gws: gameWeekSnapshotsByGameWeekId){
@@ -66,8 +66,7 @@ public class ClassificationController {
             orderedTeams.add(gws.getVirtualTeam());
         }
 
-        gameWeekSnapshotsByGameWeekId.get(0).getGameWeekCumulativePoints();
-
+       // gameWeekSnapshotsByGameWeekId.get(0).
 
         model.addAttribute("currentUser", u);
         model.addAttribute("gameWeekNumber",lista);
