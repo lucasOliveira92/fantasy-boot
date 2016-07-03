@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--/*/ <th:block th:include="shared/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<!--/*/ <th:block th:include="shared/header :: header"></th:block> /*/-->
+<section id="main-content">
+    <div class="wrap-container">
+        <div th:if="${gameWeekNumbers!=null}" class="box-body table-responsive">
+            <div class="col-md-4">
+                <section class="user_info">
+                    <h2 class="text-center">Formation</h2>
+                </section>
+                <div id="field" style="position: relative; width: 90%; height: 100%; margin:0 auto;"
+                     class="text-center">
+                    <img src="/images/field.png" alt="" height="100%" width="100%"/>
+
+                    <div style="width: 100%; height: 100%; position: absolute; top: 0; text-align: center">
+                        <div id="FOR" style="width: 100%; height: 15%; margin-top: 15%; position: relative">
+                            <div th:each="player : ${FORs}" th:id="${player.id}" class="titular"
+                                 style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                <img th:src="${player.getRealTeam().getEquipment()}" height="50%"/>
+                                <p style="line-height: 100%; font-weight: bold; font-size: 70%;" id="FOR"
+                                   th:text="${player.name}"></p>
+                                <button th:if="${idCapitao == player.id}" type="button"
+                                        class="btn btn-xs captain" th:id="${player.id}"
+                                        style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <b>C</b>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="MID" style="width: 100%; height: 15%; margin-top: 20%; position: relative">
+                            <div th:each="player : ${MIDs}" th:id="${player.id}" class="titular"
+                                 style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                <img th:src="${player.getRealTeam().getEquipment()}" height="50%"/>
+                                <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="MID"
+                                   th:text="${player.name}"></p>
+                                <button th:if="${idCapitao == player.id}" type="button"
+                                        class="btn btn-xs captain cpt-selected" th:id="${player.id}"
+                                        style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <b>C</b>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="DEF" style="width: 100%; height: 15%; margin-top: 15%; position: relative">
+                            <div th:each="player : ${DEFs}" th:id="${player.id}" class="titular"
+                                 style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                <img th:src="${player.getRealTeam().getEquipment()}" height="50%"/>
+                                <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="DEF"
+                                   th:text="${player.name}"></p>
+                                <button th:if="${idCapitao == player.id}" type="button"
+                                        class="btn btn-xs captain cpt-selected" th:id="${player.id}"
+                                        style="position: absolute;   left: 0; bottom: 0; margin-left:10%;   width: 40%; overflow: hidden">
+                                    <b>C</b>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="GK" style="width: 100%; height: 15%; margin-top: 5%; position: relative">
+                            <div th:id="${GK.get(0).id}" class="titular"
+                                 style="overflow: hidden; width: 15%; height: 100%; position: relative; display: inline-block">
+                                <img th:src="${GK.get(0).getRealTeam().getEquipment()}" height="50%"/>
+                                <p style="line-height: 100%; font-weight: bold; font-size: 70%" id="GK"
+                                   th:text="${GK.get(0).name}"></p>
+                                <button th:if="${idCapitao == GK.get(0).id}" type="button"
+                                        class="btn btn-xs captain cpt-selected" th:id="${GK.get(0).id}"
+                                        style="position: absolute; left: 0; bottom: 0; margin-left:10%; width: 40%; overflow: hidden">
+                                    <b>C</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="campo-pesquisa-historic">
+                    <label>Gameweek:</label>
+                    <select class="btn btn-default" style="width: 100%;" id="historicFilter">
+                        <option id="-1">Last</option>
+                        <option th:each="gameWeek:${gameWeekNumbers}" th:text="${gameWeek}">number</option>
+                    </select>
+                    <button type="button" class="btn btn-info btn-lg"
+                            style="margin-left:5%;bottom: 20px;margin-top: 10%; right: 20px;background-color: #2980b9"
+                            onclick="updateHistoric()">Update Strategy
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center" >History of Points by Gameweek</h2>
+                <table id="listHistoric" class="table table-bordered" >
+                    <tr class="text-center" style="background-color: #2ecc71">
+                        <th colspan="4" class="text-center" style=" font-weight: bold;">
+                            Gameweek: <span th:text="${gameWeekNumber}"></span></th>
+                        <th colspan="3" class="text-center" style=" font-weight: bold;">  <span th:text="${gameWeekDate}"></span></th>
+                    </tr>
+                    <tr >
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Goals Scored</th>
+                        <th class="text-center">Yellow Card</th>
+                        <th class="text-center">Red Card</th>
+                        <th class="text-center">Game Result</th>
+                        <th class="text-center">Clean Sheet</th>
+                        <th class="text-center">Total</th>
+                    </tr>
+                    <tr th:if="${hashPlayer.key.getId() != idCapitao}" th:id="${hashPlayer.key.getId()}" th:each="hashPlayer: ${hashEventsByPlayer}">
+                        <td th:text="${hashPlayer.key.getName()}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(0)}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(1)}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(2)}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(3)}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(4)}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(5)}"></td>
+                    </tr>
+                    <tr th:if="${hashPlayer.key.getId() == idCapitao}" th:id="${hashPlayer.key.getId()}" th:each="hashPlayer: ${hashEventsByPlayer}">
+                        <td th:text="${hashPlayer.key.getName()}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(0)*2}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(1)*2}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(2)*2}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(3)*2}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(4)*2}"></td>
+                        <td class="text-center" th:text="${hashPlayer.value.get(5)*2}"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div th:if="${gameWeekNumbers==null}" class="box-body table-responsive text-center">
+            <h2 class="text-center">There is no history of gameweeks yet. </h2>
+        </div>
+    </div>
+</section>
+<script>
+    function updateHistoric(){
+        var historicFilter = $('#historicFilter option:selected').text();
+        if(historicFilter == "Last"){historicFilter=-1;}
+
+        window.open("/team/historic/" + historicFilter, "_self");
+    }
+</script>
+</body>
+</html>

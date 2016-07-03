@@ -35,13 +35,13 @@ public class ClassificationController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
         List<Integer> lista = new ArrayList<>();
-        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
-        for(int i=1; i<=tot; i++)
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size() - 1;
+        for (int i = 1; i <= tot; i++)
             lista.add(i);
 
         model.addAttribute("currentUser", u);
 
-        model.addAttribute("gameWeekNumber",lista);
+        model.addAttribute("gameWeekNumber", lista);
         model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         return "classification";
@@ -54,34 +54,29 @@ public class ClassificationController {
         User u = gestorUser.getUserByUsername(auth.getName());
 
         List<Integer> lista = new ArrayList<>();
-        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
-        for(int i=1; i<=tot; i++)
-            lista.add(i);
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size() - 1;
+        if (number != -1) {
+            for (int i = 1; i <= tot; i++)
+                lista.add(i);
 
-        GameWeek gw = gestorGameWeek.getGameWeekByNumber(number);
-        List<GameWeekSnapshot> gameWeekSnapshotsByGameWeekId = gestorGameWeekSnapshot.getGameWeekSnapshotsOrderedCumulative(gw.getId());
-        List<VirtualTeam> orderedTeams = new ArrayList<>();
-        for(GameWeekSnapshot gws: gameWeekSnapshotsByGameWeekId){
-            //System.out.println(gws.getVirtualTeam().getName() + " "+ gws.getGameWeekCumulativePoints());
-            orderedTeams.add(gws.getVirtualTeam());
-        }
+            GameWeek gw = gestorGameWeek.getGameWeekByNumber(number);
+            List<GameWeekSnapshot> gameWeekSnapshotsByGameWeekId = gestorGameWeekSnapshot.getGameWeekSnapshotsOrderedCumulative(gw.getId());
+            List<VirtualTeam> orderedTeams = new ArrayList<>();
+            for (GameWeekSnapshot gws : gameWeekSnapshotsByGameWeekId) {
+                orderedTeams.add(gws.getVirtualTeam());
+            }
 
-       // gameWeekSnapshotsByGameWeekId.get(0).
-
-        model.addAttribute("currentUser", u);
-        model.addAttribute("gameWeekNumber",lista);
-        model.addAttribute("teams", orderedTeams);
-        //model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
-        model.addAttribute("snapshots", gameWeekSnapshotsByGameWeekId);
-        model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
-        if(number != -1) {
+            model.addAttribute("currentUser", u);
+            model.addAttribute("gameWeekNumber", lista);
+            model.addAttribute("teams", orderedTeams);
+            model.addAttribute("snapshots", gameWeekSnapshotsByGameWeekId);
+            model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
             model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());
             model.addAttribute("number", number);
-        }else{
-            model.addAttribute("gameweekID",gestorGameWeek.getGameWeekByNumber(tot).getId());
-            model.addAttribute("number", tot);
+            return "classificationGameWeek";
+        } else {
+            return "redirect:/classification";
         }
-        return "classificationGameWeek";
     }
 
     @RequestMapping(value = "statistics", method = RequestMethod.GET)
@@ -93,7 +88,7 @@ public class ClassificationController {
         model.addAttribute("players", gestorPlayers.getAllPlayersByCost());
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
-        model.addAttribute("order",-1);
+        model.addAttribute("order", -1);
         return "statistics";
     }
 
@@ -104,7 +99,7 @@ public class ClassificationController {
         List<Player> lista = null;
         List<Player> lista2;
         List<Player> listafinal;
-        switch (orderId){
+        switch (orderId) {
             case -1:
                 listafinal = gestorPlayers.getAllPlayersByCost();
                 break;
@@ -124,7 +119,7 @@ public class ClassificationController {
                 listafinal = gestorPlayers.getAllPlayersByCost();
                 break;
         }
-        if(teamId!=-1) {
+        if (teamId != -1) {
             switch (positionId) {
                 case -1:
                     lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
@@ -144,8 +139,8 @@ public class ClassificationController {
                 default:
                     break;
             }
-            if (lista!=null)listafinal.retainAll(lista);
-        }else{
+            if (lista != null) listafinal.retainAll(lista);
+        } else {
             switch (positionId) {
                 case -1:
                     break;
@@ -173,7 +168,7 @@ public class ClassificationController {
         model.addAttribute("players", listafinal);
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
-        model.addAttribute("order",orderId);
+        model.addAttribute("order", orderId);
         return "statistics";
     }
 

@@ -1,35 +1,35 @@
-
-$(document).on('click', '.clickable-row', function() {
-    if($(this).hasClass("highlighted"))
+$(document).on('click', '.clickable-row', function () {
+    if ($(this).hasClass("highlighted"))
         $(this).removeClass('highlighted');
     else
         $(this).addClass('highlighted').siblings().removeClass('highlighted');
 });
 
+
 function switchPlayers(budget) {
-    var idAll=null;
-    var posAll=null;
-    var idMy=null;
-    var posMy=null;
-    var costAll=null;
-    var costMy=null;
-    var totalTransfers=null;
+    var idAll = null;
+    var posAll = null;
+    var idMy = null;
+    var posMy = null;
+    var costAll = null;
+    var costMy = null;
+    var totalTransfers = null;
 
 
-    $('tr.highlighted').each(function(){
-        if($(this).hasClass('allPlayers')) {
+    $('tr.highlighted').each(function () {
+        if ($(this).hasClass('allPlayers')) {
             idAll = $(this).attr('id');
             posAll = $(this).find('td').eq(3).text();
             costAll = $(this).find('td').eq(4).text();
         }
-        if($(this).hasClass('myTeam')) {
+        if ($(this).hasClass('myTeam')) {
             idMy = $(this).attr('id');
             posMy = $(this).find('td').eq(2).text();
             costMy = $(this).find('td').eq(3).text();
         }
     });
-    
-    $('p.total-transfers').each(function(){
+
+    $('p.total-transfers').each(function () {
         totalTransfers = $(this).attr('id');
     });
 
@@ -97,7 +97,7 @@ function switchPlayers(budget) {
 function recarregaAllPlayers(){
     var positionFilter = $('#positionFilter option:selected').attr('id');
     var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
-    var orderFilter = -1;
+    var orderFilter = $('#orderFilter option:selected').attr('id');
     window.open("/team/transfers/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
 };
 
@@ -105,4 +105,3 @@ function recarregaAllPlayers(){
 $(document).ready(function() {
     $('.alerta').hide();
 });
-

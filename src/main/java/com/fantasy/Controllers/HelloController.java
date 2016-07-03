@@ -1,18 +1,17 @@
 package com.fantasy.Controllers;
 
 import com.fantasy.DAO.PlayerDAO;
-import com.fantasy.Models.*;
+import com.fantasy.Models.GameWeekSnapshot;
+import com.fantasy.Models.Player;
+import com.fantasy.Models.User;
+import com.fantasy.Models.VirtualTeam;
 import com.fantasy.Services.*;
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,13 +49,6 @@ public class HelloController {
         User u = gestorUser.getUserByUsername(auth.getName());
 
         model.addAttribute("currentUser", u);
-        return "home";
-    }
-    
-    //@Secured("ROLE_USER")
-    @RequestMapping("/home")
-    public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
         return "home";
     }
 
@@ -105,21 +97,6 @@ public class HelloController {
         }
         return "home";
     }
-
-
-    @RequestMapping("/generate/{gameWeek}")
-    public String generate(@PathVariable Integer gameWeek) {
-        if(gameWeekService.getTotalGeneratedWeeks() >= gameWeek)
-            return "home";
-        if(gameWeek > 0 && gameWeek <= 34){
-            generateService.generate(gameWeek);
-            if(gameWeek < 34)
-                generateService.genererateRandomSnapshots(gameWeek + 1 );
-        }
-
-        return "home";
-    }
-
 
     //@Secured("ROLE_ADMIN")
     @RequestMapping("/seed")

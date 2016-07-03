@@ -203,5 +203,34 @@ public class VirtualTeamService {
         return listaFinal;
     }
 
+    public List<List<Player>> getListsPlayersByPositionByFormation(List<Player> virtual_team_list){
+
+        ArrayList<Player> gks = new ArrayList<>();
+        ArrayList<Player> defs = new ArrayList<>();
+        ArrayList<Player> mids = new ArrayList<>();
+        ArrayList<Player> fors = new ArrayList<>();
+        List<List<Player>> listaFinal = new ArrayList<>();
+        for (Player p : virtual_team_list) {
+            switch (p.getPosition()){
+                case "GK":
+                    gks.add(p);
+                    break;
+                case "DEF":
+                    defs.add(p);
+                    break;
+                case "MID":
+                    mids.add(p);
+                    break;
+                case "FOR":
+                    fors.add(p);
+                    break;
+            }
+        }
+        listaFinal.add(gks);
+        listaFinal.add(defs);
+        listaFinal.add(mids);
+        listaFinal.add(fors);
+        return listaFinal;
+    }
 
 }

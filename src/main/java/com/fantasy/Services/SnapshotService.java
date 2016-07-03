@@ -3,13 +3,10 @@ package com.fantasy.Services;
 import com.fantasy.DAO.GameWeekSnapshotDAO;
 import com.fantasy.DAO.VirtualTeamDAO;
 import com.fantasy.Models.GameWeekSnapshot;
-import com.fantasy.Models.VirtualTeam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * Created by Lucas on 30-Jun-16.
- */
+
 @Service
 public class SnapshotService {
     @Autowired
@@ -27,5 +24,9 @@ public class SnapshotService {
 
     public void saveSnap(GameWeekSnapshot gws){
         gameWeekSnapshotDAO.save(gws);
+    }
+
+    public GameWeekSnapshot getSnapshotByGameWeekIdAndVirtualTeamId(long gameweekId, long virtualTeamId){
+        return gameWeekSnapshotDAO.findByGameWeekIdAndVirtualTeamId(gameweekId,virtualTeamId);
     }
 }

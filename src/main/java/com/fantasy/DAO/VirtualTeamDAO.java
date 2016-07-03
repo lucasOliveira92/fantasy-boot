@@ -6,8 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface VirtualTeamDAO extends CrudRepository<VirtualTeam, Long> {
-
-    List<VirtualTeam> findByName(String name);
     
     VirtualTeam findById(long id);
     

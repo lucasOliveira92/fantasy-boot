@@ -8,17 +8,12 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-
 
 import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 @Controller
 public class VirtualTeamController {
@@ -70,6 +65,115 @@ public class VirtualTeamController {
                 model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
                 model.addAttribute("team", team);
                 return "virtualTeam/show";
+            }else{
+                return "redirect:/team/new";
+            }
+        }else{
+            return "redirect:/";
+        }
+    }
+
+    @Secured("ROLE_USER")
+    @RequestMapping(value = "team/historic", method = RequestMethod.GET)
+    public String historicVirtualTeam(Model model) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        if(u != null) {
+            if (u.hasVirtualTeam()) {
+                VirtualTeam team = gestor.getVirtualTeam(u.getId());
+                List<List<Player>> listFormation = gestor.getListsPlayersByPositionByFormation(u.getVirtualTeam().getId());
+                HashMap<Long,List<GameEvent>> listEventsByPlayer = new HashMap<>();
+                if(tot>0) {
+                    for (Player p : listFormation.get(0)) {
+                        listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot, p.getId()));
+                    }
+                    for (Player p : listFormation.get(1)) {
+                        listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot, p.getId()));
+                    }
+                    for (Player p : listFormation.get(2)) {
+                        listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot, p.getId()));
+                    }
+                    for (Player p : listFormation.get(3)) {
+                        listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot, p.getId()));
+                    }
+
+                    HashMap<Player, List<Integer>> listEventPointsByPlayer = playerService.getHashOfListEventsByPlayerId(listEventsByPlayer);
+                    List<Integer> lista = new ArrayList<>();
+                    for (int i = 1; i <= tot; i++) {
+                        lista.add(i);
+                    }
+                    model.addAttribute("gameWeekNumbers",lista);
+                    model.addAttribute("hashEventsByPlayer", listEventPointsByPlayer);
+                    model.addAttribute("GK",listFormation.get(0));
+                    model.addAttribute("DEFs",listFormation.get(1));
+                    model.addAttribute("MIDs",listFormation.get(2));
+                    model.addAttribute("FORs",listFormation.get(3));
+                    model.addAttribute("gameWeekNumber", tot);
+                    model.addAttribute("gameWeekDate", gestorGameWeeks.getGameWeekByNumber(tot).prettyPrintDate());
+                    model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
+                    model.addAttribute("team", team);
+                }
+                else{
+                    model.addAttribute("gameWeekNumbers",null);
+                    model.addAttribute("hashEventsByPlayer", null);
+                }
+                return "virtualTeam/historic";
+            }else{
+                return "redirect:/team/new";
+            }
+        }else{
+            return "redirect:/";
+        }
+    }
+
+    @Secured("ROLE_USER")
+    @RequestMapping(value = "team/historic/{number}", method = RequestMethod.GET)
+    public String historicVirtualTeamByGameweekNumber(Model model, @PathVariable Integer number) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        if(number>tot || number==-1){number=tot;}
+
+        if(u != null) {
+            if (u.hasVirtualTeam()) {
+                GameWeekSnapshot snapshotByTeamByGameweek = snapshotService.getSnapshotByGameWeekIdAndVirtualTeamId(gestorGameWeeks.getGameWeekByNumber(number).getId(),u.getVirtualTeam().getId());
+                List<Player> listaPlayersSnapshot = snapshotByTeamByGameweek.getPlayers();
+
+                List<List<Player>> listFormation = gestor.getListsPlayersByPositionByFormation(listaPlayersSnapshot);
+                HashMap<Long,List<GameEvent>> listEventsByPlayer = new HashMap<>();
+                for(Player p:listFormation.get(0)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(1)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(2)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(3)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+
+                HashMap<Player, List<Integer>> listEventPointsByPlayer = playerService.getHashOfListEventsByPlayerId(listEventsByPlayer);
+                List<Integer> lista = new ArrayList<>();
+                for(int i=1; i<=tot; i++) {
+                    lista.add(i);
+                }
+                model.addAttribute("GK",listFormation.get(0));
+                model.addAttribute("DEFs",listFormation.get(1));
+                model.addAttribute("MIDs",listFormation.get(2));
+                model.addAttribute("FORs",listFormation.get(3));
+                model.addAttribute("gameWeekNumbers",lista);
+                model.addAttribute("hashEventsByPlayer", listEventPointsByPlayer);
+                model.addAttribute("gameWeekNumber", number);
+                model.addAttribute("gameWeekDate", gestorGameWeeks.getGameWeekByNumber(number).prettyPrintDate());
+                model.addAttribute("idCapitao",snapshotByTeamByGameweek.getCapitao());
+                return "virtualTeam/historic";
             }else{
                 return "redirect:/team/new";
             }
@@ -140,92 +244,96 @@ public class VirtualTeamController {
     public String searchMakeTransfersVirtualTeam(Model model, @PathVariable Integer teamId, @PathVariable Integer positionId, @PathVariable Integer orderId) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
         List<Player> lista = null;
         List<Player> lista2;
-        //List<Player> listafinal;
-        List<Player> listafinal = playerService.getAllPlayersExceptFromTeam(u.getVirtualTeam().getId());
-        /*switch (orderId){
-            case -1:
-                listafinal = playerService.getAllPlayersByCost();
-                break;
-            case 1:
-                listafinal = playerService.getAllPlayersByTotalPoints();
-                break;
-            case 2:
-                listafinal = playerService.getAllPlayersByGoalScored();
-                break;
-            case 3:
-                listafinal = playerService.getAllPlayersByYellow();
-                break;
-            case 4:
-                listafinal = playerService.getAllPlayersByRed();
-                break;
-            case 5:
-                listafinal = playerService.getAllPlayersByTimesBought();
-                break;
-            default:
-                listafinal = playerService.getAllPlayersByCost();
-                break;
-        }*/
-        if(teamId!=-1) {
-            switch (positionId) {
+        List<Player> listafinal;
+        if (u!=null) {
+            List<Player> listaSemEquipa = playerService.getAllPlayersExceptFromTeam(u.getVirtualTeam().getId());
+            switch (orderId){
                 case -1:
-                    lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
+                    listafinal = playerService.getAllPlayersByCost();
                     break;
                 case 1:
-                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("GK");
+                    listafinal = playerService.getAllPlayersByTotalPoints();
                     break;
                 case 2:
-                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("DEF");
+                    listafinal = playerService.getAllPlayersByGoalScored();
                     break;
                 case 3:
-                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("MID");
+                    listafinal = playerService.getAllPlayersByYellow();
                     break;
                 case 4:
-                    lista = gestorRealTeams.getById(teamId).getPlayerByPosition("FOR");
+                    listafinal = playerService.getAllPlayersByRed();
+                    break;
+                case 5:
+                    listafinal = playerService.getAllPlayersByTimesBought();
                     break;
                 default:
-                    lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
+                    listafinal = playerService.getAllPlayersByCost();
                     break;
             }
-            if (lista!=null)listafinal.retainAll(lista);
-        }else{
-            switch (positionId) {
-                case -1:
-                    break;
-                case 1:
-                    lista2 = playerService.getAllPlayersByPosition("GK");
-                    listafinal.retainAll(lista2);
-                    break;
-                case 2:
-                    lista2 = playerService.getAllPlayersByPosition("DEF");
-                    listafinal.retainAll(lista2);
-                    break;
-                case 3:
-                    lista2 = playerService.getAllPlayersByPosition("MID");
-                    listafinal.retainAll(lista2);
-                    break;
-                case 4:
-                    lista2 = playerService.getAllPlayersByPosition("FOR");
-                    listafinal.retainAll(lista2);
-                    break;
-                default:
-                    lista2 = playerService.getAllPlayersByPosition("GK");
-                    listafinal.retainAll(lista2);
-                    break;
+            listafinal.retainAll(listaSemEquipa);
+            if (teamId != -1) {
+                switch (positionId) {
+                    case -1:
+                        lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
+                        break;
+                    case 1:
+                        lista = gestorRealTeams.getById(teamId).getPlayerByPosition("GK");
+                        break;
+                    case 2:
+                        lista = gestorRealTeams.getById(teamId).getPlayerByPosition("DEF");
+                        break;
+                    case 3:
+                        lista = gestorRealTeams.getById(teamId).getPlayerByPosition("MID");
+                        break;
+                    case 4:
+                        lista = gestorRealTeams.getById(teamId).getPlayerByPosition("FOR");
+                        break;
+                    default:
+                        lista = gestorRealTeams.getPlayersfromRealTeam(teamId);
+                        break;
+                }
+                if (lista != null) listafinal.retainAll(lista);
+            } else {
+                switch (positionId) {
+                    case -1:
+                        break;
+                    case 1:
+                        lista2 = playerService.getAllPlayersByPosition("GK");
+                        listafinal.retainAll(lista2);
+                        break;
+                    case 2:
+                        lista2 = playerService.getAllPlayersByPosition("DEF");
+                        listafinal.retainAll(lista2);
+                        break;
+                    case 3:
+                        lista2 = playerService.getAllPlayersByPosition("MID");
+                        listafinal.retainAll(lista2);
+                        break;
+                    case 4:
+                        lista2 = playerService.getAllPlayersByPosition("FOR");
+                        listafinal.retainAll(lista2);
+                        break;
+                    default:
+                        break;
+                }
             }
+            List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(u.getVirtualTeam().getId());
+            model.addAttribute("players", listafinal);
+            model.addAttribute("gks", listFormation.get(0));
+            model.addAttribute("defs", listFormation.get(1));
+            model.addAttribute("mids", listFormation.get(2));
+            model.addAttribute("fors", listFormation.get(3));
+            model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
+            model.addAttribute("team", u.getTeam());
+            model.addAttribute("order", orderId);
+            return "virtualTeam/transfers";
         }
-        List<List<Player>> listFormation = gestor.getListsAllPlayersByPosition(u.getVirtualTeam().getId());
-        model.addAttribute("currentUser", u);
-        model.addAttribute("players", listafinal);
-        model.addAttribute("gks", listFormation.get(0));
-        model.addAttribute("defs", listFormation.get(1));
-        model.addAttribute("mids", listFormation.get(2));
-        model.addAttribute("fors", listFormation.get(3));
-        model.addAttribute("realTeams", gestorRealTeams.getAllRealTeams());
-        model.addAttribute("team", u.getTeam());
-        model.addAttribute("order",orderId);
-        return "virtualTeam/transfers";
+        else{
+            return "redirect:/login";
+        }
     }
 
     @Secured("ROLE_USER")
@@ -247,7 +355,7 @@ public class VirtualTeamController {
             return "redirect:/login";
         }
     }
-
+/*
     @Secured("ROLE_USER")
     @RequestMapping(value = "team", method = RequestMethod.POST)
     public String saveVirtualTeam(@Valid @ModelAttribute("team") VirtualTeam virtualTeam, BindingResult bindingResult, Model model) {
@@ -261,7 +369,7 @@ public class VirtualTeamController {
         gestor.saveVirtualTeam(virtualTeam);
         return "redirect:/team/new";
     }
-
+*/
     @CrossOrigin
     @Secured("ROLE_USER")
     @RequestMapping(value = "/save/team", method = RequestMethod.POST)
@@ -270,7 +378,6 @@ public class VirtualTeamController {
 
         List lista = rs.getTitulares();
         List<Player> idPlayers = new ArrayList<>();
-        System.out.println("Players");
         for(Object o: lista){
             idPlayers.add(playerService.getPlayerById(Long.parseLong(o.toString())));
         }
@@ -290,17 +397,11 @@ public class VirtualTeamController {
     @RequestMapping(value = "/save/new/team", method = RequestMethod.POST)
     public @ResponseBody
     String  newVirtualTeam(@RequestBody NewTeamResponse rs, HttpServletRequest request) {
-        System.out.println("User");
-        System.out.println(rs.getUser());
-        System.out.println("Team");
-        System.out.println(rs.getTeamName());
 
         List lista = rs.getEquipa();
         List<Long> idPlayers = new ArrayList<>();
-        System.out.println("Players");
         for(Object o: lista){
             idPlayers.add((Long.parseLong(o.toString())));
-            System.out.println(o.toString());
         }
 
         gestor.createVirtualTeam(rs.getTeamName(),idPlayers,rs.getUser());

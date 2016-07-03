@@ -5,11 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
-/**
- * Created by Lucas on 27-Jun-16.
- */
 
 @Entity
 @Table(name = "EVENT_POINTS")
