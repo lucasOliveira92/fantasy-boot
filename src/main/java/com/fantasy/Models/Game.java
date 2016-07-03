@@ -40,7 +40,7 @@ public class Game implements Serializable {
     @OneToMany(mappedBy="game", fetch = FetchType.LAZY)
     private Set<GameEvent> events;
 
-    protected Game(){}
+    public Game(){}
 
     public Game(Date date, RealTeam team1, RealTeam team2, GameWeek gameWeek) {
         this.date = date;

@@ -137,11 +137,11 @@
                         <h2 class="text-center">Substitutes</h2>
                         <table id="listPlayers" class="table table-bordered">
                             <tr>
-                                <th class="col-md-1"></th>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Value</th>
-                                <th>Points</th>
+                                <th class="col-md-1" style="background-color: #1abc9c;"></th>
+                                <th style="background-color: #1abc9c;">Name</th>
+                                <th style="background-color: #1abc9c;">Position</th>
+                                <th style="background-color: #1abc9c;">Value</th>
+                                <th style="background-color: #1abc9c;">Points</th>
                             </tr>
                             <tr th:id="${GKsub.get(0).id}" class="clickable-row" style="cursor:pointer;">
                                 <td class="col-md-1 text-center"><img
@@ -182,8 +182,9 @@
                         </table>
                         <button type="button" class="btn btn-info pull-left btn-lg"
                                 style="bottom: 20px;margin-bottom: 10%; right: 20px; background-color: #2980b9"
-                                onclick="updateStrategy()">Show Historic
-                        </button><button type="button" class="btn btn-success pull-right btn-lg"
+                                onclick="location.href='/team/historic'">Show Historic
+                        </button>
+                        <button type="button" class="btn btn-success pull-right btn-lg"
                                 style="margin-right:5%;bottom: 20px;margin-bottom: 10%; right: 20px"
                                 onclick="updateStrategy()">Update Strategy
                         </button>

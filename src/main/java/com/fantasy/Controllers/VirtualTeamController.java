@@ -50,7 +50,7 @@ public class VirtualTeamController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         User u = gestorUser.getUserByUsername(auth.getName());
         model.addAttribute("currentUser", u);
-        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size();
         if(u != null) {
             if (u.hasVirtualTeam()) {
                 VirtualTeam team = gestor.getVirtualTeam(u.getId());
@@ -90,20 +90,88 @@ public class VirtualTeamController {
             if (u.hasVirtualTeam()) {
                 VirtualTeam team = gestor.getVirtualTeam(u.getId());
                 List<List<Player>> listFormation = gestor.getListsPlayersByPositionByFormation(u.getVirtualTeam().getId());
-                List<List<Player>> listSubstitutes = gestor.getListsPlayersByPositionBySubstitutes(u.getVirtualTeam().getId());
+                HashMap<Long,List<GameEvent>> listEventsByPlayer = new HashMap<>();
+                for(Player p:listFormation.get(0)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(1)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(2)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(3)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+
+                HashMap<Player, List<Integer>> listEventPointsByPlayer = playerService.getHashOfListEventsByPlayerId(listEventsByPlayer);
+                List<Integer> lista = new ArrayList<>();
+                for(int i=1; i<=tot; i++) {
+                    lista.add(i);
+                }
                 model.addAttribute("GK",listFormation.get(0));
                 model.addAttribute("DEFs",listFormation.get(1));
                 model.addAttribute("MIDs",listFormation.get(2));
                 model.addAttribute("FORs",listFormation.get(3));
-                model.addAttribute("GKsub",listSubstitutes.get(0));
-                model.addAttribute("DEFsub",listSubstitutes.get(1));
-                model.addAttribute("MIDsub",listSubstitutes.get(2));
-                model.addAttribute("FORsub",listSubstitutes.get(3));
-                model.addAttribute("games",gestorGameWeeks.getGamesByGameWeekNumber(tot));
+                model.addAttribute("gameWeekNumbers",lista);
+                model.addAttribute("hashEventsByPlayer", listEventPointsByPlayer);
                 model.addAttribute("gameWeekNumber", tot);
                 model.addAttribute("gameWeekDate", gestorGameWeeks.getGameWeekByNumber(tot).prettyPrintDate());
                 model.addAttribute("idCapitao",u.getVirtualTeam().getLastSnapshot().getCapitao());
                 model.addAttribute("team", team);
+                return "virtualTeam/historic";
+            }else{
+                return "redirect:/team/new";
+            }
+        }else{
+            return "redirect:/";
+        }
+    }
+
+    @Secured("ROLE_USER")
+    @RequestMapping(value = "team/historic/{number}", method = RequestMethod.GET)
+    public String historicVirtualTeamByGameweekNumber(Model model, @PathVariable Integer number) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        User u = gestorUser.getUserByUsername(auth.getName());
+        model.addAttribute("currentUser", u);
+        int tot = gestorUser.getUserByUsername("Quim").getVirtualTeam().getGameWeekSnapshots().size()-1;
+        if(number>tot || number==-1){number=tot;}
+
+        if(u != null) {
+            if (u.hasVirtualTeam()) {
+                GameWeekSnapshot snapshotByTeamByGameweek = snapshotService.getSnapshotByGameWeekIdAndVirtualTeamId(gestorGameWeeks.getGameWeekByNumber(number).getId(),u.getVirtualTeam().getId());
+                List<Player> listaPlayersSnapshot = snapshotByTeamByGameweek.getPlayers();
+
+                List<List<Player>> listFormation = gestor.getListsPlayersByPositionByFormation(listaPlayersSnapshot);
+                HashMap<Long,List<GameEvent>> listEventsByPlayer = new HashMap<>();
+                for(Player p:listFormation.get(0)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(1)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(2)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+                for(Player p:listFormation.get(3)){
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                }
+
+                HashMap<Player, List<Integer>> listEventPointsByPlayer = playerService.getHashOfListEventsByPlayerId(listEventsByPlayer);
+                List<Integer> lista = new ArrayList<>();
+                for(int i=1; i<=tot; i++) {
+                    lista.add(i);
+                }
+                model.addAttribute("GK",listFormation.get(0));
+                model.addAttribute("DEFs",listFormation.get(1));
+                model.addAttribute("MIDs",listFormation.get(2));
+                model.addAttribute("FORs",listFormation.get(3));
+                model.addAttribute("gameWeekNumbers",lista);
+                model.addAttribute("hashEventsByPlayer", listEventPointsByPlayer);
+                model.addAttribute("gameWeekNumber", number);
+                model.addAttribute("gameWeekDate", gestorGameWeeks.getGameWeekByNumber(number).prettyPrintDate());
+                model.addAttribute("idCapitao",snapshotByTeamByGameweek.getCapitao());
                 return "virtualTeam/historic";
             }else{
                 return "redirect:/team/new";
