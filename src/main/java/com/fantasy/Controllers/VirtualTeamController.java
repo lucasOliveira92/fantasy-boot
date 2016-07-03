@@ -147,16 +147,16 @@ public class VirtualTeamController {
                 List<List<Player>> listFormation = gestor.getListsPlayersByPositionByFormation(listaPlayersSnapshot);
                 HashMap<Long,List<GameEvent>> listEventsByPlayer = new HashMap<>();
                 for(Player p:listFormation.get(0)){
-                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(number,p.getId()));
                 }
                 for(Player p:listFormation.get(1)){
-                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(number,p.getId()));
                 }
                 for(Player p:listFormation.get(2)){
-                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(number,p.getId()));
                 }
                 for(Player p:listFormation.get(3)){
-                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(tot,p.getId()));
+                    listEventsByPlayer.put(p.getId(), playerService.getAllGameEventsFromGameWeekNumberAndPlayerId(number,p.getId()));
                 }
 
                 HashMap<Player, List<Integer>> listEventPointsByPlayer = playerService.getHashOfListEventsByPlayerId(listEventsByPlayer);
