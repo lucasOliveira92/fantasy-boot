@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -36,11 +39,28 @@ public class GenerateService {
 
 
     @Transactional
-    public void generate(int gameWeek) {
+    public void generate(int gameWeek){
         GameWeek gw = gameWeekDAO.findByNumber(gameWeek);
+        List<Game> games = gw.getGames();
 
-        for (Game g : gw.getGames()) {
-            gameEventDAO.deleteByGameId(g.getId());
+
+        Iterable<EventPoints> pointList = eventPointsDAO.findAll();
+        HashMap<String, Integer> pointMap = new HashMap<>();
+        for(EventPoints e: pointList){
+            pointMap.put(e.getEventType(),e.getPoints());
+        }
+
+        List<GameEvent> allGameEvents = new ArrayList<>();
+
+        PrintWriter writer = null;
+        try{
+            writer = new PrintWriter("the-file-name.txt", "UTF-8");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        for (Game g : games) {
+            //gameEventDAO.deleteByGameId(g.getId());
 
             // -----------------------------  Determinar probabilidade de golo --------------------------------- //
             int chanceTeam1 = 0;
@@ -107,6 +127,11 @@ public class GenerateService {
             List<GameEvent> eventosJogo = new ArrayList<>();
             List<Player> playersTeam1 = team1.getPlayers();
             List<Player> playersTeam2 = team2.getPlayers();
+
+
+            writer.println("*********************** Checkpoint 3 - Players Team 1 - " + playersTeam1.size());
+            writer.println("*********************** Checkpoint 3 - Players Team 2 - " + playersTeam2.size());
+
             List<Player> team1DEF = new ArrayList<>();
             List<Player> team1MID = new ArrayList<>();
             List<Player> team1FOR = new ArrayList<>();
@@ -307,24 +332,23 @@ public class GenerateService {
                 }
             }
 
-            for (Player p : playersTeam2) {
+            for (Player pl : playersTeam2) {
                 if (golosEquipa1Fixed > golosEquipa2Fixed) {
-                    GameEvent gameEvent = new GameEvent("LOSE", -1, g, p);
+                    GameEvent gameEvent = new GameEvent("LOSE", -1, g, pl);
                     eventosJogo.add(gameEvent);
                 } else if (golosEquipa1Fixed < golosEquipa2Fixed) {
-                    GameEvent gameEvent = new GameEvent("WIN", -1, g, p);
+                    GameEvent gameEvent = new GameEvent("WIN", -1, g, pl);
                     eventosJogo.add(gameEvent);
                 } else {
-                    GameEvent gameEvent = new GameEvent("DRAW", -1, g, p);
+                    GameEvent gameEvent = new GameEvent("DRAW", -1, g, pl);
                     eventosJogo.add(gameEvent);
                 }
             }
 
-            Iterable<EventPoints> pointList = eventPointsDAO.findAll();
-            HashMap<String, Integer> pointMap = new HashMap<>();
-            for(EventPoints e: pointList){
-                pointMap.put(e.getEventType(),e.getPoints());
-            }
+            writer.println("$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 1" + playersTeam1.size());
+            writer.println("$$$$$$$$$$$$$$$$$$$$$ Checkpoint 5 - Players Team 2" + playersTeam2.size());
+
+
 
             for (GameEvent e : eventosJogo) {
                 System.out.println(e.getMinute() + " - " + e.getType() + " - " + e.getPlayer().getRealTeam().getName() + " - " + e.getPlayer().getName());
@@ -341,18 +365,31 @@ public class GenerateService {
                 }
                 playerRepo.save(p);
                 gameEventDAO.save(e);
+
+                writer.println("%%%%%%%%%%%%%%%%%%$ Checkpoint 5 - Players Team 1" + playersTeam1.size());
+                writer.println("%%%%%%%%%%%%%%%%% Checkpoint 5 - Players Team 2" + playersTeam2.size());
+
+
+                if(writer != null)
+                    writer.println("######################## " + g.getTeam1().getName() + "  VS " + g.getTeam2().getName() + "     " + e.getPlayer().getName() + "   " + e.getPlayer().getRealTeam().getName() + " ------------ " + e.getType());
             }
 
             g.setTeam1_score(golosEquipa1Fixed);
             g.setTeam2_score(golosEquipa2Fixed);
             gameDAO.save(g);
 
-            calculatePointsForSnapshots(gw,eventosJogo,pointMap);
+
+            allGameEvents.addAll(eventosJogo);
+
 
 
             System.out.println("----------------------------------------------------");
             System.out.println("----------------------------------------------------");
         }
+
+        calculatePointsForSnapshots(gw,allGameEvents,pointMap);
+        if(writer != null)
+            writer.close();
         List<VirtualTeam> all = virtualTeamDAO.findAll();
         for(VirtualTeam vt: all){
             vt.setNumberTransfers(vt.getNumberTransfers() +1);
