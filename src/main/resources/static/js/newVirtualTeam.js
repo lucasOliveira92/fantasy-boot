@@ -270,7 +270,9 @@ function removePlayer() {
     }
 };
 
-function submitTeam(){
+function submitTeam() {
+
+
     var equipa = [];
     var gks = [];
     var defs = [];
@@ -297,6 +299,28 @@ function submitTeam(){
         fors.push(($(this).attr('id')));
     });
 
+    var aviso = "";
+
+    if (gkscount < 2) {
+        aviso = "You need two goalkeepers.\n";
+    }
+    if (defscount < 5) {
+        aviso = "You need five defenders.\n";
+    }
+    if (midscount < 5) {
+        aviso = "You need five midfielders.\n";
+    }
+    if (forscount < 3) {
+        aviso = "You need three strikers.\n";
+    }
+    if(gkscount < 2 || defscount < 5 || midscount < 5 || forscount <3) {
+        $(".alerta").css("background-color", "red");
+        $('.p-alerta').text(aviso);
+        $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
+        return;
+    }
+
+
     for(var i=0;i<gks.length;i++){
         if(i!=0){
             equipa.push(gks[i]);
@@ -318,6 +342,12 @@ function submitTeam(){
 
     user = $('.current-user-id').text();
     var teamName = $("input:text[name=name]").val();
+    if (teamName == null || teamName == ""){
+        $(".alerta").css("background-color", "red");
+        $('.p-alerta').text("Pick a name for your team");
+        $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
+        return;
+    }
     var search = {
         "user": user,
         "teamName": teamName,
@@ -341,5 +371,11 @@ function submitTeam(){
         success: function (result) {
         }
     });
+
+    alert("NOVA TEAM");
+
+    setTimeout(function(){
+        window.open("/team/","_self");
+    }, 500);
 
 }
