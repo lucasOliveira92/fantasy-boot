@@ -372,7 +372,9 @@ function submitTeam() {
         }
     });
 
-    alert("NOVA TEAM");
+    $(".alerta").css("background-color", "green");
+    $('.p-alerta').text("Team created sucessfully!");
+    $('.alerta').fadeIn(1000).delay(3000).fadeOut('slow');
 
     setTimeout(function(){
         window.open("/team/","_self");
