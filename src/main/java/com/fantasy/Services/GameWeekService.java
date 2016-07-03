@@ -21,11 +21,7 @@ public class GameWeekService {
 
     public GameWeek getGameWeekByNumber(int number){ return gameWeeks.findByNumber(number); }
 
-    public GameWeek saveGameWeek(GameWeek gameWeek){ return gameWeeks.save(gameWeek); }
-
     public Iterable<GameWeek> getAllGameWeeks(){ return gameWeeks.findAll(); }
-
-    public List<Game> getGamesByGameWeekId(long id){ return getGameWeekById(id).getGames(); }
 
     public List<Game> getGamesByGameWeekNumber(int number){ return getGameWeekByNumber(number).getGames(); }
 

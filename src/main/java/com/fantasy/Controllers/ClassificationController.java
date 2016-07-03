@@ -63,16 +63,12 @@ public class ClassificationController {
             List<GameWeekSnapshot> gameWeekSnapshotsByGameWeekId = gestorGameWeekSnapshot.getGameWeekSnapshotsOrderedCumulative(gw.getId());
             List<VirtualTeam> orderedTeams = new ArrayList<>();
             for (GameWeekSnapshot gws : gameWeekSnapshotsByGameWeekId) {
-                //System.out.println(gws.getVirtualTeam().getName() + " "+ gws.getGameWeekCumulativePoints());
                 orderedTeams.add(gws.getVirtualTeam());
             }
-
-            // gameWeekSnapshotsByGameWeekId.get(0).
 
             model.addAttribute("currentUser", u);
             model.addAttribute("gameWeekNumber", lista);
             model.addAttribute("teams", orderedTeams);
-            //model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
             model.addAttribute("snapshots", gameWeekSnapshotsByGameWeekId);
             model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
             model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());

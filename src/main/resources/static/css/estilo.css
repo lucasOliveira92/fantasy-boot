@@ -125,14 +125,14 @@ body{
 }
 
 .campo-pesquisa-statistic{
-    width: 35%;
+    width: 23%;
     margin-right: 3%;
     margin-left: auto;
     display: inline-block;
 }
 
 .botao-pesquisa-statistic {
-    width: 20%;
+    width: 15%;
     margin-right: auto;
     margin-left: auto;
     display: inline-block;
@@ -157,7 +157,7 @@ body{
     vertical-align: middle;
 }
 
-.table tr:not(:first-of-type) {
+.table tr{
     background-color: #ecf0f1;
 }
 

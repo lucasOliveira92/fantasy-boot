@@ -8,11 +8,9 @@ import com.fantasy.Models.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class PlayerService {
@@ -155,7 +153,6 @@ public class PlayerService {
                         }
                         break;
                 }
-                // System.out.println("zzzzzzzzzz   "+id+"  aaaaaa  "+position+"  hjhjhjh   "+gE.getType());
             }
             totalPoints = yellow + red + cleanSheet + teamResult + goalScored;
             List<Integer> listaEventsPlayer = new ArrayList<>();

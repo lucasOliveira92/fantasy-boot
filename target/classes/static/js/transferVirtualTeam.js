@@ -5,40 +5,6 @@ $(document).on('click', '.clickable-row', function () {
         $(this).addClass('highlighted').siblings().removeClass('highlighted');
 });
 
-var tabelaAllPlayers = $('table#listAllPlayers');
-var tabelaMyTeam = $('table#listPlayers');
-tabelaAllPlayers.find('tr').show();
-
-var listaMyplayers = [];
-var listaMyplayersIds = [];
-
-tabelaMyTeam.find('tr').not(':first').each(function () {
-    listaMyplayersIds.push($(this).attr('id'));
-});
-
-
-tabelaAllPlayers.find('tr').not(':first').each(function(){
-    for(var i= 0;i<listaMyplayersIds.length;i++){
-        var y = listaMyplayersIds[i];
-        var x = $(this).attr('id');
-        if(x === y){
-            console.log('ppppppppppppppppppppppppoooooooooooooooooooooooooooooooooooo crl');
-            console.log(x);
-            console.log(y);
-            console.log('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz');
-        }
-        else{
-            console.log(x);
-            console.log(y);
-        }
-        /*if(x == listaMyplayersIds[i]){
-            console.log(x);
-            $(this).hide();
-        }*/
-    }
-});
-
-
 
 function switchPlayers(budget) {
     var idAll = null;
@@ -131,7 +97,7 @@ function switchPlayers(budget) {
 function recarregaAllPlayers(){
     var positionFilter = $('#positionFilter option:selected').attr('id');
     var realTeamFilter = $('#realTeamFilter option:selected').attr('id');
-    var orderFilter = -1;
+    var orderFilter = $('#orderFilter option:selected').attr('id');
     window.open("/team/transfers/"+realTeamFilter+"/"+positionFilter+"/"+orderFilter,"_self");
 };
 

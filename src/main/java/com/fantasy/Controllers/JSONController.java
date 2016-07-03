@@ -1,16 +1,12 @@
 package com.fantasy.Controllers;
 
-import com.fantasy.Models.TeamManagementResponse;
 import com.fantasy.Services.RESTService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
-/**
- * Created by Lucas on 29-Jun-16.
- */
 @RestController
 public class JSONController {
 
