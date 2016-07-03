@@ -1,7 +1,6 @@
 package com.fantasy.Controllers;
 
-import com.fantasy.Models.Player;
-import com.fantasy.Models.User;
+import com.fantasy.Models.*;
 import com.fantasy.Services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -59,9 +58,22 @@ public class ClassificationController {
         for(int i=1; i<=tot; i++)
             lista.add(i);
 
+        GameWeek gw = gestorGameWeek.getGameWeekByNumber(tot);
+        List<GameWeekSnapshot> gameWeekSnapshotsByGameWeekId = gestorGameWeekSnapshot.getGameWeekSnapshotsOrderedCumulative(gw.getId());
+        List<VirtualTeam> orderedTeams = new ArrayList<>();
+        for(GameWeekSnapshot gws: gameWeekSnapshotsByGameWeekId){
+            System.out.println(gws.getVirtualTeam().getName() + " "+ gws.getGameWeekCumulativePoints());
+            orderedTeams.add(gws.getVirtualTeam());
+        }
+
+        gameWeekSnapshotsByGameWeekId.get(0).getGameWeekCumulativePoints();
+
+
         model.addAttribute("currentUser", u);
         model.addAttribute("gameWeekNumber",lista);
-        model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
+        model.addAttribute("teams", orderedTeams);
+        //model.addAttribute("teams", gestorVirtualTeams.getAllTeamsOrderedByPoints());
+        model.addAttribute("snapshots", gameWeekSnapshotsByGameWeekId);
         model.addAttribute("gameWeeks", gestorGameWeek.getAllGameWeeks());
         if(number != -1) {
             model.addAttribute("gameweekID", gestorGameWeek.getGameWeekByNumber(number).getId());

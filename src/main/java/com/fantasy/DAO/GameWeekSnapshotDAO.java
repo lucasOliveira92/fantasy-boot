@@ -16,4 +16,5 @@ public interface GameWeekSnapshotDAO extends CrudRepository<GameWeekSnapshot, Lo
     List<GameWeekSnapshot> findByVirtualTeamId(long virtual_team_id);
     List<GameWeekSnapshot> findByGameWeekId(long game_week_id);
     //List<GameWeekSnapshot> findByGameWeekIdByOrderByGameWeekCumulativePointsDesc(int game_week_id);
+    List<GameWeekSnapshot> findByGameWeekIdOrderByGameWeekCumulativePointsDesc(long game_week_id);
 }
