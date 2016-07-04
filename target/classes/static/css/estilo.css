@@ -426,7 +426,7 @@ section#main-content > .wrap-container {
 }
 
 .table-hover > tbody > tr:hover {
-    background-color: transparent; !important;
+    background-color: transparent !important;
 }
 
 .highlighted:hover {
