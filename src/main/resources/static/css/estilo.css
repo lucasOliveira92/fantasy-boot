@@ -324,7 +324,7 @@ section#main-content > .wrap-container {
     padding: 5px 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1360px) {
     #logo {
         max-width: 80%;
         display: inline;
